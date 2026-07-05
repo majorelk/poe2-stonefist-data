@@ -1,14 +1,19 @@
 Item Class: Gloves
-Rarity: Magic
-Adorned Wraps of Valour
+Rarity: Rare
+Pain Claw
+Feathered Mitts
 --------
-Quality: +13% (augmented)
-Evasion Rating: 84 (augmented)
-Energy Shield: 26 (augmented)
+Armour: 229 (augmented)
 --------
-Requires: Level 59, 41 Dex, 41 Int
+Requires: Level 59, 73 Str
 --------
-Item Level: 74
+Item Level: 73
 --------
-{ Suffix Modifier "of Valour" (Tier: 3) — Life }
-Gain 45(41-53) Life per enemy killed
+{ Prefix Modifier "Fortified" (Tier: 4) — Armour }
++80(78-98) to Armour
+{ Prefix Modifier "Scorching" (Tier: 4) — Damage, Elemental, Fire, Attack }
+Adds 13(11-16) to 26(21-26) Fire damage to Attacks
+{ Prefix Modifier "Athlete's" (Tier: 1) — Life }
++121(120-149) to maximum Life
+{ Suffix Modifier "of the Drake" (Tier: 6) — Elemental, Fire, Resistance }
++16(16-20)% to Fire Resistance

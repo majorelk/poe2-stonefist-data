@@ -1,24 +1,26 @@
 Item Class: Gloves
 Rarity: Rare
-Golem Paw
+Eagle Grasp
 Fists of Stone
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
 --------
-Item Level: 6
+Item Level: 66
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Hale" }
-5% less damage taken while on Low Life
-{ Suffix Modifier "of Success" — Life }
-Recover 1% of maximum Life on Kill
-{ Suffix Modifier "of the Mongoose" }
-+18(15-18)% Surpassing chance to fire an additional Projectile
-{ Suffix Modifier "of Skill" }
-11(8-12)% chance to gain Onslaught for 4 seconds on Hit
+{ Prefix Modifier "Crackling" — Elemental, Lightning, Attack }
+Attacks Gain 13% of Damage as Extra Lightning Damage
+{ Prefix Modifier "Chalybeous" }
+27(26-27)% more Attack damage while on Low Mana
+{ Suffix Modifier "of the Savant" }
+31(29-32)% increased Cooldown Recovery Rate
+{ Suffix Modifier "of Infusion" — Mana }
+Recover 1% of maximum Mana on Kill
+{ Suffix Modifier "of Raiding" }
+25(21-25)% increased Quantity of Gold Dropped by Slain Enemies
 --------
 Unmodifiable

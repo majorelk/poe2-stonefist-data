@@ -1,20 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Fate Knuckle
-Adorned Wraps
+Sol Knuckle
+Stalking Bracers
 --------
-Evasion Rating: 74
-Energy Shield: 23
+Evasion Rating: 148
 --------
-Requires: Level 59, 41 Dex, 41 Int
+Requires: Level 65, 80 Dex
 --------
-Item Level: 65
+Item Level: 79
 --------
-{ Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
-+118(105-124) to maximum Mana
-{ Prefix Modifier "Stalwart" (Tier: 6) — Life }
-+40(40-59) to maximum Life
-{ Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
-22(20-24)% increased Critical Damage Bonus
-{ Suffix Modifier "of the Furnace" (Tier: 4) — Elemental, Fire, Resistance }
-+28(26-30)% to Fire Resistance
+{ Prefix Modifier "Virile" (Tier: 2) — Life }
++118(100-119) to maximum Life
+{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
++14(10-14) to maximum Mana
+{ Prefix Modifier "Razor-sharp" (Tier: 3) — Damage, Physical, Attack }
+Adds 7(7-11) to 18(14-20) Physical Damage to Attacks
+{ Suffix Modifier "of Eviction" (Tier: 4) — Chaos, Resistance }
++14(12-15)% to Chaos Resistance
+{ Suffix Modifier "of the Lightning" (Tier: 2) — Elemental, Lightning, Resistance }
++38(36-40)% to Lightning Resistance

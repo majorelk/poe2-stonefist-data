@@ -1,17 +1,23 @@
 Item Class: Gloves
 Rarity: Rare
-Pain Caress
-Suede Bracers
+Mind Palm
+Gold Gloves
 --------
-Evasion Rating: 10
+Energy Shield: 42
 --------
-Requires: Level 6
+Requires: Level 59, 73 Int
 --------
-Item Level: 9
+Item Level: 65
 --------
-{ Prefix Modifier "Hale" (Tier: 9) — Life }
-+14(10-19) to maximum Life
-{ Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
-Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
-{ Suffix Modifier "of Rejuvenation" (Tier: 4) — Life, Attack }
-Gain 2 Life per Enemy Hit with Attacks
+{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
++10(10-14) to maximum Mana
+{ Prefix Modifier "Deliberate" (Tier: 6) — Attack }
++103(85-123) to Accuracy Rating
+{ Prefix Modifier "Icy" (Tier: 7) — Damage, Elemental, Cold, Attack }
+Adds 5(5-6) to 11(9-11) Cold damage to Attacks
+{ Suffix Modifier "of Infusion" (Tier: 6) — Mana }
+Gain 6(6-9) Mana per enemy killed
+{ Suffix Modifier "of the Drought" (Tier: 2) — Mana, Physical, Attack }
+Leech 7.46(7-7.9)% of Physical Attack Damage as Mana
+{ Suffix Modifier "of Conquest" (Tier: 5) — Life }
+Gain 23(19-28) Life per enemy killed

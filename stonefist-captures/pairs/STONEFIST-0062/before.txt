@@ -1,26 +1,25 @@
 Item Class: Gloves
 Rarity: Unique
-Painter's Servant
-Torn Gloves
+Grip of Winter
+Firm Bracers
 --------
-Energy Shield: 9
+Quality: +8% (augmented)
+Evasion Rating: 45 (augmented)
 --------
-Item Level: 52
+Requires: Level 11, 16 Dex
 --------
-{ Unique Modifier }
-33% of Elemental Damage Converted to Fire Damage
-{ Unique Modifier }
-33% of Elemental Damage Converted to Cold Damage
-{ Unique Modifier }
-33% of Elemental Damage Converted to Lightning Damage
-{ Unique Modifier — Damage, Elemental, Fire }
-Gain 6(5-10)% of Elemental Damage as Extra Fire Damage
-{ Unique Modifier — Damage, Elemental, Cold }
-Gain 7(5-10)% of Elemental Damage as Extra Cold Damage
-{ Unique Modifier — Damage, Elemental, Lightning }
-Gain 9(5-10)% of Elemental Damage as Extra Lightning Damage
+Item Level: 69
 --------
-Bloodshed on the crimson shores,
-longing for the endless sea.
-Treasures, life, I'd give it all
-just to capture thee.
+{ Unique Modifier — Evasion }
+33(30-50)% increased Evasion Rating
+{ Unique Modifier — Damage, Elemental, Cold, Attack }
+Adds 4(3-5) to 6(6-8) Cold damage to Attacks
+{ Unique Modifier — Elemental, Cold, Ailment }
+41(40-50)% increased Freeze Buildup
+{ Unique Modifier — Elemental, Cold, Ailment }
+21(20-30)% increased Magnitude of Chill you inflict
+{ Unique Modifier — Elemental, Cold, Resistance }
++26(20-30)% to Cold Resistance
+--------
+After the eruption, the skies turned grey,
+ash began to fall, and a chill set in...

@@ -1,15 +1,21 @@
 Item Class: Gloves
-Rarity: Magic
-Ingrained Kalguuran Cuffs of the Lynx
+Rarity: Rare
+Doom Knuckle
+Ornate Cuffs
 --------
-Armour: 84 (augmented)
-Energy Shield: 25 (augmented)
+Armour: 97 (augmented)
+Energy Shield: 27 (augmented)
 --------
-Requires: Level 45, 32 Str, 32 Int
+Requires: Level 59, 41 Str, 41 Int
 --------
-Item Level: 52
+Item Level: 63
 --------
-{ Prefix Modifier "Ingrained" (Tier: 6) — Armour, Energy Shield }
-32(27-42)% increased Armour and Energy Shield
-{ Suffix Modifier "of the Lynx" (Tier: 8) — Attribute }
-+10(9-12) to Dexterity
+{ Prefix Modifier "Auspex's" (Tier: 5) — Life, Armour, Energy Shield }
+18(14-20)% increased Armour and Energy Shield
++11(11-19) to maximum Life
+{ Suffix Modifier "of the Volcano" (Tier: 3) — Elemental, Fire, Resistance }
++35(31-35)% to Fire Resistance
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+12(11-14)% increased Rarity of Items found
+{ Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
++17(17-20) to Dexterity

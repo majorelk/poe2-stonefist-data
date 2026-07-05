@@ -1,29 +1,24 @@
 Item Class: Gloves
 Rarity: Unique
-Valako's Vice
+Kitoko's Current
 Fists of Stone
 --------
-Quality: +8% (augmented)
-Evasion Rating: 256 (augmented)
-Energy Shield: 85 (augmented)
+Evasion Rating: 237 (augmented)
+Energy Shield: 79 (augmented)
 --------
-Item Level: 50
+Item Level: 65
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
 { Unique Modifier — Evasion, Energy Shield }
-11(10-15)% more Global Evasion Rating and Energy Shield
-{ Unique Modifier — Attack }
-13(10-14)% increased Area of Effect for Attacks
+14(10-15)% more Global Evasion Rating and Energy Shield
 { Unique Modifier }
-+25(25-50)% Surpassing chance to fire an additional Projectile
-{ Unique Modifier — Elemental, Cold }
-Gain 18(15-25)% of Lightning damage as Extra Cold damage
-{ Unique Modifier }
-100% of Lightning Damage Converted to Cold Damage
-{ Unique Modifier }
-10% chance to gain Onslaught for 4 seconds on Hit
++32(20-40)% Surpassing chance to fire an additional Projectile
+{ Unique Modifier — Attack, Caster, Speed }
+15(15-10)% reduced Attack and Cast Speed
+{ Unique Modifier — Elemental, Lightning, Ailment }
+All damage with Attacks Contributes to Electrocution Buildup — Unscalable Value
 --------
 Unmodifiable

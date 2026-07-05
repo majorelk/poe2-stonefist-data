@@ -1,21 +1,24 @@
 Item Class: Gloves
 Rarity: Rare
-Sol Knuckle
-Stalking Bracers
+Torment Knuckle
+Bound Cuffs
 --------
-Evasion Rating: 148
+Armour: 190 (augmented)
+Energy Shield: 56 (augmented)
 --------
-Requires: Level 65, 80 Dex
+Requires: Level 65, 44 Str, 44 Int
 --------
-Item Level: 79
+Sockets: S 
 --------
-{ Prefix Modifier "Virile" (Tier: 2) — Life }
-+118(100-119) to maximum Life
-{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
-+14(10-14) to maximum Mana
-{ Prefix Modifier "Razor-sharp" (Tier: 3) — Damage, Physical, Attack }
-Adds 7(7-11) to 18(14-20) Physical Damage to Attacks
-{ Suffix Modifier "of Eviction" (Tier: 4) — Chaos, Resistance }
-+14(12-15)% to Chaos Resistance
-{ Suffix Modifier "of the Lightning" (Tier: 2) — Elemental, Lightning, Resistance }
-+38(36-40)% to Lightning Resistance
+Item Level: 71
+--------
+{ Prefix Modifier "Auspex's" (Tier: 5) — Life, Armour, Energy Shield }
+17(14-20)% increased Armour and Energy Shield
++14(11-19) to maximum Life
+{ Prefix Modifier "Hallowed" (Tier: 1) — Armour, Energy Shield }
++73(72-85) to Armour
++23(22-25) to maximum Energy Shield
+{ Prefix Modifier "Robust" (Tier: 4) — Life }
++83(70-84) to maximum Life
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills

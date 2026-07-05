@@ -1,15 +1,14 @@
 Item Class: Gloves
 Rarity: Magic
-Sanguine Firm Bracers of the Penguin
+Adorned Wraps of Valour
 --------
-Quality: +10% (augmented)
-Evasion Rating: 34 (augmented)
+Quality: +13% (augmented)
+Evasion Rating: 84 (augmented)
+Energy Shield: 26 (augmented)
 --------
-Requires: Level 12, 16 Dex
+Requires: Level 59, 41 Dex, 41 Int
 --------
-Item Level: 23
+Item Level: 74
 --------
-{ Prefix Modifier "Sanguine" (Tier: 7) — Life }
-+38(30-39) to maximum Life
-{ Suffix Modifier "of the Penguin" (Tier: 7) — Elemental, Cold, Resistance }
-+13(11-15)% to Cold Resistance
+{ Suffix Modifier "of Valour" (Tier: 3) — Life }
+Gain 45(41-53) Life per enemy killed

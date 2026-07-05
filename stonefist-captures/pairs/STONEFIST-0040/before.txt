@@ -1,12 +1,15 @@
 Item Class: Gloves
 Rarity: Magic
-Annealed Refined Bracers
+Healthy Zealot Gauntlets of Valour
 --------
-Evasion Rating: 124
+Armour: 82
+Evasion Rating: 74
 --------
-Requires: Level 54, 67 Dex
+Requires: Level 59, 41 Str, 41 Dex
 --------
 Item Level: 63
 --------
-{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
-Adds 7(6-10) to 12(12-17) Physical Damage to Attacks
+{ Prefix Modifier "Healthy" (Tier: 8) — Life }
++25(20-29) to maximum Life
+{ Suffix Modifier "of Valour" (Tier: 3) — Life }
+Gain 43(41-53) Life per enemy killed

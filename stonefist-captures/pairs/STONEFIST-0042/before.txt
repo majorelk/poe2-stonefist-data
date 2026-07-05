@@ -1,14 +1,27 @@
 Item Class: Gloves
-Rarity: Magic
-Polished Refined Bracers of the Cloud
+Rarity: Rare
+Dusk Paw
+Stalking Bracers
 --------
-Evasion Rating: 124
+Evasion Rating: 266 (augmented)
 --------
-Requires: Level 54, 67 Dex
+Requires: Level 65, 80 Dex
 --------
-Item Level: 63
+Sockets: S 
 --------
-{ Prefix Modifier "Polished" (Tier: 7) — Damage, Physical, Attack }
-Adds 2(2-4) to 7(5-8) Physical Damage to Attacks
-{ Suffix Modifier "of the Cloud" (Tier: 8) — Elemental, Lightning, Resistance }
-+9(6-10)% to Lightning Resistance
+Item Level: 65
+--------
++18% to Cold Resistance (rune)
+--------
+{ Prefix Modifier "Nightmare's" (Tier: 2) — Evasion }
+80(80-91)% increased Evasion Rating
+{ Prefix Modifier "Incinerating" (Tier: 3) — Damage, Elemental, Fire, Attack }
+Adds 13(13-19) to 32(27-32) Fire damage to Attacks
+{ Prefix Modifier "Frozen" (Tier: 4) — Damage, Elemental, Cold, Attack }
+Adds 13(11-13) to 20(18-21) Cold damage to Attacks
+{ Suffix Modifier "of the Desperate" (Tier: 1) — Mana, Physical, Attack }
+Leech 8.47(8-8.9)% of Physical Attack Damage as Mana
+{ Suffix Modifier "of Nourishment" (Tier: 1) — Life, Attack }
+Gain 5 Life per Enemy Hit with Attacks
+{ Suffix Modifier "of the Lamprey" (Tier: 2) — Life, Physical, Attack }
+Leech 8.26(8-8.9)% of Physical Attack Damage as Life

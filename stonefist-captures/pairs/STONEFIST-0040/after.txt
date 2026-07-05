@@ -1,6 +1,6 @@
 Item Class: Gloves
 Rarity: Magic
-Annealed Fists of Stone
+Healthy Fists of Stone of Valour
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
@@ -11,7 +11,9 @@ Item Level: 63
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Annealed" — Physical, Attack }
-Attacks Gain 15(15-16)% of Damage as Extra Physical Damage
+{ Prefix Modifier "Healthy" }
+6% less damage taken while on Low Life
+{ Suffix Modifier "of Valour" — Life }
+Recover 2% of maximum Life on Kill
 --------
 Unmodifiable

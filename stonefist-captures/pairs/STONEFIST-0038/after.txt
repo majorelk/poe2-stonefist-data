@@ -1,6 +1,6 @@
 Item Class: Gloves
 Rarity: Magic
-Sanguine Fists of Stone of the Drake
+Polished Fists of Stone of the Cloud
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
@@ -11,10 +11,10 @@ Item Level: 63
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Sanguine" }
-7% less damage taken while on Low Life
-{ Suffix Modifier "of the Drake" — Elemental, Fire, Resistance }
-+1% to Maximum Fire Resistance
-+21(21-25)% to Fire Resistance
+{ Prefix Modifier "Polished" — Physical, Attack }
+Attacks Gain 12% of Damage as Extra Physical Damage
+{ Suffix Modifier "of the Cloud" — Elemental, Lightning, Resistance }
++1% to Maximum Lightning Resistance
++12(11-15)% to Lightning Resistance
 --------
 Unmodifiable

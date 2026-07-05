@@ -1,21 +1,15 @@
 Item Class: Gloves
-Rarity: Rare
-Storm Vise
-Spined Bracers
+Rarity: Magic
+Ingrained Kalguuran Cuffs of the Lynx
 --------
-Evasion Rating: 222 (augmented)
+Armour: 84 (augmented)
+Energy Shield: 25 (augmented)
 --------
-Requires: Level 43, 42 Dex
+Requires: Level 45, 32 Str, 32 Int
 --------
-Item Level: 59
+Item Level: 52
 --------
-{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
-Adds 10(6-10) to 16(12-17) Physical Damage to Attacks
-{ Prefix Modifier "Phased" (Tier: 2) — Evasion }
-+143(117-146) to Evasion Rating
-{ Prefix Modifier "Crackling" (Tier: 6) — Damage, Elemental, Lightning, Attack }
-Adds 1 to 23(23-27) Lightning damage to Attacks
-{ Suffix Modifier "of Triumph" (Tier: 6) — Life }
-Gain 12(10-18) Life per enemy killed
-{ Suffix Modifier "of Eviction" (Tier: 4) — Chaos, Resistance }
-+13(12-15)% to Chaos Resistance
+{ Prefix Modifier "Ingrained" (Tier: 6) — Armour, Energy Shield }
+32(27-42)% increased Armour and Energy Shield
+{ Suffix Modifier "of the Lynx" (Tier: 8) — Attribute }
++10(9-12) to Dexterity

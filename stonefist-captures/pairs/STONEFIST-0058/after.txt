@@ -1,30 +1,28 @@
 Item Class: Gloves
-Rarity: Unique
-Gravebind
+Rarity: Rare
+Agony Talons
 Fists of Stone
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
 --------
-Sockets: S 
---------
-Item Level: 62
+Item Level: 54
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Unique Modifier — Evasion, Energy Shield }
-18(15-20)% more Global Evasion Rating and Energy Shield
-{ Unique Modifier }
-31(30-50)% chance to gain Volatility on Kill
-{ Unique Modifier — Life }
-Recover 3% of maximum Life on Kill
-{ Unique Modifier — Mana }
-Recover 3% of maximum Mana on Kill
-{ Unique Modifier }
-20% increased Rarity of Items found
-Your other Modifiers to Rarity of Items found do not apply
-Enemies in your Presence killed by anyone count as being killed by you instead — Unscalable Value
+{ Prefix Modifier "Rotund" }
+11% less damage taken while on Low Life
+{ Prefix Modifier "Lobstered" — Evasion, Energy Shield }
+11(11-12)% more Global Evasion Rating and Energy Shield
+{ Suffix Modifier "of Rage" — Critical }
++1.8(1.6-2)% to Critical Hit Chance
+{ Suffix Modifier "of the Storm" — Elemental, Lightning, Resistance }
++1% to Maximum Lightning Resistance
++21(21-25)% to Lightning Resistance
+{ Suffix Modifier "of the Remora" — Life }
+Leech 11.63(11-11.9)% of Physical Attack Damage as Life
+Leech Life 25(25-20)% slower
 --------
 Unmodifiable

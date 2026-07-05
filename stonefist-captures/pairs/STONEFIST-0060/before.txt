@@ -1,29 +1,26 @@
 Item Class: Gloves
 Rarity: Unique
-The Prisoner's Manacles
-Kalguuran Cuffs
+Lochtonial Caress
+Tempered Mitts
 --------
-Armour: 220 (augmented)
-Energy Shield: 65 (augmented)
+Armour: 74 (augmented)
 --------
-Requires: Level 45, 64 (augmented) Str, 64 (augmented) Int
+Requires: Level 16, 22 Str
 --------
-Item Level: 59
+Sockets: S 
 --------
-{ Unique Modifier — Armour, Energy Shield }
-243(200-300)% increased Armour and Energy Shield
+Item Level: 79
+--------
 { Unique Modifier }
-100% increased Attribute Requirements
-{ Unique Modifier }
-Debuffs you inflict have 29(20-30)% increased Slow Magnitude
-{ Unique Modifier }
-Cannot Immobilise enemies — Unscalable Value
+Share Charges with Allies in your Presence — Unscalable Value
+{ Unique Modifier — Speed }
+14(10-15)% increased Skill Speed
+{ Unique Modifier — Mana }
+15(15-10)% reduced maximum Mana
 { Unique Modifier — Life }
-29.3(15-30) Life Regeneration per second
-{ Unique Modifier — Elemental, Lightning, Resistance }
-+24(20-40)% to Lightning Resistance
-{ Unique Modifier — Life }
-+100 to maximum Life
++56(40-60) to maximum Life
+{ Unique Modifier — Armour }
++25(15-25) to Armour
 --------
-Only once did Maligaro wonder if he'd gone too far.
-His greatest success took three entire legions to capture.
+Why cling to your sanity? It offers you nothing.
+Surrender to me, and I will grant you everything.

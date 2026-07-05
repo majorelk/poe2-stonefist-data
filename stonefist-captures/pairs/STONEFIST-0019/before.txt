@@ -1,22 +1,20 @@
 Item Class: Gloves
 Rarity: Rare
-Behemoth Fist
-Spined Bracers
+Damnation Fingers
+Bound Cuffs
 --------
-Evasion Rating: 117 (augmented)
+Armour: 171 (augmented)
+Energy Shield: 48 (augmented)
 --------
-Requires: Level 33, 42 Dex
+Requires: Level 65, 44 Str, 44 Int
 --------
-Sockets: S 
+Item Level: 71
 --------
-Item Level: 43
---------
-{ Prefix Modifier "Mouflon's" (Tier: 4) — Life, Evasion }
-22(21-26)% increased Evasion Rating
-+23(20-25) to maximum Life
-{ Prefix Modifier "Cerulean" (Tier: 5) — Mana }
-+60(55-64) to maximum Mana
-{ Prefix Modifier "Shade's" (Tier: 7) — Evasion }
-26(15-26)% increased Evasion Rating
-{ Suffix Modifier "of the Kiln" (Tier: 5) — Elemental, Fire, Resistance }
-+25(21-25)% to Fire Resistance
+{ Prefix Modifier "Inspired" (Tier: 1) — Armour, Energy Shield }
+92(92-100)% increased Armour and Energy Shield
+{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
++20(15-24) to maximum Mana
+{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
++7(6-10)% to Cold Resistance
+{ Suffix Modifier "of Sheathing" (Tier: 4) — Armour, Elemental }
++20(20-25)% of Armour also applies to Elemental Damage

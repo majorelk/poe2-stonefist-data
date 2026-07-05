@@ -1,21 +1,17 @@
 Item Class: Gloves
 Rarity: Rare
-Plague Hold
-Spiral Wraps
+Pain Caress
+Suede Bracers
 --------
-Quality: +17% (augmented)
-Evasion Rating: 71 (augmented)
-Energy Shield: 25 (augmented)
+Evasion Rating: 10
 --------
-Requires: Level 33, 24 Dex, 24 Int
+Requires: Level 6
 --------
-Item Level: 43
+Item Level: 9
 --------
-{ Prefix Modifier "Ethereal" (Tier: 6) — Evasion, Energy Shield }
-42(27-42)% increased Evasion and Energy Shield
-{ Suffix Modifier "of the Prodigy" (Tier: 6) — Attribute }
-+16(13-16) to Intelligence
-{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
-+1 to Level of all Melee Skills
-{ Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
-+22(21-25)% to Cold Resistance
+{ Prefix Modifier "Hale" (Tier: 9) — Life }
++14(10-19) to maximum Life
+{ Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
+Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
+{ Suffix Modifier "of Rejuvenation" (Tier: 4) — Life, Attack }
+Gain 2 Life per Enemy Hit with Attacks

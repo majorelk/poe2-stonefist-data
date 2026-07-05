@@ -1,28 +1,23 @@
 Item Class: Gloves
 Rarity: Unique
-Valako's Vice
-Plate Gauntlets
+Kitoko's Current
+Jewelled Gloves
 --------
-Quality: +8% (augmented)
-Armour: 113 (augmented)
-Evasion Rating: 102 (augmented)
+Energy Shield: 31 (augmented)
 --------
-Requires: Level 45, 32 Str, 32 Dex
+Requires: Level 26, 34 Int
 --------
-Item Level: 50
+Item Level: 65
 --------
-{ Unique Modifier — Armour, Evasion }
-63(50-100)% increased Armour and Evasion
+{ Unique Modifier — Energy Shield }
+34(30-50)% increased Energy Shield
 { Unique Modifier — Attribute }
-+27(20-30) to Strength
-{ Unique Modifier — Attribute }
-+24(20-30) to Dexterity
-{ Unique Modifier — Elemental, Lightning, Resistance }
-+36(30-50)% to Lightning Resistance
++14(10-20) to Dexterity
+{ Unique Modifier — Attack, Caster, Speed }
+15(15-10)% reduced Attack and Cast Speed
 { Unique Modifier }
-100% of Fire damage Converted to Lightning damage
-{ Unique Modifier — Attack, Speed }
-7(5-10)% increased Attack Speed
+Lightning damage from Hits Contributes to Electrocution Buildup — Unscalable Value
 --------
-Unlike the other gods, when he was born from the volcano,
-Valako rode the clouds of ash into the thundering sky.
+Reality is a puzzle. Ingenuity is power.
+--------
+Foil Unique

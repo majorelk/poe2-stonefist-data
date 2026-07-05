@@ -1,18 +1,24 @@
 Item Class: Gloves
 Rarity: Rare
-Phoenix Vise
-Linen Wraps
+Grim Fingers
+Layered Gauntlets
 --------
+Armour: 27
 Evasion Rating: 23
-Energy Shield: 10
 --------
-Requires: Level 16, 13 Dex, 13 Int
+Requires: Level 16, 13 Str, 13 Dex
 --------
-Item Level: 20
+Sockets: S 
 --------
+Item Level: 22
+--------
++10% to Cold Resistance (rune)
+--------
+{ Prefix Modifier "Reliable" (Tier: 8) — Attack }
++45(33-60) to Accuracy Rating
 { Prefix Modifier "Glinting" (Tier: 9) — Damage, Physical, Attack }
-Adds 2(1-2) to 3 Physical Damage to Attacks
-{ Suffix Modifier "of Ire" (Tier: 5) — Damage, Critical }
-14(10-14)% increased Critical Damage Bonus
-{ Suffix Modifier "of the Mongoose" (Tier: 9) — Attribute }
-+7(5-8) to Dexterity
+Adds 1(1-2) to 3 Physical Damage to Attacks
+{ Suffix Modifier "of the Squall" (Tier: 7) — Elemental, Lightning, Resistance }
++14(11-15)% to Lightning Resistance
+{ Suffix Modifier "of the Lynx" (Tier: 8) — Attribute }
++10(9-12) to Dexterity

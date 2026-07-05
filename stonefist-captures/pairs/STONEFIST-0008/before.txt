@@ -1,23 +1,23 @@
 Item Class: Gloves
 Rarity: Rare
-Mind Palm
-Gold Gloves
+Doom Fist
+Spined Bracers
 --------
-Energy Shield: 42
+Evasion Rating: 139 (augmented)
 --------
-Requires: Level 59, 73 Int
+Requires: Level 33, 42 Dex
 --------
-Item Level: 65
+Item Level: 39
 --------
-{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
-+10(10-14) to maximum Mana
-{ Prefix Modifier "Deliberate" (Tier: 6) — Attack }
-+103(85-123) to Accuracy Rating
-{ Prefix Modifier "Icy" (Tier: 7) — Damage, Elemental, Cold, Attack }
-Adds 5(5-6) to 11(9-11) Cold damage to Attacks
-{ Suffix Modifier "of Infusion" (Tier: 6) — Mana }
-Gain 6(6-9) Mana per enemy killed
-{ Suffix Modifier "of the Drought" (Tier: 2) — Mana, Physical, Attack }
-Leech 7.46(7-7.9)% of Physical Attack Damage as Mana
-{ Suffix Modifier "of Conquest" (Tier: 5) — Life }
-Gain 23(19-28) Life per enemy killed
+{ Prefix Modifier "Acrobat's" (Tier: 5) — Evasion }
++60(47-66) to Evasion Rating
+{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
++16(15-24) to maximum Mana
+{ Prefix Modifier "Polished" (Tier: 7) — Damage, Physical, Attack }
+Adds 2(2-4) to 7(5-8) Physical Damage to Attacks
+{ Suffix Modifier "of the Kiln" (Tier: 5) — Elemental, Fire, Resistance }
++24(21-25)% to Fire Resistance
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
++9(6-10)% to Cold Resistance

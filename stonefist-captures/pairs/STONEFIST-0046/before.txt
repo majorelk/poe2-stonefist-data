@@ -1,21 +1,12 @@
 Item Class: Gloves
-Rarity: Rare
-Agony Talons
-Ancient Mitts
+Rarity: Magic
+Annealed Refined Bracers
 --------
-Armour: 212 (augmented)
+Evasion Rating: 124
 --------
-Requires: Level 54, 67 Str
+Requires: Level 54, 67 Dex
 --------
-Item Level: 54
+Item Level: 63
 --------
-{ Prefix Modifier "Rotund" (Tier: 3) — Life }
-+91(85-99) to maximum Life
-{ Prefix Modifier "Lobstered" (Tier: 5) — Armour }
-55(43-55)% increased Armour
-{ Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
-22(20-24)% increased Critical Damage Bonus
-{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
-+18(16-20)% to Lightning Resistance
-{ Suffix Modifier "of the Remora" (Tier: 3) — Life, Physical, Attack }
-Leech 7.59(7-7.9)% of Physical Attack Damage as Life
+{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
+Adds 7(6-10) to 12(12-17) Physical Damage to Attacks

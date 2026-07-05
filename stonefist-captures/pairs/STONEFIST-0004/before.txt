@@ -1,21 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Eagle Grasp
-Grim Gloves
+Grim Touch
+Doubled Gauntlets
 --------
-Energy Shield: 45
+Armour: 57 (augmented)
+Evasion Rating: 50 (augmented)
 --------
-Requires: Level 65, 80 Int
+Requires: Level 33, 24 Str, 24 Dex
 --------
-Item Level: 66
+Item Level: 34
 --------
-{ Prefix Modifier "Crackling" (Tier: 6) — Damage, Elemental, Lightning, Attack }
-Adds 1 to 27(23-27) Lightning damage to Attacks
-{ Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
-+107(105-124) to maximum Mana
-{ Suffix Modifier "of the Savant" (Tier: 2) — Attribute }
-+29(28-30) to Intelligence
-{ Suffix Modifier "of Infusion" (Tier: 6) — Mana }
-Gain 9(6-9) Mana per enemy killed
+{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
++14(10-14) to maximum Mana
+{ Prefix Modifier "Thug's" (Tier: 5) — Life, Armour, Evasion }
+16(14-20)% increased Armour and Evasion
++18(11-19) to maximum Life
 { Suffix Modifier "of Raiding" (Tier: 2) }
-14(11-14)% increased Rarity of Items found
+12(11-14)% increased Rarity of Items found
+{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
++16(16-20)% to Lightning Resistance

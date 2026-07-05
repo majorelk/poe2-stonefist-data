@@ -1,31 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Dread Knuckle
-Adorned Wraps
+Rift Touch
+Goldcast Cuffs
 --------
-Quality: +20% (augmented)
-Evasion Rating: 213 (augmented)
-Energy Shield: 73 (augmented)
+Quality: +5% (augmented)
+Armour: 51 (augmented)
+Energy Shield: 16 (augmented)
 --------
-Requires: Level 59, 41 Dex, 41 Int
+Requires: Level 33, 24 Str, 24 Int
 --------
-Sockets: S 
+Item Level: 35
 --------
-Item Level: 72
---------
-+18% to Lightning Resistance (rune)
---------
-{ Prefix Modifier "Hunter's" (Tier: 3) — Attack }
-+336(237-346) to Accuracy Rating
-{ Prefix Modifier "Cherub's" (Tier: 1) — Evasion, Energy Shield }
-+66(65-78) to Evasion Rating
-+25(22-25) to maximum Energy Shield
-{ Prefix Modifier "Bard's" (Tier: 3) — Life, Evasion, Energy Shield }
-27(27-32)% increased Evasion and Energy Shield
-+27(26-32) to maximum Life
-{ Suffix Modifier "of the Maelstrom" (Tier: 3) — Elemental, Lightning, Resistance }
-+33(31-35)% to Lightning Resistance
-{ Suffix Modifier "of Mastery" (Tier: 2) — Attack, Speed }
-13(11-13)% increased Attack Speed
-{ Suffix Modifier "of the Lamprey" (Tier: 2) — Life, Physical, Attack }
-Leech 8.47(8-8.9)% of Physical Attack Damage as Life
+{ Prefix Modifier "Cerulean" (Tier: 5) — Mana }
++60(55-64) to maximum Mana
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+11(11-14)% increased Rarity of Items found
+{ Suffix Modifier "of the Parched" (Tier: 4) — Mana, Physical, Attack }
+Leech 5.79(5-5.9)% of Physical Attack Damage as Mana
+{ Crafted Suffix Modifier "of the Squall" (Tier: 7) — Elemental, Lightning, Resistance }
++15(11-15)% to Lightning Resistance

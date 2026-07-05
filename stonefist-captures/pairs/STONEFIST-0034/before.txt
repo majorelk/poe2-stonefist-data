@@ -1,21 +1,15 @@
 Item Class: Gloves
-Rarity: Rare
-Doom Knuckle
-Ornate Cuffs
+Rarity: Magic
+Hero's Commander Gauntlets of the Lightning
 --------
-Armour: 97 (augmented)
-Energy Shield: 27 (augmented)
+Armour: 169 (augmented)
+Evasion Rating: 153 (augmented)
 --------
-Requires: Level 59, 41 Str, 41 Int
+Requires: Level 70, 48 Str, 48 Dex
 --------
-Item Level: 63
+Item Level: 73
 --------
-{ Prefix Modifier "Auspex's" (Tier: 5) — Life, Armour, Energy Shield }
-18(14-20)% increased Armour and Energy Shield
-+11(11-19) to maximum Life
-{ Suffix Modifier "of the Volcano" (Tier: 3) — Elemental, Fire, Resistance }
-+35(31-35)% to Fire Resistance
-{ Suffix Modifier "of Raiding" (Tier: 2) }
-12(11-14)% increased Rarity of Items found
-{ Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
-+17(17-20) to Dexterity
+{ Prefix Modifier "Hero's" (Tier: 2) — Armour, Evasion }
+80(80-91)% increased Armour and Evasion
+{ Suffix Modifier "of the Lightning" (Tier: 2) — Elemental, Lightning, Resistance }
++38(36-40)% to Lightning Resistance

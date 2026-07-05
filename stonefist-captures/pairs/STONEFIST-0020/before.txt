@@ -1,26 +1,29 @@
 Item Class: Gloves
 Rarity: Rare
-Agony Clutches
-Elegant Wraps
+Brood Hand
+Gauze Wraps
 --------
-Evasion Rating: 170 (augmented)
-Energy Shield: 52 (augmented)
+Evasion Rating: 21 (augmented)
+Energy Shield: 16 (augmented)
 --------
-Requires: Level 70, 48 Dex, 48 Int
+Requires: Level 15
 --------
 Sockets: S 
 --------
-Item Level: 71
+Item Level: 24
 --------
-+18% to Lightning Resistance (rune)
++14% to Cold Resistance (rune)
 --------
-{ Prefix Modifier "Illusory" (Tier: 1) — Evasion, Energy Shield }
-100(92-100)% increased Evasion and Energy Shield
-{ Prefix Modifier "Freezing" (Tier: 5) — Damage, Elemental, Cold, Attack }
-Adds 9(9-10) to 17(15-17) Cold damage to Attacks
-{ Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
-+108(105-124) to maximum Mana
-{ Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
-+25(21-25)% to Cold Resistance
-{ Suffix Modifier "of the Sage" (Tier: 3) — Attribute }
-+27(25-27) to Intelligence
+{ Prefix Modifier "Nymph's" (Tier: 3) — Evasion, Energy Shield }
++12(11-41) to Evasion Rating
++10(9-15) to maximum Energy Shield
+{ Prefix Modifier "Azure" (Tier: 7) — Mana }
++32(25-34) to maximum Mana
+{ Prefix Modifier "Hale" (Tier: 9) — Life }
++19(10-19) to maximum Life
+{ Suffix Modifier "of Skill" (Tier: 4) — Attack, Speed }
+7(5-7)% increased Attack Speed
+{ Suffix Modifier "of the Salamander" (Tier: 7) — Elemental, Fire, Resistance }
++14(11-15)% to Fire Resistance
+{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
++8(6-10)% to Cold Resistance

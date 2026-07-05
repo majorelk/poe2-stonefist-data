@@ -1,15 +1,10 @@
 Item Class: Gloves
-Rarity: Magic
-Frozen Zealot Gauntlets of Mastery
+Rarity: Normal
+Zealot Gauntlets
 --------
 Armour: 82
 Evasion Rating: 74
 --------
 Requires: Level 59, 41 Str, 41 Dex
 --------
-Item Level: 63
---------
-{ Prefix Modifier "Frozen" (Tier: 4) — Damage, Elemental, Cold, Attack }
-Adds 11(11-13) to 19(18-21) Cold damage to Attacks
-{ Suffix Modifier "of Mastery" (Tier: 2) — Attack, Speed }
-12(11-13)% increased Attack Speed
+Item Level: 68

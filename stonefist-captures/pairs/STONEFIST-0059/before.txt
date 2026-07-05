@@ -1,23 +1,20 @@
 Item Class: Gloves
-Rarity: Unique
-Kitoko's Current
-Jewelled Gloves
+Rarity: Rare
+Rage Paw
+Steelmail Gauntlets
 --------
-Energy Shield: 31 (augmented)
+Armour: 89
+Evasion Rating: 81
 --------
-Requires: Level 26, 34 Int
+Requires: Level 65, 44 Str, 44 Dex
 --------
-Item Level: 65
+Item Level: 66
 --------
-{ Unique Modifier — Energy Shield }
-34(30-50)% increased Energy Shield
-{ Unique Modifier — Attribute }
-+14(10-20) to Dexterity
-{ Unique Modifier — Attack, Caster, Speed }
-15(15-10)% reduced Attack and Cast Speed
-{ Unique Modifier }
-Lightning damage from Hits Contributes to Electrocution Buildup — Unscalable Value
---------
-Reality is a puzzle. Ingenuity is power.
---------
-Foil Unique
+{ Prefix Modifier "Virile" (Tier: 2) — Life }
++117(100-119) to maximum Life
+{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
++20(15-24) to maximum Mana
+{ Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
++17(17-20) to Dexterity
+{ Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
++26(25-27) to Strength

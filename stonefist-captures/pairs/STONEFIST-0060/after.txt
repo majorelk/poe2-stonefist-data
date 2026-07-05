@@ -1,31 +1,31 @@
 Item Class: Gloves
 Rarity: Unique
-The Prisoner's Manacles
+Lochtonial Caress
 Fists of Stone
 --------
-Evasion Rating: 237 (augmented)
-Energy Shield: 79 (augmented)
+Evasion Rating: 316 (augmented)
+Energy Shield: 158 (augmented)
 --------
-Item Level: 59
+Sockets: S 
+--------
+Item Level: 79
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Unique Modifier — Evasion, Energy Shield }
-24(20-25)% more Global Evasion Rating and Energy Shield
 { Unique Modifier }
-100% increased Attribute Requirements
+8(5-10)% chance to grant a Endurance Charge to Allies in your Presence on Hit
+9(5-10)% chance to grant a Frenzy Charge to Allies in your Presence on Hit
+7(5-10)% chance to grant a Power Charge to Allies in your Presence on Hit
+{ Unique Modifier — Attack, Speed }
+16(13-20)% increased Attack Speed
 { Unique Modifier }
-43(25-50)% increased Immobilisation buildup
+Cannot Leech Mana — Unscalable Value
 { Unique Modifier }
-Your Hits cannot Stun enemies — Unscalable Value
-{ Unique Modifier — Life }
-Regenerate 2.22(1.5-3)% of maximum Life per second
-{ Unique Modifier — Elemental, Lightning, Resistance }
-+3(2-3)% to Maximum Lightning Resistance
-+18(15-25)% to Lightning Resistance
+7(9-7)% less damage taken while on Low Life
 { Unique Modifier }
-10(12-10)% less damage taken while on Low Life
+Has +1 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
 --------
 Unmodifiable

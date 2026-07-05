@@ -1,22 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Grim Palm
-Baroque Gloves
+Plague Hold
+Spiral Wraps
 --------
-Energy Shield: 62 (augmented)
+Quality: +17% (augmented)
+Evasion Rating: 71 (augmented)
+Energy Shield: 25 (augmented)
 --------
-Requires: Level 62, 43 (augmented) Int
+Requires: Level 33, 24 Dex, 24 Int
 --------
-Sockets: S 
+Item Level: 43
 --------
-Item Level: 82
---------
-18% increased Armour, Evasion and Energy Shield (rune)
---------
-{ Prefix Modifier "Pope's" (Tier: 1) — Life, Energy Shield }
-41(39-42)% increased Energy Shield
-+42(42-49) to maximum Life
-{ Suffix Modifier "of Renown" (Tier: 1) — Attack, Speed }
-16(14-16)% increased Attack Speed
-{ Suffix Modifier "of the Proficient" (Tier: 1) }
-35% reduced Attribute Requirements
+{ Prefix Modifier "Ethereal" (Tier: 6) — Evasion, Energy Shield }
+42(27-42)% increased Evasion and Energy Shield
+{ Suffix Modifier "of the Prodigy" (Tier: 6) — Attribute }
++16(13-16) to Intelligence
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
++22(21-25)% to Cold Resistance

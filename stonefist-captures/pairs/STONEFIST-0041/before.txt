@@ -1,19 +1,13 @@
 Item Class: Gloves
-Rarity: Rare
-Demon Fist
-Baroque Gloves
+Rarity: Magic
+Layered Gauntlets of the Lost
 --------
-Energy Shield: 39
+Armour: 27
+Evasion Rating: 23
 --------
-Requires: Level 54, 67 Int
+Requires: Level 16, 13 Str, 13 Dex
 --------
-Item Level: 63
+Item Level: 24
 --------
-{ Prefix Modifier "Opalescent" (Tier: 3) — Mana }
-+80(80-89) to maximum Mana
-{ Prefix Modifier "Frozen" (Tier: 4) — Damage, Elemental, Cold, Attack }
-Adds 12(11-13) to 18(18-21) Cold damage to Attacks
-{ Suffix Modifier "of the Drake" (Tier: 6) — Elemental, Fire, Resistance }
-+19(16-20)% to Fire Resistance
-{ Suffix Modifier "of the Parched" (Tier: 4) — Mana, Physical, Attack }
-Leech 5.78(5-5.9)% of Physical Attack Damage as Mana
+{ Suffix Modifier "of the Lost" (Tier: 6) — Chaos, Resistance }
++7(4-7)% to Chaos Resistance

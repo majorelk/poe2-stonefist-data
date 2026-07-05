@@ -243,6 +243,9 @@ def render_html(pairs: list[dict]) -> str:
                 p["after_name"],
                 p["after_base"],
                 p["uid_status"],
+                p.get("captured_at", ""),
+                p.get("character_level", ""),
+                p.get("notes", ""),
                 " ".join(p["before_lines"]),
                 " ".join(p["after_lines"]),
             ]
@@ -305,6 +308,18 @@ def render_html(pairs: list[dict]) -> str:
                                 <pre>{esc(p["after_text"])}</pre>
                             </div>
                         </div>
+                    </details>
+
+                    <details>
+                        <summary>Capture metadata</summary>
+                        <table class="mini">
+                            <tbody>
+                                <tr><th>Captured at</th><td>{esc(p.get("captured_at", ""))}</td></tr>
+                                <tr><th>Character level</th><td>{esc(p.get("character_level", ""))}</td></tr>
+                                <tr><th>Capture version</th><td>{esc(p.get("capture_version", ""))}</td></tr>
+                                <tr><th>Notes</th><td>{esc(p.get("notes", ""))}</td></tr>
+                            </tbody>
+                        </table>
                     </details>
                 </td>
             </tr>

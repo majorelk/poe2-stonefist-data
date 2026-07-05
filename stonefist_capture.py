@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 import time
 from datetime import datetime
@@ -187,6 +188,20 @@ def save_raw_capture(text: str, kind: str) -> dict:
         "raw_text": text,
     }
 
+
+def save_meta(pair_dir: Path, test_id: str, character_level: str, captured_at: str) -> None:
+    meta = {
+        "test_id": test_id,
+        "captured_at": captured_at,
+        "character_level": character_level,
+        "capture_version": 2,
+        "notes": "",
+    }
+
+    meta_path = pair_dir / "meta.json"
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def next_test_number() -> int:
     existing_numbers: list[int] = []
 
@@ -280,9 +295,11 @@ def main() -> None:
 
         before_path = pair_dir / "before.txt"
         after_path = pair_dir / "after.txt"
+        captured_at = datetime.now().isoformat(timespec="seconds")
 
         before_path.write_text(pending_before["raw_text"], encoding="utf-8")
         after_path.write_text(record["raw_text"], encoding="utf-8")
+        save_meta(pair_dir, test_id, character_level, captured_at)
 
         status = uid_status(pending_before["unique_id"], record["unique_id"])
 
@@ -291,7 +308,7 @@ def main() -> None:
 
         pair = {
             "test_id": test_id,
-            "timestamp": datetime.now().isoformat(timespec="seconds"),
+            "timestamp": captured_at,
             "character_level": character_level,
             "uid_status": status,
             "before_file": str(before_path),

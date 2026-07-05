@@ -47,6 +47,34 @@ def get_item_class(text: str) -> str:
     return get_field(text, r"Item Class:\s*(.+)")
 
 
+def load_meta(pair_dir: Path) -> dict[str, object]:
+    meta_path = pair_dir / "meta.json"
+    if not meta_path.exists():
+        return {
+            "captured_at": "",
+            "character_level": "",
+            "capture_version": None,
+            "notes": "",
+        }
+
+    try:
+        data = json.loads(meta_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {
+            "captured_at": "",
+            "character_level": "",
+            "capture_version": None,
+            "notes": "",
+        }
+
+    return {
+        "captured_at": data.get("captured_at", ""),
+        "character_level": data.get("character_level", ""),
+        "capture_version": data.get("capture_version"),
+        "notes": data.get("notes", ""),
+    }
+
+
 def uid_status(before_uid: str, after_uid: str) -> str:
     if not before_uid and not after_uid:
         return "not present"
@@ -221,6 +249,7 @@ def load_pairs() -> list[dict]:
         before_rarity = get_rarity(before)
         after_rarity = get_rarity(after)
 
+        meta = load_meta(pair_dir)
         status = uid_status(before_uid, after_uid)
         category = classify_pair(before_rarity, after_rarity)
         before_hash = content_hash(before)
@@ -258,6 +287,10 @@ def load_pairs() -> list[dict]:
                 "before_hash": before_hash,
                 "after_hash": after_hash,
                 "pair_hash": pair_hash_value,
+                "captured_at": meta["captured_at"],
+                "character_level": meta["character_level"],
+                "capture_version": meta["capture_version"],
+                "notes": meta["notes"],
                 "is_exact_duplicate": False,
                 "duplicate_of": "",
                 "duplicate_group_size": 1,
@@ -297,6 +330,9 @@ def write_csvs(pairs: list[dict]) -> None:
                 "after_base",
                 "after_item_level",
                 "after_unique_id",
+                "character_level",
+                "captured_at",
+                "capture_version",
                 "pair_hash",
                 "before_hash",
                 "after_hash",
@@ -306,8 +342,8 @@ def write_csvs(pairs: list[dict]) -> None:
                 "duplicate_group_size",
                 "before_explicit_count",
                 "after_explicit_count",
-                "before_file",
-                "after_file",
+                "before_path",
+                "after_path",
             ]
         )
 
@@ -328,6 +364,9 @@ def write_csvs(pairs: list[dict]) -> None:
                     p["after_base"],
                     p["after_item_level"],
                     p["after_unique_id"],
+                    p["character_level"],
+                    p["captured_at"],
+                    p["capture_version"],
                     p["pair_hash"],
                     p["before_hash"],
                     p["after_hash"],

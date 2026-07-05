@@ -6,7 +6,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-import pyperclip
+import pyperclip # pyright: ignore[reportMissingModuleSource]
 
 
 OUT_DIR = Path("stonefist-captures")

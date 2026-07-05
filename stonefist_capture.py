@@ -187,7 +187,30 @@ def save_raw_capture(text: str, kind: str) -> dict:
         "raw_text": text,
     }
 
+def next_test_number() -> int:
+    existing_numbers: list[int] = []
 
+    for pair_dir in PAIRS_DIR.iterdir():
+        if not pair_dir.is_dir():
+            continue
+
+        match = re.fullmatch(r"STONEFIST-(\d{4})", pair_dir.name)
+        if match:
+            existing_numbers.append(int(match.group(1)))
+
+    return max(existing_numbers, default=0) + 1
+
+
+def allocate_pair_dir(test_number: int) -> tuple[str, Path, int]:
+    while True:
+        test_id = f"STONEFIST-{test_number:04d}"
+        pair_dir = PAIRS_DIR / test_id
+
+        if not pair_dir.exists():
+            pair_dir.mkdir()
+            return test_id, pair_dir, test_number + 1
+
+        test_number += 1
 
 
 def main() -> None:
@@ -205,7 +228,9 @@ def main() -> None:
 
     last_clip_hash = ""
     pending_before = None
-    test_number = 1
+    test_number = next_test_number()
+    print(f"Next pair ID will be STONEFIST-{test_number:04d}")
+    print()
 
     while True:
         try:
@@ -251,11 +276,7 @@ def main() -> None:
             time.sleep(0.25)
             continue
 
-        test_id = f"STONEFIST-{test_number:04d}"
-        test_number += 1
-
-        pair_dir = PAIRS_DIR / test_id
-        pair_dir.mkdir(exist_ok=True)
+        test_id, pair_dir, test_number = allocate_pair_dir(test_number)
 
         before_path = pair_dir / "before.txt"
         after_path = pair_dir / "after.txt"
@@ -290,4 +311,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print()
+        print("Capture stopped.")

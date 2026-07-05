@@ -2856,10 +2856,21 @@ Mapping candidates are derived from explicit modifier block position and should 
     
 </section>
 
-<p>
-Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, and <code>mapping_families.csv</code>.
-</p>
+<section>
+    <h2>Glove modifier pool coverage</h2>
+    <p>This section compares the PoE2DB glove modifier pool against captured Stonefist samples and shows which reference families are covered.</p>
+    <div class="coverage-summary"><div class="stats"><div class="card"><div>Total reference stat families</div><div class="num">0</div></div><div class="card"><div>Captured input families</div><div class="num">0</div></div><div class="card"><div>Confirmed mappings</div><div class="num">0</div></div><div class="card"><div>Likely mappings</div><div class="num">0</div></div><div class="card"><div>Missing input samples</div><div class="num">0</div></div><div class="card"><div>Transformed-output-only families</div><div class="num">0</div></div><div class="card"><div>Corruption-only missing</div><div class="num">0</div></div></div></div>
+    <p><em>No glove modifier reference pool loaded yet.</em></p>
+</section>
 
+<section>
+    <h2>Transformed output-only stat templates</h2>
+        <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool.</p>
+        <p><em>No transformed output-only stats found.</em></p>
+    </section>
+
+    <p>
+    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, and <code>transformed_output_only.csv</code>.
 <div>
     <input id="search" placeholder="Filter by mod, base, test id, resistance, onslaught, leech, unique, etc..." />
 

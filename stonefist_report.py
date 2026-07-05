@@ -12,6 +12,8 @@ ROOT = Path("stonefist-captures")
 DATASET_PATH = ROOT / "dataset.json"
 MAPPING_CANDIDATES_PATH = ROOT / "mapping_candidates.csv"
 MAPPING_FAMILIES_PATH = ROOT / "mapping_families.csv"
+GLOVE_COVERAGE_PATH = ROOT / "glove_mod_coverage.csv"
+TRANSFORMED_OUTPUT_ONLY_PATH = ROOT / "transformed_output_only.csv"
 REPORT_PATH = ROOT / "report.html"
 
 
@@ -191,6 +193,24 @@ def load_mapping_families() -> list[dict[str, str]]:
         return [row for row in reader]
 
 
+def load_glove_coverage() -> list[dict[str, str]]:
+    if not GLOVE_COVERAGE_PATH.exists():
+        return []
+
+    with GLOVE_COVERAGE_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
+def load_transformed_output_only() -> list[dict[str, str]]:
+    if not TRANSFORMED_OUTPUT_ONLY_PATH.exists():
+        return []
+
+    with TRANSFORMED_OUTPUT_ONLY_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
 def esc(value: object) -> str:
     return html.escape(str(value))
 
@@ -345,6 +365,99 @@ def render_mapping_families(candidates: list[dict[str, str]]) -> str:
     """
 
 
+def render_glove_coverage_summary(coverage: list[dict[str, str]], output_only: list[dict[str, str]]) -> str:
+    total_reference = len(coverage)
+    captured_input = sum(1 for row in coverage if row.get("seen_as_before_input", "false").lower() == "true")
+    confirmed_mappings = sum(1 for row in coverage if row.get("coverage_status") == "confirmed_mapping")
+    likely_mappings = sum(1 for row in coverage if row.get("coverage_status") == "likely_mapping")
+    missing_input = sum(1 for row in coverage if row.get("coverage_status") == "missing_input_sample")
+    corruption_only = sum(1 for row in coverage if row.get("coverage_status") == "corruption_only_missing")
+    transformed_only = len(output_only)
+
+    cards = [
+        ("Total reference stat families", total_reference),
+        ("Captured input families", captured_input),
+        ("Confirmed mappings", confirmed_mappings),
+        ("Likely mappings", likely_mappings),
+        ("Missing input samples", missing_input),
+        ("Transformed-output-only families", transformed_only),
+        ("Corruption-only missing", corruption_only),
+    ]
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>{esc(label)}</div><div class=\"num\">{esc(value)}</div></div>"
+        for label, value in cards
+    ) + "</div>"
+
+
+def render_glove_coverage_table(coverage: list[dict[str, str]]) -> str:
+    if not coverage:
+        return "<p><em>No glove modifier reference pool loaded yet.</em></p>"
+
+    rows = []
+    for row in coverage:
+        rows.append(
+            f"""
+            <tr>
+                <td><code>{esc(row.get('stat_template', ''))}</code></td>
+                <td>{esc(row.get('modifier_names', ''))}</td>
+                <td>{esc(row.get('glove_classes', ''))}</td>
+                <td>{esc(row.get('pool_types', ''))}</td>
+                <td>{esc(row.get('coverage_status', ''))}</td>
+                <td>{esc(row.get('sample_ids', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>Stat template</th>
+                <th>Modifier names</th>
+                <th>Glove classes</th>
+                <th>Pool types</th>
+                <th>Coverage status</th>
+                <th>Samples</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
+def render_transformed_output_only(output_only: list[dict[str, str]]) -> str:
+    if not output_only:
+        return "<p><em>No transformed output-only stats found.</em></p>"
+
+    rows = []
+    for row in output_only:
+        rows.append(
+            f"""
+            <tr>
+                <td><code>{esc(row.get('after_stat_template', ''))}</code></td>
+                <td>{esc(row.get('example_after_stats', ''))}</td>
+                <td>{esc(row.get('sample_count', '0'))}</td>
+                <td>{esc(row.get('sample_ids', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>After stat template</th>
+                <th>Example after stats</th>
+                <th>Sample count</th>
+                <th>Sample ids</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
 def render_html(pairs: list[dict]) -> str:
     total = len(pairs)
     status_counts = Counter(p["uid_status"] for p in pairs)
@@ -355,6 +468,9 @@ def render_html(pairs: list[dict]) -> str:
         for p in pairs
         if "Fists of Stone" in p["after_text"]
     )
+
+    coverage = load_glove_coverage()
+    transformed_only = load_transformed_output_only()
 
     rows = []
 
@@ -637,10 +753,21 @@ Mapping candidates are derived from explicit modifier block position and should 
     {render_mapping_candidates(load_mapping_candidates())}
 </section>
 
-<p>
-Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, and <code>mapping_families.csv</code>.
-</p>
+<section>
+    <h2>Glove modifier pool coverage</h2>
+    <p>This section compares the PoE2DB glove modifier pool against captured Stonefist samples and shows which reference families are covered.</p>
+    <div class="coverage-summary">{render_glove_coverage_summary(coverage, transformed_only)}</div>
+    {render_glove_coverage_table(coverage)}
+</section>
 
+<section>
+    <h2>Transformed output-only stat templates</h2>
+        <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool.</p>
+        {render_transformed_output_only(transformed_only)}
+    </section>
+
+    <p>
+    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, and <code>transformed_output_only.csv</code>.
 <div>
     <input id="search" placeholder="Filter by mod, base, test id, resistance, onslaught, leech, unique, etc..." />
 

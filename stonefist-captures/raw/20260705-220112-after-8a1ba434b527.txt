@@ -1,0 +1,32 @@
+Item Class: Gloves
+Rarity: Rare
+Sorrow Vise
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Sockets: S 
+--------
+Item Level: 81
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Prefix Modifier "Electrocuting" — Elemental, Lightning, Attack }
+Attacks Gain 22(21-23)% of Damage as Extra Lightning Damage
+{ Prefix Modifier "Gleaming" — Physical, Attack }
+Attacks Gain 14% of Damage as Extra Physical Damage
+{ Prefix Modifier "Dauntless" — Evasion, Energy Shield }
+15(15-16)% more Global Evasion Rating and Energy Shield
+{ Suffix Modifier "of the Lightning" — Elemental, Lightning, Resistance }
++2% to Maximum Lightning Resistance
++36(36-40)% to Lightning Resistance
+{ Suffix Modifier "of the Jaguar" }
++42(41-45)% Surpassing chance to fire an additional Projectile
+{ Suffix Modifier "of the Polar Bear" — Elemental, Cold, Resistance }
++2% to Maximum Cold Resistance
++33(31-35)% to Cold Resistance
+--------
+Unmodifiable

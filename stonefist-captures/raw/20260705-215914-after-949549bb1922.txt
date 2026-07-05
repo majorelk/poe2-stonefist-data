@@ -1,0 +1,30 @@
+Item Class: Gloves
+Rarity: Unique
+Painter's Servant
+Fists of Stone
+--------
+Quality: +20% (augmented)
+Evasion Rating: 288 (augmented)
+Energy Shield: 96 (augmented)
+--------
+Sockets: S 
+--------
+Item Level: 70
+--------
++18% to Lightning Resistance (rune)
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Unique Modifier — Elemental, Fire, Cold, Lightning, Ailment }
+Physical damage from Hits Contributes to Flammability and
+Ignite Magnitudes, Freeze Buildup, and Shock Chance — Unscalable Value
+{ Unique Modifier — Damage, Physical, Elemental, Fire }
+Gain 13(6-15)% of Fire damage as Extra Physical damage
+{ Unique Modifier — Damage, Physical, Elemental, Cold }
+Gain 9(6-15)% of Cold damage as Extra Physical damage
+{ Unique Modifier — Damage, Physical, Elemental, Lightning }
+Gain 6(6-15)% of Lightning damage as Extra Physical damage
+--------
+Unmodifiable

@@ -1,0 +1,17 @@
+Item Class: Gloves
+Rarity: Magic
+Fists of Stone of Devouring
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 75
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Suffix Modifier "of Devouring" — Mana }
+Recover 2% of maximum Mana on Kill
+--------
+Unmodifiable

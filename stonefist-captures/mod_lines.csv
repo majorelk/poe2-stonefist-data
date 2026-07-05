@@ -1,0 +1,1534 @@
+test_id,category,side,line_number,mod_line
+STONEFIST-0001,rare,before,1,+18% to Lightning Resistance (rune)
+STONEFIST-0001,rare,before,2,"{ Prefix Modifier ""Hunter's"" (Tier: 3) — Attack }"
+STONEFIST-0001,rare,before,3,+336(237-346) to Accuracy Rating
+STONEFIST-0001,rare,before,4,"{ Prefix Modifier ""Cherub's"" (Tier: 1) — Evasion, Energy Shield }"
+STONEFIST-0001,rare,before,5,+66(65-78) to Evasion Rating
+STONEFIST-0001,rare,before,6,+25(22-25) to maximum Energy Shield
+STONEFIST-0001,rare,before,7,"{ Prefix Modifier ""Bard's"" (Tier: 3) — Life, Evasion, Energy Shield }"
+STONEFIST-0001,rare,before,8,27(27-32)% increased Evasion and Energy Shield
+STONEFIST-0001,rare,before,9,+27(26-32) to maximum Life
+STONEFIST-0001,rare,before,10,"{ Suffix Modifier ""of the Maelstrom"" (Tier: 3) — Elemental, Lightning, Resistance }"
+STONEFIST-0001,rare,before,11,+33(31-35)% to Lightning Resistance
+STONEFIST-0001,rare,before,12,"{ Suffix Modifier ""of Mastery"" (Tier: 2) — Attack, Speed }"
+STONEFIST-0001,rare,before,13,13(11-13)% increased Attack Speed
+STONEFIST-0001,rare,before,14,"{ Suffix Modifier ""of the Lamprey"" (Tier: 2) — Life, Physical, Attack }"
+STONEFIST-0001,rare,before,15,Leech 8.47(8-8.9)% of Physical Attack Damage as Life
+STONEFIST-0001,rare,after,1,+18% to Lightning Resistance (rune)
+STONEFIST-0001,rare,after,2,{ Implicit Modifier }
+STONEFIST-0001,rare,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0001,rare,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0001,rare,after,5,"{ Prefix Modifier ""Hunter's"" — Attack }"
+STONEFIST-0001,rare,after,6,30(30-32)% chance to Blind Enemies on Hit with Attacks
+STONEFIST-0001,rare,after,7,"{ Prefix Modifier ""Cherub's"" }"
+STONEFIST-0001,rare,after,8,Has +4 to Evasion Rating per player level
+STONEFIST-0001,rare,after,9,Has +1 to maximum Energy Shield per player level
+STONEFIST-0001,rare,after,10,"{ Prefix Modifier ""Bard's"" }"
+STONEFIST-0001,rare,after,11,"6% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0001,rare,after,12,"{ Suffix Modifier ""of the Maelstrom"" — Elemental, Lightning, Resistance }"
+STONEFIST-0001,rare,after,13,+2% to Maximum Lightning Resistance
+STONEFIST-0001,rare,after,14,+31(31-35)% to Lightning Resistance
+STONEFIST-0001,rare,after,15,"{ Suffix Modifier ""of Mastery"" }"
+STONEFIST-0001,rare,after,16,20(20-24)% chance to gain Onslaught for 4 seconds on Hit
+STONEFIST-0001,rare,after,17,"{ Suffix Modifier ""of the Lamprey"" — Life }"
+STONEFIST-0001,rare,after,18,Leech 13.34(12-13.9)% of Physical Attack Damage as Life
+STONEFIST-0001,rare,after,19,Leech Life 25(25-20)% slower
+STONEFIST-0001,rare,after,20,Unmodifiable
+STONEFIST-0002,rare,before,1,"{ Prefix Modifier ""Urchin's"" (Tier: 4) — Life, Armour }"
+STONEFIST-0002,rare,before,2,21(21-26)% increased Armour
+STONEFIST-0002,rare,before,3,+20(20-25) to maximum Life
+STONEFIST-0002,rare,before,4,"{ Prefix Modifier ""Blasting"" (Tier: 2) — Damage, Elemental, Fire, Attack }"
+STONEFIST-0002,rare,before,5,"{ Prefix Modifier ""Consistent"" (Tier: 5) — Attack }"
+STONEFIST-0002,rare,before,6,+151(124-167) to Accuracy Rating
+STONEFIST-0002,rare,before,7,"{ Suffix Modifier ""of Covering"" (Tier: 5) — Armour, Elemental }"
+STONEFIST-0002,rare,before,8,+18(14-19)% of Armour also applies to Elemental Damage
+STONEFIST-0002,rare,before,9,"{ Suffix Modifier ""of Renown"" (Tier: 1) — Attack, Speed }"
+STONEFIST-0002,rare,before,10,15(14-16)% increased Attack Speed
+STONEFIST-0002,rare,after,1,{ Implicit Modifier }
+STONEFIST-0002,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0002,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0002,rare,after,4,"{ Prefix Modifier ""Urchin's"" }"
+STONEFIST-0002,rare,after,5,"5% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0002,rare,after,6,"{ Prefix Modifier ""Blasting"" — Elemental, Fire, Attack }"
+STONEFIST-0002,rare,after,7,"{ Prefix Modifier ""Consistent"" — Attack }"
+STONEFIST-0002,rare,after,8,24(24-26)% chance to Blind Enemies on Hit with Attacks
+STONEFIST-0002,rare,after,9,"{ Suffix Modifier ""of Covering"" — Elemental, Fire, Cold, Lightning, Resistance }"
+STONEFIST-0002,rare,after,10,+11(10-12)% to all Elemental Resistances
+STONEFIST-0002,rare,after,11,"{ Suffix Modifier ""of Renown"" }"
+STONEFIST-0002,rare,after,12,30(26-30)% chance to gain Onslaught for 4 seconds on Hit
+STONEFIST-0002,rare,after,13,Unmodifiable
+STONEFIST-0003,magic,before,1,"{ Prefix Modifier ""Shocking"" (Tier: 3) — Damage, Elemental, Lightning, Attack }"
+STONEFIST-0003,magic,after,1,{ Implicit Modifier }
+STONEFIST-0003,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0003,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0003,magic,after,4,"{ Prefix Modifier ""Shocking"" — Elemental, Lightning, Attack }"
+STONEFIST-0003,magic,after,5,Unmodifiable
+STONEFIST-0004,magic,before,1,"{ Suffix Modifier ""of the Squall"" (Tier: 7) — Elemental, Lightning, Resistance }"
+STONEFIST-0004,magic,before,2,+15(11-15)% to Lightning Resistance
+STONEFIST-0004,magic,after,1,{ Implicit Modifier }
+STONEFIST-0004,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0004,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0004,magic,after,4,"{ Suffix Modifier ""of the Squall"" — Elemental, Lightning, Resistance }"
+STONEFIST-0004,magic,after,5,+1% to Maximum Lightning Resistance
+STONEFIST-0004,magic,after,6,+19(16-20)% to Lightning Resistance
+STONEFIST-0004,magic,after,7,Unmodifiable
+STONEFIST-0005,rare,before,1,+18% to Cold Resistance (rune)
+STONEFIST-0005,rare,before,2,"{ Prefix Modifier ""Nightmare's"" (Tier: 2) — Evasion }"
+STONEFIST-0005,rare,before,3,80(80-91)% increased Evasion Rating
+STONEFIST-0005,rare,before,4,"{ Prefix Modifier ""Incinerating"" (Tier: 3) — Damage, Elemental, Fire, Attack }"
+STONEFIST-0005,rare,before,5,"{ Prefix Modifier ""Frozen"" (Tier: 4) — Damage, Elemental, Cold, Attack }"
+STONEFIST-0005,rare,before,6,"{ Suffix Modifier ""of the Desperate"" (Tier: 1) — Mana, Physical, Attack }"
+STONEFIST-0005,rare,before,7,Leech 8.47(8-8.9)% of Physical Attack Damage as Mana
+STONEFIST-0005,rare,before,8,"{ Suffix Modifier ""of Nourishment"" (Tier: 1) — Life, Attack }"
+STONEFIST-0005,rare,before,9,"{ Suffix Modifier ""of the Lamprey"" (Tier: 2) — Life, Physical, Attack }"
+STONEFIST-0005,rare,before,10,Leech 8.26(8-8.9)% of Physical Attack Damage as Life
+STONEFIST-0005,rare,after,1,+18% to Cold Resistance (rune)
+STONEFIST-0005,rare,after,2,{ Implicit Modifier }
+STONEFIST-0005,rare,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0005,rare,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0005,rare,after,5,"{ Prefix Modifier ""Nightmare's"" — Evasion, Energy Shield }"
+STONEFIST-0005,rare,after,6,17(17-18)% more Global Evasion Rating and Energy Shield
+STONEFIST-0005,rare,after,7,"{ Prefix Modifier ""Incinerating"" — Elemental, Fire, Attack }"
+STONEFIST-0005,rare,after,8,"{ Prefix Modifier ""Frozen"" — Elemental, Cold, Attack }"
+STONEFIST-0005,rare,after,9,"{ Suffix Modifier ""of the Desperate"" — Mana }"
+STONEFIST-0005,rare,after,10,Leech 12.26(12-13)% of Physical Attack Damage as Mana
+STONEFIST-0005,rare,after,11,Leech Mana 22(25-20)% slower
+STONEFIST-0005,rare,after,12,"{ Suffix Modifier ""of Nourishment"" — Life }"
+STONEFIST-0005,rare,after,13,"{ Suffix Modifier ""of the Lamprey"" — Life }"
+STONEFIST-0005,rare,after,14,Leech 13.17(12-13.9)% of Physical Attack Damage as Life
+STONEFIST-0005,rare,after,15,Leech Life 21(25-20)% slower
+STONEFIST-0005,rare,after,16,Unmodifiable
+STONEFIST-0006,normal,after,1,{ Implicit Modifier }
+STONEFIST-0006,normal,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0006,normal,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0006,normal,after,4,Unmodifiable
+STONEFIST-0007,magic,before,1,"{ Suffix Modifier ""of the Lost"" (Tier: 6) — Chaos, Resistance }"
+STONEFIST-0007,magic,before,2,+7(4-7)% to Chaos Resistance
+STONEFIST-0007,magic,after,1,{ Implicit Modifier }
+STONEFIST-0007,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0007,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0007,magic,after,4,"{ Suffix Modifier ""of the Lost"" — Chaos, Resistance }"
+STONEFIST-0007,magic,after,5,+1% to Maximum Chaos Resistance
+STONEFIST-0007,magic,after,6,+7(6-9)% to Chaos Resistance
+STONEFIST-0007,magic,after,7,Unmodifiable
+STONEFIST-0008,magic,before,1,"{ Prefix Modifier ""Healthy"" (Tier: 8) — Life }"
+STONEFIST-0008,magic,before,2,+25(20-29) to maximum Life
+STONEFIST-0008,magic,before,3,"{ Suffix Modifier ""of Valour"" (Tier: 3) — Life }"
+STONEFIST-0008,magic,after,1,{ Implicit Modifier }
+STONEFIST-0008,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0008,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0008,magic,after,4,"{ Prefix Modifier ""Healthy"" }"
+STONEFIST-0008,magic,after,5,6% less damage taken while on Low Life
+STONEFIST-0008,magic,after,6,"{ Suffix Modifier ""of Valour"" — Life }"
+STONEFIST-0008,magic,after,7,Unmodifiable
+STONEFIST-0009,rare,before,1,"{ Prefix Modifier ""Opalescent"" (Tier: 3) — Mana }"
+STONEFIST-0009,rare,before,2,+80(80-89) to maximum Mana
+STONEFIST-0009,rare,before,3,"{ Prefix Modifier ""Frozen"" (Tier: 4) — Damage, Elemental, Cold, Attack }"
+STONEFIST-0009,rare,before,4,"{ Suffix Modifier ""of the Drake"" (Tier: 6) — Elemental, Fire, Resistance }"
+STONEFIST-0009,rare,before,5,+19(16-20)% to Fire Resistance
+STONEFIST-0009,rare,before,6,"{ Suffix Modifier ""of the Parched"" (Tier: 4) — Mana, Physical, Attack }"
+STONEFIST-0009,rare,before,7,Leech 5.78(5-5.9)% of Physical Attack Damage as Mana
+STONEFIST-0009,rare,after,1,{ Implicit Modifier }
+STONEFIST-0009,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0009,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0009,rare,after,4,"{ Prefix Modifier ""Opalescent"" }"
+STONEFIST-0009,rare,after,5,22(22-23)% more Attack damage while on Low Mana
+STONEFIST-0009,rare,after,6,"{ Prefix Modifier ""Frozen"" — Elemental, Cold, Attack }"
+STONEFIST-0009,rare,after,7,"{ Suffix Modifier ""of the Drake"" — Elemental, Fire, Resistance }"
+STONEFIST-0009,rare,after,8,+1% to Maximum Fire Resistance
+STONEFIST-0009,rare,after,9,+24(21-25)% to Fire Resistance
+STONEFIST-0009,rare,after,10,"{ Suffix Modifier ""of the Parched"" — Mana }"
+STONEFIST-0009,rare,after,11,Leech 8.2(8-8.9)% of Physical Attack Damage as Mana
+STONEFIST-0009,rare,after,12,Leech Mana 20(25-20)% slower
+STONEFIST-0009,rare,after,13,Unmodifiable
+STONEFIST-0010,magic,before,1,"{ Prefix Modifier ""Polished"" (Tier: 7) — Damage, Physical, Attack }"
+STONEFIST-0010,magic,before,2,"{ Suffix Modifier ""of the Cloud"" (Tier: 8) — Elemental, Lightning, Resistance }"
+STONEFIST-0010,magic,before,3,+9(6-10)% to Lightning Resistance
+STONEFIST-0010,magic,after,1,{ Implicit Modifier }
+STONEFIST-0010,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0010,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0010,magic,after,4,"{ Prefix Modifier ""Polished"" — Physical, Attack }"
+STONEFIST-0010,magic,after,5,"{ Suffix Modifier ""of the Cloud"" — Elemental, Lightning, Resistance }"
+STONEFIST-0010,magic,after,6,+1% to Maximum Lightning Resistance
+STONEFIST-0010,magic,after,7,+12(11-15)% to Lightning Resistance
+STONEFIST-0010,magic,after,8,Unmodifiable
+STONEFIST-0011,magic,before,1,"{ Prefix Modifier ""Sanguine"" (Tier: 7) — Life }"
+STONEFIST-0011,magic,before,2,+32(30-39) to maximum Life
+STONEFIST-0011,magic,before,3,"{ Suffix Modifier ""of the Drake"" (Tier: 6) — Elemental, Fire, Resistance }"
+STONEFIST-0011,magic,before,4,+20(16-20)% to Fire Resistance
+STONEFIST-0011,magic,after,1,{ Implicit Modifier }
+STONEFIST-0011,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0011,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0011,magic,after,4,"{ Prefix Modifier ""Sanguine"" }"
+STONEFIST-0011,magic,after,5,7% less damage taken while on Low Life
+STONEFIST-0011,magic,after,6,"{ Suffix Modifier ""of the Drake"" — Elemental, Fire, Resistance }"
+STONEFIST-0011,magic,after,7,+1% to Maximum Fire Resistance
+STONEFIST-0011,magic,after,8,+21(21-25)% to Fire Resistance
+STONEFIST-0011,magic,after,9,Unmodifiable
+STONEFIST-0012,rare,before,1,"{ Prefix Modifier ""Ephemeral"" (Tier: 4) — Evasion, Energy Shield }"
+STONEFIST-0012,rare,before,2,65(56-67)% increased Evasion and Energy Shield
+STONEFIST-0012,rare,before,3,"{ Prefix Modifier ""Opalescent"" (Tier: 3) — Mana }"
+STONEFIST-0012,rare,before,4,+87(80-89) to maximum Mana
+STONEFIST-0012,rare,before,5,"{ Prefix Modifier ""Steady"" (Tier: 4) — Attack }"
+STONEFIST-0012,rare,before,6,+231(168-236) to Accuracy Rating
+STONEFIST-0012,rare,before,7,"{ Suffix Modifier ""of Plunder"" (Tier: 3) }"
+STONEFIST-0012,rare,before,8,9(6-10)% increased Rarity of Items found
+STONEFIST-0012,rare,before,9,"{ Suffix Modifier ""of Curvation"" (Tier: 3) — Evasion }"
+STONEFIST-0012,rare,before,10,"{ Suffix Modifier ""of the Arid"" (Tier: 3) — Mana, Physical, Attack }"
+STONEFIST-0012,rare,before,11,Leech 6.04(6-6.9)% of Physical Attack Damage as Mana
+STONEFIST-0012,rare,after,1,{ Implicit Modifier }
+STONEFIST-0012,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0012,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0012,rare,after,4,"{ Prefix Modifier ""Ephemeral"" — Evasion, Energy Shield }"
+STONEFIST-0012,rare,after,5,13(13-14)% more Global Evasion Rating and Energy Shield
+STONEFIST-0012,rare,after,6,"{ Prefix Modifier ""Opalescent"" }"
+STONEFIST-0012,rare,after,7,23(22-23)% more Attack damage while on Low Mana
+STONEFIST-0012,rare,after,8,"{ Prefix Modifier ""Steady"" — Attack }"
+STONEFIST-0012,rare,after,9,27(27-29)% chance to Blind Enemies on Hit with Attacks
+STONEFIST-0012,rare,after,10,"{ Suffix Modifier ""of Plunder"" }"
+STONEFIST-0012,rare,after,11,19(15-20)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0012,rare,after,12,"{ Suffix Modifier ""of Curvation"" }"
+STONEFIST-0012,rare,after,13,"{ Suffix Modifier ""of the Arid"" — Mana }"
+STONEFIST-0012,rare,after,14,Leech 9.94(9-10.9)% of Physical Attack Damage as Mana
+STONEFIST-0012,rare,after,15,Leech Mana 25(25-20)% slower
+STONEFIST-0012,rare,after,16,Unmodifiable
+STONEFIST-0013,magic,before,1,"{ Prefix Modifier ""Annealed"" (Tier: 4) — Damage, Physical, Attack }"
+STONEFIST-0013,magic,after,1,{ Implicit Modifier }
+STONEFIST-0013,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0013,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0013,magic,after,4,"{ Prefix Modifier ""Annealed"" — Physical, Attack }"
+STONEFIST-0013,magic,after,5,Unmodifiable
+STONEFIST-0014,normal,after,1,{ Implicit Modifier }
+STONEFIST-0014,normal,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0014,normal,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0014,normal,after,4,Unmodifiable
+STONEFIST-0015,magic,before,1,"{ Prefix Modifier ""Frosted"" (Tier: 9) — Damage, Elemental, Cold, Attack }"
+STONEFIST-0015,magic,before,2,"{ Suffix Modifier ""of Combat"" (Tier: 2) — Attack }"
+STONEFIST-0015,magic,before,3,+1 to Level of all Melee Skills
+STONEFIST-0015,magic,after,1,{ Implicit Modifier }
+STONEFIST-0015,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0015,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0015,magic,after,4,"{ Prefix Modifier ""Frosted"" — Elemental, Cold, Attack }"
+STONEFIST-0015,magic,after,5,"{ Suffix Modifier ""of Combat"" — Gem }"
+STONEFIST-0015,magic,after,6,+12(10-12)% to Quality of all Skills
+STONEFIST-0015,magic,after,7,Unmodifiable
+STONEFIST-0016,magic,before,1,"{ Prefix Modifier ""Frozen"" (Tier: 4) — Damage, Elemental, Cold, Attack }"
+STONEFIST-0016,magic,before,2,"{ Suffix Modifier ""of Mastery"" (Tier: 2) — Attack, Speed }"
+STONEFIST-0016,magic,before,3,12(11-13)% increased Attack Speed
+STONEFIST-0016,magic,after,1,{ Implicit Modifier }
+STONEFIST-0016,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0016,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0016,magic,after,4,"{ Prefix Modifier ""Frozen"" — Elemental, Cold, Attack }"
+STONEFIST-0016,magic,after,5,"{ Suffix Modifier ""of Mastery"" }"
+STONEFIST-0016,magic,after,6,23(20-24)% chance to gain Onslaught for 4 seconds on Hit
+STONEFIST-0016,magic,after,7,Unmodifiable
+STONEFIST-0017,rare,before,1,"{ Prefix Modifier ""Deliberate"" (Tier: 6) — Attack }"
+STONEFIST-0017,rare,before,2,+104(85-123) to Accuracy Rating
+STONEFIST-0017,rare,before,3,"{ Prefix Modifier ""Monk's"" (Tier: 6) — Life, Energy Shield }"
+STONEFIST-0017,rare,before,4,13(6-13)% increased Energy Shield
+STONEFIST-0017,rare,before,5,+8(7-10) to maximum Life
+STONEFIST-0017,rare,before,6,"{ Suffix Modifier ""of the Polar Bear"" (Tier: 3) — Elemental, Cold, Resistance }"
+STONEFIST-0017,rare,before,7,+35(31-35)% to Cold Resistance
+STONEFIST-0017,rare,before,8,"{ Suffix Modifier ""of Rage"" (Tier: 3) — Damage, Critical }"
+STONEFIST-0017,rare,before,9,23(20-24)% increased Critical Damage Bonus
+STONEFIST-0017,rare,after,1,{ Implicit Modifier }
+STONEFIST-0017,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0017,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0017,rare,after,4,"{ Prefix Modifier ""Deliberate"" — Attack }"
+STONEFIST-0017,rare,after,5,23(21-23)% chance to Blind Enemies on Hit with Attacks
+STONEFIST-0017,rare,after,6,"{ Prefix Modifier ""Monk's"" }"
+STONEFIST-0017,rare,after,7,"3% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0017,rare,after,8,"{ Suffix Modifier ""of the Polar Bear"" — Elemental, Cold, Resistance }"
+STONEFIST-0017,rare,after,9,+2% to Maximum Cold Resistance
+STONEFIST-0017,rare,after,10,+32(31-35)% to Cold Resistance
+STONEFIST-0017,rare,after,11,"{ Suffix Modifier ""of Rage"" — Critical }"
+STONEFIST-0017,rare,after,12,+1.8(1.6-2)% to Critical Hit Chance
+STONEFIST-0017,rare,after,13,Unmodifiable
+STONEFIST-0018,rare,before,1,+18% to Lightning Resistance (rune)
+STONEFIST-0018,rare,before,2,"{ Prefix Modifier ""Illusory"" (Tier: 1) — Evasion, Energy Shield }"
+STONEFIST-0018,rare,before,3,100(92-100)% increased Evasion and Energy Shield
+STONEFIST-0018,rare,before,4,"{ Prefix Modifier ""Freezing"" (Tier: 5) — Damage, Elemental, Cold, Attack }"
+STONEFIST-0018,rare,before,5,"{ Prefix Modifier ""Chalybeous"" (Tier: 1) — Mana }"
+STONEFIST-0018,rare,before,6,+108(105-124) to maximum Mana
+STONEFIST-0018,rare,before,7,"{ Suffix Modifier ""of the Yeti"" (Tier: 5) — Elemental, Cold, Resistance }"
+STONEFIST-0018,rare,before,8,+25(21-25)% to Cold Resistance
+STONEFIST-0018,rare,before,9,"{ Suffix Modifier ""of the Sage"" (Tier: 3) — Attribute }"
+STONEFIST-0018,rare,before,10,+27(25-27) to Intelligence
+STONEFIST-0018,rare,after,1,+18% to Lightning Resistance (rune)
+STONEFIST-0018,rare,after,2,{ Implicit Modifier }
+STONEFIST-0018,rare,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0018,rare,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0018,rare,after,5,"{ Prefix Modifier ""Illusory"" — Evasion, Energy Shield }"
+STONEFIST-0018,rare,after,6,20(19-20)% more Global Evasion Rating and Energy Shield
+STONEFIST-0018,rare,after,7,"{ Prefix Modifier ""Freezing"" — Elemental, Cold, Attack }"
+STONEFIST-0018,rare,after,8,"{ Prefix Modifier ""Chalybeous"" }"
+STONEFIST-0018,rare,after,9,26(26-27)% more Attack damage while on Low Mana
+STONEFIST-0018,rare,after,10,"{ Suffix Modifier ""of the Yeti"" — Elemental, Cold, Resistance }"
+STONEFIST-0018,rare,after,11,+2% to Maximum Cold Resistance
+STONEFIST-0018,rare,after,12,+22(21-25)% to Cold Resistance
+STONEFIST-0018,rare,after,13,"{ Suffix Modifier ""of the Sage"" }"
+STONEFIST-0018,rare,after,14,28(25-28)% increased Cooldown Recovery Rate
+STONEFIST-0018,rare,after,15,Unmodifiable
+STONEFIST-0019,rare,before,1,"{ Prefix Modifier ""Fortified"" (Tier: 4) — Armour }"
+STONEFIST-0019,rare,before,2,+80(78-98) to Armour
+STONEFIST-0019,rare,before,3,"{ Prefix Modifier ""Scorching"" (Tier: 4) — Damage, Elemental, Fire, Attack }"
+STONEFIST-0019,rare,before,4,"{ Prefix Modifier ""Athlete's"" (Tier: 1) — Life }"
+STONEFIST-0019,rare,before,5,+121(120-149) to maximum Life
+STONEFIST-0019,rare,before,6,"{ Suffix Modifier ""of the Drake"" (Tier: 6) — Elemental, Fire, Resistance }"
+STONEFIST-0019,rare,before,7,+16(16-20)% to Fire Resistance
+STONEFIST-0019,rare,after,1,{ Implicit Modifier }
+STONEFIST-0019,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0019,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0019,rare,after,4,"{ Prefix Modifier ""Fortified"" }"
+STONEFIST-0019,rare,after,5,Has +2 to Evasion Rating per player level
+STONEFIST-0019,rare,after,6,Has +1 to maximum Energy Shield per player level
+STONEFIST-0019,rare,after,7,"{ Prefix Modifier ""Scorching"" — Elemental, Fire, Attack }"
+STONEFIST-0019,rare,after,8,"{ Prefix Modifier ""Athlete's"" }"
+STONEFIST-0019,rare,after,9,13% less damage taken while on Low Life
+STONEFIST-0019,rare,after,10,"{ Suffix Modifier ""of the Drake"" — Elemental, Fire, Resistance }"
+STONEFIST-0019,rare,after,11,+1% to Maximum Fire Resistance
+STONEFIST-0019,rare,after,12,+23(21-25)% to Fire Resistance
+STONEFIST-0019,rare,after,13,Unmodifiable
+STONEFIST-0020,rare,before,1,"{ Prefix Modifier ""Druid's"" (Tier: 4) — Life, Armour, Energy Shield }"
+STONEFIST-0020,rare,before,2,22(21-26)% increased Armour and Energy Shield
+STONEFIST-0020,rare,before,3,+21(20-25) to maximum Life
+STONEFIST-0020,rare,before,4,"{ Prefix Modifier ""Glaciated"" (Tier: 3) — Damage, Elemental, Cold, Attack }"
+STONEFIST-0020,rare,before,5,"{ Suffix Modifier ""of Combat"" (Tier: 2) — Attack }"
+STONEFIST-0020,rare,before,6,+1 to Level of all Melee Skills
+STONEFIST-0020,rare,before,7,"{ Suffix Modifier ""of the Drake"" (Tier: 6) — Elemental, Fire, Resistance }"
+STONEFIST-0020,rare,before,8,+17(16-20)% to Fire Resistance
+STONEFIST-0020,rare,after,1,{ Implicit Modifier }
+STONEFIST-0020,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0020,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0020,rare,after,4,"{ Prefix Modifier ""Druid's"" }"
+STONEFIST-0020,rare,after,5,"5% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0020,rare,after,6,"{ Prefix Modifier ""Glaciated"" — Elemental, Cold, Attack }"
+STONEFIST-0020,rare,after,7,"{ Suffix Modifier ""of Combat"" — Gem }"
+STONEFIST-0020,rare,after,8,+10(10-12)% to Quality of all Skills
+STONEFIST-0020,rare,after,9,"{ Suffix Modifier ""of the Drake"" — Elemental, Fire, Resistance }"
+STONEFIST-0020,rare,after,10,+1% to Maximum Fire Resistance
+STONEFIST-0020,rare,after,11,+22(21-25)% to Fire Resistance
+STONEFIST-0020,rare,after,12,Unmodifiable
+STONEFIST-0021,rare,before,1,"{ Prefix Modifier ""Cherub's"" (Tier: 1) — Evasion, Energy Shield }"
+STONEFIST-0021,rare,before,2,+77(65-78) to Evasion Rating
+STONEFIST-0021,rare,before,3,+22(22-25) to maximum Energy Shield
+STONEFIST-0021,rare,before,4,"{ Prefix Modifier ""Robust"" (Tier: 4) — Life }"
+STONEFIST-0021,rare,before,5,+79(70-84) to maximum Life
+STONEFIST-0021,rare,before,6,"{ Prefix Modifier ""Gleaming"" (Tier: 5) — Damage, Physical, Attack }"
+STONEFIST-0021,rare,before,7,"{ Suffix Modifier ""of the Arid"" (Tier: 3) — Mana, Physical, Attack }"
+STONEFIST-0021,rare,before,8,Leech 6.41(6-6.9)% of Physical Attack Damage as Mana
+STONEFIST-0021,rare,before,9,"{ Suffix Modifier ""of the Walrus"" (Tier: 4) — Elemental, Cold, Resistance }"
+STONEFIST-0021,rare,before,10,+26(26-30)% to Cold Resistance
+STONEFIST-0021,rare,before,11,"{ Suffix Modifier ""of the Remora"" (Tier: 3) — Life, Physical, Attack }"
+STONEFIST-0021,rare,before,12,Leech 7.24(7-7.9)% of Physical Attack Damage as Life
+STONEFIST-0021,rare,after,1,{ Implicit Modifier }
+STONEFIST-0021,rare,after,2,Has +2 to Evasion Rating per player level
+STONEFIST-0021,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0021,rare,after,4,Has +1 to maximum Runic Ward per player level
+STONEFIST-0021,rare,after,5,"{ Prefix Modifier ""Cherub's"" }"
+STONEFIST-0021,rare,after,6,Has +4 to Evasion Rating per player level
+STONEFIST-0021,rare,after,7,Has +1 to maximum Energy Shield per player level
+STONEFIST-0021,rare,after,8,"{ Prefix Modifier ""Robust"" }"
+STONEFIST-0021,rare,after,9,10% less damage taken while on Low Life
+STONEFIST-0021,rare,after,10,"{ Prefix Modifier ""Gleaming"" — Physical, Attack }"
+STONEFIST-0021,rare,after,11,"{ Suffix Modifier ""of the Arid"" — Mana }"
+STONEFIST-0021,rare,after,12,Leech 10.6(9-10.9)% of Physical Attack Damage as Mana
+STONEFIST-0021,rare,after,13,Leech Mana 23(25-20)% slower
+STONEFIST-0021,rare,after,14,"{ Suffix Modifier ""of the Walrus"" — Elemental, Cold, Resistance }"
+STONEFIST-0021,rare,after,15,+2% to Maximum Cold Resistance
+STONEFIST-0021,rare,after,16,+28(26-30)% to Cold Resistance
+STONEFIST-0021,rare,after,17,"{ Suffix Modifier ""of the Remora"" — Life }"
+STONEFIST-0021,rare,after,18,Leech 11.32(11-11.9)% of Physical Attack Damage as Life
+STONEFIST-0021,rare,after,19,Leech Life 24(25-20)% slower
+STONEFIST-0021,rare,after,20,Unmodifiable
+STONEFIST-0022,magic,before,1,"{ Suffix Modifier ""of Devouring"" (Tier: 2) — Mana }"
+STONEFIST-0022,magic,after,1,{ Implicit Modifier }
+STONEFIST-0022,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0022,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0022,magic,after,4,"{ Suffix Modifier ""of Devouring"" — Mana }"
+STONEFIST-0022,magic,after,5,Unmodifiable
+STONEFIST-0023,magic,before,1,"{ Prefix Modifier ""Hero's"" (Tier: 2) — Armour, Evasion }"
+STONEFIST-0023,magic,before,2,80(80-91)% increased Armour and Evasion
+STONEFIST-0023,magic,before,3,"{ Suffix Modifier ""of the Lightning"" (Tier: 2) — Elemental, Lightning, Resistance }"
+STONEFIST-0023,magic,before,4,+38(36-40)% to Lightning Resistance
+STONEFIST-0023,magic,after,1,{ Implicit Modifier }
+STONEFIST-0023,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0023,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0023,magic,after,4,"{ Prefix Modifier ""Hero's"" — Evasion, Energy Shield }"
+STONEFIST-0023,magic,after,5,18(17-18)% more Global Evasion Rating and Energy Shield
+STONEFIST-0023,magic,after,6,"{ Suffix Modifier ""of the Lightning"" — Elemental, Lightning, Resistance }"
+STONEFIST-0023,magic,after,7,+2% to Maximum Lightning Resistance
+STONEFIST-0023,magic,after,8,+37(36-40)% to Lightning Resistance
+STONEFIST-0023,magic,after,9,Unmodifiable
+STONEFIST-0024,rare,before,1,"{ Prefix Modifier ""Virile"" (Tier: 2) — Life }"
+STONEFIST-0024,rare,before,2,+109(100-119) to maximum Life
+STONEFIST-0024,rare,before,3,"{ Prefix Modifier ""Azure"" (Tier: 7) — Mana }"
+STONEFIST-0024,rare,before,4,+25(25-34) to maximum Mana
+STONEFIST-0024,rare,before,5,"{ Prefix Modifier ""Arcing"" (Tier: 4) — Damage, Elemental, Lightning, Attack }"
+STONEFIST-0024,rare,before,6,"{ Suffix Modifier ""of the Furnace"" (Tier: 4) — Elemental, Fire, Resistance }"
+STONEFIST-0024,rare,before,7,+30(26-30)% to Fire Resistance
+STONEFIST-0024,rare,before,8,"{ Suffix Modifier ""of the Fox"" (Tier: 7) — Attribute }"
+STONEFIST-0024,rare,before,9,+16(13-16) to Dexterity
+STONEFIST-0024,rare,before,10,"{ Suffix Modifier ""of Raiding"" (Tier: 2) }"
+STONEFIST-0024,rare,before,11,12(11-14)% increased Rarity of Items found
+STONEFIST-0024,rare,after,1,{ Implicit Modifier }
+STONEFIST-0024,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0024,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0024,rare,after,4,"{ Prefix Modifier ""Virile"" }"
+STONEFIST-0024,rare,after,5,12% less damage taken while on Low Life
+STONEFIST-0024,rare,after,6,"{ Prefix Modifier ""Azure"" }"
+STONEFIST-0024,rare,after,7,15(14-15)% more Attack damage while on Low Mana
+STONEFIST-0024,rare,after,8,"{ Prefix Modifier ""Arcing"" — Elemental, Lightning, Attack }"
+STONEFIST-0024,rare,after,9,"{ Suffix Modifier ""of the Furnace"" — Elemental, Fire, Resistance }"
+STONEFIST-0024,rare,after,10,+2% to Maximum Fire Resistance
+STONEFIST-0024,rare,after,11,+26(26-30)% to Fire Resistance
+STONEFIST-0024,rare,after,12,"{ Suffix Modifier ""of the Fox"" }"
+STONEFIST-0024,rare,after,13,+26(23-26)% Surpassing chance to fire an additional Projectile
+STONEFIST-0024,rare,after,14,"{ Suffix Modifier ""of Raiding"" }"
+STONEFIST-0024,rare,after,15,24(21-25)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0024,rare,after,16,Unmodifiable
+STONEFIST-0025,magic,before,1,"{ Prefix Modifier ""Agile"" (Tier: 7) — Evasion }"
+STONEFIST-0025,magic,before,2,+15(11-18) to Evasion Rating
+STONEFIST-0025,magic,before,3,"{ Suffix Modifier ""of the Vampire"" (Tier: 1) — Life, Physical, Attack }"
+STONEFIST-0025,magic,before,4,Leech 9.61(9-9.9)% of Physical Attack Damage as Life
+STONEFIST-0025,magic,after,1,{ Implicit Modifier }
+STONEFIST-0025,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0025,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0025,magic,after,4,"{ Prefix Modifier ""Agile"" }"
+STONEFIST-0025,magic,after,5,Has +1 to Evasion Rating per player level
+STONEFIST-0025,magic,after,6,Has +1 to maximum Energy Shield per player level
+STONEFIST-0025,magic,after,7,"{ Suffix Modifier ""of the Vampire"" — Life }"
+STONEFIST-0025,magic,after,8,Leech 14.96(14-15)% of Physical Attack Damage as Life
+STONEFIST-0025,magic,after,9,Leech Life 21(25-20)% slower
+STONEFIST-0025,magic,after,10,Unmodifiable
+STONEFIST-0026,magic,before,1,"{ Suffix Modifier ""of Valour"" (Tier: 3) — Life }"
+STONEFIST-0026,magic,after,1,{ Implicit Modifier }
+STONEFIST-0026,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0026,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0026,magic,after,4,"{ Suffix Modifier ""of Valour"" — Life }"
+STONEFIST-0026,magic,after,5,Unmodifiable
+STONEFIST-0027,rare,before,1,+18% to Fire Resistance (rune)
+STONEFIST-0027,rare,before,2,"{ Prefix Modifier ""Teal"" (Tier: 6) — Mana }"
+STONEFIST-0027,rare,before,3,+45(35-54) to maximum Mana
+STONEFIST-0027,rare,before,4,"{ Prefix Modifier ""Sanguine"" (Tier: 7) — Life }"
+STONEFIST-0027,rare,before,5,+32(30-39) to maximum Life
+STONEFIST-0027,rare,before,6,"{ Prefix Modifier ""Unworldly"" (Tier: 5) — Evasion, Energy Shield }"
+STONEFIST-0027,rare,before,7,51(43-55)% increased Evasion and Energy Shield
+STONEFIST-0027,rare,before,8,"{ Suffix Modifier ""of the Storm"" (Tier: 6) — Elemental, Lightning, Resistance }"
+STONEFIST-0027,rare,before,9,+19(16-20)% to Lightning Resistance
+STONEFIST-0027,rare,before,10,"{ Suffix Modifier ""of Regrowth"" (Tier: 2) — Life, Attack }"
+STONEFIST-0027,rare,before,11,"{ Suffix Modifier ""of the Parched"" (Tier: 4) — Mana, Physical, Attack }"
+STONEFIST-0027,rare,before,12,Leech 5.87(5-5.9)% of Physical Attack Damage as Mana
+STONEFIST-0027,rare,after,1,+18% to Fire Resistance (rune)
+STONEFIST-0027,rare,after,2,{ Implicit Modifier }
+STONEFIST-0027,rare,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0027,rare,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0027,rare,after,5,"{ Prefix Modifier ""Teal"" }"
+STONEFIST-0027,rare,after,6,17(16-17)% more Attack damage while on Low Mana
+STONEFIST-0027,rare,after,7,"{ Prefix Modifier ""Sanguine"" }"
+STONEFIST-0027,rare,after,8,7% less damage taken while on Low Life
+STONEFIST-0027,rare,after,9,"{ Prefix Modifier ""Unworldly"" — Evasion, Energy Shield }"
+STONEFIST-0027,rare,after,10,11(11-12)% more Global Evasion Rating and Energy Shield
+STONEFIST-0027,rare,after,11,"{ Suffix Modifier ""of the Storm"" — Elemental, Lightning, Resistance }"
+STONEFIST-0027,rare,after,12,+1% to Maximum Lightning Resistance
+STONEFIST-0027,rare,after,13,+21(21-25)% to Lightning Resistance
+STONEFIST-0027,rare,after,14,"{ Suffix Modifier ""of Regrowth"" — Life }"
+STONEFIST-0027,rare,after,15,"{ Suffix Modifier ""of the Parched"" — Mana }"
+STONEFIST-0027,rare,after,16,Leech 8.09(8-8.9)% of Physical Attack Damage as Mana
+STONEFIST-0027,rare,after,17,Leech Mana 22(25-20)% slower
+STONEFIST-0027,rare,after,18,Unmodifiable
+STONEFIST-0028,rare,before,1,"{ Prefix Modifier ""Poet's"" (Tier: 6) — Life, Evasion, Energy Shield }"
+STONEFIST-0028,rare,before,2,11(6-13)% increased Evasion and Energy Shield
+STONEFIST-0028,rare,before,3,+8(7-10) to maximum Life
+STONEFIST-0028,rare,before,4,"{ Suffix Modifier ""of the Penguin"" (Tier: 7) — Elemental, Cold, Resistance }"
+STONEFIST-0028,rare,before,5,+13(11-15)% to Cold Resistance
+STONEFIST-0028,rare,before,6,"{ Suffix Modifier ""of Plunder"" (Tier: 3) }"
+STONEFIST-0028,rare,before,7,6(6-10)% increased Rarity of Items found
+STONEFIST-0028,rare,before,8,"{ Suffix Modifier ""of Combat"" (Tier: 2) — Attack }"
+STONEFIST-0028,rare,before,9,+1 to Level of all Melee Skills
+STONEFIST-0028,rare,after,1,{ Implicit Modifier }
+STONEFIST-0028,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0028,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0028,rare,after,4,"{ Prefix Modifier ""Poet's"" }"
+STONEFIST-0028,rare,after,5,"3% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0028,rare,after,6,"{ Suffix Modifier ""of the Penguin"" — Elemental, Cold, Resistance }"
+STONEFIST-0028,rare,after,7,+1% to Maximum Cold Resistance
+STONEFIST-0028,rare,after,8,+20(16-20)% to Cold Resistance
+STONEFIST-0028,rare,after,9,"{ Suffix Modifier ""of Plunder"" }"
+STONEFIST-0028,rare,after,10,15(15-20)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0028,rare,after,11,"{ Suffix Modifier ""of Combat"" — Gem }"
+STONEFIST-0028,rare,after,12,+10(10-12)% to Quality of all Skills
+STONEFIST-0028,rare,after,13,Unmodifiable
+STONEFIST-0029,rare,before,1,Onslaught Mitts
+STONEFIST-0029,rare,before,2,"{ Prefix Modifier ""Annealed"" (Tier: 4) — Damage, Physical, Attack }"
+STONEFIST-0029,rare,before,3,"{ Prefix Modifier ""Glimmering"" (Tier: 6) — Energy Shield }"
+STONEFIST-0029,rare,before,4,+18(18-24) to maximum Energy Shield
+STONEFIST-0029,rare,before,5,"{ Suffix Modifier ""of Archaeology"" (Tier: 1) }"
+STONEFIST-0029,rare,before,6,17(15-18)% increased Rarity of Items found
+STONEFIST-0029,rare,before,7,"{ Suffix Modifier ""of the Pupil"" (Tier: 8) — Attribute }"
+STONEFIST-0029,rare,before,8,+5(5-8) to Intelligence
+STONEFIST-0029,rare,before,9,"{ Suffix Modifier ""of the Skilled"" (Tier: 2) }"
+STONEFIST-0029,rare,before,10,30% reduced Attribute Requirements
+STONEFIST-0029,rare,after,1,Onslaught Mitts
+STONEFIST-0029,rare,after,2,{ Implicit Modifier }
+STONEFIST-0029,rare,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0029,rare,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0029,rare,after,5,"{ Prefix Modifier ""Annealed"" — Physical, Attack }"
+STONEFIST-0029,rare,after,6,"{ Prefix Modifier ""Glimmering"" }"
+STONEFIST-0029,rare,after,7,Has +1 to Evasion Rating per player level
+STONEFIST-0029,rare,after,8,Has +1 to maximum Energy Shield per player level
+STONEFIST-0029,rare,after,9,"{ Suffix Modifier ""of Archaeology"" }"
+STONEFIST-0029,rare,after,10,30(26-30)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0029,rare,after,11,"{ Suffix Modifier ""of the Pupil"" }"
+STONEFIST-0029,rare,after,12,8(5-8)% increased Cooldown Recovery Rate
+STONEFIST-0029,rare,after,13,"{ Suffix Modifier ""of the Skilled"" — Attribute }"
+STONEFIST-0029,rare,after,14,+24(21-25) to all Attributes
+STONEFIST-0029,rare,after,15,Unmodifiable
+STONEFIST-0030,magic,before,1,"{ Prefix Modifier ""Ingrained"" (Tier: 6) — Armour, Energy Shield }"
+STONEFIST-0030,magic,before,2,32(27-42)% increased Armour and Energy Shield
+STONEFIST-0030,magic,before,3,"{ Suffix Modifier ""of the Lynx"" (Tier: 8) — Attribute }"
+STONEFIST-0030,magic,before,4,+10(9-12) to Dexterity
+STONEFIST-0030,magic,after,1,{ Implicit Modifier }
+STONEFIST-0030,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0030,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0030,magic,after,4,"{ Prefix Modifier ""Ingrained"" — Evasion, Energy Shield }"
+STONEFIST-0030,magic,after,5,10(9-10)% more Global Evasion Rating and Energy Shield
+STONEFIST-0030,magic,after,6,"{ Suffix Modifier ""of the Lynx"" }"
+STONEFIST-0030,magic,after,7,+19(19-22)% Surpassing chance to fire an additional Projectile
+STONEFIST-0030,magic,after,8,Unmodifiable
+STONEFIST-0031,rare,before,1,"{ Prefix Modifier ""Burnished"" (Tier: 8) — Damage, Physical, Attack }"
+STONEFIST-0031,rare,before,2,"{ Prefix Modifier ""Hale"" (Tier: 9) — Life }"
+STONEFIST-0031,rare,before,3,+11(10-19) to maximum Life
+STONEFIST-0031,rare,before,4,"{ Suffix Modifier ""of the Seal"" (Tier: 8) — Elemental, Cold, Resistance }"
+STONEFIST-0031,rare,before,5,+10(6-10)% to Cold Resistance
+STONEFIST-0031,rare,before,6,"{ Suffix Modifier ""of the Fox"" (Tier: 7) — Attribute }"
+STONEFIST-0031,rare,before,7,+13(13-16) to Dexterity
+STONEFIST-0031,rare,before,8,"{ Suffix Modifier ""of Restoration"" (Tier: 3) — Life, Attack }"
+STONEFIST-0031,rare,after,1,{ Implicit Modifier }
+STONEFIST-0031,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0031,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0031,rare,after,4,"{ Prefix Modifier ""Burnished"" — Physical, Attack }"
+STONEFIST-0031,rare,after,5,"{ Prefix Modifier ""Hale"" }"
+STONEFIST-0031,rare,after,6,5% less damage taken while on Low Life
+STONEFIST-0031,rare,after,7,"{ Suffix Modifier ""of the Seal"" — Elemental, Cold, Resistance }"
+STONEFIST-0031,rare,after,8,+1% to Maximum Cold Resistance
+STONEFIST-0031,rare,after,9,+13(11-15)% to Cold Resistance
+STONEFIST-0031,rare,after,10,"{ Suffix Modifier ""of the Fox"" }"
+STONEFIST-0031,rare,after,11,+26(23-26)% Surpassing chance to fire an additional Projectile
+STONEFIST-0031,rare,after,12,"{ Suffix Modifier ""of Restoration"" — Life }"
+STONEFIST-0031,rare,after,13,Unmodifiable
+STONEFIST-0032,rare,before,1,"{ Prefix Modifier ""Polished"" (Tier: 7) — Damage, Physical, Attack }"
+STONEFIST-0032,rare,before,2,"{ Prefix Modifier ""Flea's"" (Tier: 6) — Life, Evasion }"
+STONEFIST-0032,rare,before,3,12(6-13)% increased Evasion Rating
+STONEFIST-0032,rare,before,4,+10(7-10) to maximum Life
+STONEFIST-0032,rare,before,5,"{ Suffix Modifier ""of the Squall"" (Tier: 7) — Elemental, Lightning, Resistance }"
+STONEFIST-0032,rare,before,6,+12(11-15)% to Lightning Resistance
+STONEFIST-0032,rare,after,1,{ Implicit Modifier }
+STONEFIST-0032,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0032,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0032,rare,after,4,"{ Prefix Modifier ""Polished"" — Physical, Attack }"
+STONEFIST-0032,rare,after,5,"{ Prefix Modifier ""Flea's"" }"
+STONEFIST-0032,rare,after,6,"3% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0032,rare,after,7,"{ Suffix Modifier ""of the Squall"" — Elemental, Lightning, Resistance }"
+STONEFIST-0032,rare,after,8,+1% to Maximum Lightning Resistance
+STONEFIST-0032,rare,after,9,+16(16-20)% to Lightning Resistance
+STONEFIST-0032,rare,after,10,Unmodifiable
+STONEFIST-0033,magic,before,1,"{ Prefix Modifier ""Deliberate"" (Tier: 6) — Attack }"
+STONEFIST-0033,magic,before,2,+116(85-123) to Accuracy Rating
+STONEFIST-0033,magic,before,3,"{ Suffix Modifier ""of Vanquishing"" (Tier: 4) — Life }"
+STONEFIST-0033,magic,after,1,{ Implicit Modifier }
+STONEFIST-0033,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0033,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0033,magic,after,4,"{ Prefix Modifier ""Deliberate"" — Attack }"
+STONEFIST-0033,magic,after,5,21(21-23)% chance to Blind Enemies on Hit with Attacks
+STONEFIST-0033,magic,after,6,"{ Suffix Modifier ""of Vanquishing"" — Life }"
+STONEFIST-0033,magic,after,7,Unmodifiable
+STONEFIST-0034,rare,before,1,"{ Prefix Modifier ""Haruspex's"" (Tier: 3) — Life, Armour, Energy Shield }"
+STONEFIST-0034,rare,before,2,31(27-32)% increased Armour and Energy Shield
+STONEFIST-0034,rare,before,3,+31(26-32) to maximum Life
+STONEFIST-0034,rare,before,4,"{ Suffix Modifier ""of the Goliath"" (Tier: 3) — Attribute }"
+STONEFIST-0034,rare,before,5,+27(25-27) to Strength
+STONEFIST-0034,rare,before,6,"{ Suffix Modifier ""of Combat"" (Tier: 2) — Attack }"
+STONEFIST-0034,rare,before,7,+1 to Level of all Melee Skills
+STONEFIST-0034,rare,before,8,"{ Suffix Modifier ""of Raiding"" (Tier: 2) }"
+STONEFIST-0034,rare,before,9,12(11-14)% increased Rarity of Items found
+STONEFIST-0034,rare,after,1,{ Implicit Modifier }
+STONEFIST-0034,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0034,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0034,rare,after,4,"{ Prefix Modifier ""Haruspex's"" }"
+STONEFIST-0034,rare,after,5,"6% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0034,rare,after,6,"{ Suffix Modifier ""of the Goliath"" — Attack }"
+STONEFIST-0034,rare,after,7,25(23-25)% increased Area of Effect for Attacks
+STONEFIST-0034,rare,after,8,"{ Suffix Modifier ""of Combat"" — Gem }"
+STONEFIST-0034,rare,after,9,+12(10-12)% to Quality of all Skills
+STONEFIST-0034,rare,after,10,"{ Suffix Modifier ""of Raiding"" }"
+STONEFIST-0034,rare,after,11,24(21-25)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0034,rare,after,12,Unmodifiable
+STONEFIST-0035,rare,before,1,"{ Prefix Modifier ""Auspex's"" (Tier: 5) — Life, Armour, Energy Shield }"
+STONEFIST-0035,rare,before,2,18(14-20)% increased Armour and Energy Shield
+STONEFIST-0035,rare,before,3,+11(11-19) to maximum Life
+STONEFIST-0035,rare,before,4,"{ Suffix Modifier ""of the Volcano"" (Tier: 3) — Elemental, Fire, Resistance }"
+STONEFIST-0035,rare,before,5,+35(31-35)% to Fire Resistance
+STONEFIST-0035,rare,before,6,"{ Suffix Modifier ""of Raiding"" (Tier: 2) }"
+STONEFIST-0035,rare,before,7,12(11-14)% increased Rarity of Items found
+STONEFIST-0035,rare,before,8,"{ Suffix Modifier ""of the Falcon"" (Tier: 6) — Attribute }"
+STONEFIST-0035,rare,before,9,+17(17-20) to Dexterity
+STONEFIST-0035,rare,after,1,{ Implicit Modifier }
+STONEFIST-0035,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0035,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0035,rare,after,4,"{ Prefix Modifier ""Auspex's"" }"
+STONEFIST-0035,rare,after,5,"4% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0035,rare,after,6,"{ Suffix Modifier ""of the Volcano"" — Elemental, Fire, Resistance }"
+STONEFIST-0035,rare,after,7,+2% to Maximum Fire Resistance
+STONEFIST-0035,rare,after,8,+32(31-35)% to Fire Resistance
+STONEFIST-0035,rare,after,9,"{ Suffix Modifier ""of Raiding"" }"
+STONEFIST-0035,rare,after,10,22(21-25)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0035,rare,after,11,"{ Suffix Modifier ""of the Falcon"" }"
+STONEFIST-0035,rare,after,12,+27(27-30)% Surpassing chance to fire an additional Projectile
+STONEFIST-0035,rare,after,13,Unmodifiable
+STONEFIST-0036,rare,before,1,+14% to Cold Resistance (rune)
+STONEFIST-0036,rare,before,2,"{ Prefix Modifier ""Nymph's"" (Tier: 3) — Evasion, Energy Shield }"
+STONEFIST-0036,rare,before,3,+12(11-41) to Evasion Rating
+STONEFIST-0036,rare,before,4,+10(9-15) to maximum Energy Shield
+STONEFIST-0036,rare,before,5,"{ Prefix Modifier ""Azure"" (Tier: 7) — Mana }"
+STONEFIST-0036,rare,before,6,+32(25-34) to maximum Mana
+STONEFIST-0036,rare,before,7,"{ Prefix Modifier ""Hale"" (Tier: 9) — Life }"
+STONEFIST-0036,rare,before,8,+19(10-19) to maximum Life
+STONEFIST-0036,rare,before,9,"{ Suffix Modifier ""of Skill"" (Tier: 4) — Attack, Speed }"
+STONEFIST-0036,rare,before,10,7(5-7)% increased Attack Speed
+STONEFIST-0036,rare,before,11,"{ Suffix Modifier ""of the Salamander"" (Tier: 7) — Elemental, Fire, Resistance }"
+STONEFIST-0036,rare,before,12,+14(11-15)% to Fire Resistance
+STONEFIST-0036,rare,before,13,"{ Suffix Modifier ""of the Seal"" (Tier: 8) — Elemental, Cold, Resistance }"
+STONEFIST-0036,rare,before,14,+8(6-10)% to Cold Resistance
+STONEFIST-0036,rare,after,1,+14% to Cold Resistance (rune)
+STONEFIST-0036,rare,after,2,{ Implicit Modifier }
+STONEFIST-0036,rare,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0036,rare,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0036,rare,after,5,"{ Prefix Modifier ""Nymph's"" }"
+STONEFIST-0036,rare,after,6,Has +2 to Evasion Rating per player level
+STONEFIST-0036,rare,after,7,Has +1 to maximum Energy Shield per player level
+STONEFIST-0036,rare,after,8,"{ Prefix Modifier ""Azure"" }"
+STONEFIST-0036,rare,after,9,15(14-15)% more Attack damage while on Low Mana
+STONEFIST-0036,rare,after,10,"{ Prefix Modifier ""Hale"" }"
+STONEFIST-0036,rare,after,11,5% less damage taken while on Low Life
+STONEFIST-0036,rare,after,12,"{ Suffix Modifier ""of Skill"" }"
+STONEFIST-0036,rare,after,13,8(8-12)% chance to gain Onslaught for 4 seconds on Hit
+STONEFIST-0036,rare,after,14,"{ Suffix Modifier ""of the Salamander"" — Elemental, Fire, Resistance }"
+STONEFIST-0036,rare,after,15,+1% to Maximum Fire Resistance
+STONEFIST-0036,rare,after,16,+19(16-20)% to Fire Resistance
+STONEFIST-0036,rare,after,17,"{ Suffix Modifier ""of the Seal"" — Elemental, Cold, Resistance }"
+STONEFIST-0036,rare,after,18,+1% to Maximum Cold Resistance
+STONEFIST-0036,rare,after,19,+12(11-15)% to Cold Resistance
+STONEFIST-0036,rare,after,20,Unmodifiable
+STONEFIST-0037,rare,before,1,"{ Prefix Modifier ""Inspired"" (Tier: 1) — Armour, Energy Shield }"
+STONEFIST-0037,rare,before,2,92(92-100)% increased Armour and Energy Shield
+STONEFIST-0037,rare,before,3,"{ Prefix Modifier ""Cobalt"" (Tier: 8) — Mana }"
+STONEFIST-0037,rare,before,4,+20(15-24) to maximum Mana
+STONEFIST-0037,rare,before,5,"{ Suffix Modifier ""of the Seal"" (Tier: 8) — Elemental, Cold, Resistance }"
+STONEFIST-0037,rare,before,6,+7(6-10)% to Cold Resistance
+STONEFIST-0037,rare,before,7,"{ Suffix Modifier ""of Sheathing"" (Tier: 4) — Armour, Elemental }"
+STONEFIST-0037,rare,before,8,+20(20-25)% of Armour also applies to Elemental Damage
+STONEFIST-0037,rare,after,1,{ Implicit Modifier }
+STONEFIST-0037,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0037,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0037,rare,after,4,"{ Prefix Modifier ""Inspired"" — Evasion, Energy Shield }"
+STONEFIST-0037,rare,after,5,20(19-20)% more Global Evasion Rating and Energy Shield
+STONEFIST-0037,rare,after,6,"{ Prefix Modifier ""Cobalt"" }"
+STONEFIST-0037,rare,after,7,13(12-13)% more Attack damage while on Low Mana
+STONEFIST-0037,rare,after,8,"{ Suffix Modifier ""of the Seal"" — Elemental, Cold, Resistance }"
+STONEFIST-0037,rare,after,9,+1% to Maximum Cold Resistance
+STONEFIST-0037,rare,after,10,+14(11-15)% to Cold Resistance
+STONEFIST-0037,rare,after,11,"{ Suffix Modifier ""of Sheathing"" — Elemental, Fire, Cold, Lightning, Resistance }"
+STONEFIST-0037,rare,after,12,+14(13-15)% to all Elemental Resistances
+STONEFIST-0037,rare,after,13,Unmodifiable
+STONEFIST-0038,rare,before,1,"{ Prefix Modifier ""Mouflon's"" (Tier: 4) — Life, Evasion }"
+STONEFIST-0038,rare,before,2,22(21-26)% increased Evasion Rating
+STONEFIST-0038,rare,before,3,+23(20-25) to maximum Life
+STONEFIST-0038,rare,before,4,"{ Prefix Modifier ""Cerulean"" (Tier: 5) — Mana }"
+STONEFIST-0038,rare,before,5,+60(55-64) to maximum Mana
+STONEFIST-0038,rare,before,6,"{ Prefix Modifier ""Shade's"" (Tier: 7) — Evasion }"
+STONEFIST-0038,rare,before,7,26(15-26)% increased Evasion Rating
+STONEFIST-0038,rare,before,8,"{ Suffix Modifier ""of the Kiln"" (Tier: 5) — Elemental, Fire, Resistance }"
+STONEFIST-0038,rare,before,9,+25(21-25)% to Fire Resistance
+STONEFIST-0038,rare,after,1,{ Implicit Modifier }
+STONEFIST-0038,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0038,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0038,rare,after,4,"{ Prefix Modifier ""Mouflon's"" }"
+STONEFIST-0038,rare,after,5,"5% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0038,rare,after,6,"{ Prefix Modifier ""Cerulean"" }"
+STONEFIST-0038,rare,after,7,19(18-19)% more Attack damage while on Low Mana
+STONEFIST-0038,rare,after,8,"{ Prefix Modifier ""Shade's"" — Evasion, Energy Shield }"
+STONEFIST-0038,rare,after,9,7(7-8)% more Global Evasion Rating and Energy Shield
+STONEFIST-0038,rare,after,10,"{ Suffix Modifier ""of the Kiln"" — Elemental, Fire, Resistance }"
+STONEFIST-0038,rare,after,11,+2% to Maximum Fire Resistance
+STONEFIST-0038,rare,after,12,+22(21-25)% to Fire Resistance
+STONEFIST-0038,rare,after,13,Unmodifiable
+STONEFIST-0039,rare,before,1,"{ Prefix Modifier ""Annealed"" (Tier: 4) — Damage, Physical, Attack }"
+STONEFIST-0039,rare,before,2,"{ Prefix Modifier ""Phased"" (Tier: 2) — Evasion }"
+STONEFIST-0039,rare,before,3,+143(117-146) to Evasion Rating
+STONEFIST-0039,rare,before,4,"{ Prefix Modifier ""Crackling"" (Tier: 6) — Damage, Elemental, Lightning, Attack }"
+STONEFIST-0039,rare,before,5,"{ Suffix Modifier ""of Triumph"" (Tier: 6) — Life }"
+STONEFIST-0039,rare,before,6,"{ Suffix Modifier ""of Eviction"" (Tier: 4) — Chaos, Resistance }"
+STONEFIST-0039,rare,before,7,+13(12-15)% to Chaos Resistance
+STONEFIST-0039,rare,after,1,{ Implicit Modifier }
+STONEFIST-0039,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0039,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0039,rare,after,4,"{ Prefix Modifier ""Annealed"" — Physical, Attack }"
+STONEFIST-0039,rare,after,5,"{ Prefix Modifier ""Phased"" }"
+STONEFIST-0039,rare,after,6,Has +3 to Evasion Rating per player level
+STONEFIST-0039,rare,after,7,Has +1 to maximum Energy Shield per player level
+STONEFIST-0039,rare,after,8,"{ Prefix Modifier ""Crackling"" — Elemental, Lightning, Attack }"
+STONEFIST-0039,rare,after,9,"{ Suffix Modifier ""of Triumph"" — Life }"
+STONEFIST-0039,rare,after,10,"{ Suffix Modifier ""of Eviction"" — Chaos, Resistance }"
+STONEFIST-0039,rare,after,11,+1% to Maximum Chaos Resistance
+STONEFIST-0039,rare,after,12,+15(14-17)% to Chaos Resistance
+STONEFIST-0039,rare,after,13,Unmodifiable
+STONEFIST-0040,magic,before,1,"{ Prefix Modifier ""Sanguine"" (Tier: 7) — Life }"
+STONEFIST-0040,magic,before,2,+38(30-39) to maximum Life
+STONEFIST-0040,magic,before,3,"{ Suffix Modifier ""of the Penguin"" (Tier: 7) — Elemental, Cold, Resistance }"
+STONEFIST-0040,magic,before,4,+13(11-15)% to Cold Resistance
+STONEFIST-0040,magic,after,1,{ Implicit Modifier }
+STONEFIST-0040,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0040,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0040,magic,after,4,"{ Prefix Modifier ""Sanguine"" }"
+STONEFIST-0040,magic,after,5,7% less damage taken while on Low Life
+STONEFIST-0040,magic,after,6,"{ Suffix Modifier ""of the Penguin"" — Elemental, Cold, Resistance }"
+STONEFIST-0040,magic,after,7,+1% to Maximum Cold Resistance
+STONEFIST-0040,magic,after,8,+18(16-20)% to Cold Resistance
+STONEFIST-0040,magic,after,9,Unmodifiable
+STONEFIST-0041,rare,before,1,"{ Prefix Modifier ""Glinting"" (Tier: 9) — Damage, Physical, Attack }"
+STONEFIST-0041,rare,before,2,"{ Suffix Modifier ""of Ire"" (Tier: 5) — Damage, Critical }"
+STONEFIST-0041,rare,before,3,14(10-14)% increased Critical Damage Bonus
+STONEFIST-0041,rare,before,4,"{ Suffix Modifier ""of the Mongoose"" (Tier: 9) — Attribute }"
+STONEFIST-0041,rare,before,5,+7(5-8) to Dexterity
+STONEFIST-0041,rare,after,1,{ Implicit Modifier }
+STONEFIST-0041,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0041,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0041,rare,after,4,"{ Prefix Modifier ""Glinting"" — Physical, Attack }"
+STONEFIST-0041,rare,after,5,"{ Suffix Modifier ""of Ire"" — Critical }"
+STONEFIST-0041,rare,after,6,+0.61(0.5-1)% to Critical Hit Chance
+STONEFIST-0041,rare,after,7,"{ Suffix Modifier ""of the Mongoose"" }"
+STONEFIST-0041,rare,after,8,+17(15-18)% Surpassing chance to fire an additional Projectile
+STONEFIST-0041,rare,after,9,Unmodifiable
+STONEFIST-0042,rare,before,1,"{ Prefix Modifier ""Beryl"" (Tier: 9) — Mana }"
+STONEFIST-0042,rare,before,2,+10(10-14) to maximum Mana
+STONEFIST-0042,rare,before,3,"{ Prefix Modifier ""Deliberate"" (Tier: 6) — Attack }"
+STONEFIST-0042,rare,before,4,+103(85-123) to Accuracy Rating
+STONEFIST-0042,rare,before,5,"{ Prefix Modifier ""Icy"" (Tier: 7) — Damage, Elemental, Cold, Attack }"
+STONEFIST-0042,rare,before,6,"{ Suffix Modifier ""of Infusion"" (Tier: 6) — Mana }"
+STONEFIST-0042,rare,before,7,"{ Suffix Modifier ""of the Drought"" (Tier: 2) — Mana, Physical, Attack }"
+STONEFIST-0042,rare,before,8,Leech 7.46(7-7.9)% of Physical Attack Damage as Mana
+STONEFIST-0042,rare,before,9,"{ Suffix Modifier ""of Conquest"" (Tier: 5) — Life }"
+STONEFIST-0042,rare,after,1,{ Implicit Modifier }
+STONEFIST-0042,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0042,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0042,rare,after,4,"{ Prefix Modifier ""Beryl"" }"
+STONEFIST-0042,rare,after,5,10(10-11)% more Attack damage while on Low Mana
+STONEFIST-0042,rare,after,6,"{ Prefix Modifier ""Deliberate"" — Attack }"
+STONEFIST-0042,rare,after,7,21(21-23)% chance to Blind Enemies on Hit with Attacks
+STONEFIST-0042,rare,after,8,"{ Prefix Modifier ""Icy"" — Elemental, Cold, Attack }"
+STONEFIST-0042,rare,after,9,"{ Suffix Modifier ""of Infusion"" — Mana }"
+STONEFIST-0042,rare,after,10,"{ Suffix Modifier ""of the Drought"" — Mana }"
+STONEFIST-0042,rare,after,11,Leech 11.18(11-11.9)% of Physical Attack Damage as Mana
+STONEFIST-0042,rare,after,12,Leech Mana 25(25-20)% slower
+STONEFIST-0042,rare,after,13,"{ Suffix Modifier ""of Conquest"" — Life }"
+STONEFIST-0042,rare,after,14,Unmodifiable
+STONEFIST-0043,rare,before,1,"{ Prefix Modifier ""Burnished"" (Tier: 8) — Damage, Physical, Attack }"
+STONEFIST-0043,rare,before,2,"{ Prefix Modifier ""Stout"" (Tier: 5) — Life }"
+STONEFIST-0043,rare,before,3,+69(60-69) to maximum Life
+STONEFIST-0043,rare,before,4,"{ Suffix Modifier ""of the Apt"" (Tier: 4) }"
+STONEFIST-0043,rare,before,5,20% reduced Attribute Requirements
+STONEFIST-0043,rare,after,1,{ Implicit Modifier }
+STONEFIST-0043,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0043,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0043,rare,after,4,"{ Prefix Modifier ""Burnished"" — Physical, Attack }"
+STONEFIST-0043,rare,after,5,"{ Prefix Modifier ""Stout"" }"
+STONEFIST-0043,rare,after,6,9% less damage taken while on Low Life
+STONEFIST-0043,rare,after,7,"{ Suffix Modifier ""of the Apt"" — Attribute }"
+STONEFIST-0043,rare,after,8,+15(11-15) to all Attributes
+STONEFIST-0043,rare,after,9,Unmodifiable
+STONEFIST-0044,rare,before,1,+10% to Cold Resistance (rune)
+STONEFIST-0044,rare,before,2,"{ Prefix Modifier ""Reliable"" (Tier: 8) — Attack }"
+STONEFIST-0044,rare,before,3,+45(33-60) to Accuracy Rating
+STONEFIST-0044,rare,before,4,"{ Prefix Modifier ""Glinting"" (Tier: 9) — Damage, Physical, Attack }"
+STONEFIST-0044,rare,before,5,"{ Suffix Modifier ""of the Squall"" (Tier: 7) — Elemental, Lightning, Resistance }"
+STONEFIST-0044,rare,before,6,+14(11-15)% to Lightning Resistance
+STONEFIST-0044,rare,before,7,"{ Suffix Modifier ""of the Lynx"" (Tier: 8) — Attribute }"
+STONEFIST-0044,rare,before,8,+10(9-12) to Dexterity
+STONEFIST-0044,rare,after,1,+10% to Cold Resistance (rune)
+STONEFIST-0044,rare,after,2,{ Implicit Modifier }
+STONEFIST-0044,rare,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0044,rare,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0044,rare,after,5,"{ Prefix Modifier ""Reliable"" — Attack }"
+STONEFIST-0044,rare,after,6,15(15-17)% chance to Blind Enemies on Hit with Attacks
+STONEFIST-0044,rare,after,7,"{ Prefix Modifier ""Glinting"" — Physical, Attack }"
+STONEFIST-0044,rare,after,8,"{ Suffix Modifier ""of the Squall"" — Elemental, Lightning, Resistance }"
+STONEFIST-0044,rare,after,9,+1% to Maximum Lightning Resistance
+STONEFIST-0044,rare,after,10,+19(16-20)% to Lightning Resistance
+STONEFIST-0044,rare,after,11,"{ Suffix Modifier ""of the Lynx"" }"
+STONEFIST-0044,rare,after,12,+19(19-22)% Surpassing chance to fire an additional Projectile
+STONEFIST-0044,rare,after,13,Unmodifiable
+STONEFIST-0045,magic,before,1,"{ Prefix Modifier ""Humming"" (Tier: 9) — Damage, Elemental, Lightning, Attack }"
+STONEFIST-0045,magic,before,2,"{ Suffix Modifier ""of Plunder"" (Tier: 3) }"
+STONEFIST-0045,magic,before,3,10(6-10)% increased Rarity of Items found
+STONEFIST-0045,magic,after,1,{ Implicit Modifier }
+STONEFIST-0045,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0045,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0045,magic,after,4,"{ Prefix Modifier ""Humming"" — Elemental, Lightning, Attack }"
+STONEFIST-0045,magic,after,5,"{ Suffix Modifier ""of Plunder"" }"
+STONEFIST-0045,magic,after,6,20(15-20)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0045,magic,after,7,Unmodifiable
+STONEFIST-0046,rare,before,1,"{ Prefix Modifier ""Crackling"" (Tier: 6) — Damage, Elemental, Lightning, Attack }"
+STONEFIST-0046,rare,before,2,"{ Prefix Modifier ""Chalybeous"" (Tier: 1) — Mana }"
+STONEFIST-0046,rare,before,3,+107(105-124) to maximum Mana
+STONEFIST-0046,rare,before,4,"{ Suffix Modifier ""of the Savant"" (Tier: 2) — Attribute }"
+STONEFIST-0046,rare,before,5,+29(28-30) to Intelligence
+STONEFIST-0046,rare,before,6,"{ Suffix Modifier ""of Infusion"" (Tier: 6) — Mana }"
+STONEFIST-0046,rare,before,7,"{ Suffix Modifier ""of Raiding"" (Tier: 2) }"
+STONEFIST-0046,rare,before,8,14(11-14)% increased Rarity of Items found
+STONEFIST-0046,rare,after,1,{ Implicit Modifier }
+STONEFIST-0046,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0046,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0046,rare,after,4,"{ Prefix Modifier ""Crackling"" — Elemental, Lightning, Attack }"
+STONEFIST-0046,rare,after,5,"{ Prefix Modifier ""Chalybeous"" }"
+STONEFIST-0046,rare,after,6,27(26-27)% more Attack damage while on Low Mana
+STONEFIST-0046,rare,after,7,"{ Suffix Modifier ""of the Savant"" }"
+STONEFIST-0046,rare,after,8,31(29-32)% increased Cooldown Recovery Rate
+STONEFIST-0046,rare,after,9,"{ Suffix Modifier ""of Infusion"" — Mana }"
+STONEFIST-0046,rare,after,10,"{ Suffix Modifier ""of Raiding"" }"
+STONEFIST-0046,rare,after,11,25(21-25)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0046,rare,after,12,Unmodifiable
+STONEFIST-0047,rare,before,1,"{ Prefix Modifier ""Beryl"" (Tier: 9) — Mana }"
+STONEFIST-0047,rare,before,2,+14(10-14) to maximum Mana
+STONEFIST-0047,rare,before,3,"{ Prefix Modifier ""Thug's"" (Tier: 5) — Life, Armour, Evasion }"
+STONEFIST-0047,rare,before,4,16(14-20)% increased Armour and Evasion
+STONEFIST-0047,rare,before,5,+18(11-19) to maximum Life
+STONEFIST-0047,rare,before,6,"{ Suffix Modifier ""of Raiding"" (Tier: 2) }"
+STONEFIST-0047,rare,before,7,12(11-14)% increased Rarity of Items found
+STONEFIST-0047,rare,before,8,"{ Suffix Modifier ""of the Storm"" (Tier: 6) — Elemental, Lightning, Resistance }"
+STONEFIST-0047,rare,before,9,+16(16-20)% to Lightning Resistance
+STONEFIST-0047,rare,after,1,{ Implicit Modifier }
+STONEFIST-0047,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0047,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0047,rare,after,4,"{ Prefix Modifier ""Beryl"" }"
+STONEFIST-0047,rare,after,5,10(10-11)% more Attack damage while on Low Mana
+STONEFIST-0047,rare,after,6,"{ Prefix Modifier ""Thug's"" }"
+STONEFIST-0047,rare,after,7,"4% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0047,rare,after,8,"{ Suffix Modifier ""of Raiding"" }"
+STONEFIST-0047,rare,after,9,21(21-25)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0047,rare,after,10,"{ Suffix Modifier ""of the Storm"" — Elemental, Lightning, Resistance }"
+STONEFIST-0047,rare,after,11,+1% to Maximum Lightning Resistance
+STONEFIST-0047,rare,after,12,+24(21-25)% to Lightning Resistance
+STONEFIST-0047,rare,after,13,Unmodifiable
+STONEFIST-0048,rare,before,1,"{ Prefix Modifier ""Acrobat's"" (Tier: 5) — Evasion }"
+STONEFIST-0048,rare,before,2,+60(47-66) to Evasion Rating
+STONEFIST-0048,rare,before,3,"{ Prefix Modifier ""Cobalt"" (Tier: 8) — Mana }"
+STONEFIST-0048,rare,before,4,+16(15-24) to maximum Mana
+STONEFIST-0048,rare,before,5,"{ Prefix Modifier ""Polished"" (Tier: 7) — Damage, Physical, Attack }"
+STONEFIST-0048,rare,before,6,"{ Suffix Modifier ""of the Kiln"" (Tier: 5) — Elemental, Fire, Resistance }"
+STONEFIST-0048,rare,before,7,+24(21-25)% to Fire Resistance
+STONEFIST-0048,rare,before,8,"{ Suffix Modifier ""of Combat"" (Tier: 2) — Attack }"
+STONEFIST-0048,rare,before,9,+1 to Level of all Melee Skills
+STONEFIST-0048,rare,before,10,"{ Suffix Modifier ""of the Seal"" (Tier: 8) — Elemental, Cold, Resistance }"
+STONEFIST-0048,rare,before,11,+9(6-10)% to Cold Resistance
+STONEFIST-0048,rare,after,1,{ Implicit Modifier }
+STONEFIST-0048,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0048,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0048,rare,after,4,"{ Prefix Modifier ""Acrobat's"" }"
+STONEFIST-0048,rare,after,5,Has +2 to Evasion Rating per player level
+STONEFIST-0048,rare,after,6,Has +1 to maximum Energy Shield per player level
+STONEFIST-0048,rare,after,7,"{ Prefix Modifier ""Cobalt"" }"
+STONEFIST-0048,rare,after,8,12(12-13)% more Attack damage while on Low Mana
+STONEFIST-0048,rare,after,9,"{ Prefix Modifier ""Polished"" — Physical, Attack }"
+STONEFIST-0048,rare,after,10,"{ Suffix Modifier ""of the Kiln"" — Elemental, Fire, Resistance }"
+STONEFIST-0048,rare,after,11,+2% to Maximum Fire Resistance
+STONEFIST-0048,rare,after,12,+22(21-25)% to Fire Resistance
+STONEFIST-0048,rare,after,13,"{ Suffix Modifier ""of Combat"" — Gem }"
+STONEFIST-0048,rare,after,14,+11(10-12)% to Quality of all Skills
+STONEFIST-0048,rare,after,15,"{ Suffix Modifier ""of the Seal"" — Elemental, Cold, Resistance }"
+STONEFIST-0048,rare,after,16,+1% to Maximum Cold Resistance
+STONEFIST-0048,rare,after,17,+12(11-15)% to Cold Resistance
+STONEFIST-0048,rare,after,18,Unmodifiable
+STONEFIST-0049,magic,before,1,"{ Prefix Modifier ""Gleaming"" (Tier: 5) — Damage, Physical, Attack }"
+STONEFIST-0049,magic,after,1,{ Implicit Modifier }
+STONEFIST-0049,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0049,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0049,magic,after,4,"{ Prefix Modifier ""Gleaming"" — Physical, Attack }"
+STONEFIST-0049,magic,after,5,Unmodifiable
+STONEFIST-0050,rare,before,1,"{ Prefix Modifier ""Hale"" (Tier: 9) — Life }"
+STONEFIST-0050,rare,before,2,+12(10-19) to maximum Life
+STONEFIST-0050,rare,before,3,"{ Suffix Modifier ""of Success"" (Tier: 8) — Life }"
+STONEFIST-0050,rare,before,4,"{ Suffix Modifier ""of the Mongoose"" (Tier: 9) — Attribute }"
+STONEFIST-0050,rare,before,5,+6(5-8) to Dexterity
+STONEFIST-0050,rare,before,6,"{ Suffix Modifier ""of Skill"" (Tier: 4) — Attack, Speed }"
+STONEFIST-0050,rare,before,7,7(5-7)% increased Attack Speed
+STONEFIST-0050,rare,after,1,{ Implicit Modifier }
+STONEFIST-0050,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0050,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0050,rare,after,4,"{ Prefix Modifier ""Hale"" }"
+STONEFIST-0050,rare,after,5,5% less damage taken while on Low Life
+STONEFIST-0050,rare,after,6,"{ Suffix Modifier ""of Success"" — Life }"
+STONEFIST-0050,rare,after,7,"{ Suffix Modifier ""of the Mongoose"" }"
+STONEFIST-0050,rare,after,8,+18(15-18)% Surpassing chance to fire an additional Projectile
+STONEFIST-0050,rare,after,9,"{ Suffix Modifier ""of Skill"" }"
+STONEFIST-0050,rare,after,10,11(8-12)% chance to gain Onslaught for 4 seconds on Hit
+STONEFIST-0050,rare,after,11,Unmodifiable
+STONEFIST-0051,rare,before,1,"{ Prefix Modifier ""Cerulean"" (Tier: 5) — Mana }"
+STONEFIST-0051,rare,before,2,+60(55-64) to maximum Mana
+STONEFIST-0051,rare,before,3,"{ Suffix Modifier ""of Raiding"" (Tier: 2) }"
+STONEFIST-0051,rare,before,4,11(11-14)% increased Rarity of Items found
+STONEFIST-0051,rare,before,5,"{ Suffix Modifier ""of the Parched"" (Tier: 4) — Mana, Physical, Attack }"
+STONEFIST-0051,rare,before,6,Leech 5.79(5-5.9)% of Physical Attack Damage as Mana
+STONEFIST-0051,rare,before,7,"{ Crafted Suffix Modifier ""of the Squall"" (Tier: 7) — Elemental, Lightning, Resistance }"
+STONEFIST-0051,rare,before,8,+15(11-15)% to Lightning Resistance
+STONEFIST-0051,rare,after,1,{ Implicit Modifier }
+STONEFIST-0051,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0051,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0051,rare,after,4,"{ Prefix Modifier ""Cerulean"" }"
+STONEFIST-0051,rare,after,5,19(18-19)% more Attack damage while on Low Mana
+STONEFIST-0051,rare,after,6,"{ Suffix Modifier ""of Raiding"" }"
+STONEFIST-0051,rare,after,7,22(21-25)% increased Quantity of Gold Dropped by Slain Enemies
+STONEFIST-0051,rare,after,8,"{ Suffix Modifier ""of the Squall"" — Elemental, Lightning, Resistance }"
+STONEFIST-0051,rare,after,9,+1% to Maximum Lightning Resistance
+STONEFIST-0051,rare,after,10,+18(16-20)% to Lightning Resistance
+STONEFIST-0051,rare,after,11,"{ Suffix Modifier ""of the Parched"" — Mana }"
+STONEFIST-0051,rare,after,12,Leech 8.44(8-8.9)% of Physical Attack Damage as Mana
+STONEFIST-0051,rare,after,13,Leech Mana 22(25-20)% slower
+STONEFIST-0051,rare,after,14,Unmodifiable
+STONEFIST-0052,unique,before,1,{ Unique Modifier — Armour }
+STONEFIST-0052,unique,before,2,175(150-200)% increased Armour
+STONEFIST-0052,unique,before,3,{ Unique Modifier — Life }
+STONEFIST-0052,unique,before,4,+128(100-150) to maximum Life
+STONEFIST-0052,unique,before,5,"{ Unique Modifier — Life, Physical, Attack }"
+STONEFIST-0052,unique,before,6,Leech 10% of Physical Attack Damage as Life
+STONEFIST-0052,unique,before,7,{ Unique Modifier }
+STONEFIST-0052,unique,before,8,{ Unique Modifier — Life }
+STONEFIST-0052,unique,before,9,"- Atziri, Queen of the Vaal"
+STONEFIST-0052,unique,after,1,{ Implicit Modifier }
+STONEFIST-0052,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0052,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0052,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0052,unique,after,5,24(20-25)% more Global Evasion Rating and Energy Shield
+STONEFIST-0052,unique,after,6,{ Unique Modifier }
+STONEFIST-0052,unique,after,7,13(15-12)% less damage taken while on Low Life
+STONEFIST-0052,unique,after,8,{ Unique Modifier — Life }
+STONEFIST-0052,unique,after,9,Leech 13.86(13-17)% of Physical Attack Damage as Life
+STONEFIST-0052,unique,after,10,Leech Life 24(25-20)% slower
+STONEFIST-0052,unique,after,11,{ Unique Modifier }
+STONEFIST-0052,unique,after,12,"{ Unique Modifier — Life, Energy Shield }"
+STONEFIST-0052,unique,after,13,Unmodifiable
+STONEFIST-0053,unique,before,1,{ Unique Modifier — Attribute }
+STONEFIST-0053,unique,before,2,+17(10-20) to Intelligence
+STONEFIST-0053,unique,before,3,"{ Unique Modifier — Elemental, Fire, Resistance }"
+STONEFIST-0053,unique,before,4,+6(5-15)% to Fire Resistance
+STONEFIST-0053,unique,before,5,"{ Unique Modifier — Elemental, Cold, Resistance }"
+STONEFIST-0053,unique,before,6,+14(5-15)% to Cold Resistance
+STONEFIST-0053,unique,before,7,{ Unique Modifier }
+STONEFIST-0053,unique,before,8,{ Unique Modifier — Energy Shield }
+STONEFIST-0053,unique,before,9,+20 to maximum Energy Shield
+STONEFIST-0053,unique,after,1,{ Implicit Modifier }
+STONEFIST-0053,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0053,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0053,unique,after,4,{ Unique Modifier }
+STONEFIST-0053,unique,after,5,12(10-15)% increased Cooldown Recovery Rate
+STONEFIST-0053,unique,after,6,"{ Unique Modifier — Elemental, Fire, Resistance }"
+STONEFIST-0053,unique,after,7,+1% to Maximum Fire Resistance
+STONEFIST-0053,unique,after,8,+13(5-15)% to Fire Resistance
+STONEFIST-0053,unique,after,9,"{ Unique Modifier — Damage, Elemental, Lightning }"
+STONEFIST-0053,unique,after,10,{ Unique Modifier }
+STONEFIST-0053,unique,after,11,{ Unique Modifier }
+STONEFIST-0053,unique,after,12,Has +1 to Evasion Rating per player level
+STONEFIST-0053,unique,after,13,Has +1 to maximum Energy Shield per player level
+STONEFIST-0053,unique,after,14,Unmodifiable
+STONEFIST-0054,unique,before,1,"{ Unique Modifier — Armour, Evasion }"
+STONEFIST-0054,unique,before,2,147(100-150)% increased Armour and Evasion
+STONEFIST-0054,unique,before,3,{ Unique Modifier — Life }
+STONEFIST-0054,unique,before,4,{ Unique Modifier — Mana }
+STONEFIST-0054,unique,before,5,{ Unique Modifier }
+STONEFIST-0054,unique,before,6,"{ Unique Modifier — Attack, Speed }"
+STONEFIST-0054,unique,before,7,9(5-10)% increased Attack Speed
+STONEFIST-0054,unique,after,1,{ Implicit Modifier }
+STONEFIST-0054,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0054,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0054,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0054,unique,after,5,15(15-20)% more Global Evasion Rating and Energy Shield
+STONEFIST-0054,unique,after,6,{ Unique Modifier — Life }
+STONEFIST-0054,unique,after,7,{ Unique Modifier — Mana }
+STONEFIST-0054,unique,after,8,{ Unique Modifier }
+STONEFIST-0054,unique,after,9,{ Unique Modifier }
+STONEFIST-0054,unique,after,10,31(30-40)% increased Culling Strike Threshold if you've dealt a Culling Strike Recently
+STONEFIST-0054,unique,after,11,Unmodifiable
+STONEFIST-0055,unique,before,1,"{ Unique Modifier — Caster, Speed }"
+STONEFIST-0055,unique,before,2,10(6-12)% increased Cast Speed
+STONEFIST-0055,unique,before,3,{ Unique Modifier — Energy Shield }
+STONEFIST-0055,unique,before,4,+42(40-60) to maximum Energy Shield
+STONEFIST-0055,unique,before,5,{ Unique Modifier — Life }
+STONEFIST-0055,unique,before,6,+107(80-120) to maximum Life
+STONEFIST-0055,unique,before,7,"{ Unique Modifier — Life, Energy Shield }"
+STONEFIST-0055,unique,after,1,{ Implicit Modifier }
+STONEFIST-0055,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0055,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0055,unique,after,4,"{ Unique Modifier — Attack, Speed }"
+STONEFIST-0055,unique,after,5,10(9-15)% increased Attack Speed
+STONEFIST-0055,unique,after,6,{ Unique Modifier }
+STONEFIST-0055,unique,after,7,+77(60-80) to maximum Runic Ward
+STONEFIST-0055,unique,after,8,{ Unique Modifier — Life }
+STONEFIST-0055,unique,after,9,+139(130-160) to maximum Life
+STONEFIST-0055,unique,after,10,{ Unique Modifier — Attack }
+STONEFIST-0055,unique,after,11,Unmodifiable
+STONEFIST-0056,unique,before,1,{ Unique Modifier — Armour }
+STONEFIST-0056,unique,before,2,81(60-100)% increased Armour
+STONEFIST-0056,unique,before,3,"{ Unique Modifier — Damage, Critical }"
+STONEFIST-0056,unique,before,4,28(20-30)% increased Critical Damage Bonus
+STONEFIST-0056,unique,before,5,"{ Unique Modifier — Physical, Attack }"
+STONEFIST-0056,unique,before,6,{ Unique Modifier — Critical }
+STONEFIST-0056,unique,before,7,"{ Unique Modifier — Damage, Physical }"
+STONEFIST-0056,unique,after,1,{ Implicit Modifier }
+STONEFIST-0056,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0056,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0056,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0056,unique,after,5,18(15-20)% more Global Evasion Rating and Energy Shield
+STONEFIST-0056,unique,after,6,{ Unique Modifier — Critical }
+STONEFIST-0056,unique,after,7,+1.74(1.5-2)% to Critical Hit Chance
+STONEFIST-0056,unique,after,8,{ Unique Modifier }
+STONEFIST-0056,unique,after,9,{ Unique Modifier — Critical }
+STONEFIST-0056,unique,after,10,34(25-35)% increased Thorns Critical Damage Bonus
+STONEFIST-0056,unique,after,11,"{ Unique Modifier — Damage, Elemental, Cold }"
+STONEFIST-0056,unique,after,12,Unmodifiable
+STONEFIST-0057,unique,before,1,{ Unique Modifier }
+STONEFIST-0057,unique,before,2,{ Unique Modifier — Armour }
+STONEFIST-0057,unique,before,3,185(150-200)% increased Armour
+STONEFIST-0057,unique,before,4,{ Unique Modifier — Attribute }
+STONEFIST-0057,unique,before,5,+24(20-30) to Strength
+STONEFIST-0057,unique,before,6,{ Unique Modifier — Life }
+STONEFIST-0057,unique,before,7,"{ Unique Modifier — Damage, Physical }"
+STONEFIST-0057,unique,before,8,20(10-20)% increased Global Physical Damage
+STONEFIST-0057,unique,before,9,- Emperor Chitus
+STONEFIST-0057,unique,after,1,{ Implicit Modifier }
+STONEFIST-0057,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0057,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0057,unique,after,4,{ Unique Modifier }
+STONEFIST-0057,unique,after,5,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0057,unique,after,6,20(15-20)% more Global Evasion Rating and Energy Shield
+STONEFIST-0057,unique,after,7,{ Unique Modifier — Attack }
+STONEFIST-0057,unique,after,8,18(18-24)% increased Area of Effect for Attacks
+STONEFIST-0057,unique,after,9,{ Unique Modifier — Life }
+STONEFIST-0057,unique,after,10,{ Unique Modifier — Attack }
+STONEFIST-0057,unique,after,11,Unmodifiable
+STONEFIST-0058,unique,before,1,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0058,unique,before,2,38(30-60)% increased Evasion and Energy Shield
+STONEFIST-0058,unique,before,3,{ Unique Modifier — Life }
+STONEFIST-0058,unique,before,4,+42(30-50) to maximum Life
+STONEFIST-0058,unique,before,5,{ Unique Modifier }
+STONEFIST-0058,unique,before,6,{ Unique Modifier }
+STONEFIST-0058,unique,before,7,"{ Unique Modifier — Damage, Critical }"
+STONEFIST-0058,unique,before,8,20(20-30)% increased Critical Damage Bonus
+STONEFIST-0058,unique,before,9,"- Jeffry, Torturer's Apprentice"
+STONEFIST-0058,unique,after,1,{ Implicit Modifier }
+STONEFIST-0058,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0058,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0058,unique,after,4,{ Unique Modifier }
+STONEFIST-0058,unique,after,5,+46(30-50) to maximum Runic Ward
+STONEFIST-0058,unique,after,6,{ Unique Modifier }
+STONEFIST-0058,unique,after,7,7(6-8)% more damage taken while on Low Life
+STONEFIST-0058,unique,after,8,{ Unique Modifier }
+STONEFIST-0058,unique,after,9,{ Unique Modifier }
+STONEFIST-0058,unique,after,10,{ Unique Modifier — Critical }
+STONEFIST-0058,unique,after,11,+1.62(1-2)% to Critical Hit Chance
+STONEFIST-0058,unique,after,12,Unmodifiable
+STONEFIST-0059,unique,before,1,{ Unique Modifier — Energy Shield }
+STONEFIST-0059,unique,before,2,43(30-50)% increased Energy Shield
+STONEFIST-0059,unique,before,3,{ Unique Modifier — Attribute }
+STONEFIST-0059,unique,before,4,+12(10-20) to Dexterity
+STONEFIST-0059,unique,before,5,"{ Unique Modifier — Attack, Caster, Speed }"
+STONEFIST-0059,unique,before,6,13(15-10)% reduced Attack and Cast Speed
+STONEFIST-0059,unique,before,7,{ Unique Modifier }
+STONEFIST-0059,unique,after,1,{ Implicit Modifier }
+STONEFIST-0059,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0059,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0059,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0059,unique,after,5,11(10-15)% more Global Evasion Rating and Energy Shield
+STONEFIST-0059,unique,after,6,{ Unique Modifier }
+STONEFIST-0059,unique,after,7,+34(20-40)% Surpassing chance to fire an additional Projectile
+STONEFIST-0059,unique,after,8,"{ Unique Modifier — Attack, Caster, Speed }"
+STONEFIST-0059,unique,after,9,13(15-10)% reduced Attack and Cast Speed
+STONEFIST-0059,unique,after,10,"{ Unique Modifier — Elemental, Lightning, Ailment }"
+STONEFIST-0059,unique,after,11,Unmodifiable
+STONEFIST-0060,unique,before,1,{ Unique Modifier }
+STONEFIST-0060,unique,before,2,{ Unique Modifier — Speed }
+STONEFIST-0060,unique,before,3,14(10-15)% increased Skill Speed
+STONEFIST-0060,unique,before,4,{ Unique Modifier — Mana }
+STONEFIST-0060,unique,before,5,11(15-10)% reduced maximum Mana
+STONEFIST-0060,unique,before,6,{ Unique Modifier — Life }
+STONEFIST-0060,unique,before,7,+41(40-60) to maximum Life
+STONEFIST-0060,unique,before,8,{ Unique Modifier — Armour }
+STONEFIST-0060,unique,before,9,+18(15-25) to Armour
+STONEFIST-0060,unique,after,1,{ Implicit Modifier }
+STONEFIST-0060,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0060,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0060,unique,after,4,{ Unique Modifier }
+STONEFIST-0060,unique,after,5,8(5-10)% chance to grant a Endurance Charge to Allies in your Presence on Hit
+STONEFIST-0060,unique,after,6,7(5-10)% chance to grant a Frenzy Charge to Allies in your Presence on Hit
+STONEFIST-0060,unique,after,7,7(5-10)% chance to grant a Power Charge to Allies in your Presence on Hit
+STONEFIST-0060,unique,after,8,"{ Unique Modifier — Attack, Speed }"
+STONEFIST-0060,unique,after,9,16(13-20)% increased Attack Speed
+STONEFIST-0060,unique,after,10,{ Unique Modifier }
+STONEFIST-0060,unique,after,11,Cannot Leech Mana — Unscalable Value
+STONEFIST-0060,unique,after,12,{ Unique Modifier }
+STONEFIST-0060,unique,after,13,9(9-7)% less damage taken while on Low Life
+STONEFIST-0060,unique,after,14,{ Unique Modifier }
+STONEFIST-0060,unique,after,15,Has +1 to Evasion Rating per player level
+STONEFIST-0060,unique,after,16,Has +1 to maximum Energy Shield per player level
+STONEFIST-0060,unique,after,17,Unmodifiable
+STONEFIST-0061,unique,before,1,+18% to Lightning Resistance (rune)
+STONEFIST-0061,unique,before,2,{ Unique Modifier }
+STONEFIST-0061,unique,before,3,{ Unique Modifier }
+STONEFIST-0061,unique,before,4,{ Unique Modifier }
+STONEFIST-0061,unique,before,5,"{ Unique Modifier — Damage, Elemental, Fire }"
+STONEFIST-0061,unique,before,6,"{ Unique Modifier — Damage, Elemental, Cold }"
+STONEFIST-0061,unique,before,7,"{ Unique Modifier — Damage, Elemental, Lightning }"
+STONEFIST-0061,unique,before,8,longing for the endless sea.
+STONEFIST-0061,unique,after,1,+18% to Lightning Resistance (rune)
+STONEFIST-0061,unique,after,2,{ Implicit Modifier }
+STONEFIST-0061,unique,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0061,unique,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0061,unique,after,5,"{ Unique Modifier — Elemental, Fire, Cold, Lightning, Ailment }"
+STONEFIST-0061,unique,after,6,"{ Unique Modifier — Damage, Physical, Elemental, Fire }"
+STONEFIST-0061,unique,after,7,"{ Unique Modifier — Damage, Physical, Elemental, Cold }"
+STONEFIST-0061,unique,after,8,"{ Unique Modifier — Damage, Physical, Elemental, Lightning }"
+STONEFIST-0061,unique,after,9,Unmodifiable
+STONEFIST-0062,unique,before,1,{ Unique Modifier — Evasion }
+STONEFIST-0062,unique,before,2,42(40-60)% increased Evasion Rating
+STONEFIST-0062,unique,before,3,"{ Unique Modifier — Chaos, Resistance }"
+STONEFIST-0062,unique,before,4,+9(7-17)% to Chaos Resistance
+STONEFIST-0062,unique,before,5,{ Unique Modifier — Ailment }
+STONEFIST-0062,unique,before,6,26(20-30)% chance to Poison on Hit
+STONEFIST-0062,unique,before,7,{ Unique Modifier }
+STONEFIST-0062,unique,before,8,{ Unique Modifier — Life }
+STONEFIST-0062,unique,after,1,{ Implicit Modifier }
+STONEFIST-0062,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0062,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0062,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0062,unique,after,5,11(10-15)% more Global Evasion Rating and Energy Shield
+STONEFIST-0062,unique,after,6,"{ Unique Modifier — Chaos, Resistance }"
+STONEFIST-0062,unique,after,7,+1% to Maximum Chaos Resistance
+STONEFIST-0062,unique,after,8,+11(7-17)% to Chaos Resistance
+STONEFIST-0062,unique,after,9,"{ Unique Modifier — Elemental, Cold, Ailment }"
+STONEFIST-0062,unique,after,10,27(20-30)% increased Magnitude of Chill you inflict
+STONEFIST-0062,unique,after,11,"{ Unique Modifier — Elemental, Cold, Ailment }"
+STONEFIST-0062,unique,after,12,{ Unique Modifier — Life }
+STONEFIST-0062,unique,after,13,Unmodifiable
+STONEFIST-0063,unique,before,1,"{ Unique Modifier — Armour, Energy Shield }"
+STONEFIST-0063,unique,before,2,274(200-300)% increased Armour and Energy Shield
+STONEFIST-0063,unique,before,3,{ Unique Modifier }
+STONEFIST-0063,unique,before,4,100% increased Attribute Requirements
+STONEFIST-0063,unique,before,5,{ Unique Modifier }
+STONEFIST-0063,unique,before,6,Debuffs you inflict have 22(20-30)% increased Slow Magnitude
+STONEFIST-0063,unique,before,7,{ Unique Modifier }
+STONEFIST-0063,unique,before,8,{ Unique Modifier — Life }
+STONEFIST-0063,unique,before,9,"{ Unique Modifier — Elemental, Lightning, Resistance }"
+STONEFIST-0063,unique,before,10,+30(20-40)% to Lightning Resistance
+STONEFIST-0063,unique,before,11,{ Unique Modifier — Life }
+STONEFIST-0063,unique,before,12,+100 to maximum Life
+STONEFIST-0063,unique,after,1,{ Implicit Modifier }
+STONEFIST-0063,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0063,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0063,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0063,unique,after,5,24(20-25)% more Global Evasion Rating and Energy Shield
+STONEFIST-0063,unique,after,6,{ Unique Modifier }
+STONEFIST-0063,unique,after,7,100% increased Attribute Requirements
+STONEFIST-0063,unique,after,8,{ Unique Modifier }
+STONEFIST-0063,unique,after,9,27(25-50)% increased Immobilisation buildup
+STONEFIST-0063,unique,after,10,{ Unique Modifier }
+STONEFIST-0063,unique,after,11,{ Unique Modifier — Life }
+STONEFIST-0063,unique,after,12,"{ Unique Modifier — Elemental, Lightning, Resistance }"
+STONEFIST-0063,unique,after,13,+2(2-3)% to Maximum Lightning Resistance
+STONEFIST-0063,unique,after,14,+23(15-25)% to Lightning Resistance
+STONEFIST-0063,unique,after,15,{ Unique Modifier }
+STONEFIST-0063,unique,after,16,10(12-10)% less damage taken while on Low Life
+STONEFIST-0063,unique,after,17,Unmodifiable
+STONEFIST-0064,unique,before,1,+18% to Lightning Resistance (rune)
+STONEFIST-0064,unique,before,2,"{ Unique Modifier — Armour, Evasion }"
+STONEFIST-0064,unique,before,3,71(50-100)% increased Armour and Evasion
+STONEFIST-0064,unique,before,4,{ Unique Modifier — Attribute }
+STONEFIST-0064,unique,before,5,+16(20-30) to Strength
+STONEFIST-0064,unique,before,6,{ Unique Modifier — Attribute }
+STONEFIST-0064,unique,before,7,+20(20-30) to Dexterity
+STONEFIST-0064,unique,before,8,"{ Unique Modifier — Elemental, Lightning, Resistance }"
+STONEFIST-0064,unique,before,9,+54(30-50)% to Lightning Resistance
+STONEFIST-0064,unique,before,10,{ Unique Modifier }
+STONEFIST-0064,unique,before,11,"{ Unique Modifier — Attack, Speed }"
+STONEFIST-0064,unique,before,12,6(5-10)% increased Attack Speed
+STONEFIST-0064,unique,after,1,+18% to Lightning Resistance (rune)
+STONEFIST-0064,unique,after,2,{ Implicit Modifier }
+STONEFIST-0064,unique,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0064,unique,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0064,unique,after,5,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0064,unique,after,6,11(10-15)% more Global Evasion Rating and Energy Shield
+STONEFIST-0064,unique,after,7,{ Unique Modifier — Attack }
+STONEFIST-0064,unique,after,8,14(10-14)% increased Area of Effect for Attacks
+STONEFIST-0064,unique,after,9,{ Unique Modifier }
+STONEFIST-0064,unique,after,10,+30(25-50)% Surpassing chance to fire an additional Projectile
+STONEFIST-0064,unique,after,11,"{ Unique Modifier — Elemental, Cold }"
+STONEFIST-0064,unique,after,12,{ Unique Modifier }
+STONEFIST-0064,unique,after,13,{ Unique Modifier }
+STONEFIST-0064,unique,after,14,10% chance to gain Onslaught for 4 seconds on Hit
+STONEFIST-0064,unique,after,15,Unmodifiable
+STONEFIST-0065,magic,before,1,"{ Prefix Modifier ""Unassailable"" (Tier: 1) — Energy Shield }"
+STONEFIST-0065,magic,before,2,97(92-100)% increased Energy Shield
+STONEFIST-0065,magic,after,1,{ Implicit Modifier }
+STONEFIST-0065,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0065,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0065,magic,after,4,"{ Prefix Modifier ""Unassailable"" — Evasion, Energy Shield }"
+STONEFIST-0065,magic,after,5,20(19-20)% more Global Evasion Rating and Energy Shield
+STONEFIST-0065,magic,after,6,Unmodifiable
+STONEFIST-0066,rare,before,1,"{ Prefix Modifier ""Gleaming"" (Tier: 5) — Damage, Physical, Attack }"
+STONEFIST-0066,rare,before,2,"{ Prefix Modifier ""Discharging"" (Tier: 2) — Damage, Elemental, Lightning, Attack }"
+STONEFIST-0066,rare,before,3,"{ Prefix Modifier ""Virile"" (Tier: 2) — Life }"
+STONEFIST-0066,rare,before,4,+108(100-119) to maximum Life
+STONEFIST-0066,rare,before,5,"{ Suffix Modifier ""of the Phantom"" (Tier: 2) — Attribute }"
+STONEFIST-0066,rare,before,6,+33(31-33) to Dexterity
+STONEFIST-0066,rare,before,7,"{ Suffix Modifier ""of the Desperate"" (Tier: 1) — Mana, Physical, Attack }"
+STONEFIST-0066,rare,before,8,Leech 8.52(8-8.9)% of Physical Attack Damage as Mana
+STONEFIST-0066,rare,before,9,"{ Suffix Modifier ""of the Furnace"" (Tier: 4) — Elemental, Fire, Resistance }"
+STONEFIST-0066,rare,before,10,+30(26-30)% to Fire Resistance
+STONEFIST-0066,rare,after,1,{ Implicit Modifier }
+STONEFIST-0066,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0066,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0066,rare,after,4,"{ Prefix Modifier ""Gleaming"" — Physical, Attack }"
+STONEFIST-0066,rare,after,5,"{ Prefix Modifier ""Discharging"" — Elemental, Lightning, Attack }"
+STONEFIST-0066,rare,after,6,"{ Prefix Modifier ""Virile"" }"
+STONEFIST-0066,rare,after,7,12% less damage taken while on Low Life
+STONEFIST-0066,rare,after,8,"{ Suffix Modifier ""of the Phantom"" }"
+STONEFIST-0066,rare,after,9,+50(46-50)% Surpassing chance to fire an additional Projectile
+STONEFIST-0066,rare,after,10,"{ Suffix Modifier ""of the Desperate"" — Mana }"
+STONEFIST-0066,rare,after,11,Leech 12.5(12-13)% of Physical Attack Damage as Mana
+STONEFIST-0066,rare,after,12,Leech Mana 23(25-20)% slower
+STONEFIST-0066,rare,after,13,"{ Suffix Modifier ""of the Furnace"" — Elemental, Fire, Resistance }"
+STONEFIST-0066,rare,after,14,+2% to Maximum Fire Resistance
+STONEFIST-0066,rare,after,15,+29(26-30)% to Fire Resistance
+STONEFIST-0066,rare,after,16,Unmodifiable
+STONEFIST-0067,rare,before,1,"{ Prefix Modifier ""Hale"" (Tier: 9) — Life }"
+STONEFIST-0067,rare,before,2,+14(10-19) to maximum Life
+STONEFIST-0067,rare,before,3,"{ Prefix Modifier ""Burnished"" (Tier: 8) — Damage, Physical, Attack }"
+STONEFIST-0067,rare,before,4,"{ Suffix Modifier ""of Rejuvenation"" (Tier: 4) — Life, Attack }"
+STONEFIST-0067,rare,after,1,{ Implicit Modifier }
+STONEFIST-0067,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0067,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0067,rare,after,4,"{ Prefix Modifier ""Hale"" }"
+STONEFIST-0067,rare,after,5,5% less damage taken while on Low Life
+STONEFIST-0067,rare,after,6,"{ Prefix Modifier ""Burnished"" — Physical, Attack }"
+STONEFIST-0067,rare,after,7,"{ Suffix Modifier ""of Rejuvenation"" — Life }"
+STONEFIST-0067,rare,after,8,Unmodifiable
+STONEFIST-0068,rare,before,1,"{ Prefix Modifier ""Virile"" (Tier: 2) — Life }"
+STONEFIST-0068,rare,before,2,+117(100-119) to maximum Life
+STONEFIST-0068,rare,before,3,"{ Prefix Modifier ""Cobalt"" (Tier: 8) — Mana }"
+STONEFIST-0068,rare,before,4,+20(15-24) to maximum Mana
+STONEFIST-0068,rare,before,5,"{ Suffix Modifier ""of the Falcon"" (Tier: 6) — Attribute }"
+STONEFIST-0068,rare,before,6,+17(17-20) to Dexterity
+STONEFIST-0068,rare,before,7,"{ Suffix Modifier ""of the Goliath"" (Tier: 3) — Attribute }"
+STONEFIST-0068,rare,before,8,+26(25-27) to Strength
+STONEFIST-0068,rare,after,1,{ Implicit Modifier }
+STONEFIST-0068,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0068,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0068,rare,after,4,"{ Prefix Modifier ""Virile"" }"
+STONEFIST-0068,rare,after,5,12% less damage taken while on Low Life
+STONEFIST-0068,rare,after,6,"{ Prefix Modifier ""Cobalt"" }"
+STONEFIST-0068,rare,after,7,12(12-13)% more Attack damage while on Low Mana
+STONEFIST-0068,rare,after,8,"{ Suffix Modifier ""of the Falcon"" }"
+STONEFIST-0068,rare,after,9,+30(27-30)% Surpassing chance to fire an additional Projectile
+STONEFIST-0068,rare,after,10,"{ Suffix Modifier ""of the Goliath"" — Attack }"
+STONEFIST-0068,rare,after,11,25(23-25)% increased Area of Effect for Attacks
+STONEFIST-0068,rare,after,12,Unmodifiable
+STONEFIST-0069,rare,before,1,"{ Prefix Modifier ""Chalybeous"" (Tier: 1) — Mana }"
+STONEFIST-0069,rare,before,2,+118(105-124) to maximum Mana
+STONEFIST-0069,rare,before,3,"{ Prefix Modifier ""Stalwart"" (Tier: 6) — Life }"
+STONEFIST-0069,rare,before,4,+40(40-59) to maximum Life
+STONEFIST-0069,rare,before,5,"{ Suffix Modifier ""of Rage"" (Tier: 3) — Damage, Critical }"
+STONEFIST-0069,rare,before,6,22(20-24)% increased Critical Damage Bonus
+STONEFIST-0069,rare,before,7,"{ Suffix Modifier ""of the Furnace"" (Tier: 4) — Elemental, Fire, Resistance }"
+STONEFIST-0069,rare,before,8,+28(26-30)% to Fire Resistance
+STONEFIST-0069,rare,after,1,{ Implicit Modifier }
+STONEFIST-0069,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0069,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0069,rare,after,4,"{ Prefix Modifier ""Chalybeous"" }"
+STONEFIST-0069,rare,after,5,27(26-27)% more Attack damage while on Low Mana
+STONEFIST-0069,rare,after,6,"{ Prefix Modifier ""Stalwart"" }"
+STONEFIST-0069,rare,after,7,8% less damage taken while on Low Life
+STONEFIST-0069,rare,after,8,"{ Suffix Modifier ""of Rage"" — Critical }"
+STONEFIST-0069,rare,after,9,+1.79(1.6-2)% to Critical Hit Chance
+STONEFIST-0069,rare,after,10,"{ Suffix Modifier ""of the Furnace"" — Elemental, Fire, Resistance }"
+STONEFIST-0069,rare,after,11,+2% to Maximum Fire Resistance
+STONEFIST-0069,rare,after,12,+30(26-30)% to Fire Resistance
+STONEFIST-0069,rare,after,13,Unmodifiable
+STONEFIST-0070,rare,before,1,"{ Prefix Modifier ""Auspex's"" (Tier: 5) — Life, Armour, Energy Shield }"
+STONEFIST-0070,rare,before,2,17(14-20)% increased Armour and Energy Shield
+STONEFIST-0070,rare,before,3,+14(11-19) to maximum Life
+STONEFIST-0070,rare,before,4,"{ Prefix Modifier ""Hallowed"" (Tier: 1) — Armour, Energy Shield }"
+STONEFIST-0070,rare,before,5,+73(72-85) to Armour
+STONEFIST-0070,rare,before,6,+23(22-25) to maximum Energy Shield
+STONEFIST-0070,rare,before,7,"{ Prefix Modifier ""Robust"" (Tier: 4) — Life }"
+STONEFIST-0070,rare,before,8,+83(70-84) to maximum Life
+STONEFIST-0070,rare,before,9,"{ Suffix Modifier ""of Combat"" (Tier: 2) — Attack }"
+STONEFIST-0070,rare,before,10,+1 to Level of all Melee Skills
+STONEFIST-0070,rare,after,1,{ Implicit Modifier }
+STONEFIST-0070,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0070,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0070,rare,after,4,"{ Prefix Modifier ""Auspex's"" }"
+STONEFIST-0070,rare,after,5,"4% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0070,rare,after,6,"{ Prefix Modifier ""Hallowed"" }"
+STONEFIST-0070,rare,after,7,Has +4 to Evasion Rating per player level
+STONEFIST-0070,rare,after,8,Has +1 to maximum Energy Shield per player level
+STONEFIST-0070,rare,after,9,"{ Prefix Modifier ""Robust"" }"
+STONEFIST-0070,rare,after,10,10% less damage taken while on Low Life
+STONEFIST-0070,rare,after,11,"{ Suffix Modifier ""of Combat"" — Gem }"
+STONEFIST-0070,rare,after,12,+12(10-12)% to Quality of all Skills
+STONEFIST-0070,rare,after,13,Unmodifiable
+STONEFIST-0071,rare,before,1,"{ Prefix Modifier ""Rotund"" (Tier: 3) — Life }"
+STONEFIST-0071,rare,before,2,+88(85-99) to maximum Life
+STONEFIST-0071,rare,before,3,"{ Prefix Modifier ""Dancer's"" (Tier: 6) — Evasion }"
+STONEFIST-0071,rare,before,4,+44(19-46) to Evasion Rating
+STONEFIST-0071,rare,before,5,"{ Suffix Modifier ""of Absorption"" (Tier: 8) — Mana }"
+STONEFIST-0071,rare,before,6,"{ Suffix Modifier ""of the Yeti"" (Tier: 5) — Elemental, Cold, Resistance }"
+STONEFIST-0071,rare,before,7,+22(21-25)% to Cold Resistance
+STONEFIST-0071,rare,before,8,"{ Suffix Modifier ""of the Mongoose"" (Tier: 9) — Attribute }"
+STONEFIST-0071,rare,before,9,+6(5-8) to Dexterity
+STONEFIST-0071,rare,after,1,{ Implicit Modifier }
+STONEFIST-0071,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0071,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0071,rare,after,4,"{ Prefix Modifier ""Rotund"" }"
+STONEFIST-0071,rare,after,5,11% less damage taken while on Low Life
+STONEFIST-0071,rare,after,6,"{ Prefix Modifier ""Dancer's"" }"
+STONEFIST-0071,rare,after,7,Has +1 to Evasion Rating per player level
+STONEFIST-0071,rare,after,8,Has +1 to maximum Energy Shield per player level
+STONEFIST-0071,rare,after,9,"{ Suffix Modifier ""of Absorption"" — Mana }"
+STONEFIST-0071,rare,after,10,"{ Suffix Modifier ""of the Yeti"" — Elemental, Cold, Resistance }"
+STONEFIST-0071,rare,after,11,+2% to Maximum Cold Resistance
+STONEFIST-0071,rare,after,12,+22(21-25)% to Cold Resistance
+STONEFIST-0071,rare,after,13,"{ Suffix Modifier ""of the Mongoose"" }"
+STONEFIST-0071,rare,after,14,+15(15-18)% Surpassing chance to fire an additional Projectile
+STONEFIST-0071,rare,after,15,Unmodifiable
+STONEFIST-0072,rare,before,1,"{ Prefix Modifier ""Ethereal"" (Tier: 6) — Evasion, Energy Shield }"
+STONEFIST-0072,rare,before,2,42(27-42)% increased Evasion and Energy Shield
+STONEFIST-0072,rare,before,3,"{ Suffix Modifier ""of the Prodigy"" (Tier: 6) — Attribute }"
+STONEFIST-0072,rare,before,4,+16(13-16) to Intelligence
+STONEFIST-0072,rare,before,5,"{ Suffix Modifier ""of Combat"" (Tier: 2) — Attack }"
+STONEFIST-0072,rare,before,6,+1 to Level of all Melee Skills
+STONEFIST-0072,rare,before,7,"{ Suffix Modifier ""of the Yeti"" (Tier: 5) — Elemental, Cold, Resistance }"
+STONEFIST-0072,rare,before,8,+22(21-25)% to Cold Resistance
+STONEFIST-0072,rare,after,1,{ Implicit Modifier }
+STONEFIST-0072,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0072,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0072,rare,after,4,"{ Prefix Modifier ""Ethereal"" — Evasion, Energy Shield }"
+STONEFIST-0072,rare,after,5,10(9-10)% more Global Evasion Rating and Energy Shield
+STONEFIST-0072,rare,after,6,"{ Suffix Modifier ""of the Prodigy"" }"
+STONEFIST-0072,rare,after,7,16(13-16)% increased Cooldown Recovery Rate
+STONEFIST-0072,rare,after,8,"{ Suffix Modifier ""of Combat"" — Gem }"
+STONEFIST-0072,rare,after,9,+10(10-12)% to Quality of all Skills
+STONEFIST-0072,rare,after,10,"{ Suffix Modifier ""of the Yeti"" — Elemental, Cold, Resistance }"
+STONEFIST-0072,rare,after,11,+2% to Maximum Cold Resistance
+STONEFIST-0072,rare,after,12,+24(21-25)% to Cold Resistance
+STONEFIST-0072,rare,after,13,Unmodifiable
+STONEFIST-0073,rare,before,1,"{ Prefix Modifier ""Rotund"" (Tier: 3) — Life }"
+STONEFIST-0073,rare,before,2,+91(85-99) to maximum Life
+STONEFIST-0073,rare,before,3,"{ Prefix Modifier ""Lobstered"" (Tier: 5) — Armour }"
+STONEFIST-0073,rare,before,4,55(43-55)% increased Armour
+STONEFIST-0073,rare,before,5,"{ Suffix Modifier ""of Rage"" (Tier: 3) — Damage, Critical }"
+STONEFIST-0073,rare,before,6,22(20-24)% increased Critical Damage Bonus
+STONEFIST-0073,rare,before,7,"{ Suffix Modifier ""of the Storm"" (Tier: 6) — Elemental, Lightning, Resistance }"
+STONEFIST-0073,rare,before,8,+18(16-20)% to Lightning Resistance
+STONEFIST-0073,rare,before,9,"{ Suffix Modifier ""of the Remora"" (Tier: 3) — Life, Physical, Attack }"
+STONEFIST-0073,rare,before,10,Leech 7.59(7-7.9)% of Physical Attack Damage as Life
+STONEFIST-0073,rare,after,1,{ Implicit Modifier }
+STONEFIST-0073,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0073,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0073,rare,after,4,"{ Prefix Modifier ""Rotund"" }"
+STONEFIST-0073,rare,after,5,11% less damage taken while on Low Life
+STONEFIST-0073,rare,after,6,"{ Prefix Modifier ""Lobstered"" — Evasion, Energy Shield }"
+STONEFIST-0073,rare,after,7,11(11-12)% more Global Evasion Rating and Energy Shield
+STONEFIST-0073,rare,after,8,"{ Suffix Modifier ""of Rage"" — Critical }"
+STONEFIST-0073,rare,after,9,+1.8(1.6-2)% to Critical Hit Chance
+STONEFIST-0073,rare,after,10,"{ Suffix Modifier ""of the Storm"" — Elemental, Lightning, Resistance }"
+STONEFIST-0073,rare,after,11,+1% to Maximum Lightning Resistance
+STONEFIST-0073,rare,after,12,+21(21-25)% to Lightning Resistance
+STONEFIST-0073,rare,after,13,"{ Suffix Modifier ""of the Remora"" — Life }"
+STONEFIST-0073,rare,after,14,Leech 11.63(11-11.9)% of Physical Attack Damage as Life
+STONEFIST-0073,rare,after,15,Leech Life 25(25-20)% slower
+STONEFIST-0073,rare,after,16,Unmodifiable
+STONEFIST-0074,rare,before,1,"{ Prefix Modifier ""Annealed"" (Tier: 4) — Damage, Physical, Attack }"
+STONEFIST-0074,rare,before,2,"{ Prefix Modifier ""Cremating"" (Tier: 1) — Damage, Elemental, Fire, Attack }"
+STONEFIST-0074,rare,before,3,"{ Prefix Modifier ""Arcing"" (Tier: 4) — Damage, Elemental, Lightning, Attack }"
+STONEFIST-0074,rare,before,4,"{ Suffix Modifier ""of Legend"" (Tier: 1) — Life }"
+STONEFIST-0074,rare,after,1,{ Implicit Modifier }
+STONEFIST-0074,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0074,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0074,rare,after,4,"{ Prefix Modifier ""Annealed"" — Physical, Attack }"
+STONEFIST-0074,rare,after,5,"{ Prefix Modifier ""Cremating"" — Elemental, Fire, Attack }"
+STONEFIST-0074,rare,after,6,"{ Prefix Modifier ""Arcing"" — Elemental, Lightning, Attack }"
+STONEFIST-0074,rare,after,7,"{ Suffix Modifier ""of Legend"" — Life }"
+STONEFIST-0074,rare,after,8,Unmodifiable
+STONEFIST-0075,rare,before,1,"{ Prefix Modifier ""Virile"" (Tier: 2) — Life }"
+STONEFIST-0075,rare,before,2,+118(100-119) to maximum Life
+STONEFIST-0075,rare,before,3,"{ Prefix Modifier ""Beryl"" (Tier: 9) — Mana }"
+STONEFIST-0075,rare,before,4,+14(10-14) to maximum Mana
+STONEFIST-0075,rare,before,5,"{ Prefix Modifier ""Razor-sharp"" (Tier: 3) — Damage, Physical, Attack }"
+STONEFIST-0075,rare,before,6,"{ Suffix Modifier ""of Eviction"" (Tier: 4) — Chaos, Resistance }"
+STONEFIST-0075,rare,before,7,+14(12-15)% to Chaos Resistance
+STONEFIST-0075,rare,before,8,"{ Suffix Modifier ""of the Lightning"" (Tier: 2) — Elemental, Lightning, Resistance }"
+STONEFIST-0075,rare,before,9,+38(36-40)% to Lightning Resistance
+STONEFIST-0075,rare,after,1,{ Implicit Modifier }
+STONEFIST-0075,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0075,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0075,rare,after,4,"{ Prefix Modifier ""Virile"" }"
+STONEFIST-0075,rare,after,5,12% less damage taken while on Low Life
+STONEFIST-0075,rare,after,6,"{ Prefix Modifier ""Beryl"" }"
+STONEFIST-0075,rare,after,7,11(10-11)% more Attack damage while on Low Mana
+STONEFIST-0075,rare,after,8,"{ Prefix Modifier ""Razor-sharp"" — Physical, Attack }"
+STONEFIST-0075,rare,after,9,"{ Suffix Modifier ""of Eviction"" — Chaos, Resistance }"
+STONEFIST-0075,rare,after,10,+1% to Maximum Chaos Resistance
+STONEFIST-0075,rare,after,11,+17(14-17)% to Chaos Resistance
+STONEFIST-0075,rare,after,12,"{ Suffix Modifier ""of the Lightning"" — Elemental, Lightning, Resistance }"
+STONEFIST-0075,rare,after,13,+2% to Maximum Lightning Resistance
+STONEFIST-0075,rare,after,14,+36(36-40)% to Lightning Resistance
+STONEFIST-0075,rare,after,15,Unmodifiable
+STONEFIST-0076,magic,before,1,"{ Suffix Modifier ""of Skill"" (Tier: 4) — Attack, Speed }"
+STONEFIST-0076,magic,before,2,7(5-7)% increased Attack Speed
+STONEFIST-0076,magic,after,1,{ Implicit Modifier }
+STONEFIST-0076,magic,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0076,magic,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0076,magic,after,4,"{ Suffix Modifier ""of Skill"" }"
+STONEFIST-0076,magic,after,5,11(8-12)% chance to gain Onslaught for 4 seconds on Hit
+STONEFIST-0076,magic,after,6,Unmodifiable
+STONEFIST-0077,rare,before,1,"{ Prefix Modifier ""Electrocuting"" (Tier: 1) — Damage, Elemental, Lightning, Attack }"
+STONEFIST-0077,rare,before,2,"{ Desecrated Prefix Modifier ""Gleaming"" (Tier: 5) — Damage, Physical, Attack }"
+STONEFIST-0077,rare,before,3,"{ Prefix Modifier ""Dauntless"" (Tier: 3) — Energy Shield }"
+STONEFIST-0077,rare,before,4,78(68-79)% increased Energy Shield
+STONEFIST-0077,rare,before,5,"{ Suffix Modifier ""of the Lightning"" (Tier: 2) — Elemental, Lightning, Resistance }"
+STONEFIST-0077,rare,before,6,+40(36-40)% to Lightning Resistance
+STONEFIST-0077,rare,before,7,"{ Suffix Modifier ""of the Jaguar"" (Tier: 3) — Attribute }"
+STONEFIST-0077,rare,before,8,+30(28-30) to Dexterity
+STONEFIST-0077,rare,before,9,"{ Suffix Modifier ""of the Polar Bear"" (Tier: 3) — Elemental, Cold, Resistance }"
+STONEFIST-0077,rare,before,10,+34(31-35)% to Cold Resistance
+STONEFIST-0077,rare,after,1,{ Implicit Modifier }
+STONEFIST-0077,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0077,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0077,rare,after,4,"{ Prefix Modifier ""Electrocuting"" — Elemental, Lightning, Attack }"
+STONEFIST-0077,rare,after,5,"{ Prefix Modifier ""Gleaming"" — Physical, Attack }"
+STONEFIST-0077,rare,after,6,"{ Prefix Modifier ""Dauntless"" — Evasion, Energy Shield }"
+STONEFIST-0077,rare,after,7,15(15-16)% more Global Evasion Rating and Energy Shield
+STONEFIST-0077,rare,after,8,"{ Suffix Modifier ""of the Lightning"" — Elemental, Lightning, Resistance }"
+STONEFIST-0077,rare,after,9,+2% to Maximum Lightning Resistance
+STONEFIST-0077,rare,after,10,+36(36-40)% to Lightning Resistance
+STONEFIST-0077,rare,after,11,"{ Suffix Modifier ""of the Jaguar"" }"
+STONEFIST-0077,rare,after,12,+42(41-45)% Surpassing chance to fire an additional Projectile
+STONEFIST-0077,rare,after,13,"{ Suffix Modifier ""of the Polar Bear"" — Elemental, Cold, Resistance }"
+STONEFIST-0077,rare,after,14,+2% to Maximum Cold Resistance
+STONEFIST-0077,rare,after,15,+33(31-35)% to Cold Resistance
+STONEFIST-0077,rare,after,16,Unmodifiable
+STONEFIST-0078,rare,before,1,"18% increased Armour, Evasion and Energy Shield (rune)"
+STONEFIST-0078,rare,before,2,"{ Prefix Modifier ""Pope's"" (Tier: 1) — Life, Energy Shield }"
+STONEFIST-0078,rare,before,3,41(39-42)% increased Energy Shield
+STONEFIST-0078,rare,before,4,+42(42-49) to maximum Life
+STONEFIST-0078,rare,before,5,"{ Suffix Modifier ""of Renown"" (Tier: 1) — Attack, Speed }"
+STONEFIST-0078,rare,before,6,16(14-16)% increased Attack Speed
+STONEFIST-0078,rare,before,7,"{ Suffix Modifier ""of the Proficient"" (Tier: 1) }"
+STONEFIST-0078,rare,before,8,35% reduced Attribute Requirements
+STONEFIST-0078,rare,after,1,"18% increased Armour, Evasion and Energy Shield (rune)"
+STONEFIST-0078,rare,after,2,{ Implicit Modifier }
+STONEFIST-0078,rare,after,3,Has +3 to Evasion Rating per player level
+STONEFIST-0078,rare,after,4,Has +1 to maximum Energy Shield per player level
+STONEFIST-0078,rare,after,5,"{ Prefix Modifier ""Pope's"" }"
+STONEFIST-0078,rare,after,6,"8% of Damage Taken Recouped as Life, Mana and Energy Shield"
+STONEFIST-0078,rare,after,7,"{ Suffix Modifier ""of Renown"" }"
+STONEFIST-0078,rare,after,8,27(26-30)% chance to gain Onslaught for 4 seconds on Hit
+STONEFIST-0078,rare,after,9,"{ Suffix Modifier ""of the Proficient"" — Attribute }"
+STONEFIST-0078,rare,after,10,+27(26-30) to all Attributes
+STONEFIST-0078,rare,after,11,Unmodifiable
+STONEFIST-0079,unique,before,1,"{ Unique Modifier — Armour, Energy Shield }"
+STONEFIST-0079,unique,before,2,46(40-60)% increased Armour and Energy Shield
+STONEFIST-0079,unique,before,3,"{ Unique Modifier — Elemental, Cold, Resistance }"
+STONEFIST-0079,unique,before,4,+14(10-15)% to Cold Resistance
+STONEFIST-0079,unique,before,5,{ Unique Modifier — Life }
+STONEFIST-0079,unique,before,6,{ Unique Modifier — Mana }
+STONEFIST-0079,unique,before,7,{ Unique Modifier }
+STONEFIST-0079,unique,before,8,20% increased Rarity of Items found
+STONEFIST-0079,unique,after,1,{ Implicit Modifier }
+STONEFIST-0079,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0079,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0079,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0079,unique,after,5,18(15-20)% more Global Evasion Rating and Energy Shield
+STONEFIST-0079,unique,after,6,{ Unique Modifier }
+STONEFIST-0079,unique,after,7,31(30-50)% chance to gain Volatility on Kill
+STONEFIST-0079,unique,after,8,{ Unique Modifier — Life }
+STONEFIST-0079,unique,after,9,{ Unique Modifier — Mana }
+STONEFIST-0079,unique,after,10,{ Unique Modifier }
+STONEFIST-0079,unique,after,11,20% increased Rarity of Items found
+STONEFIST-0079,unique,after,12,Unmodifiable
+STONEFIST-0080,unique,before,1,{ Unique Modifier — Evasion }
+STONEFIST-0080,unique,before,2,33(30-50)% increased Evasion Rating
+STONEFIST-0080,unique,before,3,"{ Unique Modifier — Damage, Elemental, Cold, Attack }"
+STONEFIST-0080,unique,before,4,"{ Unique Modifier — Elemental, Cold, Ailment }"
+STONEFIST-0080,unique,before,5,41(40-50)% increased Freeze Buildup
+STONEFIST-0080,unique,before,6,"{ Unique Modifier — Elemental, Cold, Ailment }"
+STONEFIST-0080,unique,before,7,21(20-30)% increased Magnitude of Chill you inflict
+STONEFIST-0080,unique,before,8,"{ Unique Modifier — Elemental, Cold, Resistance }"
+STONEFIST-0080,unique,before,9,+26(20-30)% to Cold Resistance
+STONEFIST-0080,unique,after,1,{ Implicit Modifier }
+STONEFIST-0080,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0080,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0080,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0080,unique,after,5,15(10-15)% more Global Evasion Rating and Energy Shield
+STONEFIST-0080,unique,after,6,"{ Unique Modifier — Elemental, Cold, Attack }"
+STONEFIST-0080,unique,after,7,"{ Unique Modifier — Elemental, Cold, Ailment }"
+STONEFIST-0080,unique,after,8,{ Unique Modifier }
+STONEFIST-0080,unique,after,9,"{ Unique Modifier — Elemental, Cold, Resistance }"
+STONEFIST-0080,unique,after,10,+3(2-3)% to Maximum Cold Resistance
+STONEFIST-0080,unique,after,11,+15(15-25)% to Cold Resistance
+STONEFIST-0080,unique,after,12,Unmodifiable
+STONEFIST-0081,unique,before,1,{ Unique Modifier — Energy Shield }
+STONEFIST-0081,unique,before,2,34(30-50)% increased Energy Shield
+STONEFIST-0081,unique,before,3,{ Unique Modifier — Attribute }
+STONEFIST-0081,unique,before,4,+14(10-20) to Dexterity
+STONEFIST-0081,unique,before,5,"{ Unique Modifier — Attack, Caster, Speed }"
+STONEFIST-0081,unique,before,6,15(15-10)% reduced Attack and Cast Speed
+STONEFIST-0081,unique,before,7,{ Unique Modifier }
+STONEFIST-0081,unique,after,1,{ Implicit Modifier }
+STONEFIST-0081,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0081,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0081,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0081,unique,after,5,14(10-15)% more Global Evasion Rating and Energy Shield
+STONEFIST-0081,unique,after,6,{ Unique Modifier }
+STONEFIST-0081,unique,after,7,+32(20-40)% Surpassing chance to fire an additional Projectile
+STONEFIST-0081,unique,after,8,"{ Unique Modifier — Attack, Caster, Speed }"
+STONEFIST-0081,unique,after,9,15(15-10)% reduced Attack and Cast Speed
+STONEFIST-0081,unique,after,10,"{ Unique Modifier — Elemental, Lightning, Ailment }"
+STONEFIST-0081,unique,after,11,Unmodifiable
+STONEFIST-0082,unique,before,1,"{ Unique Modifier — Armour, Energy Shield }"
+STONEFIST-0082,unique,before,2,243(200-300)% increased Armour and Energy Shield
+STONEFIST-0082,unique,before,3,{ Unique Modifier }
+STONEFIST-0082,unique,before,4,100% increased Attribute Requirements
+STONEFIST-0082,unique,before,5,{ Unique Modifier }
+STONEFIST-0082,unique,before,6,Debuffs you inflict have 29(20-30)% increased Slow Magnitude
+STONEFIST-0082,unique,before,7,{ Unique Modifier }
+STONEFIST-0082,unique,before,8,{ Unique Modifier — Life }
+STONEFIST-0082,unique,before,9,"{ Unique Modifier — Elemental, Lightning, Resistance }"
+STONEFIST-0082,unique,before,10,+24(20-40)% to Lightning Resistance
+STONEFIST-0082,unique,before,11,{ Unique Modifier — Life }
+STONEFIST-0082,unique,before,12,+100 to maximum Life
+STONEFIST-0082,unique,after,1,{ Implicit Modifier }
+STONEFIST-0082,unique,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0082,unique,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0082,unique,after,4,"{ Unique Modifier — Evasion, Energy Shield }"
+STONEFIST-0082,unique,after,5,24(20-25)% more Global Evasion Rating and Energy Shield
+STONEFIST-0082,unique,after,6,{ Unique Modifier }
+STONEFIST-0082,unique,after,7,100% increased Attribute Requirements
+STONEFIST-0082,unique,after,8,{ Unique Modifier }
+STONEFIST-0082,unique,after,9,43(25-50)% increased Immobilisation buildup
+STONEFIST-0082,unique,after,10,{ Unique Modifier }
+STONEFIST-0082,unique,after,11,{ Unique Modifier — Life }
+STONEFIST-0082,unique,after,12,"{ Unique Modifier — Elemental, Lightning, Resistance }"
+STONEFIST-0082,unique,after,13,+3(2-3)% to Maximum Lightning Resistance
+STONEFIST-0082,unique,after,14,+18(15-25)% to Lightning Resistance
+STONEFIST-0082,unique,after,15,{ Unique Modifier }
+STONEFIST-0082,unique,after,16,10(12-10)% less damage taken while on Low Life
+STONEFIST-0082,unique,after,17,Unmodifiable

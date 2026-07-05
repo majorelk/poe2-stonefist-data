@@ -1,0 +1,28 @@
+Item Class: Gloves
+Rarity: Rare
+Agony Talons
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 54
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Prefix Modifier "Rotund" }
+11% less damage taken while on Low Life
+{ Prefix Modifier "Lobstered" — Evasion, Energy Shield }
+11(11-12)% more Global Evasion Rating and Energy Shield
+{ Suffix Modifier "of Rage" — Critical }
++1.8(1.6-2)% to Critical Hit Chance
+{ Suffix Modifier "of the Storm" — Elemental, Lightning, Resistance }
++1% to Maximum Lightning Resistance
++21(21-25)% to Lightning Resistance
+{ Suffix Modifier "of the Remora" — Life }
+Leech 11.63(11-11.9)% of Physical Attack Damage as Life
+Leech Life 25(25-20)% slower
+--------
+Unmodifiable

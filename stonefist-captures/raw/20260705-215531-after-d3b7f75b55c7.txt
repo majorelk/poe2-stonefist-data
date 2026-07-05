@@ -1,0 +1,34 @@
+Item Class: Gloves
+Rarity: Rare
+Doom Mitts
+Runeforged Fists of Stone
+--------
+Evasion Rating: 480 (augmented)
+Energy Shield: 160 (augmented)
+Runic Ward: 80 (augmented)
+--------
+Item Level: 53
+--------
+{ Implicit Modifier }
+Has +2 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+Has +1 to maximum Runic Ward per player level
+--------
+{ Prefix Modifier "Cherub's" }
+Has +4 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+{ Prefix Modifier "Robust" }
+10% less damage taken while on Low Life
+{ Prefix Modifier "Gleaming" — Physical, Attack }
+Attacks Gain 14% of Damage as Extra Physical Damage
+{ Suffix Modifier "of the Arid" — Mana }
+Leech 10.6(9-10.9)% of Physical Attack Damage as Mana
+Leech Mana 23(25-20)% slower
+{ Suffix Modifier "of the Walrus" — Elemental, Cold, Resistance }
++2% to Maximum Cold Resistance
++28(26-30)% to Cold Resistance
+{ Suffix Modifier "of the Remora" — Life }
+Leech 11.32(11-11.9)% of Physical Attack Damage as Life
+Leech Life 24(25-20)% slower
+--------
+Unmodifiable

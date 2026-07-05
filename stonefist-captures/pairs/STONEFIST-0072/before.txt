@@ -1,0 +1,21 @@
+Item Class: Gloves
+Rarity: Rare
+Plague Hold
+Spiral Wraps
+--------
+Quality: +17% (augmented)
+Evasion Rating: 71 (augmented)
+Energy Shield: 25 (augmented)
+--------
+Requires: Level 33, 24 Dex, 24 Int
+--------
+Item Level: 43
+--------
+{ Prefix Modifier "Ethereal" (Tier: 6) — Evasion, Energy Shield }
+42(27-42)% increased Evasion and Energy Shield
+{ Suffix Modifier "of the Prodigy" (Tier: 6) — Attribute }
++16(13-16) to Intelligence
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
++22(21-25)% to Cold Resistance

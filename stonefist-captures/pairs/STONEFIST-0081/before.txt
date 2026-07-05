@@ -1,0 +1,23 @@
+Item Class: Gloves
+Rarity: Unique
+Kitoko's Current
+Jewelled Gloves
+--------
+Energy Shield: 31 (augmented)
+--------
+Requires: Level 26, 34 Int
+--------
+Item Level: 65
+--------
+{ Unique Modifier — Energy Shield }
+34(30-50)% increased Energy Shield
+{ Unique Modifier — Attribute }
++14(10-20) to Dexterity
+{ Unique Modifier — Attack, Caster, Speed }
+15(15-10)% reduced Attack and Cast Speed
+{ Unique Modifier }
+Lightning damage from Hits Contributes to Electrocution Buildup — Unscalable Value
+--------
+Reality is a puzzle. Ingenuity is power.
+--------
+Foil Unique

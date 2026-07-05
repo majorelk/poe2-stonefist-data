@@ -1,0 +1,21 @@
+Item Class: Gloves
+Rarity: Rare
+Cataclysm Hold
+Ornate Cuffs
+--------
+Armour: 107 (augmented)
+Energy Shield: 30 (augmented)
+--------
+Requires: Level 59, 41 Str, 41 Int
+--------
+Item Level: 69
+--------
+{ Prefix Modifier "Haruspex's" (Tier: 3) — Life, Armour, Energy Shield }
+31(27-32)% increased Armour and Energy Shield
++31(26-32) to maximum Life
+{ Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
++27(25-27) to Strength
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+12(11-14)% increased Rarity of Items found

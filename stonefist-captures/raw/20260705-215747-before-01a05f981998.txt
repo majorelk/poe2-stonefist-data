@@ -1,0 +1,21 @@
+Item Class: Gloves
+Rarity: Rare
+Grim Touch
+Doubled Gauntlets
+--------
+Armour: 57 (augmented)
+Evasion Rating: 50 (augmented)
+--------
+Requires: Level 33, 24 Str, 24 Dex
+--------
+Item Level: 34
+--------
+{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
++14(10-14) to maximum Mana
+{ Prefix Modifier "Thug's" (Tier: 5) — Life, Armour, Evasion }
+16(14-20)% increased Armour and Evasion
++18(11-19) to maximum Life
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+12(11-14)% increased Rarity of Items found
+{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
++16(16-20)% to Lightning Resistance

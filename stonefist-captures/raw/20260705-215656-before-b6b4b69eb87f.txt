@@ -1,0 +1,20 @@
+Item Class: Gloves
+Rarity: Rare
+Damnation Fingers
+Bound Cuffs
+--------
+Armour: 171 (augmented)
+Energy Shield: 48 (augmented)
+--------
+Requires: Level 65, 44 Str, 44 Int
+--------
+Item Level: 71
+--------
+{ Prefix Modifier "Inspired" (Tier: 1) — Armour, Energy Shield }
+92(92-100)% increased Armour and Energy Shield
+{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
++20(15-24) to maximum Mana
+{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
++7(6-10)% to Cold Resistance
+{ Suffix Modifier "of Sheathing" (Tier: 4) — Armour, Elemental }
++20(20-25)% of Armour also applies to Elemental Damage

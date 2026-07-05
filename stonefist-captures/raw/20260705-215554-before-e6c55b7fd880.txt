@@ -1,0 +1,14 @@
+Item Class: Gloves
+Rarity: Magic
+Adorned Wraps of Valour
+--------
+Quality: +13% (augmented)
+Evasion Rating: 84 (augmented)
+Energy Shield: 26 (augmented)
+--------
+Requires: Level 59, 41 Dex, 41 Int
+--------
+Item Level: 74
+--------
+{ Suffix Modifier "of Valour" (Tier: 3) — Life }
+Gain 45(41-53) Life per enemy killed

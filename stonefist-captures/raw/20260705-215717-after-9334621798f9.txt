@@ -1,0 +1,21 @@
+Item Class: Gloves
+Rarity: Magic
+Sanguine Fists of Stone of the Penguin
+--------
+Quality: +10% (augmented)
+Evasion Rating: 264 (augmented)
+Energy Shield: 88 (augmented)
+--------
+Item Level: 23
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Prefix Modifier "Sanguine" }
+7% less damage taken while on Low Life
+{ Suffix Modifier "of the Penguin" — Elemental, Cold, Resistance }
++1% to Maximum Cold Resistance
++18(16-20)% to Cold Resistance
+--------
+Unmodifiable

@@ -1,0 +1,24 @@
+Item Class: Gloves
+Rarity: Unique
+Blueflame Bracers
+Goldcast Cuffs
+--------
+Armour: 49
+Energy Shield: 35 (augmented)
+--------
+Requires: Level 33, 24 Str, 24 Int
+--------
+Item Level: 79
+--------
+{ Unique Modifier — Attribute }
++17(10-20) to Intelligence
+{ Unique Modifier — Elemental, Fire, Resistance }
++6(5-15)% to Fire Resistance
+{ Unique Modifier — Elemental, Cold, Resistance }
++14(5-15)% to Cold Resistance
+{ Unique Modifier }
+100% of Fire Damage Converted to Cold Damage
+{ Unique Modifier — Energy Shield }
++20 to maximum Energy Shield
+--------
+The secret was lost with its maker.

@@ -1,0 +1,30 @@
+Item Class: Gloves
+Rarity: Unique
+Gravebind
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Sockets: S 
+--------
+Item Level: 62
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Unique Modifier — Evasion, Energy Shield }
+18(15-20)% more Global Evasion Rating and Energy Shield
+{ Unique Modifier }
+31(30-50)% chance to gain Volatility on Kill
+{ Unique Modifier — Life }
+Recover 3% of maximum Life on Kill
+{ Unique Modifier — Mana }
+Recover 3% of maximum Mana on Kill
+{ Unique Modifier }
+20% increased Rarity of Items found
+Your other Modifiers to Rarity of Items found do not apply
+Enemies in your Presence killed by anyone count as being killed by you instead — Unscalable Value
+--------
+Unmodifiable

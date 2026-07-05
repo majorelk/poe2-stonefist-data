@@ -172,6 +172,501 @@ Mapping candidates are derived from explicit modifier block position and should 
 </p>
 
 <section>
+    <h2>Modifier stat families</h2>
+    <p>Stat families group mapping candidates by normalised stat text, so different rolls of the same stat can be reviewed together. These are still provisional.</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Before stat family</th>
+                <th>After stat family</th>
+                <th>Before modifier names</th>
+                <th>After modifier names</th>
+                <th>Confidence</th>
+                <th>Samples</th>
+                <th>Character levels</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>Adds # to # Physical Damage to Attacks</code></td>
+                <td><code>Attacks Gain #% of Damage as Extra Physical Damage</code></td>
+                <td>Annealed, Burnished, Gleaming, Glinting, Polished, Razor-sharp</td>
+                <td>Annealed, Burnished, Gleaming, Glinting, Polished, Razor-sharp</td>
+                <td>confirmed_family</td>
+                <td>17</td>
+                <td>80</td>
+                <td><code>Adds 2(2-4) to 7(5-8) Physical Damage to Attacks</code><br><code>Attacks Gain 12% of Damage as Extra Physical Damage</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Lightning Resistance</code></td>
+                <td><code>+#% to Maximum Lightning Resistance | +#% to Lightning Resistance</code></td>
+                <td>of the Cloud, of the Lightning, of the Maelstrom, of the Squall, of the Storm</td>
+                <td>of the Cloud, of the Lightning, of the Maelstrom, of the Squall, of the Storm</td>
+                <td>confirmed_family</td>
+                <td>12</td>
+                <td>80</td>
+                <td><code>+33(31-35)% to Lightning Resistance</code><br><code>+2% to Maximum Lightning Resistance | +31(31-35)% to Lightning Resistance</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Adds # to # Lightning damage to Attacks</code></td>
+                <td><code>Attacks Gain #% of Damage as Extra Lightning Damage</code></td>
+                <td>Arcing, Crackling, Discharging, Electrocuting, Humming, Shocking</td>
+                <td>Arcing, Crackling, Discharging, Electrocuting, Humming, Shocking</td>
+                <td>confirmed_family</td>
+                <td>8</td>
+                <td>80</td>
+                <td><code>Adds 2(1-2) to 41(41-47) Lightning damage to Attacks</code><br><code>Attacks Gain 18(17-18)% of Damage as Extra Lightning Damage</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Attack Speed</code></td>
+                <td><code>#% chance to gain Onslaught for # seconds on Hit</code></td>
+                <td>of Mastery, of Renown, of Skill</td>
+                <td>of Mastery, of Renown, of Skill</td>
+                <td>confirmed_family</td>
+                <td>7</td>
+                <td>80</td>
+                <td><code>13(11-13)% increased Attack Speed</code><br><code>20(20-24)% chance to gain Onslaught for 4 seconds on Hit</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain # Life per enemy killed</code></td>
+                <td><code>Recover #% of maximum Life on Kill</code></td>
+                <td>of Conquest, of Legend, of Success, of Triumph, of Valour, of Vanquishing</td>
+                <td>of Conquest, of Legend, of Success, of Triumph, of Valour, of Vanquishing</td>
+                <td>confirmed_family</td>
+                <td>7</td>
+                <td>80</td>
+                <td><code>Gain 43(41-53) Life per enemy killed</code><br><code>Recover 2% of maximum Life on Kill</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain # Mana per enemy killed</code></td>
+                <td><code>Recover #% of maximum Mana on Kill</code></td>
+                <td>of Absorption, of Devouring, of Infusion</td>
+                <td>of Absorption, of Devouring, of Infusion</td>
+                <td>confirmed_family</td>
+                <td>4</td>
+                <td>80</td>
+                <td><code>Gain 29(28-35) Mana per enemy killed</code><br><code>Recover 2% of maximum Mana on Kill</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Chaos Resistance</code></td>
+                <td><code>+#% to Maximum Chaos Resistance | +#% to Chaos Resistance</code></td>
+                <td>of Eviction, of the Lost</td>
+                <td>of Eviction, of the Lost</td>
+                <td>confirmed_family</td>
+                <td>3</td>
+                <td>80</td>
+                <td><code>+7(4-7)% to Chaos Resistance</code><br><code>+1% to Maximum Chaos Resistance | +7(6-9)% to Chaos Resistance</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Energy Shield</code></td>
+                <td><code>#% more Global Evasion Rating and Energy Shield</code></td>
+                <td>Dauntless, Unassailable</td>
+                <td>Dauntless, Unassailable</td>
+                <td>confirmed_family</td>
+                <td>2</td>
+                <td>80</td>
+                <td><code>97(92-100)% increased Energy Shield</code><br><code>20(19-20)% more Global Evasion Rating and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to maximum Life</code></td>
+                <td><code>#% less damage taken while on Low Life</code></td>
+                <td>Athlete&#x27;s, Hale, Healthy, Robust, Rotund, Sanguine, Stalwart, Stout, Virile</td>
+                <td>Athlete&#x27;s, Hale, Healthy, Robust, Rotund, Sanguine, Stalwart, Stout, Virile</td>
+                <td>likely_family</td>
+                <td>19</td>
+                <td>80</td>
+                <td><code>+25(20-29) to maximum Life</code><br><code>6% less damage taken while on Low Life</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to maximum Mana</code></td>
+                <td><code>#% more Attack damage while on Low Mana</code></td>
+                <td>Azure, Beryl, Cerulean, Chalybeous, Cobalt, Opalescent, Teal</td>
+                <td>Azure, Beryl, Cerulean, Chalybeous, Cobalt, Opalescent, Teal</td>
+                <td>likely_family</td>
+                <td>16</td>
+                <td>80</td>
+                <td><code>+80(80-89) to maximum Mana</code><br><code>22(22-23)% more Attack damage while on Low Mana</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Cold Resistance</code></td>
+                <td><code>+#% to Maximum Cold Resistance | +#% to Cold Resistance</code></td>
+                <td>of the Penguin, of the Polar Bear, of the Seal, of the Walrus, of the Yeti</td>
+                <td>of the Penguin, of the Polar Bear, of the Seal, of the Walrus, of the Yeti</td>
+                <td>likely_family</td>
+                <td>12</td>
+                <td>80</td>
+                <td><code>+35(31-35)% to Cold Resistance</code><br><code>+2% to Maximum Cold Resistance | +32(31-35)% to Cold Resistance</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Fire Resistance</code></td>
+                <td><code>+#% to Maximum Fire Resistance | +#% to Fire Resistance</code></td>
+                <td>of the Drake, of the Furnace, of the Kiln, of the Salamander, of the Volcano</td>
+                <td>of the Drake, of the Furnace, of the Kiln, of the Salamander, of the Volcano</td>
+                <td>likely_family</td>
+                <td>11</td>
+                <td>80</td>
+                <td><code>+19(16-20)% to Fire Resistance</code><br><code>+1% to Maximum Fire Resistance | +24(21-25)% to Fire Resistance</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Dexterity</code></td>
+                <td><code>+#% Surpassing chance to fire an additional Projectile</code></td>
+                <td>of the Falcon, of the Fox, of the Jaguar, of the Lynx, of the Mongoose, of the Phantom</td>
+                <td>of the Falcon, of the Fox, of the Jaguar, of the Lynx, of the Mongoose, of the Phantom</td>
+                <td>likely_family</td>
+                <td>11</td>
+                <td>80</td>
+                <td><code>+16(13-16) to Dexterity</code><br><code>+26(23-26)% Surpassing chance to fire an additional Projectile</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Rarity of Items found</code></td>
+                <td><code>#% increased Quantity of Gold Dropped by Slain Enemies</code></td>
+                <td>of Archaeology, of Plunder, of Raiding</td>
+                <td>of Archaeology, of Plunder, of Raiding</td>
+                <td>likely_family</td>
+                <td>10</td>
+                <td>80</td>
+                <td><code>9(6-10)% increased Rarity of Items found</code><br><code>19(15-20)% increased Quantity of Gold Dropped by Slain Enemies</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Leech #% of Physical Attack Damage as Mana</code></td>
+                <td><code>Leech #% of Physical Attack Damage as Mana | Leech Mana #% slower</code></td>
+                <td>of the Arid, of the Desperate, of the Drought, of the Parched</td>
+                <td>of the Arid, of the Desperate, of the Drought, of the Parched</td>
+                <td>likely_family</td>
+                <td>8</td>
+                <td>80</td>
+                <td><code>Leech 8.47(8-8.9)% of Physical Attack Damage as Mana</code><br><code>Leech 12.26(12-13)% of Physical Attack Damage as Mana | Leech Mana 22(25-20)% slower</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Accuracy Rating</code></td>
+                <td><code>#% chance to Blind Enemies on Hit with Attacks</code></td>
+                <td>Consistent, Deliberate, Hunter&#x27;s, Reliable, Steady</td>
+                <td>Consistent, Deliberate, Hunter&#x27;s, Reliable, Steady</td>
+                <td>likely_family</td>
+                <td>7</td>
+                <td>80</td>
+                <td><code>+336(237-346) to Accuracy Rating</code><br><code>30(30-32)% chance to Blind Enemies on Hit with Attacks</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Adds # to # Cold damage to Attacks</code></td>
+                <td><code>Attacks Gain #% of Damage as Extra Cold Damage</code></td>
+                <td>Freezing, Frosted, Frozen, Glaciated, Icy</td>
+                <td>Freezing, Frosted, Frozen, Glaciated, Icy</td>
+                <td>likely_family</td>
+                <td>7</td>
+                <td>80</td>
+                <td><code>Adds 13(11-13) to 20(18-21) Cold damage to Attacks</code><br><code>Attacks Gain 15(15-16)% of Damage as Extra Cold Damage</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Level of all Melee Skills</code></td>
+                <td><code>+#% to Quality of all Skills</code></td>
+                <td>of Combat</td>
+                <td>of Combat</td>
+                <td>likely_family</td>
+                <td>7</td>
+                <td>80</td>
+                <td><code>+1 to Level of all Melee Skills</code><br><code>+12(10-12)% to Quality of all Skills</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Leech #% of Physical Attack Damage as Life</code></td>
+                <td><code>Leech #% of Physical Attack Damage as Life | Leech Life #% slower</code></td>
+                <td>of the Lamprey, of the Remora, of the Vampire</td>
+                <td>of the Lamprey, of the Remora, of the Vampire</td>
+                <td>likely_family</td>
+                <td>5</td>
+                <td>80</td>
+                <td><code>Leech 8.47(8-8.9)% of Physical Attack Damage as Life</code><br><code>Leech 13.34(12-13.9)% of Physical Attack Damage as Life | Leech Life 25(25-20)% slower</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Adds # to # Fire damage to Attacks</code></td>
+                <td><code>Attacks Gain #% of Damage as Extra Fire Damage</code></td>
+                <td>Blasting, Cremating, Incinerating, Scorching</td>
+                <td>Blasting, Cremating, Incinerating, Scorching</td>
+                <td>likely_family</td>
+                <td>4</td>
+                <td>80</td>
+                <td><code>Adds 21(20-24) to 34(33-36) Fire damage to Attacks</code><br><code>Attacks Gain 19(19-20)% of Damage as Extra Fire Damage</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain # Life per Enemy Hit with Attacks</code></td>
+                <td><code>Gain # Life per Enemy Hit with Attacks if you have dealt a Critical Hit Recently</code></td>
+                <td>of Nourishment, of Regrowth, of Rejuvenation, of Restoration</td>
+                <td>of Nourishment, of Regrowth, of Rejuvenation, of Restoration</td>
+                <td>likely_family</td>
+                <td>4</td>
+                <td>80</td>
+                <td><code>Gain 5 Life per Enemy Hit with Attacks</code><br><code>Gain 13(13-15) Life per Enemy Hit with Attacks if you have dealt a Critical Hit Recently</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Evasion and Energy Shield</code></td>
+                <td><code>#% more Global Evasion Rating and Energy Shield</code></td>
+                <td>Ephemeral, Ethereal, Illusory, Unworldly</td>
+                <td>Ephemeral, Ethereal, Illusory, Unworldly</td>
+                <td>likely_family</td>
+                <td>4</td>
+                <td>80</td>
+                <td><code>65(56-67)% increased Evasion and Energy Shield</code><br><code>13(13-14)% more Global Evasion Rating and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Critical Damage Bonus</code></td>
+                <td><code>+#% to Critical Hit Chance</code></td>
+                <td>of Ire, of Rage</td>
+                <td>of Ire, of Rage</td>
+                <td>likely_family</td>
+                <td>4</td>
+                <td>80</td>
+                <td><code>23(20-24)% increased Critical Damage Bonus</code><br><code>+1.8(1.6-2)% to Critical Hit Chance</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Intelligence</code></td>
+                <td><code>#% increased Cooldown Recovery Rate</code></td>
+                <td>of the Prodigy, of the Pupil, of the Sage, of the Savant</td>
+                <td>of the Prodigy, of the Pupil, of the Sage, of the Savant</td>
+                <td>likely_family</td>
+                <td>4</td>
+                <td>80</td>
+                <td><code>+27(25-27) to Intelligence</code><br><code>28(25-28)% increased Cooldown Recovery Rate</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour and Energy Shield | +# to maximum Life</code></td>
+                <td><code>#% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+                <td>Auspex&#x27;s, Druid&#x27;s, Haruspex&#x27;s</td>
+                <td>Auspex&#x27;s, Druid&#x27;s, Haruspex&#x27;s</td>
+                <td>likely_family</td>
+                <td>4</td>
+                <td>80</td>
+                <td><code>22(21-26)% increased Armour and Energy Shield | +21(20-25) to maximum Life</code><br><code>5% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Evasion Rating</code></td>
+                <td><code>Has +# to Evasion Rating per player level | Has +# to maximum Energy Shield per player level</code></td>
+                <td>Acrobat&#x27;s, Agile, Dancer&#x27;s, Phased</td>
+                <td>Acrobat&#x27;s, Agile, Dancer&#x27;s, Phased</td>
+                <td>likely_family</td>
+                <td>4</td>
+                <td>80</td>
+                <td><code>+15(11-18) to Evasion Rating</code><br><code>Has +1 to Evasion Rating per player level | Has +1 to maximum Energy Shield per player level</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Evasion Rating | +# to maximum Energy Shield</code></td>
+                <td><code>Has +# to Evasion Rating per player level | Has +# to maximum Energy Shield per player level</code></td>
+                <td>Cherub&#x27;s, Nymph&#x27;s</td>
+                <td>Cherub&#x27;s, Nymph&#x27;s</td>
+                <td>likely_family</td>
+                <td>3</td>
+                <td>80</td>
+                <td><code>+66(65-78) to Evasion Rating | +25(22-25) to maximum Energy Shield</code><br><code>Has +4 to Evasion Rating per player level | Has +1 to maximum Energy Shield per player level</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% reduced Attribute Requirements</code></td>
+                <td><code>+# to all Attributes</code></td>
+                <td>of the Apt, of the Proficient, of the Skilled</td>
+                <td>of the Apt, of the Proficient, of the Skilled</td>
+                <td>likely_family</td>
+                <td>3</td>
+                <td>80</td>
+                <td><code>30% reduced Attribute Requirements</code><br><code>+24(21-25) to all Attributes</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Evasion and Energy Shield | +# to maximum Life</code></td>
+                <td><code>#% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+                <td>Bard&#x27;s, Poet&#x27;s</td>
+                <td>Bard&#x27;s, Poet&#x27;s</td>
+                <td>likely_family</td>
+                <td>2</td>
+                <td>80</td>
+                <td><code>27(27-32)% increased Evasion and Energy Shield | +27(26-32) to maximum Life</code><br><code>6% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% of Armour also applies to Elemental Damage</code></td>
+                <td><code>+#% to all Elemental Resistances</code></td>
+                <td>of Covering, of Sheathing</td>
+                <td>of Covering, of Sheathing</td>
+                <td>likely_family</td>
+                <td>2</td>
+                <td>80</td>
+                <td><code>+18(14-19)% of Armour also applies to Elemental Damage</code><br><code>+11(10-12)% to all Elemental Resistances</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Evasion Rating</code></td>
+                <td><code>#% more Global Evasion Rating and Energy Shield</code></td>
+                <td>Nightmare&#x27;s, Shade&#x27;s</td>
+                <td>Nightmare&#x27;s, Shade&#x27;s</td>
+                <td>likely_family</td>
+                <td>2</td>
+                <td>80</td>
+                <td><code>80(80-91)% increased Evasion Rating</code><br><code>17(17-18)% more Global Evasion Rating and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Energy Shield | +# to maximum Life</code></td>
+                <td><code>#% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+                <td>Monk&#x27;s, Pope&#x27;s</td>
+                <td>Monk&#x27;s, Pope&#x27;s</td>
+                <td>likely_family</td>
+                <td>2</td>
+                <td>80</td>
+                <td><code>13(6-13)% increased Energy Shield | +8(7-10) to maximum Life</code><br><code>3% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour and Energy Shield</code></td>
+                <td><code>#% more Global Evasion Rating and Energy Shield</code></td>
+                <td>Ingrained, Inspired</td>
+                <td>Ingrained, Inspired</td>
+                <td>likely_family</td>
+                <td>2</td>
+                <td>80</td>
+                <td><code>32(27-42)% increased Armour and Energy Shield</code><br><code>10(9-10)% more Global Evasion Rating and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Evasion Rating | +# to maximum Life</code></td>
+                <td><code>#% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+                <td>Flea&#x27;s, Mouflon&#x27;s</td>
+                <td>Flea&#x27;s, Mouflon&#x27;s</td>
+                <td>likely_family</td>
+                <td>2</td>
+                <td>80</td>
+                <td><code>12(6-13)% increased Evasion Rating | +10(7-10) to maximum Life</code><br><code>3% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Strength</code></td>
+                <td><code>#% increased Area of Effect for Attacks</code></td>
+                <td>of the Goliath</td>
+                <td>of the Goliath</td>
+                <td>likely_family</td>
+                <td>2</td>
+                <td>80</td>
+                <td><code>+27(25-27) to Strength</code><br><code>25(23-25)% increased Area of Effect for Attacks</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour | +# to maximum Life</code></td>
+                <td><code>#% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+                <td>Urchin&#x27;s</td>
+                <td>Urchin&#x27;s</td>
+                <td>likely_family</td>
+                <td>1</td>
+                <td>80</td>
+                <td><code>21(21-26)% increased Armour | +20(20-25) to maximum Life</code><br><code>5% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain Deflection Rating equal to #% of Evasion Rating</code></td>
+                <td><code>Prevent +#% of Damage from Deflected Hits</code></td>
+                <td>of Curvation</td>
+                <td>of Curvation</td>
+                <td>likely_family</td>
+                <td>1</td>
+                <td>80</td>
+                <td><code>Gain Deflection Rating equal to 15(15-17)% of Evasion Rating</code><br><code>Prevent +5% of Damage from Deflected Hits</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Armour</code></td>
+                <td><code>Has +# to Evasion Rating per player level | Has +# to maximum Energy Shield per player level</code></td>
+                <td>Fortified</td>
+                <td>Fortified</td>
+                <td>likely_family</td>
+                <td>1</td>
+                <td>80</td>
+                <td><code>+80(78-98) to Armour</code><br><code>Has +2 to Evasion Rating per player level | Has +1 to maximum Energy Shield per player level</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour and Evasion</code></td>
+                <td><code>#% more Global Evasion Rating and Energy Shield</code></td>
+                <td>Hero&#x27;s</td>
+                <td>Hero&#x27;s</td>
+                <td>likely_family</td>
+                <td>1</td>
+                <td>80</td>
+                <td><code>80(80-91)% increased Armour and Evasion</code><br><code>18(17-18)% more Global Evasion Rating and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to maximum Energy Shield</code></td>
+                <td><code>Has +# to Evasion Rating per player level | Has +# to maximum Energy Shield per player level</code></td>
+                <td>Glimmering</td>
+                <td>Glimmering</td>
+                <td>likely_family</td>
+                <td>1</td>
+                <td>80</td>
+                <td><code>+18(18-24) to maximum Energy Shield</code><br><code>Has +1 to Evasion Rating per player level | Has +1 to maximum Energy Shield per player level</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour and Evasion | +# to maximum Life</code></td>
+                <td><code>#% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+                <td>Thug&#x27;s</td>
+                <td>Thug&#x27;s</td>
+                <td>likely_family</td>
+                <td>1</td>
+                <td>80</td>
+                <td><code>16(14-20)% increased Armour and Evasion | +18(11-19) to maximum Life</code><br><code>4% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Armour | +# to maximum Energy Shield</code></td>
+                <td><code>Has +# to Evasion Rating per player level | Has +# to maximum Energy Shield per player level</code></td>
+                <td>Hallowed</td>
+                <td>Hallowed</td>
+                <td>likely_family</td>
+                <td>1</td>
+                <td>80</td>
+                <td><code>+73(72-85) to Armour | +23(22-25) to maximum Energy Shield</code><br><code>Has +4 to Evasion Rating per player level | Has +1 to maximum Energy Shield per player level</code></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour</code></td>
+                <td><code>#% more Global Evasion Rating and Energy Shield</code></td>
+                <td>Lobstered</td>
+                <td>Lobstered</td>
+                <td>likely_family</td>
+                <td>1</td>
+                <td>80</td>
+                <td><code>55(43-55)% increased Armour</code><br><code>11(11-12)% more Global Evasion Rating and Energy Shield</code></td>
+            </tr>
+            </tbody>
+    </table>
+    
+</section>
+
+<section>
     <h2>Modifier mapping candidates</h2>
     
     <table>
@@ -1850,8 +2345,8 @@ Mapping candidates are derived from explicit modifier block position and should 
             <tr>
                 <td><code>of the Parched</code></td>
                 <td><code>Leech 5.79(5-5.9)% of Physical Attack Damage as Mana</code></td>
-                <td><code>of the Squall</code></td>
-                <td><code>+1% to Maximum Lightning Resistance | +18(16-20)% to Lightning Resistance</code></td>
+                <td><code>of the Parched</code></td>
+                <td><code>Leech 8.44(8-8.9)% of Physical Attack Damage as Mana | Leech Mana 22(25-20)% slower</code></td>
                 <td>likely_candidate</td>
                 <td>1</td>
                 <td>80</td>
@@ -1860,8 +2355,8 @@ Mapping candidates are derived from explicit modifier block position and should 
             <tr>
                 <td><code>of the Squall</code></td>
                 <td><code>+15(11-15)% to Lightning Resistance</code></td>
-                <td><code>of the Parched</code></td>
-                <td><code>Leech 8.44(8-8.9)% of Physical Attack Damage as Mana | Leech Mana 22(25-20)% slower</code></td>
+                <td><code>of the Squall</code></td>
+                <td><code>+1% to Maximum Lightning Resistance | +18(16-20)% to Lightning Resistance</code></td>
                 <td>likely_candidate</td>
                 <td>1</td>
                 <td>80</td>
@@ -2362,7 +2857,7 @@ Mapping candidates are derived from explicit modifier block position and should 
 </section>
 
 <p>
-Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, and <code>mapping_candidates.csv</code>.
+Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, and <code>mapping_families.csv</code>.
 </p>
 
 <div>

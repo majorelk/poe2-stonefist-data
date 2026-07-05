@@ -1,0 +1,31 @@
+Item Class: Gloves
+Rarity: Rare
+Dread Knuckle
+Adorned Wraps
+--------
+Quality: +20% (augmented)
+Evasion Rating: 213 (augmented)
+Energy Shield: 73 (augmented)
+--------
+Requires: Level 59, 41 Dex, 41 Int
+--------
+Sockets: S 
+--------
+Item Level: 72
+--------
++18% to Lightning Resistance (rune)
+--------
+{ Prefix Modifier "Hunter's" (Tier: 3) — Attack }
++336(237-346) to Accuracy Rating
+{ Prefix Modifier "Cherub's" (Tier: 1) — Evasion, Energy Shield }
++66(65-78) to Evasion Rating
++25(22-25) to maximum Energy Shield
+{ Prefix Modifier "Bard's" (Tier: 3) — Life, Evasion, Energy Shield }
+27(27-32)% increased Evasion and Energy Shield
++27(26-32) to maximum Life
+{ Suffix Modifier "of the Maelstrom" (Tier: 3) — Elemental, Lightning, Resistance }
++33(31-35)% to Lightning Resistance
+{ Suffix Modifier "of Mastery" (Tier: 2) — Attack, Speed }
+13(11-13)% increased Attack Speed
+{ Suffix Modifier "of the Lamprey" (Tier: 2) — Life, Physical, Attack }
+Leech 8.47(8-8.9)% of Physical Attack Damage as Life

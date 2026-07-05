@@ -1,0 +1,14 @@
+Item Class: Gloves
+Rarity: Magic
+Polished Refined Bracers of the Cloud
+--------
+Evasion Rating: 124
+--------
+Requires: Level 54, 67 Dex
+--------
+Item Level: 63
+--------
+{ Prefix Modifier "Polished" (Tier: 7) — Damage, Physical, Attack }
+Adds 2(2-4) to 7(5-8) Physical Damage to Attacks
+{ Suffix Modifier "of the Cloud" (Tier: 8) — Elemental, Lightning, Resistance }
++9(6-10)% to Lightning Resistance

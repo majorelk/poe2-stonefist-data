@@ -1,0 +1,18 @@
+Item Class: Gloves
+Rarity: Rare
+Torment Touch
+Bound Bracers
+--------
+Evasion Rating: 47 (augmented)
+--------
+Requires: Level 16, 22 Dex
+--------
+Item Level: 17
+--------
+{ Prefix Modifier "Polished" (Tier: 7) — Damage, Physical, Attack }
+Adds 3(2-4) to 7(5-8) Physical Damage to Attacks
+{ Prefix Modifier "Flea's" (Tier: 6) — Life, Evasion }
+12(6-13)% increased Evasion Rating
++10(7-10) to maximum Life
+{ Suffix Modifier "of the Squall" (Tier: 7) — Elemental, Lightning, Resistance }
++12(11-15)% to Lightning Resistance

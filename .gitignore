@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Generated reports
+stonefist-captures/report.html
+stonefist-captures/pair_summary.csv
+stonefist-captures/mod_lines.csv
+
+# Optional: raw duplicate clipboard dumps
+stonefist-captures/raw/
+
+# Keep the actual paired evidence
+!stonefist-captures/pairs/
+!stonefist-captures/pairs/**
+
+# Keep capture summary files if you want them
+!stonefist-captures/pairs.csv
+!stonefist-captures/pairs.jsonl

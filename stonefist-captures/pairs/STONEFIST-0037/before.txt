@@ -1,0 +1,13 @@
+Item Class: Gloves
+Rarity: Magic
+Layered Gauntlets of the Lost
+--------
+Armour: 27
+Evasion Rating: 23
+--------
+Requires: Level 16, 13 Str, 13 Dex
+--------
+Item Level: 24
+--------
+{ Suffix Modifier "of the Lost" (Tier: 6) — Chaos, Resistance }
++7(4-7)% to Chaos Resistance

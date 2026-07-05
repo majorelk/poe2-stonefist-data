@@ -1,0 +1,26 @@
+Item Class: Gloves
+Rarity: Unique
+Painter's Servant
+Torn Gloves
+--------
+Energy Shield: 9
+--------
+Item Level: 52
+--------
+{ Unique Modifier }
+33% of Elemental Damage Converted to Fire Damage
+{ Unique Modifier }
+33% of Elemental Damage Converted to Cold Damage
+{ Unique Modifier }
+33% of Elemental Damage Converted to Lightning Damage
+{ Unique Modifier — Damage, Elemental, Fire }
+Gain 6(5-10)% of Elemental Damage as Extra Fire Damage
+{ Unique Modifier — Damage, Elemental, Cold }
+Gain 7(5-10)% of Elemental Damage as Extra Cold Damage
+{ Unique Modifier — Damage, Elemental, Lightning }
+Gain 9(5-10)% of Elemental Damage as Extra Lightning Damage
+--------
+Bloodshed on the crimson shores,
+longing for the endless sea.
+Treasures, life, I'd give it all
+just to capture thee.

@@ -1,0 +1,24 @@
+Item Class: Gloves
+Rarity: Rare
+Torment Knuckle
+Bound Cuffs
+--------
+Armour: 190 (augmented)
+Energy Shield: 56 (augmented)
+--------
+Requires: Level 65, 44 Str, 44 Int
+--------
+Sockets: S 
+--------
+Item Level: 71
+--------
+{ Prefix Modifier "Auspex's" (Tier: 5) — Life, Armour, Energy Shield }
+17(14-20)% increased Armour and Energy Shield
++14(11-19) to maximum Life
+{ Prefix Modifier "Hallowed" (Tier: 1) — Armour, Energy Shield }
++73(72-85) to Armour
++23(22-25) to maximum Energy Shield
+{ Prefix Modifier "Robust" (Tier: 4) — Life }
++83(70-84) to maximum Life
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills

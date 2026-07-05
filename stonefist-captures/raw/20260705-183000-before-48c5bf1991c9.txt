@@ -1,0 +1,10 @@
+Item Class: Gloves
+Rarity: Magic
+Stocky Mitts of Skill
+--------
+Armour: 15
+--------
+Item Level: 3
+--------
+{ Suffix Modifier "of Skill" (Tier: 4) — Attack, Speed }
+7(5-7)% increased Attack Speed

@@ -1,0 +1,26 @@
+Item Class: Gloves
+Rarity: Unique
+Demon Stitcher
+Intricate Gloves
+--------
+Energy Shield: 69 (augmented)
+--------
+Requires: Level 33, 42 Int
+--------
+Sockets: S 
+--------
+Item Level: 48
+--------
+{ Unique Modifier — Caster, Speed }
+10(6-12)% increased Cast Speed
+{ Unique Modifier — Energy Shield }
++42(40-60) to maximum Energy Shield
+{ Unique Modifier — Life }
++107(80-120) to maximum Life
+{ Unique Modifier — Life, Energy Shield }
+Sacrifice 8(5-15)% of maximum Life to gain that much Energy Shield when you Cast a Spell
+--------
+Xibaqua's treachery was met with divine fury.
+One by one, the gods reclaimed their flesh,
+until all that remained was a droplet of pure light:
+The first Vaal.

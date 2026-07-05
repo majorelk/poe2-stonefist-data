@@ -1,0 +1,15 @@
+Item Class: Gloves
+Rarity: Magic
+Hero's Commander Gauntlets of the Lightning
+--------
+Armour: 169 (augmented)
+Evasion Rating: 153 (augmented)
+--------
+Requires: Level 70, 48 Str, 48 Dex
+--------
+Item Level: 73
+--------
+{ Prefix Modifier "Hero's" (Tier: 2) — Armour, Evasion }
+80(80-91)% increased Armour and Evasion
+{ Suffix Modifier "of the Lightning" (Tier: 2) — Elemental, Lightning, Resistance }
++38(36-40)% to Lightning Resistance

@@ -1,0 +1,32 @@
+Item Class: Gloves
+Rarity: Unique
+Atziri's Acuity
+Moulded Mitts
+--------
+Quality: +20% (augmented)
+Armour: 294 (augmented)
+--------
+Requires: Level 33, 42 Str
+--------
+Sockets: S 
+--------
+Item Level: 82
+--------
+Grants Skill: Level 19 Herald of the Royal Queen
+--------
+{ Unique Modifier — Armour }
+175(150-200)% increased Armour
+{ Unique Modifier — Life }
++128(100-150) to maximum Life
+{ Unique Modifier — Life, Physical, Attack }
+Leech 10% of Physical Attack Damage as Life
+{ Unique Modifier }
+10% of Physical damage dealt by your Hits causes Blood Loss — Unscalable Value
+{ Unique Modifier — Life }
+Vaal Pact — Unscalable Value
+--------
+"The heart is the herald. 
+It will tell me when it is best to strike."
+- Atziri, Queen of the Vaal
+--------
+Corrupted

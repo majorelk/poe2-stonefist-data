@@ -1,0 +1,27 @@
+Item Class: Gloves
+Rarity: Unique
+Demon Stitcher
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+Runic Ward: 77 (augmented)
+--------
+Sockets: S 
+--------
+Item Level: 48
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Unique Modifier — Attack, Speed }
+10(9-15)% increased Attack Speed
+{ Unique Modifier }
++77(60-80) to maximum Runic Ward
+{ Unique Modifier — Life }
++139(130-160) to maximum Life
+{ Unique Modifier — Attack }
+Sacrifice 19(10-30)% of maximum Life to gain half that much Runic Ward when you Attack
+--------
+Unmodifiable

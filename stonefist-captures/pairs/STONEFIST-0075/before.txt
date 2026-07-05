@@ -1,0 +1,25 @@
+Item Class: Gloves
+Rarity: Unique
+Empire's Grasp
+Titan Mitts
+--------
+Armour: 376 (augmented)
+--------
+Requires: Level 52, 64 Str
+--------
+Item Level: 68
+--------
+{ Unique Modifier }
+Knockback direction is reversed — Unscalable Value
+{ Unique Modifier — Armour }
+185(150-200)% increased Armour
+{ Unique Modifier — Attribute }
++24(20-30) to Strength
+{ Unique Modifier — Life }
+Gain 34(30-50) Life per enemy killed
+{ Unique Modifier — Damage, Physical }
+20(10-20)% increased Global Physical Damage
+--------
+"I like my vassals at sword point,
+but my enemies as close as the hilt."
+- Emperor Chitus

@@ -1,0 +1,24 @@
+Item Class: Gloves
+Rarity: Unique
+Deathblow
+Doubled Gauntlets
+--------
+Armour: 121 (augmented)
+Evasion Rating: 106 (augmented)
+--------
+Requires: Level 33, 24 Str, 24 Dex
+--------
+Item Level: 80
+--------
+{ Unique Modifier — Armour, Evasion }
+147(100-150)% increased Armour and Evasion
+{ Unique Modifier — Life }
+Gain 24(20-30) Life per enemy killed
+{ Unique Modifier — Mana }
+Gain 28(20-30) Mana per enemy killed
+{ Unique Modifier }
+Culling Strike — Unscalable Value
+{ Unique Modifier — Attack, Speed }
+9(5-10)% increased Attack Speed
+--------
+Anticipation is a gift.

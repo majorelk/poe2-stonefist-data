@@ -1,0 +1,28 @@
+Item Class: Gloves
+Rarity: Unique
+Blueflame Bracers
+Fists of Stone
+--------
+Evasion Rating: 320 (augmented)
+Energy Shield: 160 (augmented)
+--------
+Item Level: 79
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Unique Modifier }
+12(10-15)% increased Cooldown Recovery Rate
+{ Unique Modifier — Elemental, Fire, Resistance }
++1% to Maximum Fire Resistance
++13(5-15)% to Fire Resistance
+{ Unique Modifier — Damage, Elemental, Lightning }
+Gain 11(10-20)% of Fire damage as Extra Lightning damage
+{ Unique Modifier }
+100% of Fire damage Converted to Lightning damage
+{ Unique Modifier }
+Has +1 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable

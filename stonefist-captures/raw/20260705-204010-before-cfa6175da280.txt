@@ -1,0 +1,23 @@
+Item Class: Gloves
+Rarity: Unique
+Dreadfist
+Bolstered Mitts
+--------
+Armour: 136 (augmented)
+--------
+Requires: Level 27, 35 Str
+--------
+Item Level: 79
+--------
+{ Unique Modifier — Armour }
+81(60-100)% increased Armour
+{ Unique Modifier — Damage, Critical }
+28(20-30)% increased Critical Damage Bonus
+{ Unique Modifier — Physical, Attack }
+Critical Hits inflict Impale — Unscalable Value
+{ Unique Modifier — Critical }
+Critical Hits cannot Extract Impale — Unscalable Value
+{ Unique Modifier — Damage, Physical }
+28(20-31) to 49(32-49) Physical Thorns damage
+--------
+What is worse, the sting of the past, the pain of the present, or the fear of the future?

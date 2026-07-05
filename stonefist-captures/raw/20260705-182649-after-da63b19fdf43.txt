@@ -1,0 +1,29 @@
+Item Class: Gloves
+Rarity: Rare
+Mind Palm
+Fists of Stone
+--------
+Evasion Rating: 237 (augmented)
+Energy Shield: 79 (augmented)
+--------
+Item Level: 65
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+{ Prefix Modifier "Beryl" }
+10(10-11)% more Attack damage while on Low Mana
+{ Prefix Modifier "Deliberate" — Attack }
+21(21-23)% chance to Blind Enemies on Hit with Attacks
+{ Prefix Modifier "Icy" — Elemental, Cold, Attack }
+Attacks Gain 12% of Damage as Extra Cold Damage
+{ Suffix Modifier "of Infusion" — Mana }
+Recover 1% of maximum Mana on Kill
+{ Suffix Modifier "of the Drought" — Mana }
+Leech 11.18(11-11.9)% of Physical Attack Damage as Mana
+Leech Mana 25(25-20)% slower
+{ Suffix Modifier "of Conquest" — Life }
+Recover 2% of maximum Life on Kill
+--------
+Unmodifiable

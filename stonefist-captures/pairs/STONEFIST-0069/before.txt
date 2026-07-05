@@ -1,0 +1,13 @@
+Item Class: Gloves
+Rarity: Magic
+Shocking Bound Cuffs
+--------
+Armour: 89
+Energy Shield: 25
+--------
+Requires: Level 65, 44 Str, 44 Int
+--------
+Item Level: 72
+--------
+{ Prefix Modifier "Shocking" (Tier: 3) — Damage, Elemental, Lightning, Attack }
+Adds 2(1-2) to 41(41-47) Lightning damage to Attacks

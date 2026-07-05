@@ -1,21 +1,17 @@
 from __future__ import annotations
 
-import csv
 import hashlib
-import json
 import re
 import time
 from datetime import datetime
 from pathlib import Path
 
-import pyperclip
+import pyperclip # pyright: ignore[reportMissingModuleSource]
 
 
 OUT_DIR = Path("stonefist-captures")
 RAW_DIR = OUT_DIR / "raw"
 PAIRS_DIR = OUT_DIR / "pairs"
-CSV_PATH = OUT_DIR / "pairs.csv"
-JSONL_PATH = OUT_DIR / "pairs.jsonl"
 
 OUT_DIR.mkdir(exist_ok=True)
 RAW_DIR.mkdir(exist_ok=True)
@@ -191,67 +187,30 @@ def save_raw_capture(text: str, kind: str) -> dict:
         "raw_text": text,
     }
 
+def next_test_number() -> int:
+    existing_numbers: list[int] = []
 
-def ensure_csv_header() -> None:
-    if CSV_PATH.exists():
-        return
+    for pair_dir in PAIRS_DIR.iterdir():
+        if not pair_dir.is_dir():
+            continue
 
-    with CSV_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow([
-            "test_id",
-            "timestamp",
-            "character_level",
-            "uid_status",
-            "original_item_class",
-            "original_rarity",
-            "original_name",
-            "original_base",
-            "original_item_level",
-            "original_unique_id",
-            "transformed_item_class",
-            "transformed_rarity",
-            "transformed_name",
-            "transformed_base",
-            "transformed_item_level",
-            "transformed_unique_id",
-            "before_file",
-            "after_file",
-            "notes",
-        ])
+        match = re.fullmatch(r"STONEFIST-(\d{4})", pair_dir.name)
+        if match:
+            existing_numbers.append(int(match.group(1)))
+
+    return max(existing_numbers, default=0) + 1
 
 
-def append_pair_csv(pair: dict) -> None:
-    ensure_csv_header()
+def allocate_pair_dir(test_number: int) -> tuple[str, Path, int]:
+    while True:
+        test_id = f"STONEFIST-{test_number:04d}"
+        pair_dir = PAIRS_DIR / test_id
 
-    with CSV_PATH.open("a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow([
-            pair["test_id"],
-            pair["timestamp"],
-            pair["character_level"],
-            pair["uid_status"],
-            pair["before"]["item_class"],
-            pair["before"]["rarity"],
-            pair["before"]["name"],
-            pair["before"]["base"],
-            pair["before"]["item_level"],
-            pair["before"]["unique_id"],
-            pair["after"]["item_class"],
-            pair["after"]["rarity"],
-            pair["after"]["name"],
-            pair["after"]["base"],
-            pair["after"]["item_level"],
-            pair["after"]["unique_id"],
-            pair["before_file"],
-            pair["after_file"],
-            pair["notes"],
-        ])
+        if not pair_dir.exists():
+            pair_dir.mkdir()
+            return test_id, pair_dir, test_number + 1
 
-
-def append_pair_jsonl(pair: dict) -> None:
-    with JSONL_PATH.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(pair, ensure_ascii=False) + "\n")
+        test_number += 1
 
 
 def main() -> None:
@@ -269,7 +228,9 @@ def main() -> None:
 
     last_clip_hash = ""
     pending_before = None
-    test_number = 1
+    test_number = next_test_number()
+    print(f"Next pair ID will be STONEFIST-{test_number:04d}")
+    print()
 
     while True:
         try:
@@ -315,11 +276,7 @@ def main() -> None:
             time.sleep(0.25)
             continue
 
-        test_id = f"STONEFIST-{test_number:04d}"
-        test_number += 1
-
-        pair_dir = PAIRS_DIR / test_id
-        pair_dir.mkdir(exist_ok=True)
+        test_id, pair_dir, test_number = allocate_pair_dir(test_number)
 
         before_path = pair_dir / "before.txt"
         after_path = pair_dir / "after.txt"
@@ -344,9 +301,6 @@ def main() -> None:
             "notes": "Original copied before transformation. Transformed copied while equipped with Way of the Stonefist.",
         }
 
-        append_pair_csv(pair)
-        append_pair_jsonl(pair)
-
         print(f"Paired as {test_id}")
         print(f"UID status: {status}")
         print(f"Saved to: {pair_dir}")
@@ -357,4 +311,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print()
+        print("Capture stopped.")

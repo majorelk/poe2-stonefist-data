@@ -1,0 +1,15 @@
+Item Class: Gloves
+Rarity: Magic
+Frosted Elegant Wraps of Combat
+--------
+Evasion Rating: 85
+Energy Shield: 26
+--------
+Requires: Level 70, 48 Dex, 48 Int
+--------
+Item Level: 73
+--------
+{ Prefix Modifier "Frosted" (Tier: 9) — Damage, Elemental, Cold, Attack }
+Adds 1 to 2(2-3) Cold damage to Attacks
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills

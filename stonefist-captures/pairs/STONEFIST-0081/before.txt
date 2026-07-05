@@ -1,0 +1,25 @@
+Item Class: Gloves
+Rarity: Unique
+Killjoy
+Linen Wraps
+--------
+Evasion Rating: 32 (augmented)
+Energy Shield: 14 (augmented)
+--------
+Requires: Level 16, 13 Dex, 13 Int
+--------
+Item Level: 80
+--------
+{ Unique Modifier — Evasion, Energy Shield }
+38(30-60)% increased Evasion and Energy Shield
+{ Unique Modifier — Life }
++42(30-50) to maximum Life
+{ Unique Modifier }
+Flasks do not recover Life — Unscalable Value
+{ Unique Modifier }
+On-Kill Effects happen twice — Unscalable Value
+{ Unique Modifier — Damage, Critical }
+20(20-30)% increased Critical Damage Bonus
+--------
+"Stitches? Wouldn't that defeat the purpose?" 
+- Jeffry, Torturer's Apprentice

@@ -1,0 +1,12 @@
+Item Class: Gloves
+Rarity: Magic
+Annealed Refined Bracers
+--------
+Evasion Rating: 124
+--------
+Requires: Level 54, 67 Dex
+--------
+Item Level: 63
+--------
+{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
+Adds 7(6-10) to 12(12-17) Physical Damage to Attacks

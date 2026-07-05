@@ -1,0 +1,24 @@
+Item Class: Gloves
+Rarity: Rare
+Brood Talons
+Secured Wraps
+--------
+Evasion Rating: 94
+Energy Shield: 29
+--------
+Requires: Level 80, 55 Dex, 55 Int
+--------
+Item Level: 81
+--------
+{ Prefix Modifier "Gleaming" (Tier: 5) — Damage, Physical, Attack }
+Adds 5(5-7) to 11(9-13) Physical Damage to Attacks
+{ Prefix Modifier "Discharging" (Tier: 2) — Damage, Elemental, Lightning, Attack }
+Adds 1(1-3) to 51(48-59) Lightning damage to Attacks
+{ Prefix Modifier "Virile" (Tier: 2) — Life }
++108(100-119) to maximum Life
+{ Suffix Modifier "of the Phantom" (Tier: 2) — Attribute }
++33(31-33) to Dexterity
+{ Suffix Modifier "of the Desperate" (Tier: 1) — Mana, Physical, Attack }
+Leech 8.52(8-8.9)% of Physical Attack Damage as Mana
+{ Suffix Modifier "of the Furnace" (Tier: 4) — Elemental, Fire, Resistance }
++30(26-30)% to Fire Resistance

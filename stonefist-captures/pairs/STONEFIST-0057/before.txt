@@ -1,26 +1,21 @@
 Item Class: Gloves
-Rarity: Unique
-Lochtonial Caress
-Tempered Mitts
+Rarity: Rare
+Plague Hold
+Spiral Wraps
 --------
-Armour: 74 (augmented)
+Quality: +17% (augmented)
+Evasion Rating: 71 (augmented)
+Energy Shield: 25 (augmented)
 --------
-Requires: Level 16, 22 Str
+Requires: Level 33, 24 Dex, 24 Int
 --------
-Sockets: S 
+Item Level: 43
 --------
-Item Level: 79
---------
-{ Unique Modifier }
-Share Charges with Allies in your Presence — Unscalable Value
-{ Unique Modifier — Speed }
-14(10-15)% increased Skill Speed
-{ Unique Modifier — Mana }
-15(15-10)% reduced maximum Mana
-{ Unique Modifier — Life }
-+56(40-60) to maximum Life
-{ Unique Modifier — Armour }
-+25(15-25) to Armour
---------
-Why cling to your sanity? It offers you nothing.
-Surrender to me, and I will grant you everything.
+{ Prefix Modifier "Ethereal" (Tier: 6) — Evasion, Energy Shield }
+42(27-42)% increased Evasion and Energy Shield
+{ Suffix Modifier "of the Prodigy" (Tier: 6) — Attribute }
++16(13-16) to Intelligence
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
++22(21-25)% to Cold Resistance

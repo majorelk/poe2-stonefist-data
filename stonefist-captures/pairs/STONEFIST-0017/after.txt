@@ -1,25 +1,25 @@
 Item Class: Gloves
 Rarity: Rare
-Storm Hold
+Damnation Fingers
 Fists of Stone
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
 --------
-Item Level: 52
+Item Level: 71
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Poet's" }
-3% of Damage Taken Recouped as Life, Mana and Energy Shield
-{ Suffix Modifier "of the Penguin" — Elemental, Cold, Resistance }
+{ Prefix Modifier "Inspired" — Evasion, Energy Shield }
+20(19-20)% more Global Evasion Rating and Energy Shield
+{ Prefix Modifier "Cobalt" }
+13(12-13)% more Attack damage while on Low Mana
+{ Suffix Modifier "of the Seal" — Elemental, Cold, Resistance }
 +1% to Maximum Cold Resistance
-+20(16-20)% to Cold Resistance
-{ Suffix Modifier "of Plunder" }
-15(15-20)% increased Quantity of Gold Dropped by Slain Enemies
-{ Suffix Modifier "of Combat" — Gem }
-+10(10-12)% to Quality of all Skills
++14(11-15)% to Cold Resistance
+{ Suffix Modifier "of Sheathing" — Elemental, Fire, Cold, Lightning, Resistance }
++14(13-15)% to all Elemental Resistances
 --------
 Unmodifiable

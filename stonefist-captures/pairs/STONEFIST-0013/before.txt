@@ -1,14 +1,26 @@
 Item Class: Gloves
-Rarity: Magic
-Deliberate Intricate Gloves of Vanquishing
+Rarity: Rare
+Doom Mitts
+Runeforged Buckled Wraps
 --------
-Energy Shield: 27
+Evasion Rating: 135 (augmented)
+Energy Shield: 41 (augmented)
+Runic Ward: 27
 --------
-Requires: Level 35, 42 Int
+Requires: Level 45, 32 Dex, 32 Int
 --------
-Item Level: 52
+Item Level: 53
 --------
-{ Prefix Modifier "Deliberate" (Tier: 6) — Attack }
-+116(85-123) to Accuracy Rating
-{ Suffix Modifier "of Vanquishing" (Tier: 4) — Life }
-Gain 39(29-40) Life per enemy killed
+{ Prefix Modifier "Cherub's" (Tier: 1) — Evasion, Energy Shield }
++77(65-78) to Evasion Rating
++22(22-25) to maximum Energy Shield
+{ Prefix Modifier "Robust" (Tier: 4) — Life }
++79(70-84) to maximum Life
+{ Prefix Modifier "Gleaming" (Tier: 5) — Damage, Physical, Attack }
+Adds 5(5-7) to 11(9-13) Physical Damage to Attacks
+{ Suffix Modifier "of the Arid" (Tier: 3) — Mana, Physical, Attack }
+Leech 6.41(6-6.9)% of Physical Attack Damage as Mana
+{ Suffix Modifier "of the Walrus" (Tier: 4) — Elemental, Cold, Resistance }
++26(26-30)% to Cold Resistance
+{ Suffix Modifier "of the Remora" (Tier: 3) — Life, Physical, Attack }
+Leech 7.24(7-7.9)% of Physical Attack Damage as Life

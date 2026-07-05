@@ -1,19 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Demon Fist
-Baroque Gloves
+Grim Touch
+Doubled Gauntlets
 --------
-Energy Shield: 39
+Armour: 57 (augmented)
+Evasion Rating: 50 (augmented)
 --------
-Requires: Level 54, 67 Int
+Requires: Level 33, 24 Str, 24 Dex
 --------
-Item Level: 63
+Item Level: 34
 --------
-{ Prefix Modifier "Opalescent" (Tier: 3) — Mana }
-+80(80-89) to maximum Mana
-{ Prefix Modifier "Frozen" (Tier: 4) — Damage, Elemental, Cold, Attack }
-Adds 12(11-13) to 18(18-21) Cold damage to Attacks
-{ Suffix Modifier "of the Drake" (Tier: 6) — Elemental, Fire, Resistance }
-+19(16-20)% to Fire Resistance
-{ Suffix Modifier "of the Parched" (Tier: 4) — Mana, Physical, Attack }
-Leech 5.78(5-5.9)% of Physical Attack Damage as Mana
+{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
++14(10-14) to maximum Mana
+{ Prefix Modifier "Thug's" (Tier: 5) — Life, Armour, Evasion }
+16(14-20)% increased Armour and Evasion
++18(11-19) to maximum Life
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+12(11-14)% increased Rarity of Items found
+{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
++16(16-20)% to Lightning Resistance

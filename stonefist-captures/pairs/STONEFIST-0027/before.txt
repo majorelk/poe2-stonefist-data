@@ -1,19 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Pain Claw
-Feathered Mitts
+Storm Vise
+Spined Bracers
 --------
-Armour: 229 (augmented)
+Evasion Rating: 222 (augmented)
 --------
-Requires: Level 59, 73 Str
+Requires: Level 43, 42 Dex
 --------
-Item Level: 73
+Item Level: 59
 --------
-{ Prefix Modifier "Fortified" (Tier: 4) — Armour }
-+80(78-98) to Armour
-{ Prefix Modifier "Scorching" (Tier: 4) — Damage, Elemental, Fire, Attack }
-Adds 13(11-16) to 26(21-26) Fire damage to Attacks
-{ Prefix Modifier "Athlete's" (Tier: 1) — Life }
-+121(120-149) to maximum Life
-{ Suffix Modifier "of the Drake" (Tier: 6) — Elemental, Fire, Resistance }
-+16(16-20)% to Fire Resistance
+{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
+Adds 10(6-10) to 16(12-17) Physical Damage to Attacks
+{ Prefix Modifier "Phased" (Tier: 2) — Evasion }
++143(117-146) to Evasion Rating
+{ Prefix Modifier "Crackling" (Tier: 6) — Damage, Elemental, Lightning, Attack }
+Adds 1 to 23(23-27) Lightning damage to Attacks
+{ Suffix Modifier "of Triumph" (Tier: 6) — Life }
+Gain 12(10-18) Life per enemy killed
+{ Suffix Modifier "of Eviction" (Tier: 4) — Chaos, Resistance }
++13(12-15)% to Chaos Resistance

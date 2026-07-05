@@ -1,29 +1,13 @@
 Item Class: Gloves
-Rarity: Rare
-Brood Hand
-Gauze Wraps
+Rarity: Magic
+Ornate Cuffs of Devouring
 --------
-Evasion Rating: 21 (augmented)
-Energy Shield: 16 (augmented)
+Armour: 82
+Energy Shield: 23
 --------
-Requires: Level 15
+Requires: Level 59, 41 Str, 41 Int
 --------
-Sockets: S 
+Item Level: 75
 --------
-Item Level: 24
---------
-+14% to Cold Resistance (rune)
---------
-{ Prefix Modifier "Nymph's" (Tier: 3) — Evasion, Energy Shield }
-+12(11-41) to Evasion Rating
-+10(9-15) to maximum Energy Shield
-{ Prefix Modifier "Azure" (Tier: 7) — Mana }
-+32(25-34) to maximum Mana
-{ Prefix Modifier "Hale" (Tier: 9) — Life }
-+19(10-19) to maximum Life
-{ Suffix Modifier "of Skill" (Tier: 4) — Attack, Speed }
-7(5-7)% increased Attack Speed
-{ Suffix Modifier "of the Salamander" (Tier: 7) — Elemental, Fire, Resistance }
-+14(11-15)% to Fire Resistance
-{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
-+8(6-10)% to Cold Resistance
+{ Suffix Modifier "of Devouring" (Tier: 2) — Mana }
+Gain 29(28-35) Mana per enemy killed

@@ -1,23 +1,19 @@
 Item Class: Gloves
 Rarity: Rare
-Doom Fist
-Spined Bracers
+Pain Claw
+Feathered Mitts
 --------
-Evasion Rating: 139 (augmented)
+Armour: 229 (augmented)
 --------
-Requires: Level 33, 42 Dex
+Requires: Level 59, 73 Str
 --------
-Item Level: 39
+Item Level: 73
 --------
-{ Prefix Modifier "Acrobat's" (Tier: 5) — Evasion }
-+60(47-66) to Evasion Rating
-{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
-+16(15-24) to maximum Mana
-{ Prefix Modifier "Polished" (Tier: 7) — Damage, Physical, Attack }
-Adds 2(2-4) to 7(5-8) Physical Damage to Attacks
-{ Suffix Modifier "of the Kiln" (Tier: 5) — Elemental, Fire, Resistance }
-+24(21-25)% to Fire Resistance
-{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
-+1 to Level of all Melee Skills
-{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
-+9(6-10)% to Cold Resistance
+{ Prefix Modifier "Fortified" (Tier: 4) — Armour }
++80(78-98) to Armour
+{ Prefix Modifier "Scorching" (Tier: 4) — Damage, Elemental, Fire, Attack }
+Adds 13(11-16) to 26(21-26) Fire damage to Attacks
+{ Prefix Modifier "Athlete's" (Tier: 1) — Life }
++121(120-149) to maximum Life
+{ Suffix Modifier "of the Drake" (Tier: 6) — Elemental, Fire, Resistance }
++16(16-20)% to Fire Resistance

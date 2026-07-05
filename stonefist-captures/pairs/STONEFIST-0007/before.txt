@@ -1,18 +1,19 @@
 Item Class: Gloves
 Rarity: Rare
-Vengeance Paw
-Goldcast Cuffs
+Demon Fist
+Baroque Gloves
 --------
-Armour: 49
-Energy Shield: 15
+Energy Shield: 39
 --------
-Requires: Level 33, 19 (augmented) Str, 19 (augmented) Int
+Requires: Level 54, 67 Int
 --------
-Item Level: 39
+Item Level: 63
 --------
-{ Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
-Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
-{ Prefix Modifier "Stout" (Tier: 5) — Life }
-+69(60-69) to maximum Life
-{ Suffix Modifier "of the Apt" (Tier: 4) }
-20% reduced Attribute Requirements
+{ Prefix Modifier "Opalescent" (Tier: 3) — Mana }
++80(80-89) to maximum Mana
+{ Prefix Modifier "Frozen" (Tier: 4) — Damage, Elemental, Cold, Attack }
+Adds 12(11-13) to 18(18-21) Cold damage to Attacks
+{ Suffix Modifier "of the Drake" (Tier: 6) — Elemental, Fire, Resistance }
++19(16-20)% to Fire Resistance
+{ Suffix Modifier "of the Parched" (Tier: 4) — Mana, Physical, Attack }
+Leech 5.78(5-5.9)% of Physical Attack Damage as Mana

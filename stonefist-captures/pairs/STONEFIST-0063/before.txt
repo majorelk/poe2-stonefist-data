@@ -1,28 +1,25 @@
 Item Class: Gloves
 Rarity: Unique
-Valako's Vice
-Plate Gauntlets
+Grip of Winter
+Firm Bracers
 --------
 Quality: +8% (augmented)
-Armour: 113 (augmented)
-Evasion Rating: 102 (augmented)
+Evasion Rating: 45 (augmented)
 --------
-Requires: Level 45, 32 Str, 32 Dex
+Requires: Level 11, 16 Dex
 --------
-Item Level: 50
+Item Level: 69
 --------
-{ Unique Modifier — Armour, Evasion }
-63(50-100)% increased Armour and Evasion
-{ Unique Modifier — Attribute }
-+27(20-30) to Strength
-{ Unique Modifier — Attribute }
-+24(20-30) to Dexterity
-{ Unique Modifier — Elemental, Lightning, Resistance }
-+36(30-50)% to Lightning Resistance
-{ Unique Modifier }
-100% of Fire damage Converted to Lightning damage
-{ Unique Modifier — Attack, Speed }
-7(5-10)% increased Attack Speed
+{ Unique Modifier — Evasion }
+33(30-50)% increased Evasion Rating
+{ Unique Modifier — Damage, Elemental, Cold, Attack }
+Adds 4(3-5) to 6(6-8) Cold damage to Attacks
+{ Unique Modifier — Elemental, Cold, Ailment }
+41(40-50)% increased Freeze Buildup
+{ Unique Modifier — Elemental, Cold, Ailment }
+21(20-30)% increased Magnitude of Chill you inflict
+{ Unique Modifier — Elemental, Cold, Resistance }
++26(20-30)% to Cold Resistance
 --------
-Unlike the other gods, when he was born from the volcano,
-Valako rode the clouds of ash into the thundering sky.
+After the eruption, the skies turned grey,
+ash began to fall, and a chill set in...

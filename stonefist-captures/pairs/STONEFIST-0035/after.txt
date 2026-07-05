@@ -1,21 +1,24 @@
 Item Class: Gloves
-Rarity: Magic
-Sanguine Fists of Stone of the Penguin
+Rarity: Rare
+Golem Paw
+Fists of Stone
 --------
-Quality: +10% (augmented)
-Evasion Rating: 261 (augmented)
-Energy Shield: 87 (augmented)
+Evasion Rating: 237 (augmented)
+Energy Shield: 79 (augmented)
 --------
-Item Level: 23
+Item Level: 6
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Sanguine" }
-7% less damage taken while on Low Life
-{ Suffix Modifier "of the Penguin" — Elemental, Cold, Resistance }
-+1% to Maximum Cold Resistance
-+18(16-20)% to Cold Resistance
+{ Prefix Modifier "Hale" }
+5% less damage taken while on Low Life
+{ Suffix Modifier "of Success" — Life }
+Recover 1% of maximum Life on Kill
+{ Suffix Modifier "of the Mongoose" }
++18(15-18)% Surpassing chance to fire an additional Projectile
+{ Suffix Modifier "of Skill" }
+11(8-12)% chance to gain Onslaught for 4 seconds on Hit
 --------
 Unmodifiable

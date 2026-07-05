@@ -1,21 +1,17 @@
 Item Class: Gloves
 Rarity: Rare
-Agony Talons
-Ancient Mitts
+Pain Caress
+Suede Bracers
 --------
-Armour: 212 (augmented)
+Evasion Rating: 10
 --------
-Requires: Level 54, 67 Str
+Requires: Level 6
 --------
-Item Level: 54
+Item Level: 9
 --------
-{ Prefix Modifier "Rotund" (Tier: 3) — Life }
-+91(85-99) to maximum Life
-{ Prefix Modifier "Lobstered" (Tier: 5) — Armour }
-55(43-55)% increased Armour
-{ Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
-22(20-24)% increased Critical Damage Bonus
-{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
-+18(16-20)% to Lightning Resistance
-{ Suffix Modifier "of the Remora" (Tier: 3) — Life, Physical, Attack }
-Leech 7.59(7-7.9)% of Physical Attack Damage as Life
+{ Prefix Modifier "Hale" (Tier: 9) — Life }
++14(10-19) to maximum Life
+{ Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
+Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
+{ Suffix Modifier "of Rejuvenation" (Tier: 4) — Life, Attack }
+Gain 2 Life per Enemy Hit with Attacks

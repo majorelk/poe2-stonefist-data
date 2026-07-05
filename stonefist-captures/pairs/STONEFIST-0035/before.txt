@@ -1,15 +1,18 @@
 Item Class: Gloves
-Rarity: Magic
-Sanguine Firm Bracers of the Penguin
+Rarity: Rare
+Golem Paw
+Gauze Wraps
 --------
-Quality: +10% (augmented)
-Evasion Rating: 34 (augmented)
+Evasion Rating: 9
+Energy Shield: 6
 --------
-Requires: Level 12, 16 Dex
+Item Level: 6
 --------
-Item Level: 23
---------
-{ Prefix Modifier "Sanguine" (Tier: 7) — Life }
-+38(30-39) to maximum Life
-{ Suffix Modifier "of the Penguin" (Tier: 7) — Elemental, Cold, Resistance }
-+13(11-15)% to Cold Resistance
+{ Prefix Modifier "Hale" (Tier: 9) — Life }
++12(10-19) to maximum Life
+{ Suffix Modifier "of Success" (Tier: 8) — Life }
+Gain 5(4-6) Life per enemy killed
+{ Suffix Modifier "of the Mongoose" (Tier: 9) — Attribute }
++6(5-8) to Dexterity
+{ Suffix Modifier "of Skill" (Tier: 4) — Attack, Speed }
+7(5-7)% increased Attack Speed

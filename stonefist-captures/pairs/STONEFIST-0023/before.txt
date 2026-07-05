@@ -1,21 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Cataclysm Hold
+Doom Knuckle
 Ornate Cuffs
 --------
-Armour: 107 (augmented)
-Energy Shield: 30 (augmented)
+Armour: 97 (augmented)
+Energy Shield: 27 (augmented)
 --------
 Requires: Level 59, 41 Str, 41 Int
 --------
-Item Level: 69
+Item Level: 63
 --------
-{ Prefix Modifier "Haruspex's" (Tier: 3) — Life, Armour, Energy Shield }
-31(27-32)% increased Armour and Energy Shield
-+31(26-32) to maximum Life
-{ Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
-+27(25-27) to Strength
-{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
-+1 to Level of all Melee Skills
+{ Prefix Modifier "Auspex's" (Tier: 5) — Life, Armour, Energy Shield }
+18(14-20)% increased Armour and Energy Shield
++11(11-19) to maximum Life
+{ Suffix Modifier "of the Volcano" (Tier: 3) — Elemental, Fire, Resistance }
++35(31-35)% to Fire Resistance
 { Suffix Modifier "of Raiding" (Tier: 2) }
 12(11-14)% increased Rarity of Items found
+{ Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
++17(17-20) to Dexterity

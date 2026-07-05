@@ -1,15 +1,14 @@
 Item Class: Gloves
 Rarity: Magic
-Ingrained Kalguuran Cuffs of the Lynx
+Agile Stalking Bracers of the Vampire
 --------
-Armour: 84 (augmented)
-Energy Shield: 25 (augmented)
+Evasion Rating: 163 (augmented)
 --------
-Requires: Level 45, 32 Str, 32 Int
+Requires: Level 65, 80 Dex
 --------
-Item Level: 52
+Item Level: 71
 --------
-{ Prefix Modifier "Ingrained" (Tier: 6) — Armour, Energy Shield }
-32(27-42)% increased Armour and Energy Shield
-{ Suffix Modifier "of the Lynx" (Tier: 8) — Attribute }
-+10(9-12) to Dexterity
+{ Prefix Modifier "Agile" (Tier: 7) — Evasion }
++15(11-18) to Evasion Rating
+{ Suffix Modifier "of the Vampire" (Tier: 1) — Life, Physical, Attack }
+Leech 9.61(9-9.9)% of Physical Attack Damage as Life

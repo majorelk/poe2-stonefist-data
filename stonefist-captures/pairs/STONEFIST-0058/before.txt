@@ -1,30 +1,26 @@
 Item Class: Gloves
 Rarity: Unique
-Gravebind
-Rope Cuffs
+Lochtonial Caress
+Tempered Mitts
 --------
-Armour: 19 (augmented)
-Energy Shield: 9 (augmented)
+Armour: 74 (augmented)
 --------
-Requires: Level 5
+Requires: Level 16, 22 Str
 --------
 Sockets: S 
 --------
-Item Level: 62
+Item Level: 79
 --------
-{ Unique Modifier — Armour, Energy Shield }
-46(40-60)% increased Armour and Energy Shield
-{ Unique Modifier — Elemental, Cold, Resistance }
-+14(10-15)% to Cold Resistance
-{ Unique Modifier — Life }
-Gain 7(7-10) Life per enemy killed
-{ Unique Modifier — Mana }
-Gain 5(4-6) Mana per enemy killed
 { Unique Modifier }
-20% increased Rarity of Items found
-Your other Modifiers to Rarity of Items found do not apply
-Enemies in your Presence killed by anyone count as being killed by you instead — Unscalable Value
+Share Charges with Allies in your Presence — Unscalable Value
+{ Unique Modifier — Speed }
+14(10-15)% increased Skill Speed
+{ Unique Modifier — Mana }
+15(15-10)% reduced maximum Mana
+{ Unique Modifier — Life }
++56(40-60) to maximum Life
+{ Unique Modifier — Armour }
++25(15-25) to Armour
 --------
-Try as you like to hide the
-blood on your hands.
-You'll still know the truth.
+Why cling to your sanity? It offers you nothing.
+Surrender to me, and I will grant you everything.

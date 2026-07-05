@@ -1,20 +1,20 @@
 Item Class: Gloves
 Rarity: Rare
-Fate Knuckle
-Adorned Wraps
+Rage Paw
+Steelmail Gauntlets
 --------
-Evasion Rating: 74
-Energy Shield: 23
+Armour: 89
+Evasion Rating: 81
 --------
-Requires: Level 59, 41 Dex, 41 Int
+Requires: Level 65, 44 Str, 44 Dex
 --------
-Item Level: 65
+Item Level: 66
 --------
-{ Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
-+118(105-124) to maximum Mana
-{ Prefix Modifier "Stalwart" (Tier: 6) — Life }
-+40(40-59) to maximum Life
-{ Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
-22(20-24)% increased Critical Damage Bonus
-{ Suffix Modifier "of the Furnace" (Tier: 4) — Elemental, Fire, Resistance }
-+28(26-30)% to Fire Resistance
+{ Prefix Modifier "Virile" (Tier: 2) — Life }
++117(100-119) to maximum Life
+{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
++20(15-24) to maximum Mana
+{ Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
++17(17-20) to Dexterity
+{ Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
++26(25-27) to Strength

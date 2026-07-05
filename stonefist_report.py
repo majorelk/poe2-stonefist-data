@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import html
 import re
+from collections import Counter
 from pathlib import Path
 
 
@@ -22,16 +23,61 @@ def get_field(text: str, pattern: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def get_rarity(text: str) -> str:
+    return get_field(text, r"Rarity:\s*(.+)")
+
+
+def get_item_class(text: str) -> str:
+    return get_field(text, r"Item Class:\s*(.+)")
+
+
+def uid_status(before_uid: str, after_uid: str) -> str:
+    if not before_uid and not after_uid:
+        return "not present"
+    if before_uid and after_uid and before_uid == after_uid:
+        return "match"
+    if before_uid and after_uid and before_uid != after_uid:
+        return "mismatch"
+    return "partial"
+
+
+def uid_badge(status: str) -> str:
+    if status == "match":
+        return "✅ match"
+    if status == "mismatch":
+        return "❌ mismatch"
+    if status == "partial":
+        return "⚠️ partial"
+    return "— not present"
+
+
 def get_name_base(text: str) -> tuple[str, str]:
     lines = [line.strip() for line in text.splitlines() if line.strip()]
 
     for i, line in enumerate(lines):
         if line.startswith("Rarity:"):
             name = lines[i + 1] if i + 1 < len(lines) else ""
-            base = lines[i + 2] if i + 2 < len(lines) else ""
-            return name, base
+            maybe_base = lines[i + 2] if i + 2 < len(lines) else ""
+
+            # Magic/normal items often only have one display line, then divider.
+            if maybe_base == "--------":
+                return name, ""
+
+            return name, maybe_base
 
     return "", ""
+
+
+def get_basic_stats(text: str) -> dict:
+    return {
+        "quality": get_field(text, r"Quality:\s*(.+)"),
+        "evasion": get_field(text, r"Evasion(?: Rating)?:\s*(.+)"),
+        "energy_shield": get_field(text, r"Energy Shield:\s*(.+)"),
+        "armour": get_field(text, r"Armour:\s*(.+)"),
+        "sockets": get_field(text, r"Sockets:\s*(.+)"),
+        "rune": get_field(text, r"Rune:\s*(.+)"),
+        "requirements": get_field(text, r"Requires:\s*(.+)"),
+    }
 
 
 def interesting_mod_lines(text: str) -> list[str]:
@@ -70,15 +116,17 @@ def interesting_mod_lines(text: str) -> list[str]:
             or s.startswith("-")
             or "increased" in s
             or "reduced" in s
+            or "more " in s
+            or "less " in s
             or "chance" in s
             or "Leech" in s
             or "Recouped" in s
             or "per player level" in s
-            or s == "Unmodifiable"
             or "Resistance" in s
             or "Accuracy" in s
             or "Blind" in s
             or "Onslaught" in s
+            or s == "Unmodifiable"
         ):
             out.append(s)
 
@@ -89,8 +137,28 @@ def count_explicit_headers(lines: list[str]) -> int:
     return sum(
         1
         for line in lines
-        if "Prefix Modifier" in line or "Suffix Modifier" in line
+        if (
+            "Prefix Modifier" in line
+            or "Suffix Modifier" in line
+            or "Crafted Prefix Modifier" in line
+            or "Crafted Suffix Modifier" in line
+            or "Desecrated Prefix Modifier" in line
+            or "Desecrated Suffix Modifier" in line
+        )
+        and "Implicit Modifier" not in line
     )
+
+
+def classify_pair(before_rarity: str, after_rarity: str) -> str:
+    if before_rarity == "Unique" or after_rarity == "Unique":
+        return "unique"
+    if before_rarity == "Rare" or after_rarity == "Rare":
+        return "rare"
+    if before_rarity == "Magic" or after_rarity == "Magic":
+        return "magic"
+    if before_rarity == "Normal" or after_rarity == "Normal":
+        return "normal"
+    return "unknown"
 
 
 def load_pairs() -> list[dict]:
@@ -121,6 +189,12 @@ def load_pairs() -> list[dict]:
         before_uid = get_field(before, r"Unique ID:\s*(.+)")
         after_uid = get_field(after, r"Unique ID:\s*(.+)")
 
+        before_rarity = get_rarity(before)
+        after_rarity = get_rarity(after)
+
+        status = uid_status(before_uid, after_uid)
+        category = classify_pair(before_rarity, after_rarity)
+
         pairs.append(
             {
                 "test_id": pair_dir.name,
@@ -128,6 +202,12 @@ def load_pairs() -> list[dict]:
                 "after_path": str(after_path),
                 "before_text": before,
                 "after_text": after,
+                "before_item_class": get_item_class(before),
+                "after_item_class": get_item_class(after),
+                "before_rarity": before_rarity,
+                "after_rarity": after_rarity,
+                "category": category,
+                "is_unique": category == "unique",
                 "before_name": before_name,
                 "before_base": before_base,
                 "after_name": after_name,
@@ -136,7 +216,9 @@ def load_pairs() -> list[dict]:
                 "after_ilvl": get_field(after, r"Item Level:\s*(.+)"),
                 "before_uid": before_uid,
                 "after_uid": after_uid,
-                "uid_match": bool(before_uid and after_uid and before_uid == after_uid),
+                "uid_status": status,
+                "before_stats": get_basic_stats(before),
+                "after_stats": get_basic_stats(after),
                 "before_lines": before_lines,
                 "after_lines": after_lines,
                 "before_explicit_count": count_explicit_headers(before_lines),
@@ -153,13 +235,20 @@ def write_csvs(pairs: list[dict]) -> None:
         writer.writerow(
             [
                 "test_id",
+                "category",
+                "before_item_class",
+                "before_rarity",
                 "before_name",
                 "before_base",
                 "before_item_level",
+                "before_unique_id",
+                "after_item_class",
+                "after_rarity",
                 "after_name",
                 "after_base",
                 "after_item_level",
-                "unique_id_match",
+                "after_unique_id",
+                "uid_status",
                 "before_explicit_count",
                 "after_explicit_count",
                 "before_file",
@@ -171,13 +260,20 @@ def write_csvs(pairs: list[dict]) -> None:
             writer.writerow(
                 [
                     p["test_id"],
+                    p["category"],
+                    p["before_item_class"],
+                    p["before_rarity"],
                     p["before_name"],
                     p["before_base"],
                     p["before_ilvl"],
+                    p["before_uid"],
+                    p["after_item_class"],
+                    p["after_rarity"],
                     p["after_name"],
                     p["after_base"],
                     p["after_ilvl"],
-                    p["uid_match"],
+                    p["after_uid"],
+                    p["uid_status"],
                     p["before_explicit_count"],
                     p["after_explicit_count"],
                     p["before_path"],
@@ -187,18 +283,24 @@ def write_csvs(pairs: list[dict]) -> None:
 
     with MOD_CSV_PATH.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["test_id", "side", "line_number", "mod_line"])
+        writer.writerow(["test_id", "category", "side", "line_number", "mod_line"])
 
         for p in pairs:
             for i, line in enumerate(p["before_lines"], start=1):
-                writer.writerow([p["test_id"], "before", i, line])
+                writer.writerow([p["test_id"], p["category"], "before", i, line])
 
             for i, line in enumerate(p["after_lines"], start=1):
-                writer.writerow([p["test_id"], "after", i, line])
+                writer.writerow([p["test_id"], p["category"], "after", i, line])
 
 
 def esc(value: object) -> str:
     return html.escape(str(value))
+
+
+def display_base(name: str, base: str) -> str:
+    if base:
+        return f"{name}<br><small>{base}</small>"
+    return f"{name}<br><small>(no separate base line)</small>"
 
 
 def render_mod_list(lines: list[str]) -> str:
@@ -208,10 +310,46 @@ def render_mod_list(lines: list[str]) -> str:
     return "<ul>" + "".join(f"<li><code>{esc(line)}</code></li>" for line in lines) + "</ul>"
 
 
+def render_stats_table(before_stats: dict, after_stats: dict) -> str:
+    keys = [
+        ("quality", "Quality"),
+        ("armour", "Armour"),
+        ("evasion", "Evasion"),
+        ("energy_shield", "Energy Shield"),
+        ("sockets", "Sockets"),
+        ("rune", "Rune"),
+        ("requirements", "Requires"),
+    ]
+
+    rows = []
+    for key, label in keys:
+        before = before_stats.get(key, "")
+        after = after_stats.get(key, "")
+        if before or after:
+            rows.append(
+                f"<tr><th>{esc(label)}</th><td>{esc(before)}</td><td>{esc(after)}</td></tr>"
+            )
+
+    if not rows:
+        return "<em>No basic stats parsed</em>"
+
+    return f"""
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
 def render_html(pairs: list[dict]) -> str:
     total = len(pairs)
-    uid_matches = sum(1 for p in pairs if p["uid_match"])
-    stonefist_count = sum(1 for p in pairs if p["after_base"] == "Fists of Stone")
+    status_counts = Counter(p["uid_status"] for p in pairs)
+    category_counts = Counter(p["category"] for p in pairs)
+    stonefist_count = sum(
+        1
+        for p in pairs
+        if "Fists of Stone" in p["after_base"] or "Fists of Stone" in p["after_name"]
+        )
 
     rows = []
 
@@ -219,27 +357,45 @@ def render_html(pairs: list[dict]) -> str:
         searchable = " ".join(
             [
                 p["test_id"],
+                p["category"],
+                p["before_rarity"],
+                p["after_rarity"],
                 p["before_name"],
                 p["before_base"],
                 p["after_name"],
                 p["after_base"],
+                p["uid_status"],
                 " ".join(p["before_lines"]),
                 " ".join(p["after_lines"]),
             ]
         ).lower()
 
+        unique_tag = '<span class="tag unique">unique</span>' if p["is_unique"] else ""
+        category_tag = f'<span class="tag">{esc(p["category"])}</span>'
+
+        before_display = display_base(esc(p["before_name"]), esc(p["before_base"]))
+        after_display = display_base(esc(p["after_name"]), esc(p["after_base"]))
+
         rows.append(
             f"""
-            <tr data-search="{esc(searchable)}">
+            <tr data-search="{esc(searchable)}" data-category="{esc(p["category"])}" data-uid="{esc(p["uid_status"])}">
                 <td>{esc(p["test_id"])}</td>
                 <td>
-                    <strong>{esc(p["before_name"])}</strong><br>
-                    {esc(p["before_base"])} → <strong>{esc(p["after_base"])}</strong>
+                    <strong>{before_display}</strong>
+                    <div class="arrow">→</div>
+                    <strong>{after_display}</strong>
+                    <div class="tags">{category_tag} {unique_tag}</div>
+                    <small>{esc(p["before_rarity"])} → {esc(p["after_rarity"])}</small>
                 </td>
                 <td>{esc(p["before_ilvl"])} → {esc(p["after_ilvl"])}</td>
-                <td>{"✅" if p["uid_match"] else "⚠️"}</td>
+                <td>{esc(uid_badge(p["uid_status"]))}</td>
                 <td>{p["before_explicit_count"]} → {p["after_explicit_count"]}</td>
                 <td>
+                    <details>
+                        <summary>Stats</summary>
+                        {render_stats_table(p["before_stats"], p["after_stats"])}
+                    </details>
+
                     <details>
                         <summary>Mods</summary>
                         <div class="cols">
@@ -253,6 +409,7 @@ def render_html(pairs: list[dict]) -> str:
                             </div>
                         </div>
                     </details>
+
                     <details>
                         <summary>Raw item text</summary>
                         <div class="cols">
@@ -301,24 +458,27 @@ def render_html(pairs: list[dict]) -> str:
         border: 1px solid #333;
         border-radius: 8px;
         padding: 12px 16px;
-        min-width: 160px;
+        min-width: 170px;
     }}
 
     .card .num {{
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 700;
         color: #9cdcfe;
     }}
 
-    input {{
-        width: 100%;
+    input, select {{
         padding: 10px;
-        margin: 12px 0 18px;
+        margin: 6px 8px 16px 0;
         background: #1b1b1b;
         border: 1px solid #444;
         color: #eee;
         border-radius: 6px;
         font-size: 15px;
+    }}
+
+    input {{
+        width: min(720px, 100%);
     }}
 
     table {{
@@ -337,6 +497,7 @@ def render_html(pairs: list[dict]) -> str:
         color: #f5d38a;
         position: sticky;
         top: 0;
+        z-index: 1;
     }}
 
     tr:nth-child(even) {{
@@ -372,6 +533,33 @@ def render_html(pairs: list[dict]) -> str:
         gap: 16px;
     }}
 
+    .mini th {{
+        position: static;
+        z-index: auto;
+    }}
+
+    .tag {{
+        display: inline-block;
+        background: #263238;
+        color: #9cdcfe;
+        border: 1px solid #37474f;
+        border-radius: 999px;
+        padding: 2px 8px;
+        margin: 6px 4px 2px 0;
+        font-size: 12px;
+    }}
+
+    .tag.unique {{
+        color: #dcdcaa;
+        border-color: #7a6427;
+        background: #2f2712;
+    }}
+
+    .arrow {{
+        color: #888;
+        margin: 3px 0;
+    }}
+
     @media (max-width: 1100px) {{
         .cols {{
             grid-template-columns: 1fr;
@@ -388,12 +576,20 @@ def render_html(pairs: list[dict]) -> str:
         <div class="num">{total}</div>
     </div>
     <div class="card">
-        <div>Unique ID matches</div>
-        <div class="num">{uid_matches}</div>
+        <div>After Fists of Stone</div>
+        <div class="num">{stonefist_count}</div>
     </div>
     <div class="card">
-        <div>After base = Fists of Stone</div>
-        <div class="num">{stonefist_count}</div>
+        <div>Unique samples</div>
+        <div class="num">{category_counts.get("unique", 0)}</div>
+    </div>
+    <div class="card">
+        <div>UID not present</div>
+        <div class="num">{status_counts.get("not present", 0)}</div>
+    </div>
+    <div class="card">
+        <div>UID matches</div>
+        <div class="num">{status_counts.get("match", 0)}</div>
     </div>
 </div>
 
@@ -402,7 +598,26 @@ Generated files:
 <code>pair_summary.csv</code> and <code>mod_lines.csv</code>.
 </p>
 
-<input id="search" placeholder="Filter by mod, base, test id, resistance, onslaught, leech, etc..." />
+<div>
+    <input id="search" placeholder="Filter by mod, base, test id, resistance, onslaught, leech, unique, etc..." />
+
+    <select id="category">
+        <option value="">All categories</option>
+        <option value="normal">Normal</option>
+        <option value="magic">Magic</option>
+        <option value="rare">Rare</option>
+        <option value="unique">Unique</option>
+        <option value="unknown">Unknown</option>
+    </select>
+
+    <select id="uid">
+        <option value="">All UID statuses</option>
+        <option value="not present">UID not present</option>
+        <option value="match">UID match</option>
+        <option value="mismatch">UID mismatch</option>
+        <option value="partial">UID partial</option>
+    </select>
+</div>
 
 <table id="pairs">
     <thead>
@@ -410,7 +625,7 @@ Generated files:
             <th>Test</th>
             <th>Item</th>
             <th>Item level</th>
-            <th>UID match</th>
+            <th>UID</th>
             <th>Explicit count</th>
             <th>Details</th>
         </tr>
@@ -422,15 +637,27 @@ Generated files:
 
 <script>
 const search = document.getElementById("search");
+const category = document.getElementById("category");
+const uid = document.getElementById("uid");
 const rows = [...document.querySelectorAll("#pairs tbody tr")];
 
-search.addEventListener("input", () => {{
+function applyFilters() {{
     const q = search.value.toLowerCase().trim();
+    const cat = category.value;
+    const uidStatus = uid.value;
 
     for (const row of rows) {{
-        row.style.display = row.dataset.search.includes(q) ? "" : "none";
+        const matchesSearch = row.dataset.search.includes(q);
+        const matchesCategory = !cat || row.dataset.category === cat;
+        const matchesUid = !uidStatus || row.dataset.uid === uidStatus;
+
+        row.style.display = matchesSearch && matchesCategory && matchesUid ? "" : "none";
     }}
-}});
+}}
+
+search.addEventListener("input", applyFilters);
+category.addEventListener("change", applyFilters);
+uid.addEventListener("change", applyFilters);
 </script>
 
 </body>

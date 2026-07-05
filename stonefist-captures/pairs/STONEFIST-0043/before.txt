@@ -1,15 +1,13 @@
 Item Class: Gloves
 Rarity: Magic
-Frozen Zealot Gauntlets of Mastery
+Gleaming Ancient Cuffs
 --------
-Armour: 82
-Evasion Rating: 74
+Armour: 89
+Energy Shield: 25
 --------
-Requires: Level 59, 41 Str, 41 Dex
+Requires: Level 70, 48 Str, 48 Int
 --------
-Item Level: 63
+Item Level: 73
 --------
-{ Prefix Modifier "Frozen" (Tier: 4) — Damage, Elemental, Cold, Attack }
-Adds 11(11-13) to 19(18-21) Cold damage to Attacks
-{ Suffix Modifier "of Mastery" (Tier: 2) — Attack, Speed }
-12(11-13)% increased Attack Speed
+{ Prefix Modifier "Gleaming" (Tier: 5) — Damage, Physical, Attack }
+Adds 7(5-7) to 12(9-13) Physical Damage to Attacks

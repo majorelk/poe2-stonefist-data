@@ -1,24 +1,18 @@
 Item Class: Gloves
 Rarity: Rare
-Vengeance Caress
-Spiral Wraps
+Phoenix Vise
+Linen Wraps
 --------
-Evasion Rating: 71 (augmented)
-Energy Shield: 25 (augmented)
+Evasion Rating: 23
+Energy Shield: 10
 --------
-Requires: Level 38, 24 Dex, 24 Int
+Requires: Level 16, 13 Dex, 13 Int
 --------
-Item Level: 53
+Item Level: 20
 --------
-{ Prefix Modifier "Ephemeral" (Tier: 4) — Evasion, Energy Shield }
-65(56-67)% increased Evasion and Energy Shield
-{ Prefix Modifier "Opalescent" (Tier: 3) — Mana }
-+87(80-89) to maximum Mana
-{ Prefix Modifier "Steady" (Tier: 4) — Attack }
-+231(168-236) to Accuracy Rating
-{ Suffix Modifier "of Plunder" (Tier: 3) }
-9(6-10)% increased Rarity of Items found
-{ Suffix Modifier "of Curvation" (Tier: 3) — Evasion }
-Gain Deflection Rating equal to 15(15-17)% of Evasion Rating
-{ Suffix Modifier "of the Arid" (Tier: 3) — Mana, Physical, Attack }
-Leech 6.04(6-6.9)% of Physical Attack Damage as Mana
+{ Prefix Modifier "Glinting" (Tier: 9) — Damage, Physical, Attack }
+Adds 2(1-2) to 3 Physical Damage to Attacks
+{ Suffix Modifier "of Ire" (Tier: 5) — Damage, Critical }
+14(10-14)% increased Critical Damage Bonus
+{ Suffix Modifier "of the Mongoose" (Tier: 9) — Attribute }
++7(5-8) to Dexterity

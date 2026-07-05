@@ -1,12 +1,24 @@
 Item Class: Gloves
-Rarity: Magic
-Annealed Refined Bracers
+Rarity: Rare
+Grim Fingers
+Layered Gauntlets
 --------
-Evasion Rating: 124
+Armour: 27
+Evasion Rating: 23
 --------
-Requires: Level 54, 67 Dex
+Requires: Level 16, 13 Str, 13 Dex
 --------
-Item Level: 63
+Sockets: S 
 --------
-{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
-Adds 7(6-10) to 12(12-17) Physical Damage to Attacks
+Item Level: 22
+--------
++10% to Cold Resistance (rune)
+--------
+{ Prefix Modifier "Reliable" (Tier: 8) — Attack }
++45(33-60) to Accuracy Rating
+{ Prefix Modifier "Glinting" (Tier: 9) — Damage, Physical, Attack }
+Adds 1(1-2) to 3 Physical Damage to Attacks
+{ Suffix Modifier "of the Squall" (Tier: 7) — Elemental, Lightning, Resistance }
++14(11-15)% to Lightning Resistance
+{ Suffix Modifier "of the Lynx" (Tier: 8) — Attribute }
++10(9-12) to Dexterity

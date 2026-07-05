@@ -1,21 +1,20 @@
 Item Class: Gloves
 Rarity: Rare
-Storm Hold
-Buckled Wraps
+Damnation Fingers
+Bound Cuffs
 --------
-Evasion Rating: 64 (augmented)
-Energy Shield: 21 (augmented)
+Armour: 171 (augmented)
+Energy Shield: 48 (augmented)
 --------
-Requires: Level 45, 32 Dex, 32 Int
+Requires: Level 65, 44 Str, 44 Int
 --------
-Item Level: 52
+Item Level: 71
 --------
-{ Prefix Modifier "Poet's" (Tier: 6) — Life, Evasion, Energy Shield }
-11(6-13)% increased Evasion and Energy Shield
-+8(7-10) to maximum Life
-{ Suffix Modifier "of the Penguin" (Tier: 7) — Elemental, Cold, Resistance }
-+13(11-15)% to Cold Resistance
-{ Suffix Modifier "of Plunder" (Tier: 3) }
-6(6-10)% increased Rarity of Items found
-{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
-+1 to Level of all Melee Skills
+{ Prefix Modifier "Inspired" (Tier: 1) — Armour, Energy Shield }
+92(92-100)% increased Armour and Energy Shield
+{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
++20(15-24) to maximum Mana
+{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
++7(6-10)% to Cold Resistance
+{ Suffix Modifier "of Sheathing" (Tier: 4) — Armour, Elemental }
++20(20-25)% of Armour also applies to Elemental Damage

@@ -1,21 +1,24 @@
 Item Class: Gloves
 Rarity: Rare
-Eagle Grasp
-Grim Gloves
+Vengeance Caress
+Spiral Wraps
 --------
-Energy Shield: 45
+Evasion Rating: 71 (augmented)
+Energy Shield: 25 (augmented)
 --------
-Requires: Level 65, 80 Int
+Requires: Level 38, 24 Dex, 24 Int
 --------
-Item Level: 66
+Item Level: 53
 --------
-{ Prefix Modifier "Crackling" (Tier: 6) — Damage, Elemental, Lightning, Attack }
-Adds 1 to 27(23-27) Lightning damage to Attacks
-{ Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
-+107(105-124) to maximum Mana
-{ Suffix Modifier "of the Savant" (Tier: 2) — Attribute }
-+29(28-30) to Intelligence
-{ Suffix Modifier "of Infusion" (Tier: 6) — Mana }
-Gain 9(6-9) Mana per enemy killed
-{ Suffix Modifier "of Raiding" (Tier: 2) }
-14(11-14)% increased Rarity of Items found
+{ Prefix Modifier "Ephemeral" (Tier: 4) — Evasion, Energy Shield }
+65(56-67)% increased Evasion and Energy Shield
+{ Prefix Modifier "Opalescent" (Tier: 3) — Mana }
++87(80-89) to maximum Mana
+{ Prefix Modifier "Steady" (Tier: 4) — Attack }
++231(168-236) to Accuracy Rating
+{ Suffix Modifier "of Plunder" (Tier: 3) }
+9(6-10)% increased Rarity of Items found
+{ Suffix Modifier "of Curvation" (Tier: 3) — Evasion }
+Gain Deflection Rating equal to 15(15-17)% of Evasion Rating
+{ Suffix Modifier "of the Arid" (Tier: 3) — Mana, Physical, Attack }
+Leech 6.04(6-6.9)% of Physical Attack Damage as Mana

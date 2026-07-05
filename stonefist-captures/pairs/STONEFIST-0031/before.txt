@@ -1,15 +1,21 @@
 Item Class: Gloves
-Rarity: Magic
-Hero's Commander Gauntlets of the Lightning
+Rarity: Rare
+Onslaught Mitts
+Baroque Gloves
 --------
-Armour: 169 (augmented)
-Evasion Rating: 153 (augmented)
+Energy Shield: 57 (augmented)
 --------
-Requires: Level 70, 48 Str, 48 Dex
+Requires: Level 54, 46 (augmented) Int
 --------
-Item Level: 73
+Item Level: 54
 --------
-{ Prefix Modifier "Hero's" (Tier: 2) — Armour, Evasion }
-80(80-91)% increased Armour and Evasion
-{ Suffix Modifier "of the Lightning" (Tier: 2) — Elemental, Lightning, Resistance }
-+38(36-40)% to Lightning Resistance
+{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
+Adds 6(6-10) to 15(12-17) Physical Damage to Attacks
+{ Prefix Modifier "Glimmering" (Tier: 6) — Energy Shield }
++18(18-24) to maximum Energy Shield
+{ Suffix Modifier "of Archaeology" (Tier: 1) }
+17(15-18)% increased Rarity of Items found
+{ Suffix Modifier "of the Pupil" (Tier: 8) — Attribute }
++5(5-8) to Intelligence
+{ Suffix Modifier "of the Skilled" (Tier: 2) }
+30% reduced Attribute Requirements

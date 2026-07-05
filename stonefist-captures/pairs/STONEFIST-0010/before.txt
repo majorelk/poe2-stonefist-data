@@ -1,18 +1,15 @@
 Item Class: Gloves
-Rarity: Rare
-Phoenix Vise
-Linen Wraps
+Rarity: Magic
+Frozen Zealot Gauntlets of Mastery
 --------
-Evasion Rating: 23
-Energy Shield: 10
+Armour: 82
+Evasion Rating: 74
 --------
-Requires: Level 16, 13 Dex, 13 Int
+Requires: Level 59, 41 Str, 41 Dex
 --------
-Item Level: 20
+Item Level: 63
 --------
-{ Prefix Modifier "Glinting" (Tier: 9) — Damage, Physical, Attack }
-Adds 2(1-2) to 3 Physical Damage to Attacks
-{ Suffix Modifier "of Ire" (Tier: 5) — Damage, Critical }
-14(10-14)% increased Critical Damage Bonus
-{ Suffix Modifier "of the Mongoose" (Tier: 9) — Attribute }
-+7(5-8) to Dexterity
+{ Prefix Modifier "Frozen" (Tier: 4) — Damage, Elemental, Cold, Attack }
+Adds 11(11-13) to 19(18-21) Cold damage to Attacks
+{ Suffix Modifier "of Mastery" (Tier: 2) — Attack, Speed }
+12(11-13)% increased Attack Speed

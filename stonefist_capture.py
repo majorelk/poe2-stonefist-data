@@ -30,130 +30,144 @@ def timestamp() -> str:
     return datetime.now().strftime("%Y%m%d-%H%M%S")
 
 
-def is_likely_poe_item(text: str) -> bool:
-    if not text or len(text.strip()) < 20:
-        return False
-
-    item_markers = [
-        "Item Class:",
-        "Rarity:",
-        "Item Level:",
-        "Unique ID:",
-        "Sockets:",
-        "Requires:",
-        "LevelReq:",
-        "Evasion Rating:",
-        "Energy Shield:",
-        "Armour:",
-    ]
-
-    return sum(marker in text for marker in item_markers) >= 2
-
-
-def is_stonefist_transformed(text: str) -> bool:
-    return (
-        "Fists of Stone" in text
-        or "per player level" in text
-        or "Unmodifiable" in text and "Evasion Rating" in text and "Energy Shield" in text
-    )
-
-
 def get_field(text: str, pattern: str) -> str:
     match = re.search(pattern, text, flags=re.MULTILINE)
     return match.group(1).strip() if match else ""
 
 
-def get_name_and_base(text: str) -> tuple[str, str]:
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
+def get_rarity(text: str) -> str:
+    return get_field(text, r"Rarity:\s*(.+)")
 
-    # Normal PoE Ctrl+C format:
-    # Item Class: Gloves
-    # Rarity: Rare
-    # Dread Knuckle
-    # Fists of Stone
-    for i, line in enumerate(lines):
-        if line.startswith("Rarity:"):
-            name = lines[i + 1] if i + 1 < len(lines) else ""
-            base = lines[i + 2] if i + 2 < len(lines) else ""
-            return name, base
 
-    # Fallback for formats without Item Class / Rarity:
-    # Dread Knuckle
-    # Adorned Wraps
-    ignored_prefixes = (
+def get_item_class(text: str) -> str:
+    return get_field(text, r"Item Class:\s*(.+)")
+
+
+def uid_status(before_uid: str, after_uid: str) -> str:
+    if not before_uid and not after_uid:
+        return "not present"
+    if before_uid and after_uid and before_uid == after_uid:
+        return "match"
+    if before_uid and after_uid and before_uid != after_uid:
+        return "mismatch"
+    return "partial"
+
+
+def is_likely_poe_item(text: str) -> bool:
+    if not text or len(text.strip()) < 20:
+        return False
+
+    markers = [
         "Item Class:",
         "Rarity:",
-        "--------",
-        "Evasion:",
+        "Item Level:",
+        "Sockets:",
+        "Requires:",
         "Evasion Rating:",
         "Energy Shield:",
         "Armour:",
         "Unique ID:",
-        "Item Level:",
-        "Quality:",
-        "Sockets:",
-        "Rune:",
-        "LevelReq:",
-        "Requires:",
-        "Implicits:",
-    )
-
-    candidate_lines = [
-        line for line in lines
-        if not line.startswith(ignored_prefixes)
-        and not line.startswith("{")
-        and not line.startswith("+")
-        and not line.startswith("-")
     ]
 
-    name = candidate_lines[0] if len(candidate_lines) > 0 else ""
-    base = candidate_lines[1] if len(candidate_lines) > 1 else ""
-    return name, base
+    return sum(marker in text for marker in markers) >= 2
+
+
+def is_glove_item(text: str) -> bool:
+    return (
+        "Item Class: Gloves" in text
+        or "Fists of Stone" in text
+        or "Evasion Rating:" in text and "Energy Shield:" in text and "Rarity:" in text
+    )
+
+
+def is_stonefist_transformed(text: str) -> bool:
+    return (
+        "Fists of Stone" in text
+        or "Has +3 to Evasion Rating per player level" in text
+        or "Has +1 to maximum Energy Shield per player level" in text
+    )
+
+
+def get_name_and_base(text: str) -> tuple[str, str]:
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+
+    for i, line in enumerate(lines):
+        if line.startswith("Rarity:"):
+            name = lines[i + 1] if i + 1 < len(lines) else ""
+            maybe_base = lines[i + 2] if i + 2 < len(lines) else ""
+
+            # Magic/normal items often have only one item display line, then divider.
+            if maybe_base == "--------":
+                return name, ""
+
+            return name, maybe_base
+
+    return "", ""
+
+
+def get_basic_stats(text: str) -> dict:
+    return {
+        "quality": get_field(text, r"Quality:\s*(.+)"),
+        "evasion": get_field(text, r"Evasion(?: Rating)?:\s*(.+)"),
+        "energy_shield": get_field(text, r"Energy Shield:\s*(.+)"),
+        "armour": get_field(text, r"Armour:\s*(.+)"),
+        "sockets": get_field(text, r"Sockets:\s*(.+)"),
+        "rune": get_field(text, r"Rune:\s*(.+)"),
+        "requirements": get_field(text, r"Requires:\s*(.+)"),
+    }
 
 
 def guess_mod_lines(text: str) -> list[str]:
-    useful = []
+    ignored_prefixes = (
+        "Item Class:",
+        "Rarity:",
+        "--------",
+        "Item Level:",
+        "Unique ID:",
+        "Quality:",
+        "Sockets:",
+        "Rune:",
+        "Requires:",
+        "LevelReq:",
+        "Implicits:",
+        "Evasion:",
+        "Evasion Rating:",
+        "Energy Shield:",
+        "Armour:",
+    )
+
+    out: list[str] = []
 
     for line in text.splitlines():
-        clean = line.strip()
+        s = line.strip()
 
-        if not clean:
+        if not s:
             continue
 
-        if clean.startswith((
-            "Item Class:",
-            "Rarity:",
-            "--------",
-            "Item Level:",
-            "Unique ID:",
-            "Quality:",
-            "Sockets:",
-            "Rune:",
-            "Requires:",
-            "LevelReq:",
-            "Implicits:",
-            "Evasion:",
-            "Evasion Rating:",
-            "Energy Shield:",
-            "Armour:",
-        )):
+        if s.startswith(ignored_prefixes):
             continue
 
         if (
-            clean.startswith("{")
-            or clean.startswith("+")
-            or clean.startswith("-")
-            or "increased" in clean
-            or "reduced" in clean
-            or "chance" in clean
-            or "Leech" in clean
-            or "Recouped" in clean
-            or "per player level" in clean
-            or clean == "Unmodifiable"
+            s.startswith("{")
+            or s.startswith("+")
+            or s.startswith("-")
+            or "increased" in s
+            or "reduced" in s
+            or "more " in s
+            or "less " in s
+            or "chance" in s
+            or "Leech" in s
+            or "Recouped" in s
+            or "per player level" in s
+            or "Resistance" in s
+            or "Accuracy" in s
+            or "Blind" in s
+            or "Onslaught" in s
+            or s == "Unmodifiable"
         ):
-            useful.append(clean)
+            out.append(s)
 
-    return useful
+    return out
 
 
 def save_raw_capture(text: str, kind: str) -> dict:
@@ -164,12 +178,15 @@ def save_raw_capture(text: str, kind: str) -> dict:
 
     return {
         "kind": kind,
+        "item_class": get_item_class(text),
+        "rarity": get_rarity(text),
         "name": name,
         "base": base,
         "item_level": get_field(text, r"Item Level:\s*(.+)"),
         "unique_id": get_field(text, r"Unique ID:\s*(.+)"),
         "hash": h,
         "file": str(file_path),
+        "basic_stats": get_basic_stats(text),
         "mods_guess": guess_mod_lines(text),
         "raw_text": text,
     }
@@ -185,10 +202,15 @@ def ensure_csv_header() -> None:
             "test_id",
             "timestamp",
             "character_level",
+            "uid_status",
+            "original_item_class",
+            "original_rarity",
             "original_name",
             "original_base",
             "original_item_level",
             "original_unique_id",
+            "transformed_item_class",
+            "transformed_rarity",
             "transformed_name",
             "transformed_base",
             "transformed_item_level",
@@ -208,10 +230,15 @@ def append_pair_csv(pair: dict) -> None:
             pair["test_id"],
             pair["timestamp"],
             pair["character_level"],
+            pair["uid_status"],
+            pair["before"]["item_class"],
+            pair["before"]["rarity"],
             pair["before"]["name"],
             pair["before"]["base"],
             pair["before"]["item_level"],
             pair["before"]["unique_id"],
+            pair["after"]["item_class"],
+            pair["after"]["rarity"],
             pair["after"]["name"],
             pair["after"]["base"],
             pair["after"]["item_level"],
@@ -260,7 +287,7 @@ def main() -> None:
 
         last_clip_hash = clip_hash
 
-        if not is_likely_poe_item(clip):
+        if not is_likely_poe_item(clip) or not is_glove_item(clip):
             time.sleep(0.25)
             continue
 
@@ -269,11 +296,19 @@ def main() -> None:
 
         if kind == "before":
             pending_before = record
-            print(f"[BEFORE] {record['name']} / {record['base']} / ilvl {record['item_level']}")
+            print(
+                f"[BEFORE] {record['rarity']} | "
+                f"{record['name']} / {record['base'] or '(no base line)'} / "
+                f"ilvl {record['item_level']}"
+            )
             time.sleep(0.25)
             continue
 
-        print(f"[AFTER]  {record['name']} / {record['base']} / ilvl {record['item_level']}")
+        print(
+            f"[AFTER]  {record['rarity']} | "
+            f"{record['name']} / {record['base'] or '(no base line)'} / "
+            f"ilvl {record['item_level']}"
+        )
 
         if pending_before is None:
             print("No pending BEFORE capture. Saved raw AFTER only.")
@@ -292,6 +327,8 @@ def main() -> None:
         before_path.write_text(pending_before["raw_text"], encoding="utf-8")
         after_path.write_text(record["raw_text"], encoding="utf-8")
 
+        status = uid_status(pending_before["unique_id"], record["unique_id"])
+
         before_for_json = {k: v for k, v in pending_before.items() if k != "raw_text"}
         after_for_json = {k: v for k, v in record.items() if k != "raw_text"}
 
@@ -299,6 +336,7 @@ def main() -> None:
             "test_id": test_id,
             "timestamp": datetime.now().isoformat(timespec="seconds"),
             "character_level": character_level,
+            "uid_status": status,
             "before_file": str(before_path),
             "after_file": str(after_path),
             "before": before_for_json,
@@ -310,6 +348,7 @@ def main() -> None:
         append_pair_jsonl(pair)
 
         print(f"Paired as {test_id}")
+        print(f"UID status: {status}")
         print(f"Saved to: {pair_dir}")
         print()
 

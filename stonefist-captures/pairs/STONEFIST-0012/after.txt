@@ -1,23 +1,25 @@
 Item Class: Gloves
 Rarity: Rare
-Torment Touch
+Miracle Paw
 Fists of Stone
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
 --------
-Item Level: 17
+Item Level: 64
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Polished" — Physical, Attack }
-Attacks Gain 12% of Damage as Extra Physical Damage
-{ Prefix Modifier "Flea's" }
-3% of Damage Taken Recouped as Life, Mana and Energy Shield
-{ Suffix Modifier "of the Squall" — Elemental, Lightning, Resistance }
-+1% to Maximum Lightning Resistance
-+16(16-20)% to Lightning Resistance
+{ Prefix Modifier "Druid's" }
+5% of Damage Taken Recouped as Life, Mana and Energy Shield
+{ Prefix Modifier "Glaciated" — Elemental, Cold, Attack }
+Attacks Gain 17(17-18)% of Damage as Extra Cold Damage
+{ Suffix Modifier "of Combat" — Gem }
++10(10-12)% to Quality of all Skills
+{ Suffix Modifier "of the Drake" — Elemental, Fire, Resistance }
++1% to Maximum Fire Resistance
++22(21-25)% to Fire Resistance
 --------
 Unmodifiable

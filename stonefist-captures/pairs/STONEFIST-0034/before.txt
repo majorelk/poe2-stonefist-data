@@ -1,21 +1,29 @@
 Item Class: Gloves
 Rarity: Rare
-Doom Knuckle
-Ornate Cuffs
+Brood Hand
+Gauze Wraps
 --------
-Armour: 97 (augmented)
-Energy Shield: 27 (augmented)
+Evasion Rating: 21 (augmented)
+Energy Shield: 16 (augmented)
 --------
-Requires: Level 59, 41 Str, 41 Int
+Requires: Level 15
 --------
-Item Level: 63
+Sockets: S 
 --------
-{ Prefix Modifier "Auspex's" (Tier: 5) — Life, Armour, Energy Shield }
-18(14-20)% increased Armour and Energy Shield
-+11(11-19) to maximum Life
-{ Suffix Modifier "of the Volcano" (Tier: 3) — Elemental, Fire, Resistance }
-+35(31-35)% to Fire Resistance
-{ Suffix Modifier "of Raiding" (Tier: 2) }
-12(11-14)% increased Rarity of Items found
-{ Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
-+17(17-20) to Dexterity
+Item Level: 24
+--------
++14% to Cold Resistance (rune)
+--------
+{ Prefix Modifier "Nymph's" (Tier: 3) — Evasion, Energy Shield }
++12(11-41) to Evasion Rating
++10(9-15) to maximum Energy Shield
+{ Prefix Modifier "Azure" (Tier: 7) — Mana }
++32(25-34) to maximum Mana
+{ Prefix Modifier "Hale" (Tier: 9) — Life }
++19(10-19) to maximum Life
+{ Suffix Modifier "of Skill" (Tier: 4) — Attack, Speed }
+7(5-7)% increased Attack Speed
+{ Suffix Modifier "of the Salamander" (Tier: 7) — Elemental, Fire, Resistance }
++14(11-15)% to Fire Resistance
+{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
++8(6-10)% to Cold Resistance

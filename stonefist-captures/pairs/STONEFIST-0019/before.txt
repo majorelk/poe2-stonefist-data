@@ -1,22 +1,14 @@
 Item Class: Gloves
-Rarity: Rare
-Behemoth Fist
-Spined Bracers
+Rarity: Magic
+Adorned Wraps of Valour
 --------
-Evasion Rating: 117 (augmented)
+Quality: +13% (augmented)
+Evasion Rating: 84 (augmented)
+Energy Shield: 26 (augmented)
 --------
-Requires: Level 33, 42 Dex
+Requires: Level 59, 41 Dex, 41 Int
 --------
-Sockets: S 
+Item Level: 74
 --------
-Item Level: 43
---------
-{ Prefix Modifier "Mouflon's" (Tier: 4) — Life, Evasion }
-22(21-26)% increased Evasion Rating
-+23(20-25) to maximum Life
-{ Prefix Modifier "Cerulean" (Tier: 5) — Mana }
-+60(55-64) to maximum Mana
-{ Prefix Modifier "Shade's" (Tier: 7) — Evasion }
-26(15-26)% increased Evasion Rating
-{ Suffix Modifier "of the Kiln" (Tier: 5) — Elemental, Fire, Resistance }
-+25(21-25)% to Fire Resistance
+{ Suffix Modifier "of Valour" (Tier: 3) — Life }
+Gain 45(41-53) Life per enemy killed

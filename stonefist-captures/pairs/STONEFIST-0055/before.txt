@@ -1,22 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Grim Palm
-Baroque Gloves
+Agony Talons
+Ancient Mitts
 --------
-Energy Shield: 62 (augmented)
+Armour: 212 (augmented)
 --------
-Requires: Level 62, 43 (augmented) Int
+Requires: Level 54, 67 Str
 --------
-Sockets: S 
+Item Level: 54
 --------
-Item Level: 82
---------
-18% increased Armour, Evasion and Energy Shield (rune)
---------
-{ Prefix Modifier "Pope's" (Tier: 1) — Life, Energy Shield }
-41(39-42)% increased Energy Shield
-+42(42-49) to maximum Life
-{ Suffix Modifier "of Renown" (Tier: 1) — Attack, Speed }
-16(14-16)% increased Attack Speed
-{ Suffix Modifier "of the Proficient" (Tier: 1) }
-35% reduced Attribute Requirements
+{ Prefix Modifier "Rotund" (Tier: 3) — Life }
++91(85-99) to maximum Life
+{ Prefix Modifier "Lobstered" (Tier: 5) — Armour }
+55(43-55)% increased Armour
+{ Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
+22(20-24)% increased Critical Damage Bonus
+{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
++18(16-20)% to Lightning Resistance
+{ Suffix Modifier "of the Remora" (Tier: 3) — Life, Physical, Attack }
+Leech 7.59(7-7.9)% of Physical Attack Damage as Life

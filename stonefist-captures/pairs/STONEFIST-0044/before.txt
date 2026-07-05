@@ -1,20 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Damnation Fingers
-Bound Cuffs
+Rift Touch
+Goldcast Cuffs
 --------
-Armour: 171 (augmented)
-Energy Shield: 48 (augmented)
+Quality: +5% (augmented)
+Armour: 51 (augmented)
+Energy Shield: 16 (augmented)
 --------
-Requires: Level 65, 44 Str, 44 Int
+Requires: Level 33, 24 Str, 24 Int
 --------
-Item Level: 71
+Item Level: 35
 --------
-{ Prefix Modifier "Inspired" (Tier: 1) — Armour, Energy Shield }
-92(92-100)% increased Armour and Energy Shield
-{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
-+20(15-24) to maximum Mana
-{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
-+7(6-10)% to Cold Resistance
-{ Suffix Modifier "of Sheathing" (Tier: 4) — Armour, Elemental }
-+20(20-25)% of Armour also applies to Elemental Damage
+{ Prefix Modifier "Cerulean" (Tier: 5) — Mana }
++60(55-64) to maximum Mana
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+11(11-14)% increased Rarity of Items found
+{ Suffix Modifier "of the Parched" (Tier: 4) — Mana, Physical, Attack }
+Leech 5.79(5-5.9)% of Physical Attack Damage as Mana
+{ Crafted Suffix Modifier "of the Squall" (Tier: 7) — Elemental, Lightning, Resistance }
++15(11-15)% to Lightning Resistance

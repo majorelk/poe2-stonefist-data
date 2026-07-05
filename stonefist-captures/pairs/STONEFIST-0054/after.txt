@@ -1,25 +1,24 @@
 Item Class: Gloves
 Rarity: Rare
-Fate Knuckle
+Rage Paw
 Fists of Stone
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
 --------
-Item Level: 65
+Item Level: 66
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Chalybeous" }
-27(26-27)% more Attack damage while on Low Mana
-{ Prefix Modifier "Stalwart" }
-8% less damage taken while on Low Life
-{ Suffix Modifier "of Rage" — Critical }
-+1.79(1.6-2)% to Critical Hit Chance
-{ Suffix Modifier "of the Furnace" — Elemental, Fire, Resistance }
-+2% to Maximum Fire Resistance
-+30(26-30)% to Fire Resistance
+{ Prefix Modifier "Virile" }
+12% less damage taken while on Low Life
+{ Prefix Modifier "Cobalt" }
+12(12-13)% more Attack damage while on Low Mana
+{ Suffix Modifier "of the Falcon" }
++30(27-30)% Surpassing chance to fire an additional Projectile
+{ Suffix Modifier "of the Goliath" — Attack }
+25(23-25)% increased Area of Effect for Attacks
 --------
 Unmodifiable

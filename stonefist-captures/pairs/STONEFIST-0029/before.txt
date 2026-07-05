@@ -1,25 +1,14 @@
 Item Class: Gloves
-Rarity: Rare
-Spirit Clutches
-Gold Gloves
+Rarity: Magic
+Deliberate Intricate Gloves of Vanquishing
 --------
-Energy Shield: 42
+Energy Shield: 27
 --------
-Requires: Level 59, 73 Int
+Requires: Level 35, 42 Int
 --------
-Sockets: S 
+Item Level: 52
 --------
-Item Level: 68
---------
-{ Prefix Modifier "Virile" (Tier: 2) — Life }
-+109(100-119) to maximum Life
-{ Prefix Modifier "Azure" (Tier: 7) — Mana }
-+25(25-34) to maximum Mana
-{ Prefix Modifier "Arcing" (Tier: 4) — Damage, Elemental, Lightning, Attack }
-Adds 2(1-2) to 39(33-40) Lightning damage to Attacks
-{ Suffix Modifier "of the Furnace" (Tier: 4) — Elemental, Fire, Resistance }
-+30(26-30)% to Fire Resistance
-{ Suffix Modifier "of the Fox" (Tier: 7) — Attribute }
-+16(13-16) to Dexterity
-{ Suffix Modifier "of Raiding" (Tier: 2) }
-12(11-14)% increased Rarity of Items found
+{ Prefix Modifier "Deliberate" (Tier: 6) — Attack }
++116(85-123) to Accuracy Rating
+{ Suffix Modifier "of Vanquishing" (Tier: 4) — Life }
+Gain 39(29-40) Life per enemy killed

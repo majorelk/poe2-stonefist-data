@@ -1,29 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Brimstone Talons
-Spiral Wraps
+Cataclysm Hold
+Ornate Cuffs
 --------
-Quality: +20% (augmented)
-Evasion Rating: 78 (augmented)
-Energy Shield: 27 (augmented)
+Armour: 107 (augmented)
+Energy Shield: 30 (augmented)
 --------
-Requires: Level 33, 24 Dex, 24 Int
+Requires: Level 59, 41 Str, 41 Int
 --------
-Sockets: S 
+Item Level: 69
 --------
-Item Level: 35
---------
-+18% to Fire Resistance (rune)
---------
-{ Prefix Modifier "Teal" (Tier: 6) — Mana }
-+45(35-54) to maximum Mana
-{ Prefix Modifier "Sanguine" (Tier: 7) — Life }
-+32(30-39) to maximum Life
-{ Prefix Modifier "Unworldly" (Tier: 5) — Evasion, Energy Shield }
-51(43-55)% increased Evasion and Energy Shield
-{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
-+19(16-20)% to Lightning Resistance
-{ Suffix Modifier "of Regrowth" (Tier: 2) — Life, Attack }
-Gain 4 Life per Enemy Hit with Attacks
-{ Suffix Modifier "of the Parched" (Tier: 4) — Mana, Physical, Attack }
-Leech 5.87(5-5.9)% of Physical Attack Damage as Mana
+{ Prefix Modifier "Haruspex's" (Tier: 3) — Life, Armour, Energy Shield }
+31(27-32)% increased Armour and Energy Shield
++31(26-32) to maximum Life
+{ Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
++27(25-27) to Strength
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+12(11-14)% increased Rarity of Items found

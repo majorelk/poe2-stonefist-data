@@ -1,29 +1,26 @@
 Item Class: Gloves
 Rarity: Unique
-The Prisoner's Manacles
-Kalguuran Cuffs
+Painter's Servant
+Torn Gloves
 --------
-Armour: 220 (augmented)
-Energy Shield: 65 (augmented)
+Energy Shield: 9
 --------
-Requires: Level 45, 64 (augmented) Str, 64 (augmented) Int
+Item Level: 52
 --------
-Item Level: 59
---------
-{ Unique Modifier — Armour, Energy Shield }
-243(200-300)% increased Armour and Energy Shield
 { Unique Modifier }
-100% increased Attribute Requirements
+33% of Elemental Damage Converted to Fire Damage
 { Unique Modifier }
-Debuffs you inflict have 29(20-30)% increased Slow Magnitude
+33% of Elemental Damage Converted to Cold Damage
 { Unique Modifier }
-Cannot Immobilise enemies — Unscalable Value
-{ Unique Modifier — Life }
-29.3(15-30) Life Regeneration per second
-{ Unique Modifier — Elemental, Lightning, Resistance }
-+24(20-40)% to Lightning Resistance
-{ Unique Modifier — Life }
-+100 to maximum Life
+33% of Elemental Damage Converted to Lightning Damage
+{ Unique Modifier — Damage, Elemental, Fire }
+Gain 6(5-10)% of Elemental Damage as Extra Fire Damage
+{ Unique Modifier — Damage, Elemental, Cold }
+Gain 7(5-10)% of Elemental Damage as Extra Cold Damage
+{ Unique Modifier — Damage, Elemental, Lightning }
+Gain 9(5-10)% of Elemental Damage as Extra Lightning Damage
 --------
-Only once did Maligaro wonder if he'd gone too far.
-His greatest success took three entire legions to capture.
+Bloodshed on the crimson shores,
+longing for the endless sea.
+Treasures, life, I'd give it all
+just to capture thee.

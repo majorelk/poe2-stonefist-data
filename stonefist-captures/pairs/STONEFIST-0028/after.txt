@@ -1,17 +1,27 @@
 Item Class: Gloves
-Rarity: Magic
-Fists of Stone of Devouring
+Rarity: Rare
+Behemoth Fist
+Fists of Stone
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
 --------
-Item Level: 75
+Sockets: S 
+--------
+Item Level: 43
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Suffix Modifier "of Devouring" — Mana }
-Recover 2% of maximum Mana on Kill
+{ Prefix Modifier "Mouflon's" }
+5% of Damage Taken Recouped as Life, Mana and Energy Shield
+{ Prefix Modifier "Cerulean" }
+19(18-19)% more Attack damage while on Low Mana
+{ Prefix Modifier "Shade's" — Evasion, Energy Shield }
+7(7-8)% more Global Evasion Rating and Energy Shield
+{ Suffix Modifier "of the Kiln" — Elemental, Fire, Resistance }
++2% to Maximum Fire Resistance
++22(21-25)% to Fire Resistance
 --------
 Unmodifiable

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import html
 import json
 import re
@@ -9,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path("stonefist-captures")
 DATASET_PATH = ROOT / "dataset.json"
+MAPPING_CANDIDATES_PATH = ROOT / "mapping_candidates.csv"
 REPORT_PATH = ROOT / "report.html"
 
 
@@ -170,6 +172,15 @@ def load_dataset() -> list[dict]:
     return data["pairs"]
 
 
+def load_mapping_candidates() -> list[dict[str, str]]:
+    if not MAPPING_CANDIDATES_PATH.exists():
+        return []
+
+    with MAPPING_CANDIDATES_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
 def esc(value: object) -> str:
     return html.escape(str(value))
 
@@ -213,6 +224,58 @@ def render_stats_table(before_stats: dict, after_stats: dict) -> str:
     return f"""
     <table class="mini">
         <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
+def render_mapping_candidates(candidates: list[dict[str, str]]) -> str:
+    if not candidates:
+        return "<p><em>No provisional modifier mapping candidates available.</em></p>"
+
+    order = {
+        "confirmed_candidate": 0,
+        "likely_candidate": 1,
+        "ambiguous": 2,
+        "duplicate_only": 3,
+    }
+
+    def sort_key(candidate: dict[str, str]) -> tuple[int, int]:
+        return (
+            order.get(candidate.get("confidence_summary", "ambiguous"), 4),
+            -int(candidate.get("sample_count", "0") or "0"),
+        )
+
+    sorted_candidates = sorted(candidates, key=sort_key)
+    rows = []
+    for c in sorted_candidates:
+        rows.append(
+            f"""
+            <tr>
+                <td><code>{esc(c.get('before_modifier_name', ''))}</code></td>
+                <td><code>{esc(c.get('before_stats', ''))}</code></td>
+                <td><code>{esc(c.get('after_modifier_name', ''))}</code></td>
+                <td><code>{esc(c.get('after_stats', ''))}</code></td>
+                <td>{esc(c.get('confidence_summary', ''))}</td>
+                <td>{esc(c.get('sample_count', '0'))}</td>
+                <td>{esc(c.get('character_levels', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>Before modifier</th>
+                <th>Before stats</th>
+                <th>After modifier</th>
+                <th>After stats</th>
+                <th>Confidence</th>
+                <th>Samples</th>
+                <th>Character levels</th>
+            </tr>
+        </thead>
         <tbody>{"".join(rows)}</tbody>
     </table>
     """
@@ -496,7 +559,16 @@ def render_html(pairs: list[dict]) -> str:
 </div>
 
 <p>
-Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code> and <code>mod_lines.csv</code>.
+Mapping candidates are derived from explicit modifier block position and should be treated as provisional until confirmed by isolated samples.
+</p>
+
+<section>
+    <h2>Modifier mapping candidates</h2>
+    {render_mapping_candidates(load_mapping_candidates())}
+</section>
+
+<p>
+Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, and <code>mapping_candidates.csv</code>.
 </p>
 
 <div>

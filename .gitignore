@@ -9,6 +9,8 @@ stonefist-captures/report.html
 stonefist-captures/pair_summary.csv
 stonefist-captures/mod_lines.csv
 stonefist-captures/dataset.json
+stonefist-captures/mapping_observations.csv
+stonefist-captures/mapping_candidates.csv
 
 # Optional: raw duplicate clipboard dumps
 stonefist-captures/raw/

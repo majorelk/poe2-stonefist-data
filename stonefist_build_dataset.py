@@ -12,6 +12,8 @@ PAIRS_DIR = ROOT / "pairs"
 DATASET_PATH = ROOT / "dataset.json"
 PAIR_SUMMARY_PATH = ROOT / "pair_summary.csv"
 MOD_LINES_PATH = ROOT / "mod_lines.csv"
+MAPPING_OBSERVATIONS_PATH = ROOT / "mapping_observations.csv"
+MAPPING_CANDIDATES_PATH = ROOT / "mapping_candidates.csv"
 
 
 def read_text(path: Path) -> str:
@@ -73,6 +75,55 @@ def load_meta(pair_dir: Path) -> dict[str, object]:
         "capture_version": data.get("capture_version"),
         "notes": data.get("notes", ""),
     }
+
+
+def parse_explicit_modifier_blocks(text: str) -> list[dict[str, object]]:
+    blocks: list[dict[str, object]] = []
+    lines = [line.rstrip() for line in text.splitlines()]
+
+    header_pattern = re.compile(
+        r'^(?:\{\s*)?(?P<kind>.+?)\s+"(?P<name>[^"]+)"(?:\s+\(Tier:\s*(?P<tier>\d+)\))?.*$'
+    )
+
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+        if not line:
+            i += 1
+            continue
+
+        match = header_pattern.match(line)
+        if not match:
+            i += 1
+            continue
+
+        kind = match.group("kind").strip()
+        if kind.endswith(" Modifier"):
+            kind = kind[: -len(" Modifier")].strip()
+
+        block = {
+            "block_index": len(blocks) + 1,
+            "modifier_kind": kind,
+            "modifier_name": match.group("name").strip(),
+            "tier": match.group("tier") or "",
+            "header_line": line,
+            "stat_lines": [],
+        }
+
+        i += 1
+        while i < len(lines):
+            stat_line = lines[i].strip()
+            if not stat_line or stat_line == "--------":
+                break
+            if header_pattern.match(stat_line):
+                break
+            block["stat_lines"].append(stat_line)
+            i += 1
+
+        blocks.append(block)
+        continue
+
+    return blocks
 
 
 def uid_status(before_uid: str, after_uid: str) -> str:
@@ -311,6 +362,246 @@ def write_json_dataset(pairs: list[dict]) -> None:
     DATASET_PATH.write_text(json.dumps(dataset, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def join_stats_for_csv(lines: list[str]) -> str:
+    return " | ".join(line for line in lines if line)
+
+
+def build_mapping_observations(pairs: list[dict]) -> list[dict[str, object]]:
+    observations: list[dict[str, object]] = []
+
+    for p in pairs:
+        before_blocks = parse_explicit_modifier_blocks(p["before_text"])
+        after_blocks = parse_explicit_modifier_blocks(p["after_text"])
+        before_count = len(before_blocks)
+        after_count = len(after_blocks)
+        exact_duplicate = bool(p["is_exact_duplicate"])
+
+        if before_count == 0 or after_count == 0:
+            if before_count == 0 or after_count == 0:
+                confidence = "duplicate_observation" if exact_duplicate else "ambiguous_count_mismatch"
+                for index in range(min(before_count, after_count)):
+                    observations.append(
+                        {
+                            "test_id": p["test_id"],
+                            "character_level": p["character_level"],
+                            "category": p["category"],
+                            "confidence": confidence,
+                            "before_block_index": before_blocks[index]["block_index"],
+                            "before_modifier_kind": before_blocks[index]["modifier_kind"],
+                            "before_modifier_name": before_blocks[index]["modifier_name"],
+                            "before_tier": before_blocks[index]["tier"],
+                            "before_header": before_blocks[index]["header_line"],
+                            "before_stats": join_stats_for_csv(before_blocks[index]["stat_lines"]),
+                            "after_block_index": after_blocks[index]["block_index"],
+                            "after_modifier_kind": after_blocks[index]["modifier_kind"],
+                            "after_modifier_name": after_blocks[index]["modifier_name"],
+                            "after_tier": after_blocks[index]["tier"],
+                            "after_header": after_blocks[index]["header_line"],
+                            "after_stats": join_stats_for_csv(after_blocks[index]["stat_lines"]),
+                            "is_exact_duplicate": exact_duplicate,
+                            "duplicate_of": p["duplicate_of"],
+                        }
+                    )
+            continue
+
+        if exact_duplicate:
+            confidence = "duplicate_observation"
+        elif before_count == 1 and after_count == 1:
+            confidence = "confirmed_isolated"
+        elif before_count == after_count:
+            confidence = "likely_by_order"
+        else:
+            confidence = "ambiguous_count_mismatch"
+
+        for index in range(min(before_count, after_count)):
+            observations.append(
+                {
+                    "test_id": p["test_id"],
+                    "character_level": p["character_level"],
+                    "category": p["category"],
+                    "confidence": confidence,
+                    "before_block_index": before_blocks[index]["block_index"],
+                    "before_modifier_kind": before_blocks[index]["modifier_kind"],
+                    "before_modifier_name": before_blocks[index]["modifier_name"],
+                    "before_tier": before_blocks[index]["tier"],
+                    "before_header": before_blocks[index]["header_line"],
+                    "before_stats": join_stats_for_csv(before_blocks[index]["stat_lines"]),
+                    "after_block_index": after_blocks[index]["block_index"],
+                    "after_modifier_kind": after_blocks[index]["modifier_kind"],
+                    "after_modifier_name": after_blocks[index]["modifier_name"],
+                    "after_tier": after_blocks[index]["tier"],
+                    "after_header": after_blocks[index]["header_line"],
+                    "after_stats": join_stats_for_csv(after_blocks[index]["stat_lines"]),
+                    "is_exact_duplicate": exact_duplicate,
+                    "duplicate_of": p["duplicate_of"],
+                }
+            )
+
+    return observations
+
+
+def summarize_mapping_candidates(observations: list[dict]) -> list[dict[str, object]]:
+    groups: dict[tuple[str, str, str, str], dict[str, object]] = {}
+
+    for obs in observations:
+        key = (
+            obs["before_modifier_name"],
+            obs["before_stats"],
+            obs["after_modifier_name"],
+            obs["after_stats"],
+        )
+
+        if key not in groups:
+            groups[key] = {
+                "before_modifier_name": obs["before_modifier_name"],
+                "before_stats": obs["before_stats"],
+                "after_modifier_name": obs["after_modifier_name"],
+                "after_stats": obs["after_stats"],
+                "sample_count": 0,
+                "isolated_sample_count": 0,
+                "likely_sample_count": 0,
+                "duplicate_sample_count": 0,
+                "sample_ids_set": set(),
+                "character_levels_set": set(),
+            }
+
+        group = groups[key]
+        group["sample_count"] += 1
+        group["sample_ids_set"].add(obs["test_id"])
+        if obs["character_level"]:
+            group["character_levels_set"].add(obs["character_level"])
+
+        if obs["confidence"] == "confirmed_isolated":
+            group["isolated_sample_count"] += 1
+        elif obs["confidence"] == "likely_by_order":
+            group["likely_sample_count"] += 1
+        elif obs["confidence"] == "duplicate_observation":
+            group["duplicate_sample_count"] += 1
+
+    summaries: list[dict[str, object]] = []
+    for group in groups.values():
+        sample_count = group["sample_count"]
+        isolated_sample_count = group["isolated_sample_count"]
+        likely_sample_count = group["likely_sample_count"]
+        duplicate_sample_count = group["duplicate_sample_count"]
+
+        if isolated_sample_count >= 1:
+            confidence_summary = "confirmed_candidate"
+        elif likely_sample_count >= 1 and isolated_sample_count == 0:
+            confidence_summary = "likely_candidate"
+        elif duplicate_sample_count == sample_count:
+            confidence_summary = "duplicate_only"
+        else:
+            confidence_summary = "ambiguous"
+
+        summaries.append(
+            {
+                "before_modifier_name": group["before_modifier_name"],
+                "before_stats": group["before_stats"],
+                "after_modifier_name": group["after_modifier_name"],
+                "after_stats": group["after_stats"],
+                "sample_count": sample_count,
+                "isolated_sample_count": isolated_sample_count,
+                "likely_sample_count": likely_sample_count,
+                "duplicate_sample_count": duplicate_sample_count,
+                "sample_ids": "|".join(sorted(group["sample_ids_set"])),
+                "character_levels": "|".join(sorted(group["character_levels_set"])),
+                "confidence_summary": confidence_summary,
+            }
+        )
+
+    return summaries
+
+
+def write_mapping_csvs(pairs: list[dict]) -> None:
+    observations = build_mapping_observations(pairs)
+    summaries = summarize_mapping_candidates(observations)
+
+    with MAPPING_OBSERVATIONS_PATH.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(
+            [
+                "test_id",
+                "character_level",
+                "category",
+                "confidence",
+                "before_block_index",
+                "before_modifier_kind",
+                "before_modifier_name",
+                "before_tier",
+                "before_header",
+                "before_stats",
+                "after_block_index",
+                "after_modifier_kind",
+                "after_modifier_name",
+                "after_tier",
+                "after_header",
+                "after_stats",
+                "is_exact_duplicate",
+                "duplicate_of",
+            ]
+        )
+
+        for obs in observations:
+            writer.writerow(
+                [
+                    obs["test_id"],
+                    obs["character_level"],
+                    obs["category"],
+                    obs["confidence"],
+                    obs["before_block_index"],
+                    obs["before_modifier_kind"],
+                    obs["before_modifier_name"],
+                    obs["before_tier"],
+                    obs["before_header"],
+                    obs["before_stats"],
+                    obs["after_block_index"],
+                    obs["after_modifier_kind"],
+                    obs["after_modifier_name"],
+                    obs["after_tier"],
+                    obs["after_header"],
+                    obs["after_stats"],
+                    str(obs["is_exact_duplicate"]),
+                    obs["duplicate_of"],
+                ]
+            )
+
+    with MAPPING_CANDIDATES_PATH.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(
+            [
+                "before_modifier_name",
+                "before_stats",
+                "after_modifier_name",
+                "after_stats",
+                "sample_count",
+                "isolated_sample_count",
+                "likely_sample_count",
+                "duplicate_sample_count",
+                "sample_ids",
+                "character_levels",
+                "confidence_summary",
+            ]
+        )
+
+        for group in summaries:
+            writer.writerow(
+                [
+                    group["before_modifier_name"],
+                    group["before_stats"],
+                    group["after_modifier_name"],
+                    group["after_stats"],
+                    group["sample_count"],
+                    group["isolated_sample_count"],
+                    group["likely_sample_count"],
+                    group["duplicate_sample_count"],
+                    group["sample_ids"],
+                    group["character_levels"],
+                    group["confidence_summary"],
+                ]
+            )
+
+
 def write_csvs(pairs: list[dict]) -> None:
     with PAIR_SUMMARY_PATH.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -391,6 +682,8 @@ def write_csvs(pairs: list[dict]) -> None:
 
             for i, line in enumerate(p["after_lines"], start=1):
                 writer.writerow([p["test_id"], p["category"], "after", i, line])
+
+    write_mapping_csvs(pairs)
 
 
 def main() -> None:

@@ -1,17 +1,15 @@
 from __future__ import annotations
 
-import csv
 import html
+import json
 import re
 from collections import Counter
 from pathlib import Path
 
 
 ROOT = Path("stonefist-captures")
-PAIRS_DIR = ROOT / "pairs"
+DATASET_PATH = ROOT / "dataset.json"
 REPORT_PATH = ROOT / "report.html"
-PAIR_CSV_PATH = ROOT / "pair_summary.csv"
-MOD_CSV_PATH = ROOT / "mod_lines.csv"
 
 
 def read_text(path: Path) -> str:
@@ -161,136 +159,15 @@ def classify_pair(before_rarity: str, after_rarity: str) -> str:
     return "unknown"
 
 
-def load_pairs() -> list[dict]:
-    pairs: list[dict] = []
+def load_dataset() -> list[dict]:
+    if not DATASET_PATH.exists():
+        raise SystemExit(f"Could not find {DATASET_PATH}")
 
-    if not PAIRS_DIR.exists():
-        raise SystemExit(f"Could not find {PAIRS_DIR}")
+    data = json.loads(DATASET_PATH.read_text(encoding="utf-8"))
+    if not isinstance(data, dict) or "pairs" not in data:
+        raise SystemExit(f"Invalid dataset format in {DATASET_PATH}")
 
-    for pair_dir in sorted(PAIRS_DIR.iterdir()):
-        if not pair_dir.is_dir():
-            continue
-
-        before_path = pair_dir / "before.txt"
-        after_path = pair_dir / "after.txt"
-
-        if not before_path.exists() or not after_path.exists():
-            continue
-
-        before = read_text(before_path)
-        after = read_text(after_path)
-
-        before_name, before_base = get_name_base(before)
-        after_name, after_base = get_name_base(after)
-
-        before_lines = interesting_mod_lines(before)
-        after_lines = interesting_mod_lines(after)
-
-        before_uid = get_field(before, r"Unique ID:\s*(.+)")
-        after_uid = get_field(after, r"Unique ID:\s*(.+)")
-
-        before_rarity = get_rarity(before)
-        after_rarity = get_rarity(after)
-
-        status = uid_status(before_uid, after_uid)
-        category = classify_pair(before_rarity, after_rarity)
-
-        pairs.append(
-            {
-                "test_id": pair_dir.name,
-                "before_path": str(before_path),
-                "after_path": str(after_path),
-                "before_text": before,
-                "after_text": after,
-                "before_item_class": get_item_class(before),
-                "after_item_class": get_item_class(after),
-                "before_rarity": before_rarity,
-                "after_rarity": after_rarity,
-                "category": category,
-                "is_unique": category == "unique",
-                "before_name": before_name,
-                "before_base": before_base,
-                "after_name": after_name,
-                "after_base": after_base,
-                "before_ilvl": get_field(before, r"Item Level:\s*(.+)"),
-                "after_ilvl": get_field(after, r"Item Level:\s*(.+)"),
-                "before_uid": before_uid,
-                "after_uid": after_uid,
-                "uid_status": status,
-                "before_stats": get_basic_stats(before),
-                "after_stats": get_basic_stats(after),
-                "before_lines": before_lines,
-                "after_lines": after_lines,
-                "before_explicit_count": count_explicit_headers(before_lines),
-                "after_explicit_count": count_explicit_headers(after_lines),
-            }
-        )
-
-    return pairs
-
-
-def write_csvs(pairs: list[dict]) -> None:
-    with PAIR_CSV_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(
-            [
-                "test_id",
-                "category",
-                "before_item_class",
-                "before_rarity",
-                "before_name",
-                "before_base",
-                "before_item_level",
-                "before_unique_id",
-                "after_item_class",
-                "after_rarity",
-                "after_name",
-                "after_base",
-                "after_item_level",
-                "after_unique_id",
-                "uid_status",
-                "before_explicit_count",
-                "after_explicit_count",
-                "before_file",
-                "after_file",
-            ]
-        )
-
-        for p in pairs:
-            writer.writerow(
-                [
-                    p["test_id"],
-                    p["category"],
-                    p["before_item_class"],
-                    p["before_rarity"],
-                    p["before_name"],
-                    p["before_base"],
-                    p["before_ilvl"],
-                    p["before_uid"],
-                    p["after_item_class"],
-                    p["after_rarity"],
-                    p["after_name"],
-                    p["after_base"],
-                    p["after_ilvl"],
-                    p["after_uid"],
-                    p["uid_status"],
-                    p["before_explicit_count"],
-                    p["after_explicit_count"],
-                    p["before_path"],
-                    p["after_path"],
-                ]
-            )
-
-    with MOD_CSV_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["test_id", "category", "side", "line_number", "mod_line"])
-
-        for p in pairs:
-            for i, line in enumerate(p["before_lines"], start=1):
-                writer.writerow([p["test_id"], p["category"], "before", i, line])
-
-            for i, line in enumerate(p["after_lines"], start=1):
-                writer.writerow([p["test_id"], p["category"], "after", i, line])
+    return data["pairs"]
 
 
 def esc(value: object) -> str:
@@ -348,7 +225,7 @@ def render_html(pairs: list[dict]) -> str:
     stonefist_count = sum(
         1
         for p in pairs
-        if "Fists of Stone" in p["after_base"] or "Fists of Stone" in p["after_name"]
+        if "Fists of Stone" in p["after_text"]
         )
 
     rows = []
@@ -387,7 +264,7 @@ def render_html(pairs: list[dict]) -> str:
                     <div class="tags">{category_tag} {unique_tag}</div>
                     <small>{esc(p["before_rarity"])} → {esc(p["after_rarity"])}</small>
                 </td>
-                <td>{esc(p["before_ilvl"])} → {esc(p["after_ilvl"])}</td>
+                <td>{esc(p["before_item_level"])} → {esc(p["after_item_level"])}</td>
                 <td>{esc(uid_badge(p["uid_status"]))}</td>
                 <td>{p["before_explicit_count"]} → {p["after_explicit_count"]}</td>
                 <td>
@@ -594,8 +471,7 @@ def render_html(pairs: list[dict]) -> str:
 </div>
 
 <p>
-Generated files:
-<code>pair_summary.csv</code> and <code>mod_lines.csv</code>.
+Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code> and <code>mod_lines.csv</code>.
 </p>
 
 <div>
@@ -666,18 +542,15 @@ uid.addEventListener("change", applyFilters);
 
 
 def main() -> None:
-    pairs = load_pairs()
+    pairs = load_dataset()
 
     if not pairs:
-        raise SystemExit("No before/after pairs found in stonefist-captures/pairs")
+        raise SystemExit("No pairs found in stonefist-captures/dataset.json")
 
-    write_csvs(pairs)
     REPORT_PATH.write_text(render_html(pairs), encoding="utf-8")
 
-    print(f"Loaded {len(pairs)} pairs.")
+    print(f"Loaded {len(pairs)} pairs from {DATASET_PATH}.")
     print(f"Wrote: {REPORT_PATH}")
-    print(f"Wrote: {PAIR_CSV_PATH}")
-    print(f"Wrote: {MOD_CSV_PATH}")
 
 
 if __name__ == "__main__":

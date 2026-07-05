@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 from datetime import datetime
@@ -20,6 +21,22 @@ def read_text(path: Path) -> str:
 def get_field(text: str, pattern: str) -> str:
     match = re.search(pattern, text, flags=re.MULTILINE)
     return match.group(1).strip() if match else ""
+
+
+def normalise_item_text(text: str) -> str:
+    return "\n".join(line.rstrip() for line in text.splitlines()).strip()
+
+
+def content_hash(text: str) -> str:
+    normalized = normalise_item_text(text)
+    return hashlib.sha1(normalized.encode("utf-8", errors="ignore")).hexdigest()
+
+
+def pair_hash(before: str, after: str) -> str:
+    before_norm = normalise_item_text(before)
+    after_norm = normalise_item_text(after)
+    combined = f"{before_norm}\n---PAIR---\n{after_norm}"
+    return hashlib.sha1(combined.encode("utf-8", errors="ignore")).hexdigest()
 
 
 def get_rarity(text: str) -> str:
@@ -149,6 +166,30 @@ def classify_pair(before_rarity: str, after_rarity: str) -> str:
     return "unknown"
 
 
+def annotate_exact_duplicates(pairs: list[dict]) -> None:
+    groups: dict[str, list[dict]] = {}
+
+    for pair in pairs:
+        groups.setdefault(pair["pair_hash"], []).append(pair)
+
+    for duplicates in groups.values():
+        group_size = len(duplicates)
+        canonical = duplicates[0]
+        canonical["is_exact_duplicate"] = False
+        canonical["duplicate_of"] = ""
+        canonical["duplicate_group_size"] = group_size
+
+        for duplicate in duplicates[1:]:
+            duplicate["is_exact_duplicate"] = True
+            duplicate["duplicate_of"] = canonical["test_id"]
+            duplicate["duplicate_group_size"] = group_size
+
+        if group_size == 1:
+            canonical["is_exact_duplicate"] = False
+            canonical["duplicate_of"] = ""
+            canonical["duplicate_group_size"] = 1
+
+
 def load_pairs() -> list[dict]:
     if not PAIRS_DIR.exists():
         raise SystemExit(f"Could not find {PAIRS_DIR}")
@@ -182,6 +223,9 @@ def load_pairs() -> list[dict]:
 
         status = uid_status(before_uid, after_uid)
         category = classify_pair(before_rarity, after_rarity)
+        before_hash = content_hash(before)
+        after_hash = content_hash(after)
+        pair_hash_value = pair_hash(before, after)
 
         pairs.append(
             {
@@ -211,9 +255,16 @@ def load_pairs() -> list[dict]:
                 "after_lines": after_lines,
                 "before_explicit_count": count_explicit_headers(before_lines),
                 "after_explicit_count": count_explicit_headers(after_lines),
+                "before_hash": before_hash,
+                "after_hash": after_hash,
+                "pair_hash": pair_hash_value,
+                "is_exact_duplicate": False,
+                "duplicate_of": "",
+                "duplicate_group_size": 1,
             }
         )
 
+    annotate_exact_duplicates(pairs)
     return pairs
 
 
@@ -246,7 +297,13 @@ def write_csvs(pairs: list[dict]) -> None:
                 "after_base",
                 "after_item_level",
                 "after_unique_id",
+                "pair_hash",
+                "before_hash",
+                "after_hash",
                 "uid_status",
+                "is_exact_duplicate",
+                "duplicate_of",
+                "duplicate_group_size",
                 "before_explicit_count",
                 "after_explicit_count",
                 "before_file",
@@ -271,7 +328,13 @@ def write_csvs(pairs: list[dict]) -> None:
                     p["after_base"],
                     p["after_item_level"],
                     p["after_unique_id"],
+                    p["pair_hash"],
+                    p["before_hash"],
+                    p["after_hash"],
                     p["uid_status"],
+                    str(p["is_exact_duplicate"]),
+                    p["duplicate_of"],
+                    p["duplicate_group_size"],
                     p["before_explicit_count"],
                     p["after_explicit_count"],
                     p["before_path"],
@@ -300,7 +363,9 @@ def main() -> None:
     write_json_dataset(pairs)
     write_csvs(pairs)
 
+    duplicate_count = sum(1 for p in pairs if p.get("is_exact_duplicate"))
     print(f"Loaded {len(pairs)} pairs.")
+    print(f"Exact duplicates: {duplicate_count}.")
     print(f"Wrote: {DATASET_PATH}")
     print(f"Wrote: {PAIR_SUMMARY_PATH}")
     print(f"Wrote: {MOD_LINES_PATH}")

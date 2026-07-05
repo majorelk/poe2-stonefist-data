@@ -222,11 +222,12 @@ def render_html(pairs: list[dict]) -> str:
     total = len(pairs)
     status_counts = Counter(p["uid_status"] for p in pairs)
     category_counts = Counter(p["category"] for p in pairs)
+    duplicate_count = sum(1 for p in pairs if p.get("is_exact_duplicate"))
     stonefist_count = sum(
         1
         for p in pairs
         if "Fists of Stone" in p["after_text"]
-        )
+    )
 
     rows = []
 
@@ -253,15 +254,20 @@ def render_html(pairs: list[dict]) -> str:
         before_display = display_base(esc(p["before_name"]), esc(p["before_base"]))
         after_display = display_base(esc(p["after_name"]), esc(p["after_base"]))
 
+        duplicate_state = "duplicate" if p.get("is_exact_duplicate") else "original"
+        duplicate_tag = ""
+        if p.get("is_exact_duplicate"):
+            duplicate_tag = f'<span class="tag duplicate">duplicate of {esc(p["duplicate_of"])}</span>'
+
         rows.append(
             f"""
-            <tr data-search="{esc(searchable)}" data-category="{esc(p["category"])}" data-uid="{esc(p["uid_status"])}">
+            <tr data-search="{esc(searchable)}" data-category="{esc(p["category"])}" data-uid="{esc(p["uid_status"])}" data-duplicate="{duplicate_state}">
                 <td>{esc(p["test_id"])}</td>
                 <td>
                     <strong>{before_display}</strong>
                     <div class="arrow">→</div>
                     <strong>{after_display}</strong>
-                    <div class="tags">{category_tag} {unique_tag}</div>
+                    <div class="tags">{category_tag} {unique_tag} {duplicate_tag}</div>
                     <small>{esc(p["before_rarity"])} → {esc(p["after_rarity"])}</small>
                 </td>
                 <td>{esc(p["before_item_level"])} → {esc(p["after_item_level"])}</td>
@@ -468,6 +474,10 @@ def render_html(pairs: list[dict]) -> str:
         <div>UID matches</div>
         <div class="num">{status_counts.get("match", 0)}</div>
     </div>
+    <div class="card">
+        <div>Exact duplicates</div>
+        <div class="num">{duplicate_count}</div>
+    </div>
 </div>
 
 <p>
@@ -493,6 +503,12 @@ Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv<
         <option value="mismatch">UID mismatch</option>
         <option value="partial">UID partial</option>
     </select>
+
+    <select id="duplicate">
+        <option value="">All duplicate statuses</option>
+        <option value="original">Original only</option>
+        <option value="duplicate">Duplicates only</option>
+    </select>
 </div>
 
 <table id="pairs">
@@ -515,25 +531,29 @@ Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv<
 const search = document.getElementById("search");
 const category = document.getElementById("category");
 const uid = document.getElementById("uid");
+const duplicate = document.getElementById("duplicate");
 const rows = [...document.querySelectorAll("#pairs tbody tr")];
 
 function applyFilters() {{
     const q = search.value.toLowerCase().trim();
     const cat = category.value;
     const uidStatus = uid.value;
+    const duplicateStatus = duplicate.value;
 
     for (const row of rows) {{
         const matchesSearch = row.dataset.search.includes(q);
         const matchesCategory = !cat || row.dataset.category === cat;
         const matchesUid = !uidStatus || row.dataset.uid === uidStatus;
+        const matchesDuplicate = !duplicateStatus || row.dataset.duplicate === duplicateStatus;
 
-        row.style.display = matchesSearch && matchesCategory && matchesUid ? "" : "none";
+        row.style.display = matchesSearch && matchesCategory && matchesUid && matchesDuplicate ? "" : "none";
     }}
 }}
 
 search.addEventListener("input", applyFilters);
 category.addEventListener("change", applyFilters);
 uid.addEventListener("change", applyFilters);
+duplicate.addEventListener("change", applyFilters);
 </script>
 
 </body>

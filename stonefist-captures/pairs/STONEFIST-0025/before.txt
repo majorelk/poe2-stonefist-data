@@ -1,22 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Hate Caress
-Linen Wraps
+Storm Vise
+Spined Bracers
 --------
-Evasion Rating: 23
-Energy Shield: 10
+Evasion Rating: 222 (augmented)
 --------
-Requires: Level 17, 13 Dex, 13 Int
+Requires: Level 43, 42 Dex
 --------
-Item Level: 22
+Item Level: 59
 --------
-{ Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
-Adds 2(2-3) to 4(4-6) Physical Damage to Attacks
-{ Prefix Modifier "Hale" (Tier: 9) — Life }
-+11(10-19) to maximum Life
-{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
-+10(6-10)% to Cold Resistance
-{ Suffix Modifier "of the Fox" (Tier: 7) — Attribute }
-+13(13-16) to Dexterity
-{ Suffix Modifier "of Restoration" (Tier: 3) — Life, Attack }
-Gain 3 Life per Enemy Hit with Attacks
+{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
+Adds 10(6-10) to 16(12-17) Physical Damage to Attacks
+{ Prefix Modifier "Phased" (Tier: 2) — Evasion }
++143(117-146) to Evasion Rating
+{ Prefix Modifier "Crackling" (Tier: 6) — Damage, Elemental, Lightning, Attack }
+Adds 1 to 23(23-27) Lightning damage to Attacks
+{ Suffix Modifier "of Triumph" (Tier: 6) — Life }
+Gain 12(10-18) Life per enemy killed
+{ Suffix Modifier "of Eviction" (Tier: 4) — Chaos, Resistance }
++13(12-15)% to Chaos Resistance

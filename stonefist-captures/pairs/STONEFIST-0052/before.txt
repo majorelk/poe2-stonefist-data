@@ -1,22 +1,24 @@
 Item Class: Gloves
 Rarity: Rare
-Grim Palm
-Baroque Gloves
+Torment Knuckle
+Bound Cuffs
 --------
-Energy Shield: 62 (augmented)
+Armour: 190 (augmented)
+Energy Shield: 56 (augmented)
 --------
-Requires: Level 62, 43 (augmented) Int
+Requires: Level 65, 44 Str, 44 Int
 --------
 Sockets: S 
 --------
-Item Level: 82
+Item Level: 71
 --------
-18% increased Armour, Evasion and Energy Shield (rune)
---------
-{ Prefix Modifier "Pope's" (Tier: 1) — Life, Energy Shield }
-41(39-42)% increased Energy Shield
-+42(42-49) to maximum Life
-{ Suffix Modifier "of Renown" (Tier: 1) — Attack, Speed }
-16(14-16)% increased Attack Speed
-{ Suffix Modifier "of the Proficient" (Tier: 1) }
-35% reduced Attribute Requirements
+{ Prefix Modifier "Auspex's" (Tier: 5) — Life, Armour, Energy Shield }
+17(14-20)% increased Armour and Energy Shield
++14(11-19) to maximum Life
+{ Prefix Modifier "Hallowed" (Tier: 1) — Armour, Energy Shield }
++73(72-85) to Armour
++23(22-25) to maximum Energy Shield
+{ Prefix Modifier "Robust" (Tier: 4) — Life }
++83(70-84) to maximum Life
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills

@@ -1,23 +1,30 @@
 Item Class: Gloves
 Rarity: Unique
-Kitoko's Current
-Jewelled Gloves
+Gravebind
+Rope Cuffs
 --------
-Energy Shield: 31 (augmented)
+Armour: 19 (augmented)
+Energy Shield: 9 (augmented)
 --------
-Requires: Level 26, 34 Int
+Requires: Level 5
 --------
-Item Level: 65
+Sockets: S 
 --------
-{ Unique Modifier — Energy Shield }
-34(30-50)% increased Energy Shield
-{ Unique Modifier — Attribute }
-+14(10-20) to Dexterity
-{ Unique Modifier — Attack, Caster, Speed }
-15(15-10)% reduced Attack and Cast Speed
+Item Level: 62
+--------
+{ Unique Modifier — Armour, Energy Shield }
+46(40-60)% increased Armour and Energy Shield
+{ Unique Modifier — Elemental, Cold, Resistance }
++14(10-15)% to Cold Resistance
+{ Unique Modifier — Life }
+Gain 7(7-10) Life per enemy killed
+{ Unique Modifier — Mana }
+Gain 5(4-6) Mana per enemy killed
 { Unique Modifier }
-Lightning damage from Hits Contributes to Electrocution Buildup — Unscalable Value
+20% increased Rarity of Items found
+Your other Modifiers to Rarity of Items found do not apply
+Enemies in your Presence killed by anyone count as being killed by you instead — Unscalable Value
 --------
-Reality is a puzzle. Ingenuity is power.
---------
-Foil Unique
+Try as you like to hide the
+blood on your hands.
+You'll still know the truth.

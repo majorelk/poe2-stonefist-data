@@ -1,13 +1,13 @@
 Item Class: Gloves
 Rarity: Magic
-Layered Gauntlets of the Lost
+Gleaming Ancient Cuffs
 --------
-Armour: 27
-Evasion Rating: 23
+Armour: 89
+Energy Shield: 25
 --------
-Requires: Level 16, 13 Str, 13 Dex
+Requires: Level 70, 48 Str, 48 Int
 --------
-Item Level: 24
+Item Level: 73
 --------
-{ Suffix Modifier "of the Lost" (Tier: 6) — Chaos, Resistance }
-+7(4-7)% to Chaos Resistance
+{ Prefix Modifier "Gleaming" (Tier: 5) — Damage, Physical, Attack }
+Adds 7(5-7) to 12(9-13) Physical Damage to Attacks

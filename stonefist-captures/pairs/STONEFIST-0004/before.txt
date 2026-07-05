@@ -1,24 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Vengeance Caress
-Spiral Wraps
+Grim Touch
+Doubled Gauntlets
 --------
-Evasion Rating: 71 (augmented)
-Energy Shield: 25 (augmented)
+Armour: 57 (augmented)
+Evasion Rating: 50 (augmented)
 --------
-Requires: Level 38, 24 Dex, 24 Int
+Requires: Level 33, 24 Str, 24 Dex
 --------
-Item Level: 53
+Item Level: 34
 --------
-{ Prefix Modifier "Ephemeral" (Tier: 4) — Evasion, Energy Shield }
-65(56-67)% increased Evasion and Energy Shield
-{ Prefix Modifier "Opalescent" (Tier: 3) — Mana }
-+87(80-89) to maximum Mana
-{ Prefix Modifier "Steady" (Tier: 4) — Attack }
-+231(168-236) to Accuracy Rating
-{ Suffix Modifier "of Plunder" (Tier: 3) }
-9(6-10)% increased Rarity of Items found
-{ Suffix Modifier "of Curvation" (Tier: 3) — Evasion }
-Gain Deflection Rating equal to 15(15-17)% of Evasion Rating
-{ Suffix Modifier "of the Arid" (Tier: 3) — Mana, Physical, Attack }
-Leech 6.04(6-6.9)% of Physical Attack Damage as Mana
+{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
++14(10-14) to maximum Mana
+{ Prefix Modifier "Thug's" (Tier: 5) — Life, Armour, Evasion }
+16(14-20)% increased Armour and Evasion
++18(11-19) to maximum Life
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+12(11-14)% increased Rarity of Items found
+{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
++16(16-20)% to Lightning Resistance

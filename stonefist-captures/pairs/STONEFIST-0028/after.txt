@@ -1,27 +1,34 @@
 Item Class: Gloves
 Rarity: Rare
-Behemoth Fist
-Fists of Stone
+Doom Mitts
+Runeforged Fists of Stone
 --------
-Evasion Rating: 237 (augmented)
-Energy Shield: 79 (augmented)
+Evasion Rating: 474 (augmented)
+Energy Shield: 158 (augmented)
+Runic Ward: 79 (augmented)
 --------
-Sockets: S 
---------
-Item Level: 43
+Item Level: 53
 --------
 { Implicit Modifier }
-Has +3 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
+Has +2 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+Has +1 to maximum Runic Ward per player level
 --------
-{ Prefix Modifier "Mouflon's" }
-5% of Damage Taken Recouped as Life, Mana and Energy Shield
-{ Prefix Modifier "Cerulean" }
-19(18-19)% more Attack damage while on Low Mana
-{ Prefix Modifier "Shade's" — Evasion, Energy Shield }
-7(7-8)% more Global Evasion Rating and Energy Shield
-{ Suffix Modifier "of the Kiln" — Elemental, Fire, Resistance }
-+2% to Maximum Fire Resistance
-+22(21-25)% to Fire Resistance
+{ Prefix Modifier "Cherub's" }
+Has +4 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+{ Prefix Modifier "Robust" }
+10% less damage taken while on Low Life
+{ Prefix Modifier "Gleaming" — Physical, Attack }
+Attacks Gain 14% of Damage as Extra Physical Damage
+{ Suffix Modifier "of the Arid" — Mana }
+Leech 10.6(9-10.9)% of Physical Attack Damage as Mana
+Leech Mana 23(25-20)% slower
+{ Suffix Modifier "of the Walrus" — Elemental, Cold, Resistance }
++2% to Maximum Cold Resistance
++28(26-30)% to Cold Resistance
+{ Suffix Modifier "of the Remora" — Life }
+Leech 11.32(11-11.9)% of Physical Attack Damage as Life
+Leech Life 24(25-20)% slower
 --------
 Unmodifiable

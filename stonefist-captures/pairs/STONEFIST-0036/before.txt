@@ -1,18 +1,29 @@
 Item Class: Gloves
 Rarity: Rare
-Phoenix Vise
-Linen Wraps
+Brimstone Talons
+Spiral Wraps
 --------
-Evasion Rating: 23
-Energy Shield: 10
+Quality: +20% (augmented)
+Evasion Rating: 78 (augmented)
+Energy Shield: 27 (augmented)
 --------
-Requires: Level 16, 13 Dex, 13 Int
+Requires: Level 33, 24 Dex, 24 Int
 --------
-Item Level: 20
+Sockets: S 
 --------
-{ Prefix Modifier "Glinting" (Tier: 9) — Damage, Physical, Attack }
-Adds 2(1-2) to 3 Physical Damage to Attacks
-{ Suffix Modifier "of Ire" (Tier: 5) — Damage, Critical }
-14(10-14)% increased Critical Damage Bonus
-{ Suffix Modifier "of the Mongoose" (Tier: 9) — Attribute }
-+7(5-8) to Dexterity
+Item Level: 35
+--------
++18% to Fire Resistance (rune)
+--------
+{ Prefix Modifier "Teal" (Tier: 6) — Mana }
++45(35-54) to maximum Mana
+{ Prefix Modifier "Sanguine" (Tier: 7) — Life }
++32(30-39) to maximum Life
+{ Prefix Modifier "Unworldly" (Tier: 5) — Evasion, Energy Shield }
+51(43-55)% increased Evasion and Energy Shield
+{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
++19(16-20)% to Lightning Resistance
+{ Suffix Modifier "of Regrowth" (Tier: 2) — Life, Attack }
+Gain 4 Life per Enemy Hit with Attacks
+{ Suffix Modifier "of the Parched" (Tier: 4) — Mana, Physical, Attack }
+Leech 5.87(5-5.9)% of Physical Attack Damage as Mana

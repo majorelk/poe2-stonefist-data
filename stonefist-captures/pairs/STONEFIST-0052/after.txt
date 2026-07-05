@@ -1,26 +1,27 @@
 Item Class: Gloves
 Rarity: Rare
-Grim Palm
+Torment Knuckle
 Fists of Stone
 --------
-Evasion Rating: 280 (augmented)
-Energy Shield: 93 (augmented)
+Evasion Rating: 553 (augmented)
+Energy Shield: 158 (augmented)
 --------
 Sockets: S 
 --------
-Item Level: 82
---------
-18% increased Armour, Evasion and Energy Shield (rune)
+Item Level: 71
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Pope's" }
-8% of Damage Taken Recouped as Life, Mana and Energy Shield
-{ Suffix Modifier "of Renown" }
-27(26-30)% chance to gain Onslaught for 4 seconds on Hit
-{ Suffix Modifier "of the Proficient" — Attribute }
-+27(26-30) to all Attributes
+{ Prefix Modifier "Auspex's" }
+4% of Damage Taken Recouped as Life, Mana and Energy Shield
+{ Prefix Modifier "Hallowed" }
+Has +4 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+{ Prefix Modifier "Robust" }
+10% less damage taken while on Low Life
+{ Suffix Modifier "of Combat" — Gem }
++12(10-12)% to Quality of all Skills
 --------
 Unmodifiable

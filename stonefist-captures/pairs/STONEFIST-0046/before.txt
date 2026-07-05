@@ -1,17 +1,12 @@
 Item Class: Gloves
-Rarity: Rare
-Pain Caress
-Suede Bracers
+Rarity: Magic
+Annealed Refined Bracers
 --------
-Evasion Rating: 10
+Evasion Rating: 124
 --------
-Requires: Level 6
+Requires: Level 54, 67 Dex
 --------
-Item Level: 9
+Item Level: 63
 --------
-{ Prefix Modifier "Hale" (Tier: 9) — Life }
-+14(10-19) to maximum Life
-{ Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
-Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
-{ Suffix Modifier "of Rejuvenation" (Tier: 4) — Life, Attack }
-Gain 2 Life per Enemy Hit with Attacks
+{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
+Adds 7(6-10) to 12(12-17) Physical Damage to Attacks

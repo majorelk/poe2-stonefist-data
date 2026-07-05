@@ -1,21 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Doom Knuckle
-Ornate Cuffs
+Onslaught Mitts
+Baroque Gloves
 --------
-Armour: 97 (augmented)
-Energy Shield: 27 (augmented)
+Energy Shield: 57 (augmented)
 --------
-Requires: Level 59, 41 Str, 41 Int
+Requires: Level 54, 46 (augmented) Int
 --------
-Item Level: 63
+Item Level: 54
 --------
-{ Prefix Modifier "Auspex's" (Tier: 5) — Life, Armour, Energy Shield }
-18(14-20)% increased Armour and Energy Shield
-+11(11-19) to maximum Life
-{ Suffix Modifier "of the Volcano" (Tier: 3) — Elemental, Fire, Resistance }
-+35(31-35)% to Fire Resistance
-{ Suffix Modifier "of Raiding" (Tier: 2) }
-12(11-14)% increased Rarity of Items found
-{ Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
-+17(17-20) to Dexterity
+{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
+Adds 6(6-10) to 15(12-17) Physical Damage to Attacks
+{ Prefix Modifier "Glimmering" (Tier: 6) — Energy Shield }
++18(18-24) to maximum Energy Shield
+{ Suffix Modifier "of Archaeology" (Tier: 1) }
+17(15-18)% increased Rarity of Items found
+{ Suffix Modifier "of the Pupil" (Tier: 8) — Attribute }
++5(5-8) to Intelligence
+{ Suffix Modifier "of the Skilled" (Tier: 2) }
+30% reduced Attribute Requirements

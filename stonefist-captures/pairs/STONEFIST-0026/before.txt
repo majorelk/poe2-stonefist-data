@@ -1,15 +1,20 @@
 Item Class: Gloves
-Rarity: Magic
-Ingrained Kalguuran Cuffs of the Lynx
+Rarity: Rare
+Wrath Paw
+Gold Gloves
 --------
-Armour: 84 (augmented)
-Energy Shield: 25 (augmented)
+Energy Shield: 47 (augmented)
 --------
-Requires: Level 45, 32 Str, 32 Int
+Requires: Level 59, 73 Int
 --------
-Item Level: 52
+Item Level: 62
 --------
-{ Prefix Modifier "Ingrained" (Tier: 6) — Armour, Energy Shield }
-32(27-42)% increased Armour and Energy Shield
-{ Suffix Modifier "of the Lynx" (Tier: 8) — Attribute }
-+10(9-12) to Dexterity
+{ Prefix Modifier "Deliberate" (Tier: 6) — Attack }
++104(85-123) to Accuracy Rating
+{ Prefix Modifier "Monk's" (Tier: 6) — Life, Energy Shield }
+13(6-13)% increased Energy Shield
++8(7-10) to maximum Life
+{ Suffix Modifier "of the Polar Bear" (Tier: 3) — Elemental, Cold, Resistance }
++35(31-35)% to Cold Resistance
+{ Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
+23(20-24)% increased Critical Damage Bonus

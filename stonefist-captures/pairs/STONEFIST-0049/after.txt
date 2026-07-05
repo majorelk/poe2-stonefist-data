@@ -1,17 +1,24 @@
 Item Class: Gloves
-Rarity: Magic
-Fists of Stone of Skill
+Rarity: Rare
+Demon Hand
+Fists of Stone
 --------
 Evasion Rating: 237 (augmented)
 Energy Shield: 79 (augmented)
 --------
-Item Level: 3
+Item Level: 81
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Suffix Modifier "of Skill" }
-11(8-12)% chance to gain Onslaught for 4 seconds on Hit
+{ Prefix Modifier "Annealed" — Physical, Attack }
+Attacks Gain 15(15-16)% of Damage as Extra Physical Damage
+{ Prefix Modifier "Cremating" — Elemental, Fire, Attack }
+Attacks Gain 22(21-23)% of Damage as Extra Fire Damage
+{ Prefix Modifier "Arcing" — Elemental, Lightning, Attack }
+Attacks Gain 16(15-16)% of Damage as Extra Lightning Damage
+{ Suffix Modifier "of Legend" — Life }
+Recover 3% of maximum Life on Kill
 --------
 Unmodifiable

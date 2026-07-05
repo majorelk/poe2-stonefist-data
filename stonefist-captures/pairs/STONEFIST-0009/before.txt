@@ -1,14 +1,21 @@
 Item Class: Gloves
-Rarity: Magic
-Polished Refined Bracers of the Cloud
+Rarity: Rare
+Eagle Grasp
+Grim Gloves
 --------
-Evasion Rating: 124
+Energy Shield: 45
 --------
-Requires: Level 54, 67 Dex
+Requires: Level 65, 80 Int
 --------
-Item Level: 63
+Item Level: 66
 --------
-{ Prefix Modifier "Polished" (Tier: 7) — Damage, Physical, Attack }
-Adds 2(2-4) to 7(5-8) Physical Damage to Attacks
-{ Suffix Modifier "of the Cloud" (Tier: 8) — Elemental, Lightning, Resistance }
-+9(6-10)% to Lightning Resistance
+{ Prefix Modifier "Crackling" (Tier: 6) — Damage, Elemental, Lightning, Attack }
+Adds 1 to 27(23-27) Lightning damage to Attacks
+{ Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
++107(105-124) to maximum Mana
+{ Suffix Modifier "of the Savant" (Tier: 2) — Attribute }
++29(28-30) to Intelligence
+{ Suffix Modifier "of Infusion" (Tier: 6) — Mana }
+Gain 9(6-9) Mana per enemy killed
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+14(11-14)% increased Rarity of Items found

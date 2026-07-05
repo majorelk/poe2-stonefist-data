@@ -1,20 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Rage Paw
-Steelmail Gauntlets
+Sol Knuckle
+Stalking Bracers
 --------
-Armour: 89
-Evasion Rating: 81
+Evasion Rating: 148
 --------
-Requires: Level 65, 44 Str, 44 Dex
+Requires: Level 65, 80 Dex
 --------
-Item Level: 66
+Item Level: 79
 --------
 { Prefix Modifier "Virile" (Tier: 2) — Life }
-+117(100-119) to maximum Life
-{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
-+20(15-24) to maximum Mana
-{ Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
-+17(17-20) to Dexterity
-{ Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
-+26(25-27) to Strength
++118(100-119) to maximum Life
+{ Prefix Modifier "Beryl" (Tier: 9) — Mana }
++14(10-14) to maximum Mana
+{ Prefix Modifier "Razor-sharp" (Tier: 3) — Damage, Physical, Attack }
+Adds 7(7-11) to 18(14-20) Physical Damage to Attacks
+{ Suffix Modifier "of Eviction" (Tier: 4) — Chaos, Resistance }
++14(12-15)% to Chaos Resistance
+{ Suffix Modifier "of the Lightning" (Tier: 2) — Elemental, Lightning, Resistance }
++38(36-40)% to Lightning Resistance

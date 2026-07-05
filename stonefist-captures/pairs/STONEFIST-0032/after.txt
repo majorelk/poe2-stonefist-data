@@ -1,25 +1,26 @@
 Item Class: Gloves
 Rarity: Rare
-Storm Hold
+Pain Claw
 Fists of Stone
 --------
-Evasion Rating: 237 (augmented)
-Energy Shield: 79 (augmented)
+Evasion Rating: 395 (augmented)
+Energy Shield: 158 (augmented)
 --------
-Item Level: 52
+Item Level: 73
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Poet's" }
-3% of Damage Taken Recouped as Life, Mana and Energy Shield
-{ Suffix Modifier "of the Penguin" — Elemental, Cold, Resistance }
-+1% to Maximum Cold Resistance
-+20(16-20)% to Cold Resistance
-{ Suffix Modifier "of Plunder" }
-15(15-20)% increased Quantity of Gold Dropped by Slain Enemies
-{ Suffix Modifier "of Combat" — Gem }
-+10(10-12)% to Quality of all Skills
+{ Prefix Modifier "Fortified" }
+Has +2 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+{ Prefix Modifier "Scorching" — Elemental, Fire, Attack }
+Attacks Gain 15(15-16)% of Damage as Extra Fire Damage
+{ Prefix Modifier "Athlete's" }
+13% less damage taken while on Low Life
+{ Suffix Modifier "of the Drake" — Elemental, Fire, Resistance }
++1% to Maximum Fire Resistance
++23(21-25)% to Fire Resistance
 --------
 Unmodifiable

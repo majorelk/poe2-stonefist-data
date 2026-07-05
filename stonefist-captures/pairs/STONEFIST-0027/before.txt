@@ -1,21 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Storm Vise
-Spined Bracers
+Miracle Paw
+Ornate Cuffs
 --------
-Evasion Rating: 222 (augmented)
+Armour: 100 (augmented)
+Energy Shield: 28 (augmented)
 --------
-Requires: Level 43, 42 Dex
+Requires: Level 59, 41 Str, 41 Int
 --------
-Item Level: 59
+Item Level: 64
 --------
-{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
-Adds 10(6-10) to 16(12-17) Physical Damage to Attacks
-{ Prefix Modifier "Phased" (Tier: 2) — Evasion }
-+143(117-146) to Evasion Rating
-{ Prefix Modifier "Crackling" (Tier: 6) — Damage, Elemental, Lightning, Attack }
-Adds 1 to 23(23-27) Lightning damage to Attacks
-{ Suffix Modifier "of Triumph" (Tier: 6) — Life }
-Gain 12(10-18) Life per enemy killed
-{ Suffix Modifier "of Eviction" (Tier: 4) — Chaos, Resistance }
-+13(12-15)% to Chaos Resistance
+{ Prefix Modifier "Druid's" (Tier: 4) — Life, Armour, Energy Shield }
+22(21-26)% increased Armour and Energy Shield
++21(20-25) to maximum Life
+{ Prefix Modifier "Glaciated" (Tier: 3) — Damage, Elemental, Cold, Attack }
+Adds 15(14-15) to 23(22-24) Cold damage to Attacks
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of the Drake" (Tier: 6) — Elemental, Fire, Resistance }
++17(16-20)% to Fire Resistance

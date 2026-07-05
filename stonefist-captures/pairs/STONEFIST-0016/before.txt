@@ -1,27 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Dusk Paw
-Stalking Bracers
+Cataclysm Hold
+Ornate Cuffs
 --------
-Evasion Rating: 266 (augmented)
+Armour: 107 (augmented)
+Energy Shield: 30 (augmented)
 --------
-Requires: Level 65, 80 Dex
+Requires: Level 59, 41 Str, 41 Int
 --------
-Sockets: S 
+Item Level: 69
 --------
-Item Level: 65
---------
-+18% to Cold Resistance (rune)
---------
-{ Prefix Modifier "Nightmare's" (Tier: 2) — Evasion }
-80(80-91)% increased Evasion Rating
-{ Prefix Modifier "Incinerating" (Tier: 3) — Damage, Elemental, Fire, Attack }
-Adds 13(13-19) to 32(27-32) Fire damage to Attacks
-{ Prefix Modifier "Frozen" (Tier: 4) — Damage, Elemental, Cold, Attack }
-Adds 13(11-13) to 20(18-21) Cold damage to Attacks
-{ Suffix Modifier "of the Desperate" (Tier: 1) — Mana, Physical, Attack }
-Leech 8.47(8-8.9)% of Physical Attack Damage as Mana
-{ Suffix Modifier "of Nourishment" (Tier: 1) — Life, Attack }
-Gain 5 Life per Enemy Hit with Attacks
-{ Suffix Modifier "of the Lamprey" (Tier: 2) — Life, Physical, Attack }
-Leech 8.26(8-8.9)% of Physical Attack Damage as Life
+{ Prefix Modifier "Haruspex's" (Tier: 3) — Life, Armour, Energy Shield }
+31(27-32)% increased Armour and Energy Shield
++31(26-32) to maximum Life
+{ Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
++27(25-27) to Strength
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of Raiding" (Tier: 2) }
+12(11-14)% increased Rarity of Items found

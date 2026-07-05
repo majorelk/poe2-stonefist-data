@@ -1,29 +1,15 @@
 Item Class: Gloves
-Rarity: Rare
-Brimstone Talons
-Spiral Wraps
+Rarity: Magic
+Ingrained Kalguuran Cuffs of the Lynx
 --------
-Quality: +20% (augmented)
-Evasion Rating: 78 (augmented)
-Energy Shield: 27 (augmented)
+Armour: 84 (augmented)
+Energy Shield: 25 (augmented)
 --------
-Requires: Level 33, 24 Dex, 24 Int
+Requires: Level 45, 32 Str, 32 Int
 --------
-Sockets: S 
+Item Level: 52
 --------
-Item Level: 35
---------
-+18% to Fire Resistance (rune)
---------
-{ Prefix Modifier "Teal" (Tier: 6) — Mana }
-+45(35-54) to maximum Mana
-{ Prefix Modifier "Sanguine" (Tier: 7) — Life }
-+32(30-39) to maximum Life
-{ Prefix Modifier "Unworldly" (Tier: 5) — Evasion, Energy Shield }
-51(43-55)% increased Evasion and Energy Shield
-{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
-+19(16-20)% to Lightning Resistance
-{ Suffix Modifier "of Regrowth" (Tier: 2) — Life, Attack }
-Gain 4 Life per Enemy Hit with Attacks
-{ Suffix Modifier "of the Parched" (Tier: 4) — Mana, Physical, Attack }
-Leech 5.87(5-5.9)% of Physical Attack Damage as Mana
+{ Prefix Modifier "Ingrained" (Tier: 6) — Armour, Energy Shield }
+32(27-42)% increased Armour and Energy Shield
+{ Suffix Modifier "of the Lynx" (Tier: 8) — Attribute }
++10(9-12) to Dexterity

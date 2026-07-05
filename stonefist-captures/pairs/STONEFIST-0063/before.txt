@@ -1,25 +1,23 @@
 Item Class: Gloves
 Rarity: Unique
-Grip of Winter
-Firm Bracers
+Kitoko's Current
+Jewelled Gloves
 --------
-Quality: +8% (augmented)
-Evasion Rating: 45 (augmented)
+Energy Shield: 31 (augmented)
 --------
-Requires: Level 11, 16 Dex
+Requires: Level 26, 34 Int
 --------
-Item Level: 69
+Item Level: 65
 --------
-{ Unique Modifier — Evasion }
-33(30-50)% increased Evasion Rating
-{ Unique Modifier — Damage, Elemental, Cold, Attack }
-Adds 4(3-5) to 6(6-8) Cold damage to Attacks
-{ Unique Modifier — Elemental, Cold, Ailment }
-41(40-50)% increased Freeze Buildup
-{ Unique Modifier — Elemental, Cold, Ailment }
-21(20-30)% increased Magnitude of Chill you inflict
-{ Unique Modifier — Elemental, Cold, Resistance }
-+26(20-30)% to Cold Resistance
+{ Unique Modifier — Energy Shield }
+34(30-50)% increased Energy Shield
+{ Unique Modifier — Attribute }
++14(10-20) to Dexterity
+{ Unique Modifier — Attack, Caster, Speed }
+15(15-10)% reduced Attack and Cast Speed
+{ Unique Modifier }
+Lightning damage from Hits Contributes to Electrocution Buildup — Unscalable Value
 --------
-After the eruption, the skies turned grey,
-ash began to fall, and a chill set in...
+Reality is a puzzle. Ingenuity is power.
+--------
+Foil Unique

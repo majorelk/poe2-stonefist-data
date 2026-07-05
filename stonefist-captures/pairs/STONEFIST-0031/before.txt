@@ -1,21 +1,26 @@
 Item Class: Gloves
 Rarity: Rare
-Onslaught Mitts
-Baroque Gloves
+Agony Clutches
+Elegant Wraps
 --------
-Energy Shield: 57 (augmented)
+Evasion Rating: 170 (augmented)
+Energy Shield: 52 (augmented)
 --------
-Requires: Level 54, 46 (augmented) Int
+Requires: Level 70, 48 Dex, 48 Int
 --------
-Item Level: 54
+Sockets: S 
 --------
-{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
-Adds 6(6-10) to 15(12-17) Physical Damage to Attacks
-{ Prefix Modifier "Glimmering" (Tier: 6) — Energy Shield }
-+18(18-24) to maximum Energy Shield
-{ Suffix Modifier "of Archaeology" (Tier: 1) }
-17(15-18)% increased Rarity of Items found
-{ Suffix Modifier "of the Pupil" (Tier: 8) — Attribute }
-+5(5-8) to Intelligence
-{ Suffix Modifier "of the Skilled" (Tier: 2) }
-30% reduced Attribute Requirements
+Item Level: 71
+--------
++18% to Lightning Resistance (rune)
+--------
+{ Prefix Modifier "Illusory" (Tier: 1) — Evasion, Energy Shield }
+100(92-100)% increased Evasion and Energy Shield
+{ Prefix Modifier "Freezing" (Tier: 5) — Damage, Elemental, Cold, Attack }
+Adds 9(9-10) to 17(15-17) Cold damage to Attacks
+{ Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
++108(105-124) to maximum Mana
+{ Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
++25(21-25)% to Cold Resistance
+{ Suffix Modifier "of the Sage" (Tier: 3) — Attribute }
++27(25-27) to Intelligence

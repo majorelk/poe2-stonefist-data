@@ -1,21 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Plague Hold
-Spiral Wraps
+Agony Talons
+Ancient Mitts
 --------
-Quality: +17% (augmented)
-Evasion Rating: 71 (augmented)
-Energy Shield: 25 (augmented)
+Armour: 212 (augmented)
 --------
-Requires: Level 33, 24 Dex, 24 Int
+Requires: Level 54, 67 Str
 --------
-Item Level: 43
+Item Level: 54
 --------
-{ Prefix Modifier "Ethereal" (Tier: 6) — Evasion, Energy Shield }
-42(27-42)% increased Evasion and Energy Shield
-{ Suffix Modifier "of the Prodigy" (Tier: 6) — Attribute }
-+16(13-16) to Intelligence
-{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
-+1 to Level of all Melee Skills
-{ Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
-+22(21-25)% to Cold Resistance
+{ Prefix Modifier "Rotund" (Tier: 3) — Life }
++91(85-99) to maximum Life
+{ Prefix Modifier "Lobstered" (Tier: 5) — Armour }
+55(43-55)% increased Armour
+{ Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
+22(20-24)% increased Critical Damage Bonus
+{ Suffix Modifier "of the Storm" (Tier: 6) — Elemental, Lightning, Resistance }
++18(16-20)% to Lightning Resistance
+{ Suffix Modifier "of the Remora" (Tier: 3) — Life, Physical, Attack }
+Leech 7.59(7-7.9)% of Physical Attack Damage as Life

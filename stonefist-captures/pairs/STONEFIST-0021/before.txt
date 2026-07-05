@@ -1,13 +1,14 @@
 Item Class: Gloves
 Rarity: Magic
-Ornate Cuffs of Devouring
+Deliberate Intricate Gloves of Vanquishing
 --------
-Armour: 82
-Energy Shield: 23
+Energy Shield: 27
 --------
-Requires: Level 59, 41 Str, 41 Int
+Requires: Level 35, 42 Int
 --------
-Item Level: 75
+Item Level: 52
 --------
-{ Suffix Modifier "of Devouring" (Tier: 2) — Mana }
-Gain 29(28-35) Mana per enemy killed
+{ Prefix Modifier "Deliberate" (Tier: 6) — Attack }
++116(85-123) to Accuracy Rating
+{ Suffix Modifier "of Vanquishing" (Tier: 4) — Life }
+Gain 39(29-40) Life per enemy killed

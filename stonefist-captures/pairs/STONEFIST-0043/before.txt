@@ -1,13 +1,10 @@
 Item Class: Gloves
-Rarity: Magic
-Gleaming Ancient Cuffs
+Rarity: Normal
+Zealot Gauntlets
 --------
-Armour: 89
-Energy Shield: 25
+Armour: 82
+Evasion Rating: 74
 --------
-Requires: Level 70, 48 Str, 48 Int
+Requires: Level 59, 41 Str, 41 Dex
 --------
-Item Level: 73
---------
-{ Prefix Modifier "Gleaming" (Tier: 5) — Damage, Physical, Attack }
-Adds 7(5-7) to 12(9-13) Physical Damage to Attacks
+Item Level: 68

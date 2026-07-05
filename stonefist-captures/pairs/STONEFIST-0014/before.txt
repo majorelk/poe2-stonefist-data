@@ -1,25 +1,22 @@
 Item Class: Gloves
 Rarity: Rare
-Spirit Clutches
-Gold Gloves
+Behemoth Fist
+Spined Bracers
 --------
-Energy Shield: 42
+Evasion Rating: 117 (augmented)
 --------
-Requires: Level 59, 73 Int
+Requires: Level 33, 42 Dex
 --------
 Sockets: S 
 --------
-Item Level: 68
+Item Level: 43
 --------
-{ Prefix Modifier "Virile" (Tier: 2) — Life }
-+109(100-119) to maximum Life
-{ Prefix Modifier "Azure" (Tier: 7) — Mana }
-+25(25-34) to maximum Mana
-{ Prefix Modifier "Arcing" (Tier: 4) — Damage, Elemental, Lightning, Attack }
-Adds 2(1-2) to 39(33-40) Lightning damage to Attacks
-{ Suffix Modifier "of the Furnace" (Tier: 4) — Elemental, Fire, Resistance }
-+30(26-30)% to Fire Resistance
-{ Suffix Modifier "of the Fox" (Tier: 7) — Attribute }
-+16(13-16) to Dexterity
-{ Suffix Modifier "of Raiding" (Tier: 2) }
-12(11-14)% increased Rarity of Items found
+{ Prefix Modifier "Mouflon's" (Tier: 4) — Life, Evasion }
+22(21-26)% increased Evasion Rating
++23(20-25) to maximum Life
+{ Prefix Modifier "Cerulean" (Tier: 5) — Mana }
++60(55-64) to maximum Mana
+{ Prefix Modifier "Shade's" (Tier: 7) — Evasion }
+26(15-26)% increased Evasion Rating
+{ Suffix Modifier "of the Kiln" (Tier: 5) — Elemental, Fire, Resistance }
++25(21-25)% to Fire Resistance

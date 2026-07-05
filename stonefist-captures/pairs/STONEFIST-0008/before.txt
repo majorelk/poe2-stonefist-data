@@ -1,12 +1,23 @@
 Item Class: Gloves
-Rarity: Magic
-Annealed Refined Bracers
+Rarity: Rare
+Doom Fist
+Spined Bracers
 --------
-Evasion Rating: 124
+Evasion Rating: 139 (augmented)
 --------
-Requires: Level 54, 67 Dex
+Requires: Level 33, 42 Dex
 --------
-Item Level: 63
+Item Level: 39
 --------
-{ Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
-Adds 7(6-10) to 12(12-17) Physical Damage to Attacks
+{ Prefix Modifier "Acrobat's" (Tier: 5) — Evasion }
++60(47-66) to Evasion Rating
+{ Prefix Modifier "Cobalt" (Tier: 8) — Mana }
++16(15-24) to maximum Mana
+{ Prefix Modifier "Polished" (Tier: 7) — Damage, Physical, Attack }
+Adds 2(2-4) to 7(5-8) Physical Damage to Attacks
+{ Suffix Modifier "of the Kiln" (Tier: 5) — Elemental, Fire, Resistance }
++24(21-25)% to Fire Resistance
+{ Suffix Modifier "of Combat" (Tier: 2) — Attack }
++1 to Level of all Melee Skills
+{ Suffix Modifier "of the Seal" (Tier: 8) — Elemental, Cold, Resistance }
++9(6-10)% to Cold Resistance

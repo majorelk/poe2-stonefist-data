@@ -1,23 +1,21 @@
 Item Class: Gloves
-Rarity: Rare
-Torment Touch
-Fists of Stone
+Rarity: Magic
+Agile Fists of Stone of the Vampire
 --------
-Evasion Rating: 237 (augmented)
-Energy Shield: 79 (augmented)
+Evasion Rating: 316 (augmented)
+Energy Shield: 158 (augmented)
 --------
-Item Level: 17
+Item Level: 71
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Polished" — Physical, Attack }
-Attacks Gain 12% of Damage as Extra Physical Damage
-{ Prefix Modifier "Flea's" }
-3% of Damage Taken Recouped as Life, Mana and Energy Shield
-{ Suffix Modifier "of the Squall" — Elemental, Lightning, Resistance }
-+1% to Maximum Lightning Resistance
-+16(16-20)% to Lightning Resistance
+{ Prefix Modifier "Agile" }
+Has +1 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+{ Suffix Modifier "of the Vampire" — Life }
+Leech 14.96(14-15)% of Physical Attack Damage as Life
+Leech Life 21(25-20)% slower
 --------
 Unmodifiable

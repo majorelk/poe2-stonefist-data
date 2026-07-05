@@ -1,21 +1,21 @@
 Item Class: Gloves
 Rarity: Rare
-Cataclysm Hold
-Ornate Cuffs
+Storm Hold
+Buckled Wraps
 --------
-Armour: 107 (augmented)
-Energy Shield: 30 (augmented)
+Evasion Rating: 64 (augmented)
+Energy Shield: 21 (augmented)
 --------
-Requires: Level 59, 41 Str, 41 Int
+Requires: Level 45, 32 Dex, 32 Int
 --------
-Item Level: 69
+Item Level: 52
 --------
-{ Prefix Modifier "Haruspex's" (Tier: 3) — Life, Armour, Energy Shield }
-31(27-32)% increased Armour and Energy Shield
-+31(26-32) to maximum Life
-{ Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
-+27(25-27) to Strength
+{ Prefix Modifier "Poet's" (Tier: 6) — Life, Evasion, Energy Shield }
+11(6-13)% increased Evasion and Energy Shield
++8(7-10) to maximum Life
+{ Suffix Modifier "of the Penguin" (Tier: 7) — Elemental, Cold, Resistance }
++13(11-15)% to Cold Resistance
+{ Suffix Modifier "of Plunder" (Tier: 3) }
+6(6-10)% increased Rarity of Items found
 { Suffix Modifier "of Combat" (Tier: 2) — Attack }
 +1 to Level of all Melee Skills
-{ Suffix Modifier "of Raiding" (Tier: 2) }
-12(11-14)% increased Rarity of Items found

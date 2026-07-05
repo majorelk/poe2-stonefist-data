@@ -1,21 +1,17 @@
 Item Class: Gloves
 Rarity: Rare
-Tempest Clutches
-Spiked Bracers
+Pain Caress
+Suede Bracers
 --------
-Evasion Rating: 179 (augmented)
+Evasion Rating: 10
 --------
-Requires: Level 59, 73 Dex
+Requires: Level 6
 --------
-Item Level: 61
+Item Level: 9
 --------
-{ Prefix Modifier "Rotund" (Tier: 3) — Life }
-+88(85-99) to maximum Life
-{ Prefix Modifier "Dancer's" (Tier: 6) — Evasion }
-+44(19-46) to Evasion Rating
-{ Suffix Modifier "of Absorption" (Tier: 8) — Mana }
-Gain 2(2-3) Mana per enemy killed
-{ Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
-+22(21-25)% to Cold Resistance
-{ Suffix Modifier "of the Mongoose" (Tier: 9) — Attribute }
-+6(5-8) to Dexterity
+{ Prefix Modifier "Hale" (Tier: 9) — Life }
++14(10-19) to maximum Life
+{ Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
+Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
+{ Suffix Modifier "of Rejuvenation" (Tier: 4) — Life, Attack }
+Gain 2 Life per Enemy Hit with Attacks

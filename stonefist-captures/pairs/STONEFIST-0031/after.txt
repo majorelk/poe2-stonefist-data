@@ -1,27 +1,31 @@
 Item Class: Gloves
 Rarity: Rare
-Onslaught Mitts
+Agony Clutches
 Fists of Stone
 --------
-Evasion Rating: 316 (augmented)
-Energy Shield: 158 (augmented)
+Evasion Rating: 237 (augmented)
+Energy Shield: 79 (augmented)
 --------
-Item Level: 54
+Sockets: S 
+--------
+Item Level: 71
+--------
++18% to Lightning Resistance (rune)
 --------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
 Has +1 to maximum Energy Shield per player level
 --------
-{ Prefix Modifier "Annealed" — Physical, Attack }
-Attacks Gain 15(15-16)% of Damage as Extra Physical Damage
-{ Prefix Modifier "Glimmering" }
-Has +1 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
-{ Suffix Modifier "of Archaeology" }
-30(26-30)% increased Quantity of Gold Dropped by Slain Enemies
-{ Suffix Modifier "of the Pupil" }
-8(5-8)% increased Cooldown Recovery Rate
-{ Suffix Modifier "of the Skilled" — Attribute }
-+24(21-25) to all Attributes
+{ Prefix Modifier "Illusory" — Evasion, Energy Shield }
+20(19-20)% more Global Evasion Rating and Energy Shield
+{ Prefix Modifier "Freezing" — Elemental, Cold, Attack }
+Attacks Gain 14% of Damage as Extra Cold Damage
+{ Prefix Modifier "Chalybeous" }
+26(26-27)% more Attack damage while on Low Mana
+{ Suffix Modifier "of the Yeti" — Elemental, Cold, Resistance }
++2% to Maximum Cold Resistance
++22(21-25)% to Cold Resistance
+{ Suffix Modifier "of the Sage" }
+28(25-28)% increased Cooldown Recovery Rate
 --------
 Unmodifiable

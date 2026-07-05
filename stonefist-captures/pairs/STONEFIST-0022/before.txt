@@ -1,19 +1,18 @@
 Item Class: Gloves
 Rarity: Rare
-Pain Claw
-Feathered Mitts
+Torment Touch
+Bound Bracers
 --------
-Armour: 229 (augmented)
+Evasion Rating: 47 (augmented)
 --------
-Requires: Level 59, 73 Str
+Requires: Level 16, 22 Dex
 --------
-Item Level: 73
+Item Level: 17
 --------
-{ Prefix Modifier "Fortified" (Tier: 4) — Armour }
-+80(78-98) to Armour
-{ Prefix Modifier "Scorching" (Tier: 4) — Damage, Elemental, Fire, Attack }
-Adds 13(11-16) to 26(21-26) Fire damage to Attacks
-{ Prefix Modifier "Athlete's" (Tier: 1) — Life }
-+121(120-149) to maximum Life
-{ Suffix Modifier "of the Drake" (Tier: 6) — Elemental, Fire, Resistance }
-+16(16-20)% to Fire Resistance
+{ Prefix Modifier "Polished" (Tier: 7) — Damage, Physical, Attack }
+Adds 3(2-4) to 7(5-8) Physical Damage to Attacks
+{ Prefix Modifier "Flea's" (Tier: 6) — Life, Evasion }
+12(6-13)% increased Evasion Rating
++10(7-10) to maximum Life
+{ Suffix Modifier "of the Squall" (Tier: 7) — Elemental, Lightning, Resistance }
++12(11-15)% to Lightning Resistance

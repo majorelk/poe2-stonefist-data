@@ -11,6 +11,7 @@ MAPPING_FAMILIES_PATH = ROOT / "mapping_families.csv"
 GLOVE_COVERAGE_PATH = ROOT / "glove_mod_coverage.csv"
 TRANSFORMED_OUTPUT_ONLY_PATH = ROOT / "transformed_output_only.csv"
 CAPTURE_TARGETS_PATH = ROOT / "capture_targets.csv"
+BASE_CONTROL_SUMMARY_PATH = ROOT / "base_control_summary.csv"
 REPORT_PATH = ROOT / "report.html"
 
 
@@ -52,3 +53,7 @@ def load_transformed_output_only() -> list[dict[str, str]]:
 
 def load_capture_targets() -> list[dict[str, str]]:
     return _load_csv(CAPTURE_TARGETS_PATH)
+
+
+def load_base_control_summary() -> list[dict[str, str]]:
+    return _load_csv(BASE_CONTROL_SUMMARY_PATH)

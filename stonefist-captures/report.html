@@ -365,11 +365,11 @@ summary {
 <header class="page-header">
     <h1>Way of the Stonefist</h1>
     <p class="subtitle">Evidence-based glove modifier mapping, generated from captured Stonefist transformation pairs.</p>
-    <p class="meta"><strong>84</strong> pairs captured &middot; <strong>84</strong> confirmed transformed by Fists of Stone</p>
+    <p class="meta"><strong>99</strong> pairs captured &middot; <strong>99</strong> confirmed transformed by Fists of Stone</p>
 </header>
 
 <nav class="tabs">
-<button class="tab-btn" data-tab="overview">Overview</button><button class="tab-btn" data-tab="capture-targets">Capture Targets</button><button class="tab-btn" data-tab="mapping-families">Mapping Families</button><button class="tab-btn" data-tab="modifier-coverage">Modifier Coverage</button><button class="tab-btn" data-tab="output-only">Output Only</button><button class="tab-btn" data-tab="pair-explorer">Pair Explorer</button><button class="tab-btn" data-tab="raw-evidence">Raw Evidence</button>
+<button class="tab-btn" data-tab="overview">Overview</button><button class="tab-btn" data-tab="capture-targets">Capture Targets</button><button class="tab-btn" data-tab="mapping-families">Mapping Families</button><button class="tab-btn" data-tab="modifier-coverage">Modifier Coverage</button><button class="tab-btn" data-tab="output-only">Output Only</button><button class="tab-btn" data-tab="base-controls">Base Controls</button><button class="tab-btn" data-tab="pair-explorer">Pair Explorer</button><button class="tab-btn" data-tab="raw-evidence">Raw Evidence</button>
 </nav>
 
 
@@ -377,12 +377,13 @@ summary {
         <p class="lede">High-level counts across the whole dataset. Use the other tabs for detail and filtering.</p>
 
         <div class="stats">
-            <div class="card"><div>Total pairs</div><div class="num">84</div></div>
-            <div class="card"><div>After Fists of Stone</div><div class="num">84</div></div>
+            <div class="card"><div>Total pairs</div><div class="num">99</div></div>
+            <div class="card"><div>After Fists of Stone</div><div class="num">99</div></div>
             <div class="card"><div>Unique samples</div><div class="num">17</div></div>
-            <div class="card"><div>UID not present</div><div class="num">84</div></div>
+            <div class="card"><div>UID not present</div><div class="num">99</div></div>
             <div class="card"><div>UID matches</div><div class="num">0</div></div>
-            <div class="card"><div>Exact duplicates</div><div class="num">0</div></div>
+            <div class="card"><div>Exact duplicates</div><div class="num">1</div></div>
+            <div class="card"><div>Normal base controls</div><div class="num">17</div></div>
         </div>
 
         <h3>Capture targets by priority</h3>
@@ -392,7 +393,7 @@ summary {
         <div class="stats"><div class="card"><div>Total reference stat families</div><div class="num">68</div></div><div class="card"><div>Captured input families</div><div class="num">45</div></div><div class="card"><div>Confirmed mappings</div><div class="num">8</div></div><div class="card"><div>Likely mappings</div><div class="num">37</div></div><div class="card"><div>Missing input samples</div><div class="num">17</div></div><div class="card"><div>Transformed-output-only families</div><div class="num">30</div></div><div class="card"><div>Corruption-only missing</div><div class="num">6</div></div></div>
 
         <p class="subtle">
-        Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, and <code>capture_targets.csv</code>.
+        Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, <code>capture_targets.csv</code>, and <code>base_control_summary.csv</code>.
         </p>
     </div>
     
@@ -4865,6 +4866,204 @@ summary {
                 <td>+2(2-3)% to Maximum Cold Resistance | +16(13-17)% to Chaos Resistance</td>
                 <td>1</td>
                 <td>STONEFIST-0084</td>
+            </tr>
+            </tbody>
+    </table>
+    
+    </div>
+    
+    <div class="tab-panel" id="tab-base-controls">
+        <p class="lede">Normal/white gloves with no explicit modifiers, captured before and after Stonefist. These isolate the base implicit transformation from explicit modifier mapping, and show how the original defence family scales into the Fists of Stone Evasion/Energy Shield implicit.</p>
+
+        <h3>Samples by original defence family</h3>
+        <div class="stats"><div class="card"><div>STR</div><div class="num">4</div></div><div class="card"><div>DEX</div><div class="num">2</div></div><div class="card"><div>INT</div><div class="num">2</div></div><div class="card"><div>STR/DEX</div><div class="num">2</div></div><div class="card"><div>STR/INT</div><div class="num">5</div></div><div class="card"><div>DEX/INT</div><div class="num">2</div></div></div>
+
+        <h3>Observed per-level scaling</h3>
+        <div class="stats"><div class="card"><div>Evasion Rating per level</div><div class="num">+3 (17 samples)</div></div><div class="card"><div>Energy Shield per level</div><div class="num">+1 (17 samples)</div></div></div>
+
+        <h3>Samples</h3>
+        
+    <table id="base-control-table">
+        <thead>
+            <tr>
+                <th>Sample</th>
+                <th>Before base</th>
+                <th>Defence family</th>
+                <th>Before stats</th>
+                <th>After stats</th>
+                <th>EV / ES per level</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>STONEFIST-0006</td>
+                <td>Zealot Gauntlets</td>
+                <td><span class="badge badge-warning">STR/DEX</span></td>
+                <td>Armour 82, Evasion 74</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0014</td>
+                <td>Bound Cuffs</td>
+                <td><span class="badge badge-special">STR/INT</span></td>
+                <td>Armour 89, Energy Shield 25</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0085</td>
+                <td>Superior Ancient Mitts</td>
+                <td><span class="badge badge-danger">STR</span></td>
+                <td>Armour 153 (augmented)</td>
+                <td>Evasion 269 (augmented), Energy Shield 90 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0086</td>
+                <td>Refined Bracers</td>
+                <td><span class="badge badge-success">DEX</span></td>
+                <td>Evasion 124</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0087</td>
+                <td>Ancient Cuffs</td>
+                <td><span class="badge badge-special">STR/INT</span></td>
+                <td>Armour 89, Energy Shield 25</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0088</td>
+                <td>Ornate Mitts</td>
+                <td><span class="badge badge-danger">STR</span></td>
+                <td>Armour 171</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0089</td>
+                <td>Feathered Mitts</td>
+                <td><span class="badge badge-danger">STR</span></td>
+                <td>Armour 149</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0090</td>
+                <td>Superior Feathered Mitts</td>
+                <td><span class="badge badge-danger">STR</span></td>
+                <td>Armour 159 (augmented)</td>
+                <td>Evasion 257 (augmented), Energy Shield 86 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0091</td>
+                <td>Zealot Gauntlets</td>
+                <td><span class="badge badge-warning">STR/DEX</span></td>
+                <td>Armour 82, Evasion 74</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0092</td>
+                <td>Vaal Gloves</td>
+                <td><span class="badge badge-accent">INT</span></td>
+                <td>Energy Shield 51</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0093</td>
+                <td>Sirenscale Gloves</td>
+                <td><span class="badge badge-accent">INT</span></td>
+                <td>Energy Shield 54</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0094</td>
+                <td>War Wraps</td>
+                <td><span class="badge badge-special">DEX/INT</span></td>
+                <td>Evasion 94, Energy Shield 29</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0095</td>
+                <td>Elegant Wraps</td>
+                <td><span class="badge badge-special">DEX/INT</span></td>
+                <td>Evasion 85, Energy Shield 26</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0096</td>
+                <td>Ornate Cuffs</td>
+                <td><span class="badge badge-special">STR/INT</span></td>
+                <td>Armour 82, Energy Shield 23</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0097</td>
+                <td>Grand Bracers</td>
+                <td><span class="badge badge-success">DEX</span></td>
+                <td>Evasion 155</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0098</td>
+                <td>Ornate Cuffs</td>
+                <td><span class="badge badge-special">STR/INT</span></td>
+                <td>Armour 82, Energy Shield 23</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
+            </tr>
+            
+            <tr>
+                <td>STONEFIST-0099</td>
+                <td>Ancient Cuffs</td>
+                <td><span class="badge badge-special">STR/INT</span></td>
+                <td>Armour 89, Energy Shield 25</td>
+                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
+                <td>+3 / +1</td>
+                <td>Normal white base control captures. No explicit modifiers.</td>
             </tr>
             </tbody>
     </table>
@@ -14234,6 +14433,1345 @@ Unmodifiable
                         <tr><th>Character level</th><td>80</td></tr>
                         <tr><th>Capture version</th><td>2</td></tr>
                         <tr><th>Notes</th><td></td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0085 normal normal normal superior ancient mitts  superior fists of stone  not present 2026-07-06t20:03:03 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0085</td>
+        <td>
+            <strong>Superior Ancient Mitts<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Superior Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>79 → 79</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Quality</th><td>+12% (augmented)</td><td>+12% (augmented)</td></tr><tr><th>Armour</th><td>153 (augmented)</td><td></td></tr><tr><th>Evasion</th><td></td><td>269 (augmented)</td></tr><tr><th>Energy Shield</th><td></td><td>90 (augmented)</td></tr><tr><th>Requires</th><td>Level 54, 67 Str</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Superior Ancient Mitts
+--------
+Quality: +12% (augmented)
+Armour: 153 (augmented)
+--------
+Requires: Level 54, 67 Str
+--------
+Item Level: 79
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Superior Fists of Stone
+--------
+Quality: +12% (augmented)
+Evasion Rating: 269 (augmented)
+Energy Shield: 90 (augmented)
+--------
+Item Level: 79
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:03:03</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0086 normal normal normal refined bracers  fists of stone  not present 2026-07-06t20:04:00 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0086</td>
+        <td>
+            <strong>Refined Bracers<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>71 → 71</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Evasion</th><td>124</td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td></td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 54, 67 Dex</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Refined Bracers
+--------
+Evasion Rating: 124
+--------
+Requires: Level 54, 67 Dex
+--------
+Item Level: 71
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 71
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:04:00</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0087 normal normal normal ancient cuffs  fists of stone  not present 2026-07-06t20:04:09 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0087</td>
+        <td>
+            <strong>Ancient Cuffs<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>71 → 71</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Armour</th><td>89</td><td></td></tr><tr><th>Evasion</th><td></td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td>25</td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 70, 48 Str, 48 Int</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Ancient Cuffs
+--------
+Armour: 89
+Energy Shield: 25
+--------
+Requires: Level 70, 48 Str, 48 Int
+--------
+Item Level: 71
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 71
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:04:09</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0088 normal normal normal ornate mitts  fists of stone  not present 2026-07-06t20:04:18 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0088</td>
+        <td>
+            <strong>Ornate Mitts<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>80 → 80</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Armour</th><td>171</td><td></td></tr><tr><th>Evasion</th><td></td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td></td><td>80 (augmented)</td></tr><tr><th>Sockets</th><td>S</td><td>S</td></tr><tr><th>Requires</th><td>Level 70, 87 Str</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Ornate Mitts
+--------
+Armour: 171
+--------
+Requires: Level 70, 87 Str
+--------
+Sockets: S 
+--------
+Item Level: 80
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Sockets: S 
+--------
+Item Level: 80
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:04:18</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0089 normal normal normal feathered mitts  fists of stone  not present 2026-07-06t20:04:29 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0089</td>
+        <td>
+            <strong>Feathered Mitts<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>71 → 71</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Armour</th><td>149</td><td></td></tr><tr><th>Evasion</th><td></td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td></td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 59, 73 Str</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Feathered Mitts
+--------
+Armour: 149
+--------
+Requires: Level 59, 73 Str
+--------
+Item Level: 71
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 71
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:04:29</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0090 normal normal normal superior feathered mitts  superior fists of stone  not present 2026-07-06t20:04:42 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0090</td>
+        <td>
+            <strong>Superior Feathered Mitts<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Superior Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>80 → 80</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Quality</th><td>+7% (augmented)</td><td>+7% (augmented)</td></tr><tr><th>Armour</th><td>159 (augmented)</td><td></td></tr><tr><th>Evasion</th><td></td><td>257 (augmented)</td></tr><tr><th>Energy Shield</th><td></td><td>86 (augmented)</td></tr><tr><th>Requires</th><td>Level 59, 73 Str</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Superior Feathered Mitts
+--------
+Quality: +7% (augmented)
+Armour: 159 (augmented)
+--------
+Requires: Level 59, 73 Str
+--------
+Item Level: 80
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Superior Fists of Stone
+--------
+Quality: +7% (augmented)
+Evasion Rating: 257 (augmented)
+Energy Shield: 86 (augmented)
+--------
+Item Level: 80
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:04:42</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0091 normal normal normal zealot gauntlets  fists of stone  not present 2026-07-06t20:04:51 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="duplicate">
+        <td>STONEFIST-0091</td>
+        <td>
+            <strong>Zealot Gauntlets<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  <span class="tag duplicate">duplicate of STONEFIST-0006</span></div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>68 → 68</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Armour</th><td>82</td><td></td></tr><tr><th>Evasion</th><td>74</td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td></td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 59, 41 Str, 41 Dex</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Zealot Gauntlets
+--------
+Armour: 82
+Evasion Rating: 74
+--------
+Requires: Level 59, 41 Str, 41 Dex
+--------
+Item Level: 68
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 68
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:04:51</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0092 normal normal normal vaal gloves  fists of stone  not present 2026-07-06t20:05:02 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0092</td>
+        <td>
+            <strong>Vaal Gloves<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>80 → 80</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Evasion</th><td></td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td>51</td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 75, 94 Int</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Vaal Gloves
+--------
+Energy Shield: 51
+--------
+Requires: Level 75, 94 Int
+--------
+Item Level: 80
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 80
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:05:02</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0093 normal normal normal sirenscale gloves  fists of stone  not present 2026-07-06t20:05:10 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0093</td>
+        <td>
+            <strong>Sirenscale Gloves<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>80 → 80</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Evasion</th><td></td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td>54</td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 80, 101 Int</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Sirenscale Gloves
+--------
+Energy Shield: 54
+--------
+Requires: Level 80, 101 Int
+--------
+Item Level: 80
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 80
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:05:10</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0094 normal normal normal war wraps  fists of stone  not present 2026-07-06t20:05:20 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0094</td>
+        <td>
+            <strong>War Wraps<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>76 → 76</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Evasion</th><td>94</td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td>29</td><td>80 (augmented)</td></tr><tr><th>Sockets</th><td>S</td><td>S</td></tr><tr><th>Requires</th><td>Level 65, 44 Dex, 44 Int</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+War Wraps
+--------
+Evasion Rating: 94
+Energy Shield: 29
+--------
+Requires: Level 65, 44 Dex, 44 Int
+--------
+Sockets: S 
+--------
+Item Level: 76
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Sockets: S 
+--------
+Item Level: 76
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:05:20</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0095 normal normal normal elegant wraps  fists of stone  not present 2026-07-06t20:05:27 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0095</td>
+        <td>
+            <strong>Elegant Wraps<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>82 → 82</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Evasion</th><td>85</td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td>26</td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 70, 48 Dex, 48 Int</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Elegant Wraps
+--------
+Evasion Rating: 85
+Energy Shield: 26
+--------
+Requires: Level 70, 48 Dex, 48 Int
+--------
+Item Level: 82
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 82
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:05:27</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0096 normal normal normal ornate cuffs  fists of stone  not present 2026-07-06t20:05:59 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0096</td>
+        <td>
+            <strong>Ornate Cuffs<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>72 → 72</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Armour</th><td>82</td><td></td></tr><tr><th>Evasion</th><td></td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td>23</td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 59, 41 Str, 41 Int</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Ornate Cuffs
+--------
+Armour: 82
+Energy Shield: 23
+--------
+Requires: Level 59, 41 Str, 41 Int
+--------
+Item Level: 72
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 72
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:05:59</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0097 normal normal normal grand bracers  fists of stone  not present 2026-07-06t20:06:09 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0097</td>
+        <td>
+            <strong>Grand Bracers<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>71 → 71</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Evasion</th><td>155</td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td></td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 70, 87 Dex</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Grand Bracers
+--------
+Evasion Rating: 155
+--------
+Requires: Level 70, 87 Dex
+--------
+Item Level: 71
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 71
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:06:09</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0098 normal normal normal ornate cuffs  fists of stone  not present 2026-07-06t20:06:16 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0098</td>
+        <td>
+            <strong>Ornate Cuffs<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>71 → 71</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Armour</th><td>82</td><td></td></tr><tr><th>Evasion</th><td></td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td>23</td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 59, 41 Str, 41 Int</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Ornate Cuffs
+--------
+Armour: 82
+Energy Shield: 23
+--------
+Requires: Level 59, 41 Str, 41 Int
+--------
+Item Level: 71
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 71
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:06:16</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
+                    </tbody>
+                </table>
+            </details>
+        </td>
+    </tr>
+    
+    <tr data-search="stonefist-0099 normal normal normal ancient cuffs  fists of stone  not present 2026-07-06t20:06:23 80 normal white base control captures. no explicit modifiers.  { implicit modifier } has +3 to evasion rating per player level has +1 to maximum energy shield per player level unmodifiable" data-category="normal" data-uid="not present" data-duplicate="original">
+        <td>STONEFIST-0099</td>
+        <td>
+            <strong>Ancient Cuffs<br><small>(no separate base line)</small></strong>
+            <div class="arrow">→</div>
+            <strong>Fists of Stone<br><small>(no separate base line)</small></strong>
+            <div class="tags"><span class="tag">normal</span>  </div>
+            <small>Normal → Normal</small>
+        </td>
+        <td>72 → 72</td>
+        <td><span class="badge badge-muted">— not present</span></td>
+        <td>0 → 0</td>
+        <td>
+            <details>
+                <summary>Stats</summary>
+                
+    <table class="mini">
+        <thead><tr><th>Stat</th><th>Before</th><th>After</th></tr></thead>
+        <tbody><tr><th>Armour</th><td>89</td><td></td></tr><tr><th>Evasion</th><td></td><td>240 (augmented)</td></tr><tr><th>Energy Shield</th><td>25</td><td>80 (augmented)</td></tr><tr><th>Requires</th><td>Level 70, 48 Str, 48 Int</td><td></td></tr></tbody>
+    </table>
+    
+            </details>
+
+            <details>
+                <summary>Mods</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before</h4>
+                        <em>No parsed mod lines</em>
+                    </div>
+                    <div>
+                        <h4>After</h4>
+                        <ul><li><code>{ Implicit Modifier }</code></li><li><code>Has +3 to Evasion Rating per player level</code></li><li><code>Has +1 to maximum Energy Shield per player level</code></li><li><code>Unmodifiable</code></li></ul>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Raw item text</summary>
+                <div class="cols">
+                    <div>
+                        <h4>Before raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Ancient Cuffs
+--------
+Armour: 89
+Energy Shield: 25
+--------
+Requires: Level 70, 48 Str, 48 Int
+--------
+Item Level: 72
+</pre>
+                    </div>
+                    <div>
+                        <h4>After raw</h4>
+                        <pre>Item Class: Gloves
+Rarity: Normal
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 72
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable
+</pre>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Capture metadata</summary>
+                <table class="mini">
+                    <tbody>
+                        <tr><th>Captured at</th><td>2026-07-06T20:06:23</td></tr>
+                        <tr><th>Character level</th><td>80</td></tr>
+                        <tr><th>Capture version</th><td>2</td></tr>
+                        <tr><th>Notes</th><td>Normal white base control captures. No explicit modifiers.</td></tr>
                     </tbody>
                 </table>
             </details>

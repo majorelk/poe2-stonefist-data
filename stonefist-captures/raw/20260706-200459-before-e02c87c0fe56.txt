@@ -1,0 +1,9 @@
+Item Class: Gloves
+Rarity: Normal
+Vaal Gloves
+--------
+Energy Shield: 51
+--------
+Requires: Level 75, 94 Int
+--------
+Item Level: 80

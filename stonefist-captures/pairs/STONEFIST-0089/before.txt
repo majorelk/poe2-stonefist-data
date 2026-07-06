@@ -1,0 +1,9 @@
+Item Class: Gloves
+Rarity: Normal
+Feathered Mitts
+--------
+Armour: 149
+--------
+Requires: Level 59, 73 Str
+--------
+Item Level: 71

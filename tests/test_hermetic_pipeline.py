@@ -17,6 +17,7 @@ WRITTEN_FILENAMES = [
     "glove_mod_coverage.csv",
     "transformed_output_only.csv",
     "capture_targets.csv",
+    "base_control_summary.csv",
 ]
 
 
@@ -49,6 +50,7 @@ def test_build_pipeline_writes_only_inside_tmp_path(tmp_path, monkeypatch):
     monkeypatch.setattr(sbd, "GLOVE_COVERAGE_PATH", captures_root / "glove_mod_coverage.csv")
     monkeypatch.setattr(sbd, "TRANSFORMED_OUTPUT_ONLY_PATH", captures_root / "transformed_output_only.csv")
     monkeypatch.setattr(sbd, "CAPTURE_TARGETS_PATH", captures_root / "capture_targets.csv")
+    monkeypatch.setattr(sbd, "BASE_CONTROL_SUMMARY_PATH", captures_root / "base_control_summary.csv")
 
     pairs = sbd.load_pairs()
     assert len(pairs) == 1

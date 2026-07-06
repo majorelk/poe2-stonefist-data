@@ -28,6 +28,18 @@ UID_BADGE_TEXT = {
     "not present": "— not present",
 }
 
+DEFENCE_FAMILY_BADGE_KIND = {
+    "STR": "danger",
+    "DEX": "success",
+    "INT": "accent",
+    "STR/DEX": "warning",
+    "STR/INT": "special",
+    "DEX/INT": "special",
+    "unknown": "muted",
+}
+
+DEFENCE_FAMILY_ORDER = ["STR", "DEX", "INT", "STR/DEX", "STR/INT", "DEX/INT", "unknown"]
+
 
 def esc(value: object) -> str:
     return html.escape(str(value))
@@ -427,11 +439,125 @@ def _render_pair_row(p: dict) -> str:
     """
 
 
+def _plus_or_dash(value: str) -> str:
+    return f"+{value}" if value else "-"
+
+
+def render_base_control_family_summary(rows: list[dict[str, str]]) -> str:
+    counts = Counter(row.get("before_defence_family") or "unknown" for row in rows)
+    cards = [(family, counts.get(family, 0)) for family in DEFENCE_FAMILY_ORDER if counts.get(family, 0)]
+
+    if not cards:
+        return "<p><em>No normal base control samples captured yet.</em></p>"
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>{esc(family)}</div><div class=\"num\">{esc(count)}</div></div>"
+        for family, count in cards
+    ) + "</div>"
+
+
+def render_base_control_scaling_summary(rows: list[dict[str, str]]) -> str:
+    evasion_counts = Counter(row["evasion_per_level"] for row in rows if row.get("evasion_per_level"))
+    energy_shield_counts = Counter(
+        row["energy_shield_per_level"] for row in rows if row.get("energy_shield_per_level")
+    )
+
+    def describe(counts: Counter) -> str:
+        if not counts:
+            return "no data yet"
+        return ", ".join(
+            f"+{value} ({count} sample{'s' if count != 1 else ''})"
+            for value, count in sorted(counts.items())
+        )
+
+    return (
+        "<div class=\"stats\">"
+        f"<div class=\"card\"><div>Evasion Rating per level</div><div class=\"num\">{esc(describe(evasion_counts))}</div></div>"
+        f"<div class=\"card\"><div>Energy Shield per level</div><div class=\"num\">{esc(describe(energy_shield_counts))}</div></div>"
+        "</div>"
+    )
+
+
+def render_base_control_table(rows: list[dict[str, str]]) -> str:
+    if not rows:
+        return "<p><em>No normal base control samples captured yet. Capture a normal/white glove with no explicit modifiers before and after Stonefist to add one.</em></p>"
+
+    table_rows = []
+    for row in rows:
+        before_combo = ", ".join(
+            f"{label} {value}"
+            for label, value in (
+                ("Armour", row.get("before_armour", "")),
+                ("Evasion", row.get("before_evasion", "")),
+                ("Energy Shield", row.get("before_energy_shield", "")),
+            )
+            if value
+        )
+        after_combo = ", ".join(
+            f"{label} {value}"
+            for label, value in (
+                ("Evasion", row.get("after_evasion", "")),
+                ("Energy Shield", row.get("after_energy_shield", "")),
+            )
+            if value
+        )
+        family = row.get("before_defence_family") or "unknown"
+
+        table_rows.append(
+            f"""
+            <tr>
+                <td>{esc(row.get('sample_id', ''))}</td>
+                <td>{esc(row.get('before_name', ''))}</td>
+                <td>{badge(family, DEFENCE_FAMILY_BADGE_KIND.get(family, 'muted'))}</td>
+                <td>{esc(before_combo)}</td>
+                <td>{esc(after_combo)}</td>
+                <td>{_plus_or_dash(row.get('evasion_per_level', ''))} / {_plus_or_dash(row.get('energy_shield_per_level', ''))}</td>
+                <td>{esc(row.get('notes', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table id="base-control-table">
+        <thead>
+            <tr>
+                <th>Sample</th>
+                <th>Before base</th>
+                <th>Defence family</th>
+                <th>Before stats</th>
+                <th>After stats</th>
+                <th>EV / ES per level</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(table_rows)}</tbody>
+    </table>
+    """
+
+
+def render_base_controls_section(rows: list[dict[str, str]]) -> str:
+    return f"""
+    <div class="tab-panel" id="tab-base-controls">
+        <p class="lede">Normal/white gloves with no explicit modifiers, captured before and after Stonefist. These isolate the base implicit transformation from explicit modifier mapping, and show how the original defence family scales into the Fists of Stone Evasion/Energy Shield implicit.</p>
+
+        <h3>Samples by original defence family</h3>
+        {render_base_control_family_summary(rows)}
+
+        <h3>Observed per-level scaling</h3>
+        {render_base_control_scaling_summary(rows)}
+
+        <h3>Samples</h3>
+        {render_base_control_table(rows)}
+    </div>
+    """
+
+
 def render_overview_section(
     pairs: list[dict],
     coverage: list[dict[str, str]],
     transformed_only: list[dict[str, str]],
     capture_targets: list[dict[str, str]],
+    base_controls: list[dict[str, str]],
 ) -> str:
     status_counts = Counter(p["uid_status"] for p in pairs)
     category_counts = Counter(p["category"] for p in pairs)
@@ -449,6 +575,7 @@ def render_overview_section(
             <div class="card"><div>UID not present</div><div class="num">{status_counts.get("not present", 0)}</div></div>
             <div class="card"><div>UID matches</div><div class="num">{status_counts.get("match", 0)}</div></div>
             <div class="card"><div>Exact duplicates</div><div class="num">{duplicate_count}</div></div>
+            <div class="card"><div>Normal base controls</div><div class="num">{len(base_controls)}</div></div>
         </div>
 
         <h3>Capture targets by priority</h3>
@@ -458,7 +585,7 @@ def render_overview_section(
         {render_glove_coverage_summary(coverage, transformed_only)}
 
         <p class="subtle">
-        Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, and <code>capture_targets.csv</code>.
+        Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, <code>capture_targets.csv</code>, and <code>base_control_summary.csv</code>.
         </p>
     </div>
     """

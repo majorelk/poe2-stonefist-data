@@ -1,0 +1,9 @@
+Item Class: Gloves
+Rarity: Normal
+Grand Bracers
+--------
+Evasion Rating: 155
+--------
+Requires: Level 70, 87 Dex
+--------
+Item Level: 71

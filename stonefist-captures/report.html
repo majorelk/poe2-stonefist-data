@@ -2859,14 +2859,848 @@ Mapping candidates are derived from explicit modifier block position and should 
 <section>
     <h2>Glove modifier pool coverage</h2>
     <p>This section compares the PoE2DB glove modifier pool against captured Stonefist samples and shows which reference families are covered.</p>
-    <div class="coverage-summary"><div class="stats"><div class="card"><div>Total reference stat families</div><div class="num">0</div></div><div class="card"><div>Captured input families</div><div class="num">0</div></div><div class="card"><div>Confirmed mappings</div><div class="num">0</div></div><div class="card"><div>Likely mappings</div><div class="num">0</div></div><div class="card"><div>Missing input samples</div><div class="num">0</div></div><div class="card"><div>Transformed-output-only families</div><div class="num">0</div></div><div class="card"><div>Corruption-only missing</div><div class="num">0</div></div></div></div>
-    <p><em>No glove modifier reference pool loaded yet.</em></p>
+    <div class="coverage-summary"><div class="stats"><div class="card"><div>Total reference stat families</div><div class="num">68</div></div><div class="card"><div>Captured input families</div><div class="num">43</div></div><div class="card"><div>Confirmed mappings</div><div class="num">8</div></div><div class="card"><div>Likely mappings</div><div class="num">35</div></div><div class="card"><div>Missing input samples</div><div class="num">19</div></div><div class="card"><div>Transformed-output-only families</div><div class="num">28</div></div><div class="card"><div>Corruption-only missing</div><div class="num">6</div></div></div></div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Stat template</th>
+                <th>Modifier names</th>
+                <th>Glove classes</th>
+                <th>Pool types</th>
+                <th>Coverage status</th>
+                <th>Samples</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>Break #% increased Armour</code></td>
+                <td>CorruptionArmourBreak1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>corruption_only_missing</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>Damage Penetrates #% Cold Resistance</code></td>
+                <td>CorruptionColdPenetration1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>corruption_only_missing</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>Damage Penetrates #% Fire Resistance</code></td>
+                <td>CorruptionFirePenetration1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>corruption_only_missing</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Level of all Melee Skills</code></td>
+                <td>CorruptionGlobalMeleeSkillGemsLevel1, of Combat, of Dueling</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0015|STONEFIST-0020|STONEFIST-0028|STONEFIST-0034|STONEFIST-0048|STONEFIST-0070|STONEFIST-0072</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Quantity of Gold Dropped by Slain Enemies</code></td>
+                <td>CorruptionGoldFoundIncrease1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>corruption_only_missing</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>Damage Penetrates #% Lightning Resistance</code></td>
+                <td>CorruptionLightningPenetration1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>corruption_only_missing</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Evasion Rating</code></td>
+                <td>CorruptionLocalIncreasedEvasionRatingPercent1, Ghost&#x27;s, Mirage&#x27;s, Nightmare&#x27;s, Phantasm&#x27;s, Shade&#x27;s, Spectre&#x27;s, Wraith&#x27;s</td>
+                <td>dex</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0005|STONEFIST-0038</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Maximum Frenzy Charges</code></td>
+                <td>CorruptionMaximumFrenzyCharges1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>corruption_only_missing</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% reduced Attribute Requirements</code></td>
+                <td>CorruptionReducedLocalAttributeRequirements1, of the Apt, of the Proficient, of the Skilled, of the Talented, of the Worthy</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0029|STONEFIST-0043|STONEFIST-0078</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% chance to Daze on Hit</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Area of Effect of Curses</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, str_dex</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Immobilisation buildup</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, str_dex</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Strength and Intelligence</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Fire and Chaos Resistances</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Mana Cost Efficiency</code></td>
+                <td>of Kurgal</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Dexterity and Intelligence</code></td>
+                <td>of Kurgal</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Cold and Chaos Resistances</code></td>
+                <td>of Kurgal</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Magnitude of Ailments you inflict</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased chance to Poison</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased chance to inflict Bleeding</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Strength and Dexterity</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Lightning and Chaos Resistances</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Evasion Rating</code></td>
+                <td>Acrobat&#x27;s, Agile, Blurred, Dancer&#x27;s, Fleet, Phased, Vaporous</td>
+                <td>dex</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0025|STONEFIST-0039|STONEFIST-0048|STONEFIST-0071</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Accuracy Rating</code></td>
+                <td>Amazon&#x27;s, Consistent, Deliberate, Focused, Hunter&#x27;s, Precise, Ranger&#x27;s, Reliable, Steady</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0001|STONEFIST-0002|STONEFIST-0012|STONEFIST-0017|STONEFIST-0033|STONEFIST-0042|STONEFIST-0044</td>
+            </tr>
+            
+            <tr>
+                <td><code>Adds # to # Physical Damage to Attacks</code></td>
+                <td>Annealed, Burnished, Flaring, Gleaming, Glinting, Honed, Polished, Razor-sharp, Tempered</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>confirmed_mapping</td>
+                <td>STONEFIST-0010|STONEFIST-0013|STONEFIST-0021|STONEFIST-0029|STONEFIST-0031|STONEFIST-0032|STONEFIST-0039|STONEFIST-0041|STONEFIST-0043|STONEFIST-0044|STONEFIST-0048|STONEFIST-0049|STONEFIST-0066|STONEFIST-0067|STONEFIST-0074|STONEFIST-0075|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to maximum Mana</code></td>
+                <td>Aqua, Azure, Beryl, Cerulean, Chalybeous, Cobalt, Gentian, Opalescent, Teal</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0009|STONEFIST-0012|STONEFIST-0018|STONEFIST-0024|STONEFIST-0027|STONEFIST-0036|STONEFIST-0037|STONEFIST-0038|STONEFIST-0042|STONEFIST-0046|STONEFIST-0047|STONEFIST-0048|STONEFIST-0051|STONEFIST-0068|STONEFIST-0069|STONEFIST-0075</td>
+            </tr>
+            
+            <tr>
+                <td><code>Adds # to # Lightning damage to Attacks</code></td>
+                <td>Arcing, Buzzing, Crackling, Discharging, Electrocuting, Humming, Shocking, Snapping, Sparking</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>confirmed_mapping</td>
+                <td>STONEFIST-0003|STONEFIST-0024|STONEFIST-0039|STONEFIST-0045|STONEFIST-0046|STONEFIST-0066|STONEFIST-0074|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to maximum Life</code></td>
+                <td>Athlete&#x27;s, Hale, Healthy, Robust, Rotund, Sanguine, Stalwart, Stout, Virile</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0008|STONEFIST-0011|STONEFIST-0019|STONEFIST-0021|STONEFIST-0024|STONEFIST-0027|STONEFIST-0031|STONEFIST-0036|STONEFIST-0040|STONEFIST-0043|STONEFIST-0050|STONEFIST-0066|STONEFIST-0067|STONEFIST-0068|STONEFIST-0069|STONEFIST-0070|STONEFIST-0071|STONEFIST-0073|STONEFIST-0075</td>
+            </tr>
+            
+            <tr>
+                <td><code>Adds # to # Fire damage to Attacks</code></td>
+                <td>Blasting, Burning, Cremating, Flaming, Heated, Incinerating, Scorching, Smoking, Smouldering</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0002|STONEFIST-0005|STONEFIST-0019|STONEFIST-0074</td>
+            </tr>
+            
+            <tr>
+                <td><code>Adds # to # Cold damage to Attacks</code></td>
+                <td>Chilled, Entombing, Freezing, Frigid, Frosted, Frozen, Glaciated, Icy, Polar</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0005|STONEFIST-0009|STONEFIST-0015|STONEFIST-0016|STONEFIST-0018|STONEFIST-0020|STONEFIST-0042</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Evasion Rating | +# to maximum Life</code></td>
+                <td>Fawn&#x27;s, Flea&#x27;s, Ibex&#x27;s, Mouflon&#x27;s, Ram&#x27;s, Stag&#x27;s</td>
+                <td>dex</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0032|STONEFIST-0038</td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain # Mana per enemy killed</code></td>
+                <td>of Absorption, of Assimilation, of Consumption, of Devouring, of Enveloping, of Infusion, of Osmosis, of Siphoning</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>confirmed_mapping</td>
+                <td>STONEFIST-0022|STONEFIST-0042|STONEFIST-0046|STONEFIST-0071</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Critical Damage Bonus</code></td>
+                <td>of Anger, of Ferocity, of Fury, of Ire, of Rage</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0017|STONEFIST-0041|STONEFIST-0069|STONEFIST-0073</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Rarity of Items found</code></td>
+                <td>of Archaeology, of Plunder, of Raiding</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0012|STONEFIST-0024|STONEFIST-0028|STONEFIST-0029|STONEFIST-0034|STONEFIST-0035|STONEFIST-0045|STONEFIST-0046|STONEFIST-0047|STONEFIST-0051</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Chaos Resistance</code></td>
+                <td>of Bameth, of Banishment, of Eviction, of Exile, of Expulsion, of the Lost</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>confirmed_mapping</td>
+                <td>STONEFIST-0007|STONEFIST-0039|STONEFIST-0075</td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain Deflection Rating equal to #% of Evasion Rating</code></td>
+                <td>of Bending, of Curvation, of Deflecting, of Diversion, of Flexure</td>
+                <td>dex, dex_int, str_dex</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0012</td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain # Life per enemy killed</code></td>
+                <td>of Conquest, of Glory, of Legend, of Success, of Triumph, of Valour, of Vanquishing, of Victory</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>confirmed_mapping</td>
+                <td>STONEFIST-0008|STONEFIST-0026|STONEFIST-0033|STONEFIST-0039|STONEFIST-0042|STONEFIST-0050|STONEFIST-0074</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Attack Speed</code></td>
+                <td>of Ease, of Mastery, of Renown, of Skill</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>confirmed_mapping</td>
+                <td>STONEFIST-0001|STONEFIST-0002|STONEFIST-0016|STONEFIST-0036|STONEFIST-0050|STONEFIST-0076|STONEFIST-0078</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Lightning Resistance</code></td>
+                <td>of Ephij, of the Cloud, of the Lightning, of the Maelstrom, of the Squall, of the Storm, of the Tempest, of the Thunderhead</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>confirmed_mapping</td>
+                <td>STONEFIST-0001|STONEFIST-0004|STONEFIST-0010|STONEFIST-0023|STONEFIST-0027|STONEFIST-0032|STONEFIST-0044|STONEFIST-0047|STONEFIST-0051|STONEFIST-0073|STONEFIST-0075|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Cold Resistance</code></td>
+                <td>of Haast, of the Ice, of the Narwhal, of the Penguin, of the Polar Bear, of the Seal, of the Walrus, of the Yeti</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0017|STONEFIST-0018|STONEFIST-0021|STONEFIST-0028|STONEFIST-0031|STONEFIST-0036|STONEFIST-0037|STONEFIST-0040|STONEFIST-0048|STONEFIST-0071|STONEFIST-0072|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Fire Resistance</code></td>
+                <td>of Magma, of Tzteosh, of the Drake, of the Furnace, of the Kiln, of the Salamander, of the Volcano, of the Whelpling</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0009|STONEFIST-0011|STONEFIST-0019|STONEFIST-0020|STONEFIST-0024|STONEFIST-0035|STONEFIST-0036|STONEFIST-0038|STONEFIST-0048|STONEFIST-0066|STONEFIST-0069</td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain # Life per Enemy Hit with Attacks</code></td>
+                <td>of Nourishment, of Regrowth, of Rejuvenation, of Restoration</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0005|STONEFIST-0027|STONEFIST-0031|STONEFIST-0067</td>
+            </tr>
+            
+            <tr>
+                <td><code>Leech #% of Physical Attack Damage as Mana</code></td>
+                <td>of the Arid, of the Desperate, of the Drought, of the Parched</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0005|STONEFIST-0009|STONEFIST-0012|STONEFIST-0021|STONEFIST-0027|STONEFIST-0042|STONEFIST-0051|STONEFIST-0066</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Dexterity</code></td>
+                <td>of the Falcon, of the Fox, of the Jaguar, of the Leopard, of the Lynx, of the Mongoose, of the Panther, of the Phantom, of the Wind</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0024|STONEFIST-0030|STONEFIST-0031|STONEFIST-0035|STONEFIST-0041|STONEFIST-0044|STONEFIST-0050|STONEFIST-0066|STONEFIST-0068|STONEFIST-0071|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>Leech #% of Physical Attack Damage as Life</code></td>
+                <td>of the Lamprey, of the Locust, of the Remora, of the Vampire</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0001|STONEFIST-0005|STONEFIST-0021|STONEFIST-0025|STONEFIST-0073</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Evasion and Energy Shield</code></td>
+                <td>CorruptionLocalIncreasedEvasionAndEnergyShield1, Ephemeral, Ethereal, Evanescent, Illusory, Shadowy, Unreal, Unworldly</td>
+                <td>dex_int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0012|STONEFIST-0018|STONEFIST-0027|STONEFIST-0072</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% chance to Gain Arcane Surge when you deal a Critical Hit</code></td>
+                <td>of Kurgal</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Cast Speed when on Full Life</code></td>
+                <td>of Kurgal</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% chance for Attack Hits to apply Incision</code></td>
+                <td>of Ulaman</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Skill Speed if you&#x27;ve consumed a Frenzy Charge Recently</code></td>
+                <td>of Ulaman</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Evasion and Energy Shield | +# to maximum Life</code></td>
+                <td>Bard&#x27;s, Maestro&#x27;s, Minstrel&#x27;s, Musician&#x27;s, Poet&#x27;s, Troubadour&#x27;s</td>
+                <td>dex_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0001|STONEFIST-0028</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Evasion Rating | +# to maximum Energy Shield</code></td>
+                <td>Cherub&#x27;s, Nymph&#x27;s, Sylph&#x27;s, Will-o-wisp&#x27;s</td>
+                <td>dex_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0001|STONEFIST-0021|STONEFIST-0036</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Energy Shield Recharge Rate</code></td>
+                <td>of Buffering</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Intelligence</code></td>
+                <td>of the Augur, of the Philosopher, of the Prodigy, of the Pupil, of the Sage, of the Savant, of the Student, of the Virtuoso</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0018|STONEFIST-0029|STONEFIST-0046|STONEFIST-0072</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Energy Shield</code></td>
+                <td>CorruptionLocalIncreasedEnergyShieldPercent1, Dauntless, Fearless, Indomitable, Protective, Resolute, Strong-Willed, Unassailable</td>
+                <td>int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>confirmed_mapping</td>
+                <td>STONEFIST-0065|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Energy Shield | +# to maximum Life</code></td>
+                <td>Abbot&#x27;s, Bishop&#x27;s, Exarch&#x27;s, Monk&#x27;s, Pope&#x27;s, Prior&#x27;s</td>
+                <td>int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0017|STONEFIST-0078</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to maximum Energy Shield</code></td>
+                <td>Blazing, Glimmering, Glittering, Glowing, Pulsing, Radiating, Shining</td>
+                <td>int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0029</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour</code></td>
+                <td>Buttressed, CorruptionLocalIncreasedPhysicalDamageReductionRatingPercent1, Girded, Impregnable, Layered, Lobstered, Reinforced, Thickened</td>
+                <td>str</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0073</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Armour</code></td>
+                <td>Carapaced, Encased, Fortified, Lacquered, Plated, Ribbed, Studded</td>
+                <td>str</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0019</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour | +# to maximum Life</code></td>
+                <td>Crocodile&#x27;s, Lobster&#x27;s, Nautilus&#x27;, Octopus&#x27;, Oyster&#x27;s, Urchin&#x27;s</td>
+                <td>str</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0002</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% of Armour also applies to Elemental Damage</code></td>
+                <td>of Covering, of Furring, of Lining, of Padding, of Sheathing</td>
+                <td>str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0002|STONEFIST-0037</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Strength</code></td>
+                <td>of the Bear, of the Brute, of the Goliath, of the Gorilla, of the Leviathan, of the Lion, of the Titan, of the Wrestler</td>
+                <td>str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0034|STONEFIST-0068</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour and Evasion</code></td>
+                <td>Brawler&#x27;s, CorruptionLocalIncreasedArmourAndEvasion1, Duelist&#x27;s, Fencer&#x27;s, Gladiator&#x27;s, Hero&#x27;s, Legend&#x27;s, Scrapper&#x27;s</td>
+                <td>str_dex</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0023</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour and Evasion | +# to maximum Life</code></td>
+                <td>Aggressor&#x27;s, Assailant&#x27;s, Brute&#x27;s, Bully&#x27;s, Predator&#x27;s, Thug&#x27;s</td>
+                <td>str_dex</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0047</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Armour | +# to Evasion Rating</code></td>
+                <td>Durable, Flexible, Pliant, Supple</td>
+                <td>str_dex</td>
+                <td>explicit</td>
+                <td>missing_input_sample</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour and Energy Shield</code></td>
+                <td>CorruptionLocalIncreasedArmourAndEnergyShield1, Inculcated, Infixed, Infused, Ingrained, Inspired, Instilled, Interpolated</td>
+                <td>str_int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0030|STONEFIST-0037</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to Armour | +# to maximum Energy Shield</code></td>
+                <td>Anointed, Blessed, Hallowed, Sanctified</td>
+                <td>str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0070</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Armour and Energy Shield | +# to maximum Life</code></td>
+                <td>Augur&#x27;s, Auspex&#x27;s, Druid&#x27;s, Haruspex&#x27;s, Prophet&#x27;s, Visionary&#x27;s</td>
+                <td>str_int</td>
+                <td>explicit</td>
+                <td>likely_mapping</td>
+                <td>STONEFIST-0020|STONEFIST-0034|STONEFIST-0035|STONEFIST-0070</td>
+            </tr>
+            </tbody>
+    </table>
+    
 </section>
 
 <section>
     <h2>Transformed output-only stat templates</h2>
         <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool.</p>
-        <p><em>No transformed output-only stats found.</em></p>
+        
+    <table>
+        <thead>
+            <tr>
+                <th>After stat template</th>
+                <th>Example after stats</th>
+                <th>Sample count</th>
+                <th>Sample ids</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>#% chance to Blind Enemies on Hit with Attacks</code></td>
+                <td>30(30-32)% chance to Blind Enemies on Hit with Attacks</td>
+                <td>7</td>
+                <td>STONEFIST-0001|STONEFIST-0002|STONEFIST-0012|STONEFIST-0017|STONEFIST-0033|STONEFIST-0042|STONEFIST-0044</td>
+            </tr>
+            
+            <tr>
+                <td><code>Has +# to Evasion Rating per player level | Has +# to maximum Energy Shield per player level</code></td>
+                <td>Has +4 to Evasion Rating per player level | Has +1 to maximum Energy Shield per player level</td>
+                <td>10</td>
+                <td>STONEFIST-0001|STONEFIST-0019|STONEFIST-0021|STONEFIST-0025|STONEFIST-0029|STONEFIST-0036|STONEFIST-0039|STONEFIST-0048|STONEFIST-0070|STONEFIST-0071</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% of Damage Taken Recouped as Life, Mana and Energy Shield</code></td>
+                <td>6% of Damage Taken Recouped as Life, Mana and Energy Shield</td>
+                <td>12</td>
+                <td>STONEFIST-0001|STONEFIST-0002|STONEFIST-0017|STONEFIST-0020|STONEFIST-0028|STONEFIST-0032|STONEFIST-0034|STONEFIST-0035|STONEFIST-0038|STONEFIST-0047|STONEFIST-0070|STONEFIST-0078</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Maximum Lightning Resistance | +#% to Lightning Resistance</code></td>
+                <td>+2% to Maximum Lightning Resistance | +31(31-35)% to Lightning Resistance</td>
+                <td>12</td>
+                <td>STONEFIST-0001|STONEFIST-0004|STONEFIST-0010|STONEFIST-0023|STONEFIST-0027|STONEFIST-0032|STONEFIST-0044|STONEFIST-0047|STONEFIST-0051|STONEFIST-0073|STONEFIST-0075|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% chance to gain Onslaught for # seconds on Hit</code></td>
+                <td>20(20-24)% chance to gain Onslaught for 4 seconds on Hit</td>
+                <td>7</td>
+                <td>STONEFIST-0001|STONEFIST-0002|STONEFIST-0016|STONEFIST-0036|STONEFIST-0050|STONEFIST-0076|STONEFIST-0078</td>
+            </tr>
+            
+            <tr>
+                <td><code>Leech #% of Physical Attack Damage as Life | Leech Life #% slower</code></td>
+                <td>Leech 13.34(12-13.9)% of Physical Attack Damage as Life | Leech Life 25(25-20)% slower</td>
+                <td>5</td>
+                <td>STONEFIST-0001|STONEFIST-0005|STONEFIST-0021|STONEFIST-0025|STONEFIST-0073</td>
+            </tr>
+            
+            <tr>
+                <td><code>Attacks Gain #% of Damage as Extra Fire Damage</code></td>
+                <td>Attacks Gain 19(19-20)% of Damage as Extra Fire Damage</td>
+                <td>4</td>
+                <td>STONEFIST-0002|STONEFIST-0005|STONEFIST-0019|STONEFIST-0074</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to all Elemental Resistances</code></td>
+                <td>+11(10-12)% to all Elemental Resistances</td>
+                <td>2</td>
+                <td>STONEFIST-0002|STONEFIST-0037</td>
+            </tr>
+            
+            <tr>
+                <td><code>Attacks Gain #% of Damage as Extra Lightning Damage</code></td>
+                <td>Attacks Gain 18(17-18)% of Damage as Extra Lightning Damage</td>
+                <td>8</td>
+                <td>STONEFIST-0003|STONEFIST-0024|STONEFIST-0039|STONEFIST-0045|STONEFIST-0046|STONEFIST-0066|STONEFIST-0074|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% more Global Evasion Rating and Energy Shield</code></td>
+                <td>17(17-18)% more Global Evasion Rating and Energy Shield</td>
+                <td>12</td>
+                <td>STONEFIST-0005|STONEFIST-0012|STONEFIST-0018|STONEFIST-0023|STONEFIST-0027|STONEFIST-0030|STONEFIST-0037|STONEFIST-0038|STONEFIST-0065|STONEFIST-0072|STONEFIST-0073|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>Attacks Gain #% of Damage as Extra Cold Damage</code></td>
+                <td>Attacks Gain 15(15-16)% of Damage as Extra Cold Damage</td>
+                <td>7</td>
+                <td>STONEFIST-0005|STONEFIST-0009|STONEFIST-0015|STONEFIST-0016|STONEFIST-0018|STONEFIST-0020|STONEFIST-0042</td>
+            </tr>
+            
+            <tr>
+                <td><code>Leech #% of Physical Attack Damage as Mana | Leech Mana #% slower</code></td>
+                <td>Leech 12.26(12-13)% of Physical Attack Damage as Mana | Leech Mana 22(25-20)% slower</td>
+                <td>8</td>
+                <td>STONEFIST-0005|STONEFIST-0009|STONEFIST-0012|STONEFIST-0021|STONEFIST-0027|STONEFIST-0042|STONEFIST-0051|STONEFIST-0066</td>
+            </tr>
+            
+            <tr>
+                <td><code>Gain # Life per Enemy Hit with Attacks if you have dealt a Critical Hit Recently</code></td>
+                <td>Gain 13(13-15) Life per Enemy Hit with Attacks if you have dealt a Critical Hit Recently</td>
+                <td>4</td>
+                <td>STONEFIST-0005|STONEFIST-0027|STONEFIST-0031|STONEFIST-0067</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Maximum Chaos Resistance | +#% to Chaos Resistance</code></td>
+                <td>+1% to Maximum Chaos Resistance | +7(6-9)% to Chaos Resistance</td>
+                <td>3</td>
+                <td>STONEFIST-0007|STONEFIST-0039|STONEFIST-0075</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% less damage taken while on Low Life</code></td>
+                <td>6% less damage taken while on Low Life</td>
+                <td>19</td>
+                <td>STONEFIST-0008|STONEFIST-0011|STONEFIST-0019|STONEFIST-0021|STONEFIST-0024|STONEFIST-0027|STONEFIST-0031|STONEFIST-0036|STONEFIST-0040|STONEFIST-0043|STONEFIST-0050|STONEFIST-0066|STONEFIST-0067|STONEFIST-0068|STONEFIST-0069|STONEFIST-0070|STONEFIST-0071|STONEFIST-0073|STONEFIST-0075</td>
+            </tr>
+            
+            <tr>
+                <td><code>Recover #% of maximum Life on Kill</code></td>
+                <td>Recover 2% of maximum Life on Kill</td>
+                <td>7</td>
+                <td>STONEFIST-0008|STONEFIST-0026|STONEFIST-0033|STONEFIST-0039|STONEFIST-0042|STONEFIST-0050|STONEFIST-0074</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% more Attack damage while on Low Mana</code></td>
+                <td>22(22-23)% more Attack damage while on Low Mana</td>
+                <td>16</td>
+                <td>STONEFIST-0009|STONEFIST-0012|STONEFIST-0018|STONEFIST-0024|STONEFIST-0027|STONEFIST-0036|STONEFIST-0037|STONEFIST-0038|STONEFIST-0042|STONEFIST-0046|STONEFIST-0047|STONEFIST-0048|STONEFIST-0051|STONEFIST-0068|STONEFIST-0069|STONEFIST-0075</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Maximum Fire Resistance | +#% to Fire Resistance</code></td>
+                <td>+1% to Maximum Fire Resistance | +24(21-25)% to Fire Resistance</td>
+                <td>11</td>
+                <td>STONEFIST-0009|STONEFIST-0011|STONEFIST-0019|STONEFIST-0020|STONEFIST-0024|STONEFIST-0035|STONEFIST-0036|STONEFIST-0038|STONEFIST-0048|STONEFIST-0066|STONEFIST-0069</td>
+            </tr>
+            
+            <tr>
+                <td><code>Attacks Gain #% of Damage as Extra Physical Damage</code></td>
+                <td>Attacks Gain 12% of Damage as Extra Physical Damage</td>
+                <td>17</td>
+                <td>STONEFIST-0010|STONEFIST-0013|STONEFIST-0021|STONEFIST-0029|STONEFIST-0031|STONEFIST-0032|STONEFIST-0039|STONEFIST-0041|STONEFIST-0043|STONEFIST-0044|STONEFIST-0048|STONEFIST-0049|STONEFIST-0066|STONEFIST-0067|STONEFIST-0074|STONEFIST-0075|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>Prevent +#% of Damage from Deflected Hits</code></td>
+                <td>Prevent +5% of Damage from Deflected Hits</td>
+                <td>1</td>
+                <td>STONEFIST-0012</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Quality of all Skills</code></td>
+                <td>+12(10-12)% to Quality of all Skills</td>
+                <td>7</td>
+                <td>STONEFIST-0015|STONEFIST-0020|STONEFIST-0028|STONEFIST-0034|STONEFIST-0048|STONEFIST-0070|STONEFIST-0072</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Maximum Cold Resistance | +#% to Cold Resistance</code></td>
+                <td>+2% to Maximum Cold Resistance | +32(31-35)% to Cold Resistance</td>
+                <td>12</td>
+                <td>STONEFIST-0017|STONEFIST-0018|STONEFIST-0021|STONEFIST-0028|STONEFIST-0031|STONEFIST-0036|STONEFIST-0037|STONEFIST-0040|STONEFIST-0048|STONEFIST-0071|STONEFIST-0072|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% to Critical Hit Chance</code></td>
+                <td>+1.8(1.6-2)% to Critical Hit Chance</td>
+                <td>4</td>
+                <td>STONEFIST-0017|STONEFIST-0041|STONEFIST-0069|STONEFIST-0073</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Cooldown Recovery Rate</code></td>
+                <td>28(25-28)% increased Cooldown Recovery Rate</td>
+                <td>4</td>
+                <td>STONEFIST-0018|STONEFIST-0029|STONEFIST-0046|STONEFIST-0072</td>
+            </tr>
+            
+            <tr>
+                <td><code>Recover #% of maximum Mana on Kill</code></td>
+                <td>Recover 2% of maximum Mana on Kill</td>
+                <td>4</td>
+                <td>STONEFIST-0022|STONEFIST-0042|STONEFIST-0046|STONEFIST-0071</td>
+            </tr>
+            
+            <tr>
+                <td><code>+#% Surpassing chance to fire an additional Projectile</code></td>
+                <td>+26(23-26)% Surpassing chance to fire an additional Projectile</td>
+                <td>11</td>
+                <td>STONEFIST-0024|STONEFIST-0030|STONEFIST-0031|STONEFIST-0035|STONEFIST-0041|STONEFIST-0044|STONEFIST-0050|STONEFIST-0066|STONEFIST-0068|STONEFIST-0071|STONEFIST-0077</td>
+            </tr>
+            
+            <tr>
+                <td><code>+# to all Attributes</code></td>
+                <td>+24(21-25) to all Attributes</td>
+                <td>3</td>
+                <td>STONEFIST-0029|STONEFIST-0043|STONEFIST-0078</td>
+            </tr>
+            
+            <tr>
+                <td><code>#% increased Area of Effect for Attacks</code></td>
+                <td>25(23-25)% increased Area of Effect for Attacks</td>
+                <td>2</td>
+                <td>STONEFIST-0034|STONEFIST-0068</td>
+            </tr>
+            </tbody>
+    </table>
+    
     </section>
 
     <p>

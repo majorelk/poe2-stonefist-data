@@ -1,0 +1,15 @@
+[project]
+name = "poe2-stonefist-data"
+version = "0.1.0"
+description = "Capture and report Path of Exile 2 Way of the Stonefist transformation data."
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

@@ -19,6 +19,7 @@ GLOVE_MOD_POOL_JSON_PATH = Path("stonefist-reference") / "glove_mod_pool.json"
 GLOVE_MOD_POOL_CSV_PATH = Path("stonefist-reference") / "glove_mod_pool.csv"
 GLOVE_COVERAGE_PATH = ROOT / "glove_mod_coverage.csv"
 TRANSFORMED_OUTPUT_ONLY_PATH = ROOT / "transformed_output_only.csv"
+CAPTURE_TARGETS_PATH = ROOT / "capture_targets.csv"
 
 
 def read_text(path: Path) -> str:
@@ -183,6 +184,89 @@ def load_glove_mod_pool() -> list[dict[str, str]]:
     return []
 
 
+def build_capture_targets(coverage_rows: list[dict[str, object]]) -> list[dict[str, object]]:
+    targets: list[dict[str, object]] = []
+
+    for row in coverage_rows:
+        status = row["coverage_status"]
+        pool_types = [p.strip() for p in str(row["pool_types"]).split(",") if p.strip()]
+        isolated_sample_count = int(row["isolated_sample_count"] or 0)
+
+        if status == "missing_input_sample" and "explicit" in pool_types:
+            priority = 1
+            reason = "Missing explicit input sample"
+            suggested_action = "Find and capture this modifier as an input glove mod, ideally isolated on a magic item."
+        elif status == "likely_mapping" and isolated_sample_count == 0:
+            priority = 2
+            reason = "Likely mapping needs isolated confirmation"
+            suggested_action = "Capture an isolated sample to confirm this likely mapping."
+        elif status == "corruption_only_missing":
+            priority = 3
+            reason = "Missing corruption-only sample"
+            suggested_action = "Capture if available, lower priority because it requires corrupted/enchantment data."
+        elif status == "confirmed_mapping":
+            priority = 4
+            reason = "Confirmed mapping"
+            suggested_action = "No immediate action."
+        else:
+            continue
+
+        targets.append(
+            {
+                "priority": priority,
+                "reason": reason,
+                "stat_template": row["stat_template"],
+                "modifier_names": row["modifier_names"],
+                "glove_classes": row["glove_classes"],
+                "pool_types": row["pool_types"],
+                "current_status": status,
+                "isolated_sample_count": row["isolated_sample_count"],
+                "likely_sample_count": row["likely_sample_count"],
+                "sample_ids": row["sample_ids"],
+                "suggested_action": suggested_action,
+            }
+        )
+
+    targets.sort(key=lambda t: (t["priority"], t["current_status"], t["stat_template"]))
+    return targets
+
+
+def write_capture_targets_csv(rows: list[dict[str, object]]) -> None:
+    with CAPTURE_TARGETS_PATH.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(
+            [
+                "priority",
+                "reason",
+                "stat_template",
+                "modifier_names",
+                "glove_classes",
+                "pool_types",
+                "current_status",
+                "isolated_sample_count",
+                "likely_sample_count",
+                "sample_ids",
+                "suggested_action",
+            ]
+        )
+        for row in rows:
+            writer.writerow(
+                [
+                    row["priority"],
+                    row["reason"],
+                    row["stat_template"],
+                    row["modifier_names"],
+                    row["glove_classes"],
+                    row["pool_types"],
+                    row["current_status"],
+                    row["isolated_sample_count"],
+                    row["likely_sample_count"],
+                    row["sample_ids"],
+                    row["suggested_action"],
+                ]
+            )
+
+
 def write_glove_coverage_files(
     pairs: list[dict],
     observations: list[dict[str, object]],
@@ -337,6 +421,8 @@ def write_glove_coverage_files(
                     "sample_ids",
                 ]
             )
+
+        write_capture_targets_csv([])
         return
 
     output_only_rows: list[dict[str, object]] = []
@@ -408,6 +494,8 @@ def write_glove_coverage_files(
                     row["sample_ids"],
                 ]
             )
+
+    write_capture_targets_csv(build_capture_targets(coverage_rows))
 
 
 def uid_status(before_uid: str, after_uid: str) -> str:

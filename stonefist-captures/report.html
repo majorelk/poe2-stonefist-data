@@ -74,6 +74,14 @@
         background: #171717;
     }
 
+    tr.priority-1 {
+        background: #3a1414;
+    }
+
+    tr.priority-2 {
+        background: #3a2c14;
+    }
+
     code {
         color: #ce9178;
         white-space: pre-wrap;
@@ -167,8 +175,778 @@
     </div>
 </div>
 
+<section>
+    <h2>Capture targets</h2>
+    <p>Capture targets are generated from the glove modifier reference pool and current Stonefist mapping coverage. They are intended to guide what to pick up or isolate next.</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Priority</th>
+                <th>Reason</th>
+                <th>Stat template</th>
+                <th>Modifier names</th>
+                <th>Glove classes</th>
+                <th>Pool types</th>
+                <th>Suggested action</th>
+                <th>Samples</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% chance for Attack Hits to apply Incision</code></td>
+                <td>of Ulaman</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% chance to Daze on Hit</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% chance to Gain Arcane Surge when you deal a Critical Hit</code></td>
+                <td>of Kurgal</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased Area of Effect of Curses</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, str_dex</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased Cast Speed when on Full Life</code></td>
+                <td>of Kurgal</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased Energy Shield Recharge Rate</code></td>
+                <td>of Buffering</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased Immobilisation buildup</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, str_dex</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased Magnitude of Ailments you inflict</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased Mana Cost Efficiency</code></td>
+                <td>of Kurgal</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased Skill Speed if you&#x27;ve consumed a Frenzy Charge Recently</code></td>
+                <td>of Ulaman</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased chance to Poison</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>#% increased chance to inflict Bleeding</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>+# to Armour | +# to Evasion Rating</code></td>
+                <td>Durable, Flexible, Pliant, Supple</td>
+                <td>str_dex</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>+# to Dexterity and Intelligence</code></td>
+                <td>of Kurgal</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>+# to Strength and Dexterity</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>+# to Strength and Intelligence</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>+#% to Cold and Chaos Resistances</code></td>
+                <td>of Kurgal</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>+#% to Fire and Chaos Resistances</code></td>
+                <td>of Amanamu</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-1">
+                <td>1</td>
+                <td>Missing explicit input sample</td>
+                <td><code>+#% to Lightning and Chaos Resistances</code></td>
+                <td>of Ulaman</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Find and capture this modifier as an input glove mod, ideally isolated on a magic item.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Armour</code></td>
+                <td>Buttressed, CorruptionLocalIncreasedPhysicalDamageReductionRatingPercent1, Girded, Impregnable, Layered, Lobstered, Reinforced, Thickened</td>
+                <td>str</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>1</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Armour and Energy Shield</code></td>
+                <td>CorruptionLocalIncreasedArmourAndEnergyShield1, Inculcated, Infixed, Infused, Ingrained, Inspired, Instilled, Interpolated</td>
+                <td>str_int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>2</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Armour and Energy Shield | +# to maximum Life</code></td>
+                <td>Augur&#x27;s, Auspex&#x27;s, Druid&#x27;s, Haruspex&#x27;s, Prophet&#x27;s, Visionary&#x27;s</td>
+                <td>str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>4</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Armour and Evasion</code></td>
+                <td>Brawler&#x27;s, CorruptionLocalIncreasedArmourAndEvasion1, Duelist&#x27;s, Fencer&#x27;s, Gladiator&#x27;s, Hero&#x27;s, Legend&#x27;s, Scrapper&#x27;s</td>
+                <td>str_dex</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>1</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Armour and Evasion | +# to maximum Life</code></td>
+                <td>Aggressor&#x27;s, Assailant&#x27;s, Brute&#x27;s, Bully&#x27;s, Predator&#x27;s, Thug&#x27;s</td>
+                <td>str_dex</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>1</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Armour | +# to maximum Life</code></td>
+                <td>Crocodile&#x27;s, Lobster&#x27;s, Nautilus&#x27;, Octopus&#x27;, Oyster&#x27;s, Urchin&#x27;s</td>
+                <td>str</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>1</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Critical Damage Bonus</code></td>
+                <td>of Anger, of Ferocity, of Fury, of Ire, of Rage</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>4</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Energy Shield | +# to maximum Life</code></td>
+                <td>Abbot&#x27;s, Bishop&#x27;s, Exarch&#x27;s, Monk&#x27;s, Pope&#x27;s, Prior&#x27;s</td>
+                <td>int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>2</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Evasion Rating</code></td>
+                <td>CorruptionLocalIncreasedEvasionRatingPercent1, Ghost&#x27;s, Mirage&#x27;s, Nightmare&#x27;s, Phantasm&#x27;s, Shade&#x27;s, Spectre&#x27;s, Wraith&#x27;s</td>
+                <td>dex</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>2</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Evasion Rating | +# to maximum Life</code></td>
+                <td>Fawn&#x27;s, Flea&#x27;s, Ibex&#x27;s, Mouflon&#x27;s, Ram&#x27;s, Stag&#x27;s</td>
+                <td>dex</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>2</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Evasion and Energy Shield</code></td>
+                <td>CorruptionLocalIncreasedEvasionAndEnergyShield1, Ephemeral, Ethereal, Evanescent, Illusory, Shadowy, Unreal, Unworldly</td>
+                <td>dex_int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>4</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Evasion and Energy Shield | +# to maximum Life</code></td>
+                <td>Bard&#x27;s, Maestro&#x27;s, Minstrel&#x27;s, Musician&#x27;s, Poet&#x27;s, Troubadour&#x27;s</td>
+                <td>dex_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>2</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% increased Rarity of Items found</code></td>
+                <td>of Archaeology, of Plunder, of Raiding</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>10</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>#% reduced Attribute Requirements</code></td>
+                <td>CorruptionReducedLocalAttributeRequirements1, of the Apt, of the Proficient, of the Skilled, of the Talented, of the Worthy</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>3</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Accuracy Rating</code></td>
+                <td>Amazon&#x27;s, Consistent, Deliberate, Focused, Hunter&#x27;s, Precise, Ranger&#x27;s, Reliable, Steady</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>7</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Armour</code></td>
+                <td>Carapaced, Encased, Fortified, Lacquered, Plated, Ribbed, Studded</td>
+                <td>str</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>1</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Armour | +# to maximum Energy Shield</code></td>
+                <td>Anointed, Blessed, Hallowed, Sanctified</td>
+                <td>str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>1</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Dexterity</code></td>
+                <td>of the Falcon, of the Fox, of the Jaguar, of the Leopard, of the Lynx, of the Mongoose, of the Panther, of the Phantom, of the Wind</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>11</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Evasion Rating</code></td>
+                <td>Acrobat&#x27;s, Agile, Blurred, Dancer&#x27;s, Fleet, Phased, Vaporous</td>
+                <td>dex</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>4</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Evasion Rating | +# to maximum Energy Shield</code></td>
+                <td>Cherub&#x27;s, Nymph&#x27;s, Sylph&#x27;s, Will-o-wisp&#x27;s</td>
+                <td>dex_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>3</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Intelligence</code></td>
+                <td>of the Augur, of the Philosopher, of the Prodigy, of the Pupil, of the Sage, of the Savant, of the Student, of the Virtuoso</td>
+                <td>dex_int, int, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>4</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Level of all Melee Skills</code></td>
+                <td>CorruptionGlobalMeleeSkillGemsLevel1, of Combat, of Dueling</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>7</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to Strength</code></td>
+                <td>of the Bear, of the Brute, of the Goliath, of the Gorilla, of the Leviathan, of the Lion, of the Titan, of the Wrestler</td>
+                <td>str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>2</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to maximum Energy Shield</code></td>
+                <td>Blazing, Glimmering, Glittering, Glowing, Pulsing, Radiating, Shining</td>
+                <td>int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>1</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to maximum Life</code></td>
+                <td>Athlete&#x27;s, Hale, Healthy, Robust, Rotund, Sanguine, Stalwart, Stout, Virile</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>19</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+# to maximum Mana</code></td>
+                <td>Aqua, Azure, Beryl, Cerulean, Chalybeous, Cobalt, Gentian, Opalescent, Teal</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>16</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+#% of Armour also applies to Elemental Damage</code></td>
+                <td>of Covering, of Furring, of Lining, of Padding, of Sheathing</td>
+                <td>str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>2</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+#% to Cold Resistance</code></td>
+                <td>of Haast, of the Ice, of the Narwhal, of the Penguin, of the Polar Bear, of the Seal, of the Walrus, of the Yeti</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>12</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>+#% to Fire Resistance</code></td>
+                <td>of Magma, of Tzteosh, of the Drake, of the Furnace, of the Kiln, of the Salamander, of the Volcano, of the Whelpling</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>11</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>Adds # to # Cold damage to Attacks</code></td>
+                <td>Chilled, Entombing, Freezing, Frigid, Frosted, Frozen, Glaciated, Icy, Polar</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>7</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>Adds # to # Fire damage to Attacks</code></td>
+                <td>Blasting, Burning, Cremating, Flaming, Heated, Incinerating, Scorching, Smoking, Smouldering</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>4</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>Gain # Life per Enemy Hit with Attacks</code></td>
+                <td>of Nourishment, of Regrowth, of Rejuvenation, of Restoration</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>4</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>Gain Deflection Rating equal to #% of Evasion Rating</code></td>
+                <td>of Bending, of Curvation, of Deflecting, of Diversion, of Flexure</td>
+                <td>dex, dex_int, str_dex</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>1</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>Leech #% of Physical Attack Damage as Life</code></td>
+                <td>of the Lamprey, of the Locust, of the Remora, of the Vampire</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>5</td>
+            </tr>
+            
+            <tr class="priority-2">
+                <td>2</td>
+                <td>Likely mapping needs isolated confirmation</td>
+                <td><code>Leech #% of Physical Attack Damage as Mana</code></td>
+                <td>of the Arid, of the Desperate, of the Drought, of the Parched</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>Capture an isolated sample to confirm this likely mapping.</td>
+                <td>8</td>
+            </tr>
+            
+            <tr class="">
+                <td>3</td>
+                <td>Missing corruption-only sample</td>
+                <td><code>#% increased Quantity of Gold Dropped by Slain Enemies</code></td>
+                <td>CorruptionGoldFoundIncrease1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>Capture if available, lower priority because it requires corrupted/enchantment data.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="">
+                <td>3</td>
+                <td>Missing corruption-only sample</td>
+                <td><code>+# to Maximum Frenzy Charges</code></td>
+                <td>CorruptionMaximumFrenzyCharges1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>Capture if available, lower priority because it requires corrupted/enchantment data.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="">
+                <td>3</td>
+                <td>Missing corruption-only sample</td>
+                <td><code>Break #% increased Armour</code></td>
+                <td>CorruptionArmourBreak1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>Capture if available, lower priority because it requires corrupted/enchantment data.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="">
+                <td>3</td>
+                <td>Missing corruption-only sample</td>
+                <td><code>Damage Penetrates #% Cold Resistance</code></td>
+                <td>CorruptionColdPenetration1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>Capture if available, lower priority because it requires corrupted/enchantment data.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="">
+                <td>3</td>
+                <td>Missing corruption-only sample</td>
+                <td><code>Damage Penetrates #% Fire Resistance</code></td>
+                <td>CorruptionFirePenetration1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>Capture if available, lower priority because it requires corrupted/enchantment data.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="">
+                <td>3</td>
+                <td>Missing corruption-only sample</td>
+                <td><code>Damage Penetrates #% Lightning Resistance</code></td>
+                <td>CorruptionLightningPenetration1</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>corrupted_enchantment</td>
+                <td>Capture if available, lower priority because it requires corrupted/enchantment data.</td>
+                <td>0</td>
+            </tr>
+            
+            <tr class="">
+                <td>4</td>
+                <td>Confirmed mapping</td>
+                <td><code>#% increased Attack Speed</code></td>
+                <td>of Ease, of Mastery, of Renown, of Skill</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>No immediate action.</td>
+                <td>7</td>
+            </tr>
+            
+            <tr class="">
+                <td>4</td>
+                <td>Confirmed mapping</td>
+                <td><code>#% increased Energy Shield</code></td>
+                <td>CorruptionLocalIncreasedEnergyShieldPercent1, Dauntless, Fearless, Indomitable, Protective, Resolute, Strong-Willed, Unassailable</td>
+                <td>int</td>
+                <td>corrupted_enchantment, explicit</td>
+                <td>No immediate action.</td>
+                <td>2</td>
+            </tr>
+            
+            <tr class="">
+                <td>4</td>
+                <td>Confirmed mapping</td>
+                <td><code>+#% to Chaos Resistance</code></td>
+                <td>of Bameth, of Banishment, of Eviction, of Exile, of Expulsion, of the Lost</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>No immediate action.</td>
+                <td>3</td>
+            </tr>
+            
+            <tr class="">
+                <td>4</td>
+                <td>Confirmed mapping</td>
+                <td><code>+#% to Lightning Resistance</code></td>
+                <td>of Ephij, of the Cloud, of the Lightning, of the Maelstrom, of the Squall, of the Storm, of the Tempest, of the Thunderhead</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>No immediate action.</td>
+                <td>12</td>
+            </tr>
+            
+            <tr class="">
+                <td>4</td>
+                <td>Confirmed mapping</td>
+                <td><code>Adds # to # Lightning damage to Attacks</code></td>
+                <td>Arcing, Buzzing, Crackling, Discharging, Electrocuting, Humming, Shocking, Snapping, Sparking</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>No immediate action.</td>
+                <td>8</td>
+            </tr>
+            
+            <tr class="">
+                <td>4</td>
+                <td>Confirmed mapping</td>
+                <td><code>Adds # to # Physical Damage to Attacks</code></td>
+                <td>Annealed, Burnished, Flaring, Gleaming, Glinting, Honed, Polished, Razor-sharp, Tempered</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>No immediate action.</td>
+                <td>17</td>
+            </tr>
+            
+            <tr class="">
+                <td>4</td>
+                <td>Confirmed mapping</td>
+                <td><code>Gain # Life per enemy killed</code></td>
+                <td>of Conquest, of Glory, of Legend, of Success, of Triumph, of Valour, of Vanquishing, of Victory</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>No immediate action.</td>
+                <td>7</td>
+            </tr>
+            
+            <tr class="">
+                <td>4</td>
+                <td>Confirmed mapping</td>
+                <td><code>Gain # Mana per enemy killed</code></td>
+                <td>of Absorption, of Assimilation, of Consumption, of Devouring, of Enveloping, of Infusion, of Osmosis, of Siphoning</td>
+                <td>dex, dex_int, int, str, str_dex, str_int</td>
+                <td>explicit</td>
+                <td>No immediate action.</td>
+                <td>4</td>
+            </tr>
+            </tbody>
+    </table>
+    
+</section>
+
 <p>
-Mapping candidates are derived from explicit modifier block position and should be treated as provisional until confirmed by isolated samples.
+Mapping candidates are derived from explicit modifier block matching. Multi-mod items are matched by modifier name where possible and should still be treated as provisional until confirmed by isolated samples.
 </p>
 
 <section>
@@ -3491,7 +4269,7 @@ Mapping candidates are derived from explicit modifier block position and should 
 
 <section>
     <h2>Transformed output-only stat templates</h2>
-        <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool.</p>
+        <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool. They are not directly targetable as a glove input capture unless they also show up in the reference pool.</p>
         
     <table>
         <thead>
@@ -3704,7 +4482,7 @@ Mapping candidates are derived from explicit modifier block position and should 
     </section>
 
     <p>
-    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, and <code>transformed_output_only.csv</code>.
+    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, and <code>capture_targets.csv</code>.
 <div>
     <input id="search" placeholder="Filter by mod, base, test id, resistance, onslaught, leech, unique, etc..." />
 

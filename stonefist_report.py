@@ -14,6 +14,7 @@ MAPPING_CANDIDATES_PATH = ROOT / "mapping_candidates.csv"
 MAPPING_FAMILIES_PATH = ROOT / "mapping_families.csv"
 GLOVE_COVERAGE_PATH = ROOT / "glove_mod_coverage.csv"
 TRANSFORMED_OUTPUT_ONLY_PATH = ROOT / "transformed_output_only.csv"
+CAPTURE_TARGETS_PATH = ROOT / "capture_targets.csv"
 REPORT_PATH = ROOT / "report.html"
 
 
@@ -207,6 +208,15 @@ def load_transformed_output_only() -> list[dict[str, str]]:
         return []
 
     with TRANSFORMED_OUTPUT_ONLY_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
+def load_capture_targets() -> list[dict[str, str]]:
+    if not CAPTURE_TARGETS_PATH.exists():
+        return []
+
+    with CAPTURE_TARGETS_PATH.open("r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         return [row for row in reader]
 
@@ -458,6 +468,49 @@ def render_transformed_output_only(output_only: list[dict[str, str]]) -> str:
     """
 
 
+def render_capture_targets(targets: list[dict[str, str]]) -> str:
+    if not targets:
+        return "<p><em>No capture targets available yet.</em></p>"
+
+    rows = []
+    for t in targets:
+        priority = t.get("priority", "")
+        row_class = f"priority-{priority}" if priority in ("1", "2") else ""
+        sample_ids = [s for s in t.get("sample_ids", "").split("|") if s]
+        rows.append(
+            f"""
+            <tr class="{esc(row_class)}">
+                <td>{esc(priority)}</td>
+                <td>{esc(t.get('reason', ''))}</td>
+                <td><code>{esc(t.get('stat_template', ''))}</code></td>
+                <td>{esc(t.get('modifier_names', ''))}</td>
+                <td>{esc(t.get('glove_classes', ''))}</td>
+                <td>{esc(t.get('pool_types', ''))}</td>
+                <td>{esc(t.get('suggested_action', ''))}</td>
+                <td>{len(sample_ids)}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>Priority</th>
+                <th>Reason</th>
+                <th>Stat template</th>
+                <th>Modifier names</th>
+                <th>Glove classes</th>
+                <th>Pool types</th>
+                <th>Suggested action</th>
+                <th>Samples</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
 def render_html(pairs: list[dict]) -> str:
     total = len(pairs)
     status_counts = Counter(p["uid_status"] for p in pairs)
@@ -645,6 +698,14 @@ def render_html(pairs: list[dict]) -> str:
         background: #171717;
     }}
 
+    tr.priority-1 {{
+        background: #3a1414;
+    }}
+
+    tr.priority-2 {{
+        background: #3a2c14;
+    }}
+
     code {{
         color: #ce9178;
         white-space: pre-wrap;
@@ -738,8 +799,14 @@ def render_html(pairs: list[dict]) -> str:
     </div>
 </div>
 
+<section>
+    <h2>Capture targets</h2>
+    <p>Capture targets are generated from the glove modifier reference pool and current Stonefist mapping coverage. They are intended to guide what to pick up or isolate next.</p>
+    {render_capture_targets(load_capture_targets())}
+</section>
+
 <p>
-Mapping candidates are derived from explicit modifier block position and should be treated as provisional until confirmed by isolated samples.
+Mapping candidates are derived from explicit modifier block matching. Multi-mod items are matched by modifier name where possible and should still be treated as provisional until confirmed by isolated samples.
 </p>
 
 <section>
@@ -762,12 +829,12 @@ Mapping candidates are derived from explicit modifier block position and should 
 
 <section>
     <h2>Transformed output-only stat templates</h2>
-        <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool.</p>
+        <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool. They are not directly targetable as a glove input capture unless they also show up in the reference pool.</p>
         {render_transformed_output_only(transformed_only)}
     </section>
 
     <p>
-    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, and <code>transformed_output_only.csv</code>.
+    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, and <code>capture_targets.csv</code>.
 <div>
     <input id="search" placeholder="Filter by mod, base, test id, resistance, onslaught, leech, unique, etc..." />
 

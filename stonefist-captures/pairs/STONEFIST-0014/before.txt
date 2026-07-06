@@ -1,10 +1,10 @@
-Item Class: Gloves
-Rarity: Normal
-Bound Cuffs
---------
-Armour: 89
-Energy Shield: 25
---------
-Requires: Level 65, 44 Str, 44 Int
---------
-Item Level: 73
+Item Class: Gloves
+Rarity: Normal
+Bound Cuffs
+--------
+Armour: 89
+Energy Shield: 25
+--------
+Requires: Level 65, 44 Str, 44 Int
+--------
+Item Level: 73

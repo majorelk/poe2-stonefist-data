@@ -1,28 +1,28 @@
-Item Class: Gloves
-Rarity: Unique
-Valako's Vice
-Plate Gauntlets
---------
-Quality: +8% (augmented)
-Armour: 113 (augmented)
-Evasion Rating: 102 (augmented)
---------
-Requires: Level 45, 32 Str, 32 Dex
---------
-Item Level: 50
---------
+Item Class: Gloves
+Rarity: Unique
+Valako's Vice
+Plate Gauntlets
+--------
+Quality: +8% (augmented)
+Armour: 113 (augmented)
+Evasion Rating: 102 (augmented)
+--------
+Requires: Level 45, 32 Str, 32 Dex
+--------
+Item Level: 50
+--------
 { Unique Modifier — Armour, Evasion }
-63(50-100)% increased Armour and Evasion
+63(50-100)% increased Armour and Evasion
 { Unique Modifier — Attribute }
-+27(20-30) to Strength
++27(20-30) to Strength
 { Unique Modifier — Attribute }
-+24(20-30) to Dexterity
++24(20-30) to Dexterity
 { Unique Modifier — Elemental, Lightning, Resistance }
-+36(30-50)% to Lightning Resistance
++36(30-50)% to Lightning Resistance
 { Unique Modifier }
-100% of Fire damage Converted to Lightning damage
+100% of Fire damage Converted to Lightning damage
 { Unique Modifier — Attack, Speed }
-7(5-10)% increased Attack Speed
---------
-Unlike the other gods, when he was born from the volcano,
-Valako rode the clouds of ash into the thundering sky.
+7(5-10)% increased Attack Speed
+--------
+Unlike the other gods, when he was born from the volcano,
+Valako rode the clouds of ash into the thundering sky.

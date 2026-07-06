@@ -1,15 +1,15 @@
-Item Class: Gloves
-Rarity: Magic
-Ingrained Kalguuran Cuffs of the Lynx
---------
-Armour: 84 (augmented)
-Energy Shield: 25 (augmented)
---------
-Requires: Level 45, 32 Str, 32 Int
---------
-Item Level: 52
---------
+Item Class: Gloves
+Rarity: Magic
+Ingrained Kalguuran Cuffs of the Lynx
+--------
+Armour: 84 (augmented)
+Energy Shield: 25 (augmented)
+--------
+Requires: Level 45, 32 Str, 32 Int
+--------
+Item Level: 52
+--------
 { Prefix Modifier "Ingrained" (Tier: 6) — Armour, Energy Shield }
-32(27-42)% increased Armour and Energy Shield
+32(27-42)% increased Armour and Energy Shield
 { Suffix Modifier "of the Lynx" (Tier: 8) — Attribute }
-+10(9-12) to Dexterity
++10(9-12) to Dexterity

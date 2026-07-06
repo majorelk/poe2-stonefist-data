@@ -1,33 +1,33 @@
-Item Class: Gloves
-Rarity: Unique
-Valako's Vice
-Plate Gauntlets
---------
-Armour: 109 (augmented)
-Evasion Rating: 99 (augmented)
---------
-Requires: Level 45, 32 Str, 32 Dex
---------
-Sockets: S 
---------
-Item Level: 78
---------
-+18% to Lightning Resistance (rune)
---------
+Item Class: Gloves
+Rarity: Unique
+Valako's Vice
+Plate Gauntlets
+--------
+Armour: 109 (augmented)
+Evasion Rating: 99 (augmented)
+--------
+Requires: Level 45, 32 Str, 32 Dex
+--------
+Sockets: S 
+--------
+Item Level: 78
+--------
++18% to Lightning Resistance (rune)
+--------
 { Unique Modifier — Armour, Evasion }
-71(50-100)% increased Armour and Evasion
+71(50-100)% increased Armour and Evasion
 { Unique Modifier — Attribute }
-+16(20-30) to Strength
++16(20-30) to Strength
 { Unique Modifier — Attribute }
-+20(20-30) to Dexterity
++20(20-30) to Dexterity
 { Unique Modifier — Elemental, Lightning, Resistance }
-+54(30-50)% to Lightning Resistance
++54(30-50)% to Lightning Resistance
 { Unique Modifier }
-109(100)% of Fire damage Converted to Lightning damage
+109(100)% of Fire damage Converted to Lightning damage
 { Unique Modifier — Attack, Speed }
-6(5-10)% increased Attack Speed
---------
-Unlike the other gods, when he was born from the volcano,
-Valako rode the clouds of ash into the thundering sky.
---------
-Corrupted
+6(5-10)% increased Attack Speed
+--------
+Unlike the other gods, when he was born from the volcano,
+Valako rode the clouds of ash into the thundering sky.
+--------
+Corrupted

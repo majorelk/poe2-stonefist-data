@@ -1,27 +1,27 @@
-Item Class: Gloves
-Rarity: Rare
-Torment Knuckle
-Fists of Stone
---------
-Evasion Rating: 553 (augmented)
-Energy Shield: 158 (augmented)
---------
-Sockets: S 
---------
-Item Level: 71
---------
+Item Class: Gloves
+Rarity: Rare
+Torment Knuckle
+Fists of Stone
+--------
+Evasion Rating: 553 (augmented)
+Energy Shield: 158 (augmented)
+--------
+Sockets: S 
+--------
+Item Level: 71
+--------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
---------
+Has +1 to maximum Energy Shield per player level
+--------
 { Prefix Modifier "Auspex's" }
-4% of Damage Taken Recouped as Life, Mana and Energy Shield
+4% of Damage Taken Recouped as Life, Mana and Energy Shield
 { Prefix Modifier "Hallowed" }
 Has +4 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
+Has +1 to maximum Energy Shield per player level
 { Prefix Modifier "Robust" }
-10% less damage taken while on Low Life
+10% less damage taken while on Low Life
 { Suffix Modifier "of Combat" — Gem }
-+12(10-12)% to Quality of all Skills
---------
-Unmodifiable
++12(10-12)% to Quality of all Skills
+--------
+Unmodifiable

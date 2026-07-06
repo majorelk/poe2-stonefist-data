@@ -1,15 +1,15 @@
-Item Class: Gloves
-Rarity: Magic
-Humming Gauze Wraps of Plunder
---------
-Evasion Rating: 9
-Energy Shield: 6
---------
-Requires: Level 2
---------
-Item Level: 5
---------
+Item Class: Gloves
+Rarity: Magic
+Humming Gauze Wraps of Plunder
+--------
+Evasion Rating: 9
+Energy Shield: 6
+--------
+Requires: Level 2
+--------
+Item Level: 5
+--------
 { Prefix Modifier "Humming" (Tier: 9) — Damage, Elemental, Lightning, Attack }
-Adds 1 to 6(4-6) Lightning damage to Attacks
+Adds 1 to 6(4-6) Lightning damage to Attacks
 { Suffix Modifier "of Plunder" (Tier: 3) }
-10(6-10)% increased Rarity of Items found
+10(6-10)% increased Rarity of Items found

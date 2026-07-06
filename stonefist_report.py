@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import html
 import json
 import re
@@ -9,6 +10,11 @@ from pathlib import Path
 
 ROOT = Path("stonefist-captures")
 DATASET_PATH = ROOT / "dataset.json"
+MAPPING_CANDIDATES_PATH = ROOT / "mapping_candidates.csv"
+MAPPING_FAMILIES_PATH = ROOT / "mapping_families.csv"
+GLOVE_COVERAGE_PATH = ROOT / "glove_mod_coverage.csv"
+TRANSFORMED_OUTPUT_ONLY_PATH = ROOT / "transformed_output_only.csv"
+CAPTURE_TARGETS_PATH = ROOT / "capture_targets.csv"
 REPORT_PATH = ROOT / "report.html"
 
 
@@ -170,6 +176,51 @@ def load_dataset() -> list[dict]:
     return data["pairs"]
 
 
+def load_mapping_candidates() -> list[dict[str, str]]:
+    if not MAPPING_CANDIDATES_PATH.exists():
+        return []
+
+    with MAPPING_CANDIDATES_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
+def load_mapping_families() -> list[dict[str, str]]:
+    if not MAPPING_FAMILIES_PATH.exists():
+        return []
+
+    with MAPPING_FAMILIES_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
+def load_glove_coverage() -> list[dict[str, str]]:
+    if not GLOVE_COVERAGE_PATH.exists():
+        return []
+
+    with GLOVE_COVERAGE_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
+def load_transformed_output_only() -> list[dict[str, str]]:
+    if not TRANSFORMED_OUTPUT_ONLY_PATH.exists():
+        return []
+
+    with TRANSFORMED_OUTPUT_ONLY_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
+def load_capture_targets() -> list[dict[str, str]]:
+    if not CAPTURE_TARGETS_PATH.exists():
+        return []
+
+    with CAPTURE_TARGETS_PATH.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        return [row for row in reader]
+
+
 def esc(value: object) -> str:
     return html.escape(str(value))
 
@@ -218,6 +269,248 @@ def render_stats_table(before_stats: dict, after_stats: dict) -> str:
     """
 
 
+def render_mapping_candidates(candidates: list[dict[str, str]]) -> str:
+    if not candidates:
+        return "<p><em>No provisional modifier mapping candidates available.</em></p>"
+
+    order = {
+        "confirmed_candidate": 0,
+        "likely_candidate": 1,
+        "ambiguous": 2,
+        "duplicate_only": 3,
+    }
+
+    def sort_key(candidate: dict[str, str]) -> tuple[int, int]:
+        return (
+            order.get(candidate.get("confidence_summary", "ambiguous"), 4),
+            -int(candidate.get("sample_count", "0") or "0"),
+        )
+
+    sorted_candidates = sorted(candidates, key=sort_key)
+    rows = []
+    for c in sorted_candidates:
+        rows.append(
+            f"""
+            <tr>
+                <td><code>{esc(c.get('before_modifier_name', ''))}</code></td>
+                <td><code>{esc(c.get('before_stats', ''))}</code></td>
+                <td><code>{esc(c.get('after_modifier_name', ''))}</code></td>
+                <td><code>{esc(c.get('after_stats', ''))}</code></td>
+                <td>{esc(c.get('confidence_summary', ''))}</td>
+                <td>{esc(c.get('sample_count', '0'))}</td>
+                <td>{esc(c.get('character_levels', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>Before modifier</th>
+                <th>Before stats</th>
+                <th>After modifier</th>
+                <th>After stats</th>
+                <th>Confidence</th>
+                <th>Samples</th>
+                <th>Character levels</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
+def render_mapping_families(candidates: list[dict[str, str]]) -> str:
+    if not candidates:
+        return "<p><em>No provisional stat families available.</em></p>"
+
+    order = {
+        "confirmed_family": 0,
+        "likely_family": 1,
+        "ambiguous": 2,
+        "duplicate_only": 3,
+    }
+
+    def sort_key(candidate: dict[str, str]) -> tuple[int, int]:
+        return (
+            order.get(candidate.get("confidence_summary", "ambiguous"), 4),
+            -int(candidate.get("sample_count", "0") or "0"),
+        )
+
+    sorted_candidates = sorted(candidates, key=sort_key)
+    rows = []
+    for c in sorted_candidates:
+        rows.append(
+            f"""
+            <tr>
+                <td><code>{esc(c.get('before_stat_template', ''))}</code></td>
+                <td><code>{esc(c.get('after_stat_template', ''))}</code></td>
+                <td>{esc(c.get('before_modifier_names', ''))}</td>
+                <td>{esc(c.get('after_modifier_names', ''))}</td>
+                <td>{esc(c.get('confidence_summary', ''))}</td>
+                <td>{esc(c.get('sample_count', '0'))}</td>
+                <td>{esc(c.get('character_levels', ''))}</td>
+                <td><code>{esc(c.get('example_before_stats', ''))}</code><br><code>{esc(c.get('example_after_stats', ''))}</code></td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>Before stat family</th>
+                <th>After stat family</th>
+                <th>Before modifier names</th>
+                <th>After modifier names</th>
+                <th>Confidence</th>
+                <th>Samples</th>
+                <th>Character levels</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
+def render_glove_coverage_summary(coverage: list[dict[str, str]], output_only: list[dict[str, str]]) -> str:
+    total_reference = len(coverage)
+    captured_input = sum(1 for row in coverage if row.get("seen_as_before_input", "false").lower() == "true")
+    confirmed_mappings = sum(1 for row in coverage if row.get("coverage_status") == "confirmed_mapping")
+    likely_mappings = sum(1 for row in coverage if row.get("coverage_status") == "likely_mapping")
+    missing_input = sum(1 for row in coverage if row.get("coverage_status") == "missing_input_sample")
+    corruption_only = sum(1 for row in coverage if row.get("coverage_status") == "corruption_only_missing")
+    transformed_only = len(output_only)
+
+    cards = [
+        ("Total reference stat families", total_reference),
+        ("Captured input families", captured_input),
+        ("Confirmed mappings", confirmed_mappings),
+        ("Likely mappings", likely_mappings),
+        ("Missing input samples", missing_input),
+        ("Transformed-output-only families", transformed_only),
+        ("Corruption-only missing", corruption_only),
+    ]
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>{esc(label)}</div><div class=\"num\">{esc(value)}</div></div>"
+        for label, value in cards
+    ) + "</div>"
+
+
+def render_glove_coverage_table(coverage: list[dict[str, str]]) -> str:
+    if not coverage:
+        return "<p><em>No glove modifier reference pool loaded yet.</em></p>"
+
+    rows = []
+    for row in coverage:
+        rows.append(
+            f"""
+            <tr>
+                <td><code>{esc(row.get('stat_template', ''))}</code></td>
+                <td>{esc(row.get('modifier_names', ''))}</td>
+                <td>{esc(row.get('glove_classes', ''))}</td>
+                <td>{esc(row.get('pool_types', ''))}</td>
+                <td>{esc(row.get('coverage_status', ''))}</td>
+                <td>{esc(row.get('sample_ids', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>Stat template</th>
+                <th>Modifier names</th>
+                <th>Glove classes</th>
+                <th>Pool types</th>
+                <th>Coverage status</th>
+                <th>Samples</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
+def render_transformed_output_only(output_only: list[dict[str, str]]) -> str:
+    if not output_only:
+        return "<p><em>No transformed output-only stats found.</em></p>"
+
+    rows = []
+    for row in output_only:
+        rows.append(
+            f"""
+            <tr>
+                <td><code>{esc(row.get('after_stat_template', ''))}</code></td>
+                <td>{esc(row.get('example_after_stats', ''))}</td>
+                <td>{esc(row.get('sample_count', '0'))}</td>
+                <td>{esc(row.get('sample_ids', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>After stat template</th>
+                <th>Example after stats</th>
+                <th>Sample count</th>
+                <th>Sample ids</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
+def render_capture_targets(targets: list[dict[str, str]]) -> str:
+    if not targets:
+        return "<p><em>No capture targets available yet.</em></p>"
+
+    rows = []
+    for t in targets:
+        priority = t.get("priority", "")
+        row_class = f"priority-{priority}" if priority in ("1", "2") else ""
+        sample_ids = [s for s in t.get("sample_ids", "").split("|") if s]
+        rows.append(
+            f"""
+            <tr class="{esc(row_class)}">
+                <td>{esc(priority)}</td>
+                <td>{esc(t.get('reason', ''))}</td>
+                <td><code>{esc(t.get('stat_template', ''))}</code></td>
+                <td>{esc(t.get('modifier_names', ''))}</td>
+                <td>{esc(t.get('glove_classes', ''))}</td>
+                <td>{esc(t.get('pool_types', ''))}</td>
+                <td>{esc(t.get('suggested_action', ''))}</td>
+                <td>{len(sample_ids)}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table>
+        <thead>
+            <tr>
+                <th>Priority</th>
+                <th>Reason</th>
+                <th>Stat template</th>
+                <th>Modifier names</th>
+                <th>Glove classes</th>
+                <th>Pool types</th>
+                <th>Suggested action</th>
+                <th>Samples</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(rows)}</tbody>
+    </table>
+    """
+
+
 def render_html(pairs: list[dict]) -> str:
     total = len(pairs)
     status_counts = Counter(p["uid_status"] for p in pairs)
@@ -228,6 +521,9 @@ def render_html(pairs: list[dict]) -> str:
         for p in pairs
         if "Fists of Stone" in p["after_text"]
     )
+
+    coverage = load_glove_coverage()
+    transformed_only = load_transformed_output_only()
 
     rows = []
 
@@ -402,6 +698,14 @@ def render_html(pairs: list[dict]) -> str:
         background: #171717;
     }}
 
+    tr.priority-1 {{
+        background: #3a1414;
+    }}
+
+    tr.priority-2 {{
+        background: #3a2c14;
+    }}
+
     code {{
         color: #ce9178;
         white-space: pre-wrap;
@@ -495,10 +799,42 @@ def render_html(pairs: list[dict]) -> str:
     </div>
 </div>
 
+<section>
+    <h2>Capture targets</h2>
+    <p>Capture targets are generated from the glove modifier reference pool and current Stonefist mapping coverage. They are intended to guide what to pick up or isolate next.</p>
+    {render_capture_targets(load_capture_targets())}
+</section>
+
 <p>
-Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code> and <code>mod_lines.csv</code>.
+Mapping candidates are derived from explicit modifier block matching. Multi-mod items are matched by modifier name where possible and should still be treated as provisional until confirmed by isolated samples.
 </p>
 
+<section>
+    <h2>Modifier stat families</h2>
+    <p>Stat families group mapping candidates by normalised stat text, so different rolls of the same stat can be reviewed together. These are still provisional.</p>
+    {render_mapping_families(load_mapping_families())}
+</section>
+
+<section>
+    <h2>Modifier mapping candidates</h2>
+    {render_mapping_candidates(load_mapping_candidates())}
+</section>
+
+<section>
+    <h2>Glove modifier pool coverage</h2>
+    <p>This section compares the PoE2DB glove modifier pool against captured Stonefist samples and shows which reference families are covered.</p>
+    <div class="coverage-summary">{render_glove_coverage_summary(coverage, transformed_only)}</div>
+    {render_glove_coverage_table(coverage)}
+</section>
+
+<section>
+    <h2>Transformed output-only stat templates</h2>
+        <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool. They are not directly targetable as a glove input capture unless they also show up in the reference pool.</p>
+        {render_transformed_output_only(transformed_only)}
+    </section>
+
+    <p>
+    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, and <code>capture_targets.csv</code>.
 <div>
     <input id="search" placeholder="Filter by mod, base, test id, resistance, onslaught, leech, unique, etc..." />
 

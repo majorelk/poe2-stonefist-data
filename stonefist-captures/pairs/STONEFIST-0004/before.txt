@@ -1,13 +1,13 @@
-Item Class: Gloves
-Rarity: Magic
-Adorned Wraps of the Squall
---------
-Evasion Rating: 74
-Energy Shield: 23
---------
-Requires: Level 59, 41 Dex, 41 Int
---------
-Item Level: 74
---------
+Item Class: Gloves
+Rarity: Magic
+Adorned Wraps of the Squall
+--------
+Evasion Rating: 74
+Energy Shield: 23
+--------
+Requires: Level 59, 41 Dex, 41 Int
+--------
+Item Level: 74
+--------
 { Suffix Modifier "of the Squall" (Tier: 7) — Elemental, Lightning, Resistance }
-+15(11-15)% to Lightning Resistance
++15(11-15)% to Lightning Resistance

@@ -1,14 +1,14 @@
-Item Class: Gloves
-Rarity: Magic
-Deliberate Intricate Gloves of Vanquishing
---------
-Energy Shield: 27
---------
-Requires: Level 35, 42 Int
---------
-Item Level: 52
---------
+Item Class: Gloves
+Rarity: Magic
+Deliberate Intricate Gloves of Vanquishing
+--------
+Energy Shield: 27
+--------
+Requires: Level 35, 42 Int
+--------
+Item Level: 52
+--------
 { Prefix Modifier "Deliberate" (Tier: 6) — Attack }
-+116(85-123) to Accuracy Rating
++116(85-123) to Accuracy Rating
 { Suffix Modifier "of Vanquishing" (Tier: 4) — Life }
-Gain 39(29-40) Life per enemy killed
+Gain 39(29-40) Life per enemy killed

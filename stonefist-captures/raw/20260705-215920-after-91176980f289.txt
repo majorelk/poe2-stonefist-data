@@ -1,27 +1,27 @@
-Item Class: Gloves
-Rarity: Unique
-Snakebite
-Fists of Stone
---------
-Evasion Rating: 240 (augmented)
-Energy Shield: 80 (augmented)
---------
-Item Level: 80
---------
+Item Class: Gloves
+Rarity: Unique
+Snakebite
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 80
+--------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
---------
+Has +1 to maximum Energy Shield per player level
+--------
 { Unique Modifier — Evasion, Energy Shield }
-11(10-15)% more Global Evasion Rating and Energy Shield
+11(10-15)% more Global Evasion Rating and Energy Shield
 { Unique Modifier — Chaos, Resistance }
 +1% to Maximum Chaos Resistance
-+11(7-17)% to Chaos Resistance
++11(7-17)% to Chaos Resistance
 { Unique Modifier — Elemental, Cold, Ailment }
-27(20-30)% increased Magnitude of Chill you inflict
+27(20-30)% increased Magnitude of Chill you inflict
 { Unique Modifier — Elemental, Cold, Ailment }
-Targets can be affected by two of your Chills at the same time — Unscalable Value
+Targets can be affected by two of your Chills at the same time — Unscalable Value
 { Unique Modifier — Life }
-Regenerate 0.98(0.5-1.5)% of maximum Life per second
---------
-Unmodifiable
+Regenerate 0.98(0.5-1.5)% of maximum Life per second
+--------
+Unmodifiable

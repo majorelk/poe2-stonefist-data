@@ -1,21 +1,21 @@
-Item Class: Gloves
-Rarity: Rare
-Eagle Grasp
-Grim Gloves
---------
-Energy Shield: 45
---------
-Requires: Level 65, 80 Int
---------
-Item Level: 66
---------
+Item Class: Gloves
+Rarity: Rare
+Eagle Grasp
+Grim Gloves
+--------
+Energy Shield: 45
+--------
+Requires: Level 65, 80 Int
+--------
+Item Level: 66
+--------
 { Prefix Modifier "Crackling" (Tier: 6) — Damage, Elemental, Lightning, Attack }
-Adds 1 to 27(23-27) Lightning damage to Attacks
+Adds 1 to 27(23-27) Lightning damage to Attacks
 { Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
-+107(105-124) to maximum Mana
++107(105-124) to maximum Mana
 { Suffix Modifier "of the Savant" (Tier: 2) — Attribute }
-+29(28-30) to Intelligence
++29(28-30) to Intelligence
 { Suffix Modifier "of Infusion" (Tier: 6) — Mana }
-Gain 9(6-9) Mana per enemy killed
+Gain 9(6-9) Mana per enemy killed
 { Suffix Modifier "of Raiding" (Tier: 2) }
-14(11-14)% increased Rarity of Items found
+14(11-14)% increased Rarity of Items found

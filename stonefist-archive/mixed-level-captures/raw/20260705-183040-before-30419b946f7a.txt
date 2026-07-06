@@ -1,20 +1,20 @@
-Item Class: Gloves
-Rarity: Rare
-Fate Knuckle
-Adorned Wraps
---------
-Evasion Rating: 74
-Energy Shield: 23
---------
-Requires: Level 59, 41 Dex, 41 Int
---------
-Item Level: 65
---------
+Item Class: Gloves
+Rarity: Rare
+Fate Knuckle
+Adorned Wraps
+--------
+Evasion Rating: 74
+Energy Shield: 23
+--------
+Requires: Level 59, 41 Dex, 41 Int
+--------
+Item Level: 65
+--------
 { Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
-+118(105-124) to maximum Mana
++118(105-124) to maximum Mana
 { Prefix Modifier "Stalwart" (Tier: 6) — Life }
-+40(40-59) to maximum Life
++40(40-59) to maximum Life
 { Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
-22(20-24)% increased Critical Damage Bonus
+22(20-24)% increased Critical Damage Bonus
 { Suffix Modifier "of the Furnace" (Tier: 4) — Elemental, Fire, Resistance }
-+28(26-30)% to Fire Resistance
++28(26-30)% to Fire Resistance

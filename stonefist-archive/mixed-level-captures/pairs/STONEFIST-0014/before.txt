@@ -1,22 +1,22 @@
-Item Class: Gloves
-Rarity: Rare
-Behemoth Fist
-Spined Bracers
---------
-Evasion Rating: 117 (augmented)
---------
-Requires: Level 33, 42 Dex
---------
-Sockets: S 
---------
-Item Level: 43
---------
+Item Class: Gloves
+Rarity: Rare
+Behemoth Fist
+Spined Bracers
+--------
+Evasion Rating: 117 (augmented)
+--------
+Requires: Level 33, 42 Dex
+--------
+Sockets: S 
+--------
+Item Level: 43
+--------
 { Prefix Modifier "Mouflon's" (Tier: 4) — Life, Evasion }
 22(21-26)% increased Evasion Rating
-+23(20-25) to maximum Life
++23(20-25) to maximum Life
 { Prefix Modifier "Cerulean" (Tier: 5) — Mana }
-+60(55-64) to maximum Mana
++60(55-64) to maximum Mana
 { Prefix Modifier "Shade's" (Tier: 7) — Evasion }
-26(15-26)% increased Evasion Rating
+26(15-26)% increased Evasion Rating
 { Suffix Modifier "of the Kiln" (Tier: 5) — Elemental, Fire, Resistance }
-+25(21-25)% to Fire Resistance
++25(21-25)% to Fire Resistance

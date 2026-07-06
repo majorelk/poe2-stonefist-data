@@ -1,0 +1,10 @@
+Item Class: Gloves
+Rarity: Rare
+Dread Knuckle
+Fists of Stone
+--------
+Item Level: 82
+--------
+{ Prefix Modifier "Hunter's" }
+30(30-32)% chance to Blind Enemies on Hit with Attacks
+--------

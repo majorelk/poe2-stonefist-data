@@ -1,0 +1,17 @@
+Item Class: Gloves
+Rarity: Rare
+Dread Knuckle
+Fists of Stone
+--------
+Quality: +20%
+Armour: 120
+--------
+Requires: Level 60
+--------
+Item Level: 82
+--------
+{ Prefix Modifier "Hunter's" (Tier: 3) — Attack }
++336(237-346) to Accuracy Rating
+{ Suffix Modifier "of the Maelstrom" }
++33(31-35)% to Lightning Resistance
+--------

@@ -1,0 +1,2 @@
+source_url,glove_class,pool_type,modifier_kind,modifier_name,tier,min_item_level,tags,stat_text,stat_template
+https://example.invalid/gloves_str,str,explicit,prefix,of the Brute,8,1,attribute,+(5-8) to Strength,+# to Strength

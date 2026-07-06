@@ -55,33 +55,53 @@ Screenshots of the generated report live under `docs/assets/`. If you regenerate
 - `stonefist_capture.py` - captures clipboard `before`/`after` item text and saves raw evidence under `stonefist-captures/pairs/`.
 - `stonefist_import_poe2db_mods.py` - imports the glove modifier reference pool from local PoE2DB page snapshots, or with `--fetch` to download them, into `stonefist-reference/glove_mod_pool.csv` and `stonefist-reference/glove_mod_pool.json`. Never runs automatically.
 - `stonefist_build_dataset.py` - parses raw pairs and the reference pool into `stonefist-captures/dataset.json`, `pair_summary.csv`, `mod_lines.csv`, `mapping_observations.csv`, `mapping_candidates.csv`, `mapping_families.csv`, `glove_mod_coverage.csv`, `transformed_output_only.csv`, and `capture_targets.csv`.
-- `stonefist_report.py` - reads the generated dataset and CSVs, then writes `stonefist-captures/report.html`.
+- `stonefist_report.py` - thin entry point; delegates to the `stonefist_reporter` package (`loaders.py`, `sections.py`, `assets.py`, `render.py`), which reads the generated dataset and CSVs and writes `stonefist-captures/report.html`.
+
+## Requirements
+
+- Python 3.12 or newer.
+- [`uv`](https://docs.astral.sh/uv/) is recommended for running everything with the correct interpreter and pinned dependencies. After cloning, run `uv sync` once to create `.venv` with `pyperclip` (capture) and `pytest` (tests) installed.
+- Capturing (`stonefist_capture.py`) needs `pyperclip` for clipboard access, which is a declared project dependency (installed automatically by `uv sync`). Clipboard access itself depends on your OS having a working clipboard backend:
+  - Windows: works out of the box.
+  - Linux/macOS: needs a clipboard tool available (e.g. `xclip`/`xsel` on X11, or a Wayland equivalent).
+  - **WSL2**: tested working - pyperclip talks to the real Windows clipboard via `clip.exe`/`powershell.exe`, both already on `PATH` in a standard WSL2 setup, so no extra install is needed there.
+- `stonefist_build_dataset.py`, `stonefist_report.py` (and the `stonefist_reporter` package), and `stonefist_import_poe2db_mods.py` use only the Python standard library. On a system with Python 3.12+ already installed, plain `python3 stonefist_build_dataset.py` / `python3 stonefist_report.py` work identically without `uv`. Only capture needs `pyperclip` installed some other way (e.g. `pip install pyperclip`) if you're not using `uv`.
 
 ## Workflow
+
+Recommended: run `uv sync` once after cloning (see Requirements above).
 
 1. Capture raw item pairs:
 
 ```bash
-uv run --python 3.12 python stonefist_capture.py
+uv run python stonefist_capture.py
 ```
 
 2. Optional, one-off: populate the glove modifier reference pool. Save PoE2DB page snapshots into `stonefist-reference/raw-poe2db/`, see its README, or pass `--fetch` to download them automatically:
 
 ```bash
-uv run --python 3.12 python stonefist_import_poe2db_mods.py
+uv run python stonefist_import_poe2db_mods.py
 ```
 
 3. Build the dataset:
 
 ```bash
-uv run --python 3.12 python stonefist_build_dataset.py
+uv run python stonefist_build_dataset.py
 ```
 
 4. Generate the report:
 
 ```bash
-uv run --python 3.12 python stonefist_report.py
+uv run python stonefist_report.py
 ```
+
+5. Run the test suite:
+
+```bash
+uv run pytest
+```
+
+Steps 3 and 4 also work as plain `python3 stonefist_build_dataset.py` / `python3 stonefist_report.py` on any system with Python 3.12+, since neither has third-party dependencies - see Requirements above.
 
 ## Reference source
 

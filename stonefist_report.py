@@ -406,21 +406,22 @@ def render_glove_coverage_table(coverage: list[dict[str, str]]) -> str:
 
     rows = []
     for row in coverage:
+        status = row.get("coverage_status", "")
         rows.append(
             f"""
-            <tr>
+            <tr data-status="{esc(status)}">
                 <td><code>{esc(row.get('stat_template', ''))}</code></td>
                 <td>{esc(row.get('modifier_names', ''))}</td>
                 <td>{esc(row.get('glove_classes', ''))}</td>
                 <td>{esc(row.get('pool_types', ''))}</td>
-                <td>{esc(row.get('coverage_status', ''))}</td>
+                <td>{esc(status)}</td>
                 <td>{esc(row.get('sample_ids', ''))}</td>
             </tr>
             """
         )
 
     return f"""
-    <table>
+    <table id="coverage-table">
         <thead>
             <tr>
                 <th>Stat template</th>
@@ -479,7 +480,7 @@ def render_capture_targets(targets: list[dict[str, str]]) -> str:
         sample_ids = [s for s in t.get("sample_ids", "").split("|") if s]
         rows.append(
             f"""
-            <tr class="{esc(row_class)}">
+            <tr class="{esc(row_class)}" data-priority="{esc(priority)}">
                 <td>{esc(priority)}</td>
                 <td>{esc(t.get('reason', ''))}</td>
                 <td><code>{esc(t.get('stat_template', ''))}</code></td>
@@ -493,7 +494,7 @@ def render_capture_targets(targets: list[dict[str, str]]) -> str:
         )
 
     return f"""
-    <table>
+    <table id="capture-targets-table">
         <thead>
             <tr>
                 <th>Priority</th>
@@ -511,6 +512,16 @@ def render_capture_targets(targets: list[dict[str, str]]) -> str:
     """
 
 
+def render_priority_summary(targets: list[dict[str, str]]) -> str:
+    counts = Counter(t.get("priority", "") for t in targets)
+    cards = [(f"P{p} capture targets", counts.get(str(p), 0)) for p in (1, 2, 3, 4)]
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>{esc(label)}</div><div class=\"num\">{esc(value)}</div></div>"
+        for label, value in cards
+    ) + "</div>"
+
+
 def render_html(pairs: list[dict]) -> str:
     total = len(pairs)
     status_counts = Counter(p["uid_status"] for p in pairs)
@@ -524,6 +535,7 @@ def render_html(pairs: list[dict]) -> str:
 
     coverage = load_glove_coverage()
     transformed_only = load_transformed_output_only()
+    capture_targets = load_capture_targets()
 
     rows = []
 
@@ -767,75 +779,151 @@ def render_html(pairs: list[dict]) -> str:
             grid-template-columns: 1fr;
         }}
     }}
+
+    .tabs {{
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #111;
+        padding: 10px 0;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #333;
+    }}
+
+    .tab-btn {{
+        background: #1b1b1b;
+        color: #ddd;
+        border: 1px solid #444;
+        border-radius: 6px;
+        padding: 8px 14px;
+        margin: 0 6px 6px 0;
+        font-size: 14px;
+        cursor: pointer;
+    }}
+
+    .tab-btn.active {{
+        background: #2a2410;
+        color: #f5d38a;
+        border-color: #f5d38a;
+    }}
+
+    .tab-panel {{
+        display: none;
+    }}
+
+    .tab-panel.active {{
+        display: block;
+    }}
+
+    .subtle {{
+        color: #999;
+    }}
 </style>
 </head>
 <body>
 <h1>Way of the Stonefist Transformation Report</h1>
 
-<div class="stats">
-    <div class="card">
-        <div>Total pairs</div>
-        <div class="num">{total}</div>
+<nav class="tabs">
+    <button class="tab-btn" data-tab="overview">Overview</button>
+    <button class="tab-btn" data-tab="capture-targets">Capture Targets</button>
+    <button class="tab-btn" data-tab="mapping-families">Mapping Families</button>
+    <button class="tab-btn" data-tab="modifier-coverage">Modifier Coverage</button>
+    <button class="tab-btn" data-tab="output-only">Output Only</button>
+    <button class="tab-btn" data-tab="pair-explorer">Pair Explorer</button>
+    <button class="tab-btn" data-tab="raw-evidence">Raw Evidence</button>
+</nav>
+
+<div class="tab-panel" id="tab-overview">
+    <p>High-level counts across the whole dataset. Use the other tabs for detail and filtering.</p>
+
+    <div class="stats">
+        <div class="card">
+            <div>Total pairs</div>
+            <div class="num">{total}</div>
+        </div>
+        <div class="card">
+            <div>After Fists of Stone</div>
+            <div class="num">{stonefist_count}</div>
+        </div>
+        <div class="card">
+            <div>Unique samples</div>
+            <div class="num">{category_counts.get("unique", 0)}</div>
+        </div>
+        <div class="card">
+            <div>UID not present</div>
+            <div class="num">{status_counts.get("not present", 0)}</div>
+        </div>
+        <div class="card">
+            <div>UID matches</div>
+            <div class="num">{status_counts.get("match", 0)}</div>
+        </div>
+        <div class="card">
+            <div>Exact duplicates</div>
+            <div class="num">{duplicate_count}</div>
+        </div>
     </div>
-    <div class="card">
-        <div>After Fists of Stone</div>
-        <div class="num">{stonefist_count}</div>
-    </div>
-    <div class="card">
-        <div>Unique samples</div>
-        <div class="num">{category_counts.get("unique", 0)}</div>
-    </div>
-    <div class="card">
-        <div>UID not present</div>
-        <div class="num">{status_counts.get("not present", 0)}</div>
-    </div>
-    <div class="card">
-        <div>UID matches</div>
-        <div class="num">{status_counts.get("match", 0)}</div>
-    </div>
-    <div class="card">
-        <div>Exact duplicates</div>
-        <div class="num">{duplicate_count}</div>
-    </div>
+
+    <h3>Capture targets by priority</h3>
+    {render_priority_summary(capture_targets)}
+
+    <h3>Glove modifier coverage status</h3>
+    {render_glove_coverage_summary(coverage, transformed_only)}
+
+    <p class="subtle">
+    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, and <code>capture_targets.csv</code>.
+    </p>
 </div>
 
-<section>
-    <h2>Capture targets</h2>
+<div class="tab-panel" id="tab-capture-targets">
     <p>Capture targets are generated from the glove modifier reference pool and current Stonefist mapping coverage. They are intended to guide what to pick up or isolate next.</p>
-    {render_capture_targets(load_capture_targets())}
-</section>
 
-<p>
-Mapping candidates are derived from explicit modifier block matching. Multi-mod items are matched by modifier name where possible and should still be treated as provisional until confirmed by isolated samples.
-</p>
+    <select id="capture-priority-filter">
+        <option value="">All priorities</option>
+        <option value="1">P1</option>
+        <option value="2">P2</option>
+        <option value="3">P3</option>
+        <option value="4">P4</option>
+    </select>
 
-<section>
-    <h2>Modifier stat families</h2>
+    {render_capture_targets(capture_targets)}
+</div>
+
+<div class="tab-panel" id="tab-mapping-families">
+    <p>
+    Mapping candidates are derived from explicit modifier block matching. Multi-mod items are matched by modifier name where possible and should still be treated as provisional until confirmed by isolated samples.
+    </p>
+
+    <h3>Modifier stat families</h3>
     <p>Stat families group mapping candidates by normalised stat text, so different rolls of the same stat can be reviewed together. These are still provisional.</p>
     {render_mapping_families(load_mapping_families())}
-</section>
 
-<section>
-    <h2>Modifier mapping candidates</h2>
+    <h3>Modifier mapping candidates</h3>
+    <p class="subtle">Per-modifier-name candidates behind the stat families above.</p>
     {render_mapping_candidates(load_mapping_candidates())}
-</section>
+</div>
 
-<section>
-    <h2>Glove modifier pool coverage</h2>
+<div class="tab-panel" id="tab-modifier-coverage">
     <p>This section compares the PoE2DB glove modifier pool against captured Stonefist samples and shows which reference families are covered.</p>
-    <div class="coverage-summary">{render_glove_coverage_summary(coverage, transformed_only)}</div>
+
+    <select id="coverage-status-filter">
+        <option value="">All statuses</option>
+        <option value="missing_input_sample">Missing input sample</option>
+        <option value="likely_mapping">Likely mapping</option>
+        <option value="confirmed_mapping">Confirmed mapping</option>
+        <option value="corruption_only_missing">Corruption-only missing</option>
+    </select>
+
     {render_glove_coverage_table(coverage)}
-</section>
+</div>
 
-<section>
-    <h2>Transformed output-only stat templates</h2>
-        <p>These stat templates appear after Stonefist and are not present in the loaded glove reference pool. They are not directly targetable as a glove input capture unless they also show up in the reference pool.</p>
-        {render_transformed_output_only(transformed_only)}
-    </section>
+<div class="tab-panel" id="tab-output-only">
+    <p>These stat templates are Stonefist transformation outputs that are not present in the loaded glove reference pool. They are not directly targetable as a glove input capture unless they also appear in the reference pool.</p>
+    {render_transformed_output_only(transformed_only)}
+</div>
 
-    <p>
-    Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, and <code>capture_targets.csv</code>.
-<div>
+<div class="tab-panel" id="tab-pair-explorer">
+    <p>Search and filter captured before/after pairs. Expand a row's details to see stats, mods, raw item text, and capture metadata.</p>
+
     <input id="search" placeholder="Filter by mod, base, test id, resistance, onslaught, leech, unique, etc..." />
 
     <select id="category">
@@ -860,30 +948,55 @@ Mapping candidates are derived from explicit modifier block matching. Multi-mod 
         <option value="original">Original only</option>
         <option value="duplicate">Duplicates only</option>
     </select>
+
+    <table id="pairs">
+        <thead>
+            <tr>
+                <th>Test</th>
+                <th>Item</th>
+                <th>Item level</th>
+                <th>UID</th>
+                <th>Explicit count</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {"".join(rows)}
+        </tbody>
+    </table>
 </div>
 
-<table id="pairs">
-    <thead>
-        <tr>
-            <th>Test</th>
-            <th>Item</th>
-            <th>Item level</th>
-            <th>UID</th>
-            <th>Explicit count</th>
-            <th>Details</th>
-        </tr>
-    </thead>
-    <tbody>
-        {"".join(rows)}
-    </tbody>
-</table>
+<div class="tab-panel" id="tab-raw-evidence">
+    <p>
+    Raw before/after item text is not duplicated here to keep the page small. It remains available inside each
+    <strong>Pair Explorer</strong> row, under the collapsed "Raw item text" detail for that pair.
+    </p>
+</div>
 
 <script>
+const tabButtons = [...document.querySelectorAll(".tab-btn")];
+const tabPanels = [...document.querySelectorAll(".tab-panel")];
+
+function activateTab(name) {{
+    for (const btn of tabButtons) {{
+        btn.classList.toggle("active", btn.dataset.tab === name);
+    }}
+    for (const panel of tabPanels) {{
+        panel.classList.toggle("active", panel.id === "tab-" + name);
+    }}
+}}
+
+for (const btn of tabButtons) {{
+    btn.addEventListener("click", () => activateTab(btn.dataset.tab));
+}}
+
+activateTab("overview");
+
 const search = document.getElementById("search");
 const category = document.getElementById("category");
 const uid = document.getElementById("uid");
 const duplicate = document.getElementById("duplicate");
-const rows = [...document.querySelectorAll("#pairs tbody tr")];
+const pairRows = [...document.querySelectorAll("#pairs tbody tr")];
 
 function applyFilters() {{
     const q = search.value.toLowerCase().trim();
@@ -891,7 +1004,7 @@ function applyFilters() {{
     const uidStatus = uid.value;
     const duplicateStatus = duplicate.value;
 
-    for (const row of rows) {{
+    for (const row of pairRows) {{
         const matchesSearch = row.dataset.search.includes(q);
         const matchesCategory = !cat || row.dataset.category === cat;
         const matchesUid = !uidStatus || row.dataset.uid === uidStatus;
@@ -905,6 +1018,30 @@ search.addEventListener("input", applyFilters);
 category.addEventListener("change", applyFilters);
 uid.addEventListener("change", applyFilters);
 duplicate.addEventListener("change", applyFilters);
+
+const capturePriorityFilter = document.getElementById("capture-priority-filter");
+const captureRows = [...document.querySelectorAll("#capture-targets-table tbody tr")];
+
+function applyCaptureFilter() {{
+    const val = capturePriorityFilter.value;
+    for (const row of captureRows) {{
+        row.style.display = !val || row.dataset.priority === val ? "" : "none";
+    }}
+}}
+
+capturePriorityFilter.addEventListener("change", applyCaptureFilter);
+
+const coverageStatusFilter = document.getElementById("coverage-status-filter");
+const coverageRows = [...document.querySelectorAll("#coverage-table tbody tr")];
+
+function applyCoverageFilter() {{
+    const val = coverageStatusFilter.value;
+    for (const row of coverageRows) {{
+        row.style.display = !val || row.dataset.status === val ? "" : "none";
+    }}
+}}
+
+coverageStatusFilter.addEventListener("change", applyCoverageFilter);
 </script>
 
 </body>

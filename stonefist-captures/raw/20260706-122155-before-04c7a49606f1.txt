@@ -1,0 +1,26 @@
+Item Class: Gloves
+Rarity: Rare
+Gale Nails
+Blacksteel Gauntlets
+--------
+Armour: 199 (augmented)
+Evasion Rating: 181 (augmented)
+--------
+Requires: Level 80, 55 Str, 55 Dex
+--------
+Sockets: S 
+--------
+Item Level: 81
+--------
+{ Prefix Modifier "Legend's" (Tier: 1) — Armour, Evasion }
+93(92-100)% increased Armour and Evasion
+{ Prefix Modifier "Glaciated" (Tier: 3) — Damage, Elemental, Cold, Attack }
+Adds 14(14-15) to 24(22-24) Cold damage to Attacks
+{ Prefix Modifier "Blasting" (Tier: 2) — Damage, Elemental, Fire, Attack }
+Adds 21(20-24) to 34(33-36) Fire damage to Attacks
+{ Suffix Modifier "of Siphoning" (Tier: 3) — Mana }
+Gain 25(21-27) Mana per enemy killed
+{ Suffix Modifier "of the Drought" (Tier: 2) — Mana, Physical, Attack }
+Leech 7.85(7-7.9)% of Physical Attack Damage as Mana
+{ Desecrated Suffix Modifier "of Kurgal" (Tier: 1) — Elemental, Cold, Chaos, Resistance }
++17(13-17)% to Cold and Chaos Resistances

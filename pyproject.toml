@@ -3,7 +3,9 @@ name = "poe2-stonefist-data"
 version = "0.1.0"
 description = "Capture and report Path of Exile 2 Way of the Stonefist transformation data."
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pyperclip>=1.11.0",
+]
 
 [dependency-groups]
 dev = [

@@ -1532,3 +1532,56 @@ STONEFIST-0082,unique,after,14,+18(15-25)% to Lightning Resistance
 STONEFIST-0082,unique,after,15,{ Unique Modifier }
 STONEFIST-0082,unique,after,16,10(12-10)% less damage taken while on Low Life
 STONEFIST-0082,unique,after,17,Unmodifiable
+STONEFIST-0083,rare,before,1,"{ Prefix Modifier ""Incinerating"" (Tier: 3) — Damage, Elemental, Fire, Attack }"
+STONEFIST-0083,rare,before,2,"{ Prefix Modifier ""Consistent"" (Tier: 5) — Attack }"
+STONEFIST-0083,rare,before,3,+131(124-167) to Accuracy Rating
+STONEFIST-0083,rare,before,4,"{ Prefix Modifier ""Chalybeous"" (Tier: 1) — Mana }"
+STONEFIST-0083,rare,before,5,+109(105-124) to maximum Mana
+STONEFIST-0083,rare,before,6,"{ Suffix Modifier ""of the Vampire"" (Tier: 1) — Life, Physical, Attack }"
+STONEFIST-0083,rare,before,7,Leech 9.89(9-9.9)% of Physical Attack Damage as Life
+STONEFIST-0083,rare,before,8,"{ Suffix Modifier ""of the Arid"" (Tier: 3) — Mana, Physical, Attack }"
+STONEFIST-0083,rare,before,9,Leech 6.27(6-6.9)% of Physical Attack Damage as Mana
+STONEFIST-0083,rare,before,10,"{ Desecrated Suffix Modifier ""of Ulaman"" (Tier: 1) — Elemental, Lightning, Chaos, Resistance }"
+STONEFIST-0083,rare,before,11,+13(13-17)% to Lightning and Chaos Resistances
+STONEFIST-0083,rare,after,1,{ Implicit Modifier }
+STONEFIST-0083,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0083,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0083,rare,after,4,"{ Prefix Modifier ""Incinerating"" — Elemental, Fire, Attack }"
+STONEFIST-0083,rare,after,5,"{ Prefix Modifier ""Consistent"" — Attack }"
+STONEFIST-0083,rare,after,6,24(24-26)% chance to Blind Enemies on Hit with Attacks
+STONEFIST-0083,rare,after,7,"{ Prefix Modifier ""Chalybeous"" }"
+STONEFIST-0083,rare,after,8,26(26-27)% more Attack damage while on Low Mana
+STONEFIST-0083,rare,after,9,"{ Suffix Modifier ""of the Vampire"" — Life }"
+STONEFIST-0083,rare,after,10,Leech 14.77(14-15)% of Physical Attack Damage as Life
+STONEFIST-0083,rare,after,11,Leech Life 22(25-20)% slower
+STONEFIST-0083,rare,after,12,"{ Suffix Modifier ""of the Arid"" — Mana }"
+STONEFIST-0083,rare,after,13,Leech 10.06(9-10.9)% of Physical Attack Damage as Mana
+STONEFIST-0083,rare,after,14,Leech Mana 21(25-20)% slower
+STONEFIST-0083,rare,after,15,"{ Suffix Modifier ""of Ulaman"" — Elemental, Lightning, Chaos, Resistance }"
+STONEFIST-0083,rare,after,16,+2(2-3)% to Maximum Lightning Resistance
+STONEFIST-0083,rare,after,17,+17(13-17)% to Chaos Resistance
+STONEFIST-0083,rare,after,18,Unmodifiable
+STONEFIST-0084,rare,before,1,"{ Prefix Modifier ""Legend's"" (Tier: 1) — Armour, Evasion }"
+STONEFIST-0084,rare,before,2,93(92-100)% increased Armour and Evasion
+STONEFIST-0084,rare,before,3,"{ Prefix Modifier ""Glaciated"" (Tier: 3) — Damage, Elemental, Cold, Attack }"
+STONEFIST-0084,rare,before,4,"{ Prefix Modifier ""Blasting"" (Tier: 2) — Damage, Elemental, Fire, Attack }"
+STONEFIST-0084,rare,before,5,"{ Suffix Modifier ""of Siphoning"" (Tier: 3) — Mana }"
+STONEFIST-0084,rare,before,6,"{ Suffix Modifier ""of the Drought"" (Tier: 2) — Mana, Physical, Attack }"
+STONEFIST-0084,rare,before,7,Leech 7.85(7-7.9)% of Physical Attack Damage as Mana
+STONEFIST-0084,rare,before,8,"{ Desecrated Suffix Modifier ""of Kurgal"" (Tier: 1) — Elemental, Cold, Chaos, Resistance }"
+STONEFIST-0084,rare,before,9,+17(13-17)% to Cold and Chaos Resistances
+STONEFIST-0084,rare,after,1,{ Implicit Modifier }
+STONEFIST-0084,rare,after,2,Has +3 to Evasion Rating per player level
+STONEFIST-0084,rare,after,3,Has +1 to maximum Energy Shield per player level
+STONEFIST-0084,rare,after,4,"{ Prefix Modifier ""Legend's"" — Evasion, Energy Shield }"
+STONEFIST-0084,rare,after,5,19(19-20)% more Global Evasion Rating and Energy Shield
+STONEFIST-0084,rare,after,6,"{ Prefix Modifier ""Glaciated"" — Elemental, Cold, Attack }"
+STONEFIST-0084,rare,after,7,"{ Prefix Modifier ""Blasting"" — Elemental, Fire, Attack }"
+STONEFIST-0084,rare,after,8,"{ Suffix Modifier ""of Siphoning"" — Mana }"
+STONEFIST-0084,rare,after,9,"{ Suffix Modifier ""of the Drought"" — Mana }"
+STONEFIST-0084,rare,after,10,Leech 11.2(11-11.9)% of Physical Attack Damage as Mana
+STONEFIST-0084,rare,after,11,Leech Mana 23(25-20)% slower
+STONEFIST-0084,rare,after,12,"{ Suffix Modifier ""of Kurgal"" — Elemental, Cold, Chaos, Resistance }"
+STONEFIST-0084,rare,after,13,+2(2-3)% to Maximum Cold Resistance
+STONEFIST-0084,rare,after,14,+16(13-17)% to Chaos Resistance
+STONEFIST-0084,rare,after,15,Unmodifiable

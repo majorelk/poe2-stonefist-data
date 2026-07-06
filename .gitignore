@@ -13,7 +13,11 @@ stonefist-captures/mapping_observations.csv
 stonefist-captures/mapping_candidates.csv
 
 # Optional: raw duplicate clipboard dumps
-stonefist-captures/raw/
+# stonefist-captures/raw/
+
+# Raw Stonefist clipboard evidence is committed with captures.
+!stonefist-captures/raw/
+!stonefist-captures/raw/*.txt
 
 # Keep the actual paired evidence
 !stonefist-captures/pairs/

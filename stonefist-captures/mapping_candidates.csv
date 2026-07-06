@@ -216,3 +216,15 @@ of the Polar Bear,+34(31-35)% to Cold Resistance,of the Polar Bear,+2% to Maximu
 Pope's,41(39-42)% increased Energy Shield | +42(42-49) to maximum Life,Pope's,"8% of Damage Taken Recouped as Life, Mana and Energy Shield",1,0,1,0,STONEFIST-0078,80,likely_candidate
 of Renown,16(14-16)% increased Attack Speed,of Renown,27(26-30)% chance to gain Onslaught for 4 seconds on Hit,1,0,1,0,STONEFIST-0078,80,likely_candidate
 of the Proficient,35% reduced Attribute Requirements,of the Proficient,+27(26-30) to all Attributes,1,0,1,0,STONEFIST-0078,80,likely_candidate
+Incinerating,Adds 18(13-19) to 29(27-32) Fire damage to Attacks,Incinerating,Attacks Gain 17(17-18)% of Damage as Extra Fire Damage,1,0,1,0,STONEFIST-0083,80,likely_candidate
+Consistent,+131(124-167) to Accuracy Rating,Consistent,24(24-26)% chance to Blind Enemies on Hit with Attacks,1,0,1,0,STONEFIST-0083,80,likely_candidate
+Chalybeous,+109(105-124) to maximum Mana,Chalybeous,26(26-27)% more Attack damage while on Low Mana,1,0,1,0,STONEFIST-0083,80,likely_candidate
+of the Vampire,Leech 9.89(9-9.9)% of Physical Attack Damage as Life,of the Vampire,Leech 14.77(14-15)% of Physical Attack Damage as Life | Leech Life 22(25-20)% slower,1,0,1,0,STONEFIST-0083,80,likely_candidate
+of the Arid,Leech 6.27(6-6.9)% of Physical Attack Damage as Mana,of the Arid,Leech 10.06(9-10.9)% of Physical Attack Damage as Mana | Leech Mana 21(25-20)% slower,1,0,1,0,STONEFIST-0083,80,likely_candidate
+of Ulaman,+13(13-17)% to Lightning and Chaos Resistances,of Ulaman,+2(2-3)% to Maximum Lightning Resistance | +17(13-17)% to Chaos Resistance,1,0,1,0,STONEFIST-0083,80,likely_candidate
+Legend's,93(92-100)% increased Armour and Evasion,Legend's,19(19-20)% more Global Evasion Rating and Energy Shield,1,0,1,0,STONEFIST-0084,80,likely_candidate
+Glaciated,Adds 14(14-15) to 24(22-24) Cold damage to Attacks,Glaciated,Attacks Gain 18(17-18)% of Damage as Extra Cold Damage,1,0,1,0,STONEFIST-0084,80,likely_candidate
+Blasting,Adds 21(20-24) to 34(33-36) Fire damage to Attacks,Blasting,Attacks Gain 20(19-20)% of Damage as Extra Fire Damage,1,0,1,0,STONEFIST-0084,80,likely_candidate
+of Siphoning,Gain 25(21-27) Mana per enemy killed,of Siphoning,Recover 2% of maximum Mana on Kill,1,0,1,0,STONEFIST-0084,80,likely_candidate
+of the Drought,Leech 7.85(7-7.9)% of Physical Attack Damage as Mana,of the Drought,Leech 11.2(11-11.9)% of Physical Attack Damage as Mana | Leech Mana 23(25-20)% slower,1,0,1,0,STONEFIST-0084,80,likely_candidate
+of Kurgal,+17(13-17)% to Cold and Chaos Resistances,of Kurgal,+2(2-3)% to Maximum Cold Resistance | +16(13-17)% to Chaos Resistance,1,0,1,0,STONEFIST-0084,80,likely_candidate

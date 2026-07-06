@@ -33,7 +33,7 @@
 *.7z binary
 
 # Generated Stonefist artefacts
-stonefist-captures/report.html linguist-generated
+# stonefist-captures/report.html
 stonefist-captures/dataset.json linguist-generated
 stonefist-captures/*.csv linguist-generated
 stonefist-reference/glove_mod_pool.csv linguist-generated

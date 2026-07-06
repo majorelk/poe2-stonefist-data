@@ -2,7 +2,8 @@ import shutil
 from pathlib import Path
 
 import stonefist_build_dataset as sbd
-import stonefist_report as sr
+from stonefist_reporter import loaders
+from stonefist_reporter.render import render_html
 
 FIXTURE_PAIRS_DIR = Path(__file__).parent / "fixtures" / "mini_pairs"
 
@@ -29,13 +30,13 @@ def test_report_html_contains_all_tabs(tmp_path, monkeypatch):
 
     # Point the CSV loaders at an empty directory so the report renders
     # against a minimal dataset rather than the real generated CSVs.
-    monkeypatch.setattr(sr, "MAPPING_FAMILIES_PATH", tmp_path / "mapping_families.csv")
-    monkeypatch.setattr(sr, "MAPPING_CANDIDATES_PATH", tmp_path / "mapping_candidates.csv")
-    monkeypatch.setattr(sr, "GLOVE_COVERAGE_PATH", tmp_path / "glove_mod_coverage.csv")
-    monkeypatch.setattr(sr, "TRANSFORMED_OUTPUT_ONLY_PATH", tmp_path / "transformed_output_only.csv")
-    monkeypatch.setattr(sr, "CAPTURE_TARGETS_PATH", tmp_path / "capture_targets.csv")
+    monkeypatch.setattr(loaders, "MAPPING_FAMILIES_PATH", tmp_path / "mapping_families.csv")
+    monkeypatch.setattr(loaders, "MAPPING_CANDIDATES_PATH", tmp_path / "mapping_candidates.csv")
+    monkeypatch.setattr(loaders, "GLOVE_COVERAGE_PATH", tmp_path / "glove_mod_coverage.csv")
+    monkeypatch.setattr(loaders, "TRANSFORMED_OUTPUT_ONLY_PATH", tmp_path / "transformed_output_only.csv")
+    monkeypatch.setattr(loaders, "CAPTURE_TARGETS_PATH", tmp_path / "capture_targets.csv")
 
-    html = sr.render_html(pairs)
+    html = render_html(pairs)
 
     for label in TAB_LABELS:
         assert label in html

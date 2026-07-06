@@ -65,5 +65,5 @@ def guard_real_project_outputs():
     assert before == after, (
         "A test modified real project output files or raw pair data. "
         "Tests must only write to tmp_path (use monkeypatch to redirect "
-        "module-level paths in stonefist_build_dataset.py / stonefist_report.py)."
+        "module-level paths in stonefist_build_dataset.py / stonefist_reporter/loaders.py)."
     )

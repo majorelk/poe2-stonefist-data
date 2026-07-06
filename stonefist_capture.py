@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -189,17 +190,22 @@ def save_raw_capture(text: str, kind: str) -> dict:
     }
 
 
-def save_meta(pair_dir: Path, test_id: str, character_level: str, captured_at: str) -> None:
+def save_meta(pair_dir: Path, test_id: str, character_level: str, captured_at: str, notes: str = "") -> None:
     meta = {
         "test_id": test_id,
         "captured_at": captured_at,
         "character_level": character_level,
         "capture_version": 2,
-        "notes": "",
+        "notes": notes,
     }
 
     meta_path = pair_dir / "meta.json"
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def resolve_pair_notes(session_notes: str, per_pair_input: str) -> str:
+    per_pair_input = per_pair_input.strip()
+    return per_pair_input if per_pair_input else session_notes
 
 
 def next_test_number() -> int:
@@ -228,7 +234,22 @@ def allocate_pair_dir(test_number: int) -> tuple[str, Path, int]:
         test_number += 1
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Way of the Stonefist clipboard capture.")
+    parser.add_argument(
+        "--prompt-notes",
+        action="store_true",
+        help=(
+            "After each pair is saved, prompt for a per-pair note that overrides the "
+            "session note for that pair only. Off by default."
+        ),
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
+
     print("Way of the Stonefist clipboard capture")
     print()
     print("Use this order:")
@@ -240,6 +261,7 @@ def main() -> None:
     print()
 
     character_level = input("Character level for this session, or blank to skip: ").strip()
+    session_notes = input("Session notes, or blank to skip: ").strip()
 
     last_clip_hash = ""
     pending_before = None
@@ -299,7 +321,16 @@ def main() -> None:
 
         before_path.write_text(pending_before["raw_text"], encoding="utf-8")
         after_path.write_text(record["raw_text"], encoding="utf-8")
-        save_meta(pair_dir, test_id, character_level, captured_at)
+
+        # Write meta.json with the session note first, so a Ctrl+C during the
+        # per-pair notes prompt below can never leave a pair folder without one.
+        save_meta(pair_dir, test_id, character_level, captured_at, session_notes)
+
+        if args.prompt_notes:
+            note_input = input(f"Notes for {test_id}, blank to keep session/default notes: ")
+            if note_input.strip():
+                pair_notes = resolve_pair_notes(session_notes, note_input)
+                save_meta(pair_dir, test_id, character_level, captured_at, pair_notes)
 
         status = uid_status(pending_before["unique_id"], record["unique_id"])
 

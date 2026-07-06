@@ -77,6 +77,20 @@ Recommended: run `uv sync` once after cloning (see Requirements above).
 uv run python stonefist_capture.py
 ```
 
+Capture prompts for a character level and then for optional **session notes** at startup ("Session notes, or blank to skip:"). The session note is stored in every pair's `meta.json` under `notes` for that run, useful for flagging control captures, desecrated mods, off-class essence/crafted mods, corrupted items, etc. For example:
+
+- `Normal white base control. No explicit modifiers. DEX base.`
+- `Desecrated dual-resistance target.`
+- `Essence-forced off-class evasion mod.`
+
+Pass `--prompt-notes` to additionally be asked for a note after each individual pair is saved:
+
+```bash
+uv run python stonefist_capture.py --prompt-notes
+```
+
+You'll see `Notes for STONEFIST-XXXX, blank to keep session/default notes:` after each pair. Leaving it blank keeps the session note; typing something stores that note for this pair only. Off by default, so existing capture behaviour is unchanged unless you opt in.
+
 2. Optional, one-off: populate the glove modifier reference pool. Save PoE2DB page snapshots into `stonefist-reference/raw-poe2db/`, see its README, or pass `--fetch` to download them automatically:
 
 ```bash

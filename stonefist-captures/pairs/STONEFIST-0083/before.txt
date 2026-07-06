@@ -1,0 +1,24 @@
+Item Class: Gloves
+Rarity: Rare
+Apocalypse Grip
+Adorned Wraps
+--------
+Evasion Rating: 74
+Energy Shield: 23
+--------
+Requires: Level 59, 41 Dex, 41 Int
+--------
+Item Level: 82
+--------
+{ Prefix Modifier "Incinerating" (Tier: 3) — Damage, Elemental, Fire, Attack }
+Adds 18(13-19) to 29(27-32) Fire damage to Attacks
+{ Prefix Modifier "Consistent" (Tier: 5) — Attack }
++131(124-167) to Accuracy Rating
+{ Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
++109(105-124) to maximum Mana
+{ Suffix Modifier "of the Vampire" (Tier: 1) — Life, Physical, Attack }
+Leech 9.89(9-9.9)% of Physical Attack Damage as Life
+{ Suffix Modifier "of the Arid" (Tier: 3) — Mana, Physical, Attack }
+Leech 6.27(6-6.9)% of Physical Attack Damage as Mana
+{ Desecrated Suffix Modifier "of Ulaman" (Tier: 1) — Elemental, Lightning, Chaos, Resistance }
++13(13-17)% to Lightning and Chaos Resistances

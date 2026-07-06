@@ -1,3 +1,4 @@
+import shutil
 from pathlib import Path
 
 import stonefist_build_dataset as sbd
@@ -17,7 +18,12 @@ TAB_LABELS = [
 
 
 def test_report_html_contains_all_tabs(tmp_path, monkeypatch):
-    monkeypatch.setattr(sbd, "PAIRS_DIR", FIXTURE_PAIRS_DIR)
+    # Copy the fixture pair into tmp_path rather than pointing PAIRS_DIR
+    # straight at tests/fixtures, keeping test I/O entirely inside tmp_path.
+    pairs_dir = tmp_path / "pairs"
+    shutil.copytree(FIXTURE_PAIRS_DIR, pairs_dir)
+
+    monkeypatch.setattr(sbd, "PAIRS_DIR", pairs_dir)
     pairs = sbd.load_pairs()
     assert len(pairs) == 1
 

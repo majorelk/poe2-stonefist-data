@@ -1,0 +1,10 @@
+Item Class: Gloves
+Rarity: Normal
+Elegant Wraps
+--------
+Evasion Rating: 85
+Energy Shield: 26
+--------
+Requires: Level 70, 48 Dex, 48 Int
+--------
+Item Level: 82

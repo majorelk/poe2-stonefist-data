@@ -150,6 +150,7 @@ The build step produces derived data under `stonefist-captures/`:
 - `glove_mod_coverage.csv` - comparison between the PoE2DB glove modifier pool and captured Stonefist data.
 - `transformed_output_only.csv` - Stonefist output stat templates not present in the loaded glove modifier reference pool.
 - `capture_targets.csv` - prioritised list of modifiers worth hunting or isolating next.
+- `base_control_summary.csv` - normal/white glove base controls (no explicit modifiers) showing how each original defence family (STR/DEX/INT and hybrids) transforms into the Fists of Stone Evasion/Energy Shield implicit, with observed per-level scaling.
 - `report.html` - static human-readable report.
 
 ## Reading the report
@@ -192,6 +193,15 @@ Use this tab to see which reference modifier families are confirmed, likely, mis
 Shows stat templates that appear after Stonefist transformation but are not present in the loaded glove reference pool.
 
 These are not directly targetable as glove input mods unless they also appear in the reference pool.
+
+### Base Controls
+
+Shows normal/white glove pairs with no explicit modifiers, captured before and after Stonefist. These isolate the base implicit transformation from explicit modifier mapping: every original defence family (Armour-only, Evasion-only, Energy Shield-only, and the three hybrid combinations) appears to transform into the same Fists of Stone implicit:
+
+- `Has +# to Evasion Rating per player level`
+- `Has +# to maximum Energy Shield per player level`
+
+This tab groups samples by original defence family, shows the observed per-level scaling, and lists each sample with its notes. If no base controls have been captured yet, this tab shows zero counts rather than an error.
 
 ### Pair Explorer
 

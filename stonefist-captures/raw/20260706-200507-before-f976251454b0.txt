@@ -1,0 +1,9 @@
+Item Class: Gloves
+Rarity: Normal
+Sirenscale Gloves
+--------
+Energy Shield: 54
+--------
+Requires: Level 80, 101 Int
+--------
+Item Level: 80

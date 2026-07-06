@@ -1,0 +1,9 @@
+Item Class: Gloves
+Rarity: Normal
+Refined Bracers
+--------
+Evasion Rating: 124
+--------
+Requires: Level 54, 67 Dex
+--------
+Item Level: 71

@@ -1,0 +1,10 @@
+Item Class: Gloves
+Rarity: Normal
+Zealot Gauntlets
+--------
+Armour: 82
+Evasion Rating: 74
+--------
+Requires: Level 59, 41 Str, 41 Dex
+--------
+Item Level: 68

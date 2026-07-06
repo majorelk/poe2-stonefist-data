@@ -1,0 +1,10 @@
+Item Class: Gloves
+Rarity: Normal
+Ancient Cuffs
+--------
+Armour: 89
+Energy Shield: 25
+--------
+Requires: Level 70, 48 Str, 48 Int
+--------
+Item Level: 72

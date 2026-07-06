@@ -1,0 +1,10 @@
+Item Class: Gloves
+Rarity: Normal
+Superior Ancient Mitts
+--------
+Quality: +12% (augmented)
+Armour: 153 (augmented)
+--------
+Requires: Level 54, 67 Str
+--------
+Item Level: 79

@@ -24,6 +24,7 @@ PROTECTED_FILES = [
     _CAPTURES_DIR / "glove_mod_coverage.csv",
     _CAPTURES_DIR / "transformed_output_only.csv",
     _CAPTURES_DIR / "capture_targets.csv",
+    _CAPTURES_DIR / "base_control_summary.csv",
     _REFERENCE_DIR / "glove_mod_pool.csv",
     _REFERENCE_DIR / "glove_mod_pool.json",
 ]

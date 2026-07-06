@@ -20,6 +20,7 @@ GLOVE_MOD_POOL_CSV_PATH = Path("stonefist-reference") / "glove_mod_pool.csv"
 GLOVE_COVERAGE_PATH = ROOT / "glove_mod_coverage.csv"
 TRANSFORMED_OUTPUT_ONLY_PATH = ROOT / "transformed_output_only.csv"
 CAPTURE_TARGETS_PATH = ROOT / "capture_targets.csv"
+BASE_CONTROL_SUMMARY_PATH = ROOT / "base_control_summary.csv"
 
 
 def read_text(path: Path) -> str:
@@ -1172,6 +1173,118 @@ def write_mapping_csvs(pairs: list[dict]) -> None:
     write_glove_coverage_files(pairs, observations, family_summaries, reference_entries)
 
 
+BASE_CONTROL_FIELDNAMES = [
+    "sample_id",
+    "character_level",
+    "before_name",
+    "before_base_type",
+    "before_defence_family",
+    "before_armour",
+    "before_evasion",
+    "before_energy_shield",
+    "after_evasion",
+    "after_energy_shield",
+    "evasion_per_level",
+    "energy_shield_per_level",
+    "after_implicit_templates",
+    "notes",
+]
+
+DEFENCE_FAMILY_BY_STATS = {
+    (True, False, False): "STR",
+    (False, True, False): "DEX",
+    (False, False, True): "INT",
+    (True, True, False): "STR/DEX",
+    (True, False, True): "STR/INT",
+    (False, True, True): "DEX/INT",
+}
+
+STONEFIST_EVASION_IMPLICIT_RE = re.compile(r"Has\s+\+(\d+(?:\.\d+)?)\s+to\s+Evasion Rating per player level")
+STONEFIST_ENERGY_SHIELD_IMPLICIT_RE = re.compile(
+    r"Has\s+\+(\d+(?:\.\d+)?)\s+to\s+maximum Energy Shield per player level"
+)
+
+
+def derive_defence_family(before_stats: dict[str, str]) -> str:
+    has_armour = bool((before_stats.get("armour") or "").strip())
+    has_evasion = bool((before_stats.get("evasion") or "").strip())
+    has_energy_shield = bool((before_stats.get("energy_shield") or "").strip())
+
+    return DEFENCE_FAMILY_BY_STATS.get((has_armour, has_evasion, has_energy_shield), "unknown")
+
+
+def extract_stonefist_implicit_lines(after_text: str) -> list[str]:
+    lines: list[str] = []
+    for line in after_text.splitlines():
+        s = line.strip()
+        if STONEFIST_EVASION_IMPLICIT_RE.search(s) or STONEFIST_ENERGY_SHIELD_IMPLICIT_RE.search(s):
+            lines.append(s)
+    return lines
+
+
+def is_normal_base_control_pair(pair: dict) -> bool:
+    return (
+        pair.get("before_rarity") == "Normal"
+        and int(pair.get("before_explicit_count", 0) or 0) == 0
+        and "Fists of Stone" in pair.get("after_text", "")
+    )
+
+
+def compute_base_control_rows(pairs: list[dict]) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+
+    for p in pairs:
+        if not is_normal_base_control_pair(p):
+            continue
+
+        before_stats = p.get("before_stats", {}) or {}
+        after_stats = p.get("after_stats", {}) or {}
+        after_text = p.get("after_text", "")
+
+        implicit_lines = extract_stonefist_implicit_lines(after_text)
+        implicit_template = " | ".join(normalise_stat_template(line) for line in implicit_lines)
+
+        evasion_per_level = ""
+        energy_shield_per_level = ""
+        for line in implicit_lines:
+            evasion_match = STONEFIST_EVASION_IMPLICIT_RE.search(line)
+            if evasion_match:
+                evasion_per_level = evasion_match.group(1)
+            energy_shield_match = STONEFIST_ENERGY_SHIELD_IMPLICIT_RE.search(line)
+            if energy_shield_match:
+                energy_shield_per_level = energy_shield_match.group(1)
+
+        rows.append(
+            {
+                "sample_id": p.get("test_id", ""),
+                "character_level": p.get("character_level", ""),
+                "before_name": p.get("before_name", ""),
+                "before_base_type": p.get("before_name", ""),
+                "before_defence_family": derive_defence_family(before_stats),
+                "before_armour": before_stats.get("armour", ""),
+                "before_evasion": before_stats.get("evasion", ""),
+                "before_energy_shield": before_stats.get("energy_shield", ""),
+                "after_evasion": after_stats.get("evasion", ""),
+                "after_energy_shield": after_stats.get("energy_shield", ""),
+                "evasion_per_level": evasion_per_level,
+                "energy_shield_per_level": energy_shield_per_level,
+                "after_implicit_templates": implicit_template,
+                "notes": p.get("notes", ""),
+            }
+        )
+
+    rows.sort(key=lambda row: row["sample_id"])
+    return rows
+
+
+def write_base_control_summary_csv(rows: list[dict[str, object]]) -> None:
+    with BASE_CONTROL_SUMMARY_PATH.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(BASE_CONTROL_FIELDNAMES)
+        for row in rows:
+            writer.writerow([row.get(field, "") for field in BASE_CONTROL_FIELDNAMES])
+
+
 def write_csvs(pairs: list[dict]) -> None:
     with PAIR_SUMMARY_PATH.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -1254,6 +1367,7 @@ def write_csvs(pairs: list[dict]) -> None:
                 writer.writerow([p["test_id"], p["category"], "after", i, line])
 
     write_mapping_csvs(pairs)
+    write_base_control_summary_csv(compute_base_control_rows(pairs))
 
 
 def main() -> None:

@@ -1,0 +1,9 @@
+Item Class: Gloves
+Rarity: Normal
+Ornate Mitts
+--------
+Armour: 171
+--------
+Requires: Level 70, 87 Str
+--------
+Item Level: 80

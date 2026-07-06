@@ -1,17 +1,17 @@
-Item Class: Gloves
-Rarity: Rare
-Pain Caress
-Suede Bracers
---------
-Evasion Rating: 10
---------
-Requires: Level 6
---------
-Item Level: 9
---------
+Item Class: Gloves
+Rarity: Rare
+Pain Caress
+Suede Bracers
+--------
+Evasion Rating: 10
+--------
+Requires: Level 6
+--------
+Item Level: 9
+--------
 { Prefix Modifier "Hale" (Tier: 9) — Life }
-+14(10-19) to maximum Life
++14(10-19) to maximum Life
 { Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
-Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
+Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
 { Suffix Modifier "of Rejuvenation" (Tier: 4) — Life, Attack }
-Gain 2 Life per Enemy Hit with Attacks
+Gain 2 Life per Enemy Hit with Attacks

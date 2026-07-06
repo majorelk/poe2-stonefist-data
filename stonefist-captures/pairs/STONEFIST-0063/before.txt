@@ -1,29 +1,29 @@
-Item Class: Gloves
-Rarity: Unique
-The Prisoner's Manacles
-Kalguuran Cuffs
---------
-Armour: 239 (augmented)
-Energy Shield: 71 (augmented)
---------
-Requires: Level 45, 64 (augmented) Str, 64 (augmented) Int
---------
-Item Level: 82
---------
+Item Class: Gloves
+Rarity: Unique
+The Prisoner's Manacles
+Kalguuran Cuffs
+--------
+Armour: 239 (augmented)
+Energy Shield: 71 (augmented)
+--------
+Requires: Level 45, 64 (augmented) Str, 64 (augmented) Int
+--------
+Item Level: 82
+--------
 { Unique Modifier — Armour, Energy Shield }
-274(200-300)% increased Armour and Energy Shield
+274(200-300)% increased Armour and Energy Shield
 { Unique Modifier }
-100% increased Attribute Requirements
+100% increased Attribute Requirements
 { Unique Modifier }
-Debuffs you inflict have 22(20-30)% increased Slow Magnitude
+Debuffs you inflict have 22(20-30)% increased Slow Magnitude
 { Unique Modifier }
-Cannot Immobilise enemies — Unscalable Value
+Cannot Immobilise enemies — Unscalable Value
 { Unique Modifier — Life }
-16.7(15-30) Life Regeneration per second
+16.7(15-30) Life Regeneration per second
 { Unique Modifier — Elemental, Lightning, Resistance }
-+30(20-40)% to Lightning Resistance
++30(20-40)% to Lightning Resistance
 { Unique Modifier — Life }
-+100 to maximum Life
---------
-Only once did Maligaro wonder if he'd gone too far.
-His greatest success took three entire legions to capture.
++100 to maximum Life
+--------
+Only once did Maligaro wonder if he'd gone too far.
+His greatest success took three entire legions to capture.

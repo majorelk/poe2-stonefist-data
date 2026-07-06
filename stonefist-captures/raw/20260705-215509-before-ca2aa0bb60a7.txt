@@ -1,20 +1,20 @@
-Item Class: Gloves
-Rarity: Rare
-Wrath Paw
-Gold Gloves
---------
-Energy Shield: 47 (augmented)
---------
-Requires: Level 59, 73 Int
---------
-Item Level: 62
---------
+Item Class: Gloves
+Rarity: Rare
+Wrath Paw
+Gold Gloves
+--------
+Energy Shield: 47 (augmented)
+--------
+Requires: Level 59, 73 Int
+--------
+Item Level: 62
+--------
 { Prefix Modifier "Deliberate" (Tier: 6) — Attack }
-+104(85-123) to Accuracy Rating
++104(85-123) to Accuracy Rating
 { Prefix Modifier "Monk's" (Tier: 6) — Life, Energy Shield }
 13(6-13)% increased Energy Shield
-+8(7-10) to maximum Life
++8(7-10) to maximum Life
 { Suffix Modifier "of the Polar Bear" (Tier: 3) — Elemental, Cold, Resistance }
-+35(31-35)% to Cold Resistance
++35(31-35)% to Cold Resistance
 { Suffix Modifier "of Rage" (Tier: 3) — Damage, Critical }
-23(20-24)% increased Critical Damage Bonus
+23(20-24)% increased Critical Damage Bonus

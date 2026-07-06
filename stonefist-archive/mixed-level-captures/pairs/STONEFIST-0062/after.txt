@@ -1,28 +1,28 @@
-Item Class: Gloves
-Rarity: Unique
-Grip of Winter
-Fists of Stone
---------
-Quality: +8% (augmented)
-Evasion Rating: 256 (augmented)
-Energy Shield: 85 (augmented)
---------
-Item Level: 69
---------
+Item Class: Gloves
+Rarity: Unique
+Grip of Winter
+Fists of Stone
+--------
+Quality: +8% (augmented)
+Evasion Rating: 256 (augmented)
+Energy Shield: 85 (augmented)
+--------
+Item Level: 69
+--------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
---------
+Has +1 to maximum Energy Shield per player level
+--------
 { Unique Modifier — Evasion, Energy Shield }
-15(10-15)% more Global Evasion Rating and Energy Shield
+15(10-15)% more Global Evasion Rating and Energy Shield
 { Unique Modifier — Elemental, Cold, Attack }
-Attacks Gain 13(10-15)% of Damage as Extra Cold Damage
+Attacks Gain 13(10-15)% of Damage as Extra Cold Damage
 { Unique Modifier — Elemental, Cold, Ailment }
-All Damage from Hits Contributes to Freeze Buildup — Unscalable Value
+All Damage from Hits Contributes to Freeze Buildup — Unscalable Value
 { Unique Modifier }
-All Damage from Hits Contributes to Chill Magnitude — Unscalable Value
+All Damage from Hits Contributes to Chill Magnitude — Unscalable Value
 { Unique Modifier — Elemental, Cold, Resistance }
 +3(2-3)% to Maximum Cold Resistance
-+15(15-25)% to Cold Resistance
---------
-Unmodifiable
++15(15-25)% to Cold Resistance
+--------
+Unmodifiable

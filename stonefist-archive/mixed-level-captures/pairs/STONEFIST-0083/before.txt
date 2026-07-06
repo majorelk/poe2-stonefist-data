@@ -1,26 +1,26 @@
-Item Class: Gloves
-Rarity: Unique
-Snakebite
-Spined Bracers
---------
-Evasion Rating: 112 (augmented)
---------
-Requires: Level 33, 42 Dex
---------
-Item Level: 80
---------
+Item Class: Gloves
+Rarity: Unique
+Snakebite
+Spined Bracers
+--------
+Evasion Rating: 112 (augmented)
+--------
+Requires: Level 33, 42 Dex
+--------
+Item Level: 80
+--------
 { Unique Modifier — Evasion }
-42(40-60)% increased Evasion Rating
+42(40-60)% increased Evasion Rating
 { Unique Modifier — Chaos, Resistance }
-+9(7-17)% to Chaos Resistance
++9(7-17)% to Chaos Resistance
 { Unique Modifier — Ailment }
-26(20-30)% chance to Poison on Hit
+26(20-30)% chance to Poison on Hit
 { Unique Modifier }
-Targets can be affected by +1 of your Poisons at the same time
+Targets can be affected by +1 of your Poisons at the same time
 { Unique Modifier — Life }
-6.1(6-10) Life Regeneration per second
---------
-As the serpent shuns thought,
-It shuns fear.
-It strikes with the speed of wrath
-And the skill of compulsion.
+6.1(6-10) Life Regeneration per second
+--------
+As the serpent shuns thought,
+It shuns fear.
+It strikes with the speed of wrath
+And the skill of compulsion.

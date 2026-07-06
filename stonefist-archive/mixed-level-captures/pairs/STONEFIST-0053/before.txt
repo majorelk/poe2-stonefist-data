@@ -1,22 +1,22 @@
-Item Class: Gloves
-Rarity: Rare
-Grim Palm
-Baroque Gloves
---------
-Energy Shield: 62 (augmented)
---------
-Requires: Level 62, 43 (augmented) Int
---------
-Sockets: S 
---------
-Item Level: 82
---------
-18% increased Armour, Evasion and Energy Shield (rune)
---------
+Item Class: Gloves
+Rarity: Rare
+Grim Palm
+Baroque Gloves
+--------
+Energy Shield: 62 (augmented)
+--------
+Requires: Level 62, 43 (augmented) Int
+--------
+Sockets: S 
+--------
+Item Level: 82
+--------
+18% increased Armour, Evasion and Energy Shield (rune)
+--------
 { Prefix Modifier "Pope's" (Tier: 1) — Life, Energy Shield }
 41(39-42)% increased Energy Shield
-+42(42-49) to maximum Life
++42(42-49) to maximum Life
 { Suffix Modifier "of Renown" (Tier: 1) — Attack, Speed }
-16(14-16)% increased Attack Speed
+16(14-16)% increased Attack Speed
 { Suffix Modifier "of the Proficient" (Tier: 1) }
-35% reduced Attribute Requirements
+35% reduced Attribute Requirements

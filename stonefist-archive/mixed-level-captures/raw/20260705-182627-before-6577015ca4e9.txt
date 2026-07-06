@@ -1,18 +1,18 @@
-Item Class: Gloves
-Rarity: Rare
-Vengeance Paw
-Goldcast Cuffs
---------
-Armour: 49
-Energy Shield: 15
---------
-Requires: Level 33, 19 (augmented) Str, 19 (augmented) Int
---------
-Item Level: 39
---------
+Item Class: Gloves
+Rarity: Rare
+Vengeance Paw
+Goldcast Cuffs
+--------
+Armour: 49
+Energy Shield: 15
+--------
+Requires: Level 33, 19 (augmented) Str, 19 (augmented) Int
+--------
+Item Level: 39
+--------
 { Prefix Modifier "Burnished" (Tier: 8) — Damage, Physical, Attack }
-Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
+Adds 3(2-3) to 4(4-6) Physical Damage to Attacks
 { Prefix Modifier "Stout" (Tier: 5) — Life }
-+69(60-69) to maximum Life
++69(60-69) to maximum Life
 { Suffix Modifier "of the Apt" (Tier: 4) }
-20% reduced Attribute Requirements
+20% reduced Attribute Requirements

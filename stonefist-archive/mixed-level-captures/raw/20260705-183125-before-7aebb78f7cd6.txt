@@ -1,20 +1,20 @@
-Item Class: Gloves
-Rarity: Rare
-Rage Paw
-Steelmail Gauntlets
---------
-Armour: 89
-Evasion Rating: 81
---------
-Requires: Level 65, 44 Str, 44 Dex
---------
-Item Level: 66
---------
+Item Class: Gloves
+Rarity: Rare
+Rage Paw
+Steelmail Gauntlets
+--------
+Armour: 89
+Evasion Rating: 81
+--------
+Requires: Level 65, 44 Str, 44 Dex
+--------
+Item Level: 66
+--------
 { Prefix Modifier "Virile" (Tier: 2) — Life }
-+117(100-119) to maximum Life
++117(100-119) to maximum Life
 { Prefix Modifier "Cobalt" (Tier: 8) — Mana }
-+20(15-24) to maximum Mana
++20(15-24) to maximum Mana
 { Suffix Modifier "of the Falcon" (Tier: 6) — Attribute }
-+17(17-20) to Dexterity
++17(17-20) to Dexterity
 { Suffix Modifier "of the Goliath" (Tier: 3) — Attribute }
-+26(25-27) to Strength
++26(25-27) to Strength

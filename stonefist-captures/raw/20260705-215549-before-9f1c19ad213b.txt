@@ -1,14 +1,14 @@
-Item Class: Gloves
-Rarity: Magic
-Agile Stalking Bracers of the Vampire
---------
-Evasion Rating: 163 (augmented)
---------
-Requires: Level 65, 80 Dex
---------
-Item Level: 71
---------
+Item Class: Gloves
+Rarity: Magic
+Agile Stalking Bracers of the Vampire
+--------
+Evasion Rating: 163 (augmented)
+--------
+Requires: Level 65, 80 Dex
+--------
+Item Level: 71
+--------
 { Prefix Modifier "Agile" (Tier: 7) — Evasion }
-+15(11-18) to Evasion Rating
++15(11-18) to Evasion Rating
 { Suffix Modifier "of the Vampire" (Tier: 1) — Life, Physical, Attack }
-Leech 9.61(9-9.9)% of Physical Attack Damage as Life
+Leech 9.61(9-9.9)% of Physical Attack Damage as Life

@@ -1,21 +1,21 @@
-Item Class: Gloves
-Rarity: Rare
-Onslaught Mitts
-Baroque Gloves
---------
-Energy Shield: 57 (augmented)
---------
-Requires: Level 54, 46 (augmented) Int
---------
-Item Level: 54
---------
+Item Class: Gloves
+Rarity: Rare
+Onslaught Mitts
+Baroque Gloves
+--------
+Energy Shield: 57 (augmented)
+--------
+Requires: Level 54, 46 (augmented) Int
+--------
+Item Level: 54
+--------
 { Prefix Modifier "Annealed" (Tier: 4) — Damage, Physical, Attack }
-Adds 6(6-10) to 15(12-17) Physical Damage to Attacks
+Adds 6(6-10) to 15(12-17) Physical Damage to Attacks
 { Prefix Modifier "Glimmering" (Tier: 6) — Energy Shield }
-+18(18-24) to maximum Energy Shield
++18(18-24) to maximum Energy Shield
 { Suffix Modifier "of Archaeology" (Tier: 1) }
-17(15-18)% increased Rarity of Items found
+17(15-18)% increased Rarity of Items found
 { Suffix Modifier "of the Pupil" (Tier: 8) — Attribute }
-+5(5-8) to Intelligence
++5(5-8) to Intelligence
 { Suffix Modifier "of the Skilled" (Tier: 2) }
-30% reduced Attribute Requirements
+30% reduced Attribute Requirements

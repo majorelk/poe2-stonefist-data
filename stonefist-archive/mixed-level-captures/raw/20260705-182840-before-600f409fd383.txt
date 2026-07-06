@@ -1,13 +1,13 @@
-Item Class: Gloves
-Rarity: Magic
-Ornate Cuffs of Devouring
---------
-Armour: 82
-Energy Shield: 23
---------
-Requires: Level 59, 41 Str, 41 Int
---------
-Item Level: 75
---------
+Item Class: Gloves
+Rarity: Magic
+Ornate Cuffs of Devouring
+--------
+Armour: 82
+Energy Shield: 23
+--------
+Requires: Level 59, 41 Str, 41 Int
+--------
+Item Level: 75
+--------
 { Suffix Modifier "of Devouring" (Tier: 2) — Mana }
-Gain 29(28-35) Mana per enemy killed
+Gain 29(28-35) Mana per enemy killed

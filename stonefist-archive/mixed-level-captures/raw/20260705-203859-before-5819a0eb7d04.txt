@@ -1,12 +1,12 @@
-Item Class: Gloves
-Rarity: Magic
-Unassailable Sirenscale Gloves
---------
-Energy Shield: 106 (augmented)
---------
-Requires: Level 80, 101 Int
---------
-Item Level: 80
---------
+Item Class: Gloves
+Rarity: Magic
+Unassailable Sirenscale Gloves
+--------
+Energy Shield: 106 (augmented)
+--------
+Requires: Level 80, 101 Int
+--------
+Item Level: 80
+--------
 { Prefix Modifier "Unassailable" (Tier: 1) — Energy Shield }
-97(92-100)% increased Energy Shield
+97(92-100)% increased Energy Shield

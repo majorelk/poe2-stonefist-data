@@ -1,26 +1,26 @@
-Item Class: Gloves
-Rarity: Rare
-Agony Clutches
-Elegant Wraps
---------
-Evasion Rating: 170 (augmented)
-Energy Shield: 52 (augmented)
---------
-Requires: Level 70, 48 Dex, 48 Int
---------
-Sockets: S 
---------
-Item Level: 71
---------
-+18% to Lightning Resistance (rune)
---------
+Item Class: Gloves
+Rarity: Rare
+Agony Clutches
+Elegant Wraps
+--------
+Evasion Rating: 170 (augmented)
+Energy Shield: 52 (augmented)
+--------
+Requires: Level 70, 48 Dex, 48 Int
+--------
+Sockets: S 
+--------
+Item Level: 71
+--------
++18% to Lightning Resistance (rune)
+--------
 { Prefix Modifier "Illusory" (Tier: 1) — Evasion, Energy Shield }
-100(92-100)% increased Evasion and Energy Shield
+100(92-100)% increased Evasion and Energy Shield
 { Prefix Modifier "Freezing" (Tier: 5) — Damage, Elemental, Cold, Attack }
-Adds 9(9-10) to 17(15-17) Cold damage to Attacks
+Adds 9(9-10) to 17(15-17) Cold damage to Attacks
 { Prefix Modifier "Chalybeous" (Tier: 1) — Mana }
-+108(105-124) to maximum Mana
++108(105-124) to maximum Mana
 { Suffix Modifier "of the Yeti" (Tier: 5) — Elemental, Cold, Resistance }
-+25(21-25)% to Cold Resistance
++25(21-25)% to Cold Resistance
 { Suffix Modifier "of the Sage" (Tier: 3) — Attribute }
-+27(25-27) to Intelligence
++27(25-27) to Intelligence

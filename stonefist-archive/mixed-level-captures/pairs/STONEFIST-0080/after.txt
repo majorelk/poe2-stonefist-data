@@ -1,26 +1,26 @@
-Item Class: Gloves
-Rarity: Unique
-Dreadfist
-Fists of Stone
---------
-Evasion Rating: 240 (augmented)
-Energy Shield: 80 (augmented)
---------
-Item Level: 79
---------
+Item Class: Gloves
+Rarity: Unique
+Dreadfist
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Item Level: 79
+--------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
---------
+Has +1 to maximum Energy Shield per player level
+--------
 { Unique Modifier — Evasion, Energy Shield }
-18(15-20)% more Global Evasion Rating and Energy Shield
+18(15-20)% more Global Evasion Rating and Energy Shield
 { Unique Modifier — Critical }
-+1.74(1.5-2)% to Critical Hit Chance
++1.74(1.5-2)% to Critical Hit Chance
 { Unique Modifier }
-Deal your Thorns damage to enemies you Critically Hit with Melee Attacks — Unscalable Value
+Deal your Thorns damage to enemies you Critically Hit with Melee Attacks — Unscalable Value
 { Unique Modifier — Critical }
-34(25-35)% increased Thorns Critical Damage Bonus
+34(25-35)% increased Thorns Critical Damage Bonus
 { Unique Modifier — Damage, Elemental, Cold }
-32(24-35) to 56(36-57) Cold Thorns damage
---------
-Unmodifiable
+32(24-35) to 56(36-57) Cold Thorns damage
+--------
+Unmodifiable

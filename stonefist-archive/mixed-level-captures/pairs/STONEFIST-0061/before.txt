@@ -1,30 +1,30 @@
-Item Class: Gloves
-Rarity: Unique
-Gravebind
-Rope Cuffs
---------
-Armour: 19 (augmented)
-Energy Shield: 9 (augmented)
---------
-Requires: Level 5
---------
-Sockets: S 
---------
-Item Level: 62
---------
+Item Class: Gloves
+Rarity: Unique
+Gravebind
+Rope Cuffs
+--------
+Armour: 19 (augmented)
+Energy Shield: 9 (augmented)
+--------
+Requires: Level 5
+--------
+Sockets: S 
+--------
+Item Level: 62
+--------
 { Unique Modifier — Armour, Energy Shield }
-46(40-60)% increased Armour and Energy Shield
+46(40-60)% increased Armour and Energy Shield
 { Unique Modifier — Elemental, Cold, Resistance }
-+14(10-15)% to Cold Resistance
++14(10-15)% to Cold Resistance
 { Unique Modifier — Life }
-Gain 7(7-10) Life per enemy killed
+Gain 7(7-10) Life per enemy killed
 { Unique Modifier — Mana }
-Gain 5(4-6) Mana per enemy killed
+Gain 5(4-6) Mana per enemy killed
 { Unique Modifier }
 20% increased Rarity of Items found
 Your other Modifiers to Rarity of Items found do not apply
-Enemies in your Presence killed by anyone count as being killed by you instead — Unscalable Value
---------
-Try as you like to hide the
-blood on your hands.
-You'll still know the truth.
+Enemies in your Presence killed by anyone count as being killed by you instead — Unscalable Value
+--------
+Try as you like to hide the
+blood on your hands.
+You'll still know the truth.

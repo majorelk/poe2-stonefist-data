@@ -1,29 +1,29 @@
-Item Class: Gloves
-Rarity: Unique
-Lochtonial Caress
-Fists of Stone
---------
-Evasion Rating: 320 (augmented)
-Energy Shield: 160 (augmented)
---------
-Item Level: 80
---------
+Item Class: Gloves
+Rarity: Unique
+Lochtonial Caress
+Fists of Stone
+--------
+Evasion Rating: 320 (augmented)
+Energy Shield: 160 (augmented)
+--------
+Item Level: 80
+--------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
---------
+Has +1 to maximum Energy Shield per player level
+--------
 { Unique Modifier }
 8(5-10)% chance to grant a Endurance Charge to Allies in your Presence on Hit
 7(5-10)% chance to grant a Frenzy Charge to Allies in your Presence on Hit
-7(5-10)% chance to grant a Power Charge to Allies in your Presence on Hit
+7(5-10)% chance to grant a Power Charge to Allies in your Presence on Hit
 { Unique Modifier — Attack, Speed }
-16(13-20)% increased Attack Speed
+16(13-20)% increased Attack Speed
 { Unique Modifier }
-Cannot Leech Mana — Unscalable Value
+Cannot Leech Mana — Unscalable Value
 { Unique Modifier }
-9(9-7)% less damage taken while on Low Life
+9(9-7)% less damage taken while on Low Life
 { Unique Modifier }
 Has +1 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
---------
-Unmodifiable
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable

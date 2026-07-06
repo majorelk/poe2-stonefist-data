@@ -1,22 +1,22 @@
-Item Class: Gloves
-Rarity: Rare
-Vortex Grasp
-Ornate Mitts
---------
-Armour: 207 (augmented)
---------
-Requires: Level 70, 87 Str
---------
-Item Level: 73
---------
+Item Class: Gloves
+Rarity: Rare
+Vortex Grasp
+Ornate Mitts
+--------
+Armour: 207 (augmented)
+--------
+Requires: Level 70, 87 Str
+--------
+Item Level: 73
+--------
 { Prefix Modifier "Urchin's" (Tier: 4) — Life, Armour }
 21(21-26)% increased Armour
-+20(20-25) to maximum Life
++20(20-25) to maximum Life
 { Prefix Modifier "Blasting" (Tier: 2) — Damage, Elemental, Fire, Attack }
-Adds 21(20-24) to 34(33-36) Fire damage to Attacks
+Adds 21(20-24) to 34(33-36) Fire damage to Attacks
 { Prefix Modifier "Consistent" (Tier: 5) — Attack }
-+151(124-167) to Accuracy Rating
++151(124-167) to Accuracy Rating
 { Suffix Modifier "of Covering" (Tier: 5) — Armour, Elemental }
-+18(14-19)% of Armour also applies to Elemental Damage
++18(14-19)% of Armour also applies to Elemental Damage
 { Suffix Modifier "of Renown" (Tier: 1) — Attack, Speed }
-15(14-16)% increased Attack Speed
+15(14-16)% increased Attack Speed

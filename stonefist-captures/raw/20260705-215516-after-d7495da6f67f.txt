@@ -1,31 +1,31 @@
-Item Class: Gloves
-Rarity: Rare
-Agony Clutches
-Fists of Stone
---------
-Evasion Rating: 240 (augmented)
-Energy Shield: 80 (augmented)
---------
-Sockets: S 
---------
-Item Level: 71
---------
-+18% to Lightning Resistance (rune)
---------
+Item Class: Gloves
+Rarity: Rare
+Agony Clutches
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Sockets: S 
+--------
+Item Level: 71
+--------
++18% to Lightning Resistance (rune)
+--------
 { Implicit Modifier }
 Has +3 to Evasion Rating per player level
-Has +1 to maximum Energy Shield per player level
---------
+Has +1 to maximum Energy Shield per player level
+--------
 { Prefix Modifier "Illusory" — Evasion, Energy Shield }
-20(19-20)% more Global Evasion Rating and Energy Shield
+20(19-20)% more Global Evasion Rating and Energy Shield
 { Prefix Modifier "Freezing" — Elemental, Cold, Attack }
-Attacks Gain 14% of Damage as Extra Cold Damage
+Attacks Gain 14% of Damage as Extra Cold Damage
 { Prefix Modifier "Chalybeous" }
-26(26-27)% more Attack damage while on Low Mana
+26(26-27)% more Attack damage while on Low Mana
 { Suffix Modifier "of the Yeti" — Elemental, Cold, Resistance }
 +2% to Maximum Cold Resistance
-+22(21-25)% to Cold Resistance
++22(21-25)% to Cold Resistance
 { Suffix Modifier "of the Sage" }
-28(25-28)% increased Cooldown Recovery Rate
---------
-Unmodifiable
+28(25-28)% increased Cooldown Recovery Rate
+--------
+Unmodifiable

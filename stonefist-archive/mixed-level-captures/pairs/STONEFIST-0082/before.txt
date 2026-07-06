@@ -1,24 +1,24 @@
-Item Class: Gloves
-Rarity: Unique
-Lochtonial Caress
-Tempered Mitts
---------
-Armour: 67 (augmented)
---------
-Requires: Level 16, 22 Str
---------
-Item Level: 80
---------
+Item Class: Gloves
+Rarity: Unique
+Lochtonial Caress
+Tempered Mitts
+--------
+Armour: 67 (augmented)
+--------
+Requires: Level 16, 22 Str
+--------
+Item Level: 80
+--------
 { Unique Modifier }
-Share Charges with Allies in your Presence — Unscalable Value
+Share Charges with Allies in your Presence — Unscalable Value
 { Unique Modifier — Speed }
-14(10-15)% increased Skill Speed
+14(10-15)% increased Skill Speed
 { Unique Modifier — Mana }
-11(15-10)% reduced maximum Mana
+11(15-10)% reduced maximum Mana
 { Unique Modifier — Life }
-+41(40-60) to maximum Life
++41(40-60) to maximum Life
 { Unique Modifier — Armour }
-+18(15-25) to Armour
---------
-Why cling to your sanity? It offers you nothing.
-Surrender to me, and I will grant you everything.
++18(15-25) to Armour
+--------
+Why cling to your sanity? It offers you nothing.
+Surrender to me, and I will grant you everything.

@@ -2,6 +2,54 @@
 
 A small toolchain for capturing, building, and reporting Way of the Stonefist item transformation pairs, and for cross-referencing transformed gloves against a PoE2DB glove modifier reference pool.
 
+## What this is for
+
+Path of Exile 2's Way of the Stonefist transforms a pair of gloves into a unique item, and it is not obvious which modifiers on the original gloves lead to which modifiers on the result.
+
+This tool exists to answer that question with evidence instead of guesswork:
+
+- Capture real before/after glove pairs as you use Stonefist in-game.
+- Automatically build a searchable dataset from everything captured so far.
+- Cross-reference against the known pool of glove modifiers from PoE2DB.
+- Generate a single readable HTML report showing what is confirmed, what is likely, and what still needs more data.
+
+You do not need to read or write Python to use this. See `docs/README.md` for a visual walkthrough of the report, or read on for the full details.
+
+## Visual overview
+
+```mermaid
+flowchart LR
+    Capture["stonefist_capture.py\ncapture before/after item text"] --> Raw["stonefist-captures/pairs/\nraw evidence"]
+    Raw --> Build["stonefist_build_dataset.py"]
+
+    Import["stonefist_import_poe2db_mods.py\n(optional, one-off)"] --> Pool["stonefist-reference/glove_mod_pool.csv"]
+    Pool --> Build
+
+    Build --> Data["dataset.json + generated CSVs\n(mapping, coverage, capture targets)"]
+    Data --> Report["stonefist_report.py"]
+    Report --> Html["report.html\ntabbed report"]
+```
+
+## Screenshots
+
+Screenshots of the generated report live under `docs/assets/`. If you regenerate the report, feel free to refresh these with your own captures of `stonefist-captures/report.html`.
+
+**Overview** - high-level dataset counts and priority/coverage summaries:
+
+![Overview tab](docs/assets/report-overview.png)
+
+**Capture Targets** - prioritised list of what to capture or isolate next:
+
+![Capture Targets tab](docs/assets/report-capture-targets.png)
+
+**Mapping Families** - what Stonefist appears to turn each modifier into:
+
+![Mapping Families tab](docs/assets/report-mapping-families.png)
+
+**Pair Explorer** - every captured before/after pair, individually searchable:
+
+![Pair Explorer tab](docs/assets/report-pair-explorer.png)
+
 ## Files
 
 - `stonefist_capture.py` - captures clipboard `before`/`after` item text and saves raw evidence under `stonefist-captures/pairs/`.

@@ -202,7 +202,6 @@ table {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    overflow: hidden;
     font-size: 13.5px;
 }
 

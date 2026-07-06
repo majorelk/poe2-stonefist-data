@@ -51,9 +51,9 @@ Every captured before/after pair, individually. Expand a row to see item stats, 
 
 Not a separate table - raw item text lives inside each row in **Pair Explorer**, under the collapsed "Raw item text" section, so the page doesn't balloon in size.
 
-## Adding your own screenshots
+## Refreshing these screenshots
 
-Drop PNG files into `assets/` using these names and they'll show up automatically in this guide and the main README:
+The images above are captures of a real generated `report.html`. If the report's look changes, replace the PNG files in `assets/` using these same names and both this guide and the main README will pick up the update automatically:
 
 - `assets/report-overview.png`
 - `assets/report-capture-targets.png`

@@ -32,16 +32,22 @@ flowchart LR
 
 ## Screenshots
 
-Screenshots of the generated report live under `docs/assets/`. Add your own after running `stonefist_report.py` and opening `stonefist-captures/report.html`:
+Screenshots of the generated report live under `docs/assets/`. If you regenerate the report, feel free to refresh these with your own captures of `stonefist-captures/report.html`.
 
-- `docs/assets/report-overview.png` - the Overview tab
-- `docs/assets/report-capture-targets.png` - the Capture Targets tab
-- `docs/assets/report-mapping-families.png` - the Mapping Families tab
-- `docs/assets/report-pair-explorer.png` - the Pair Explorer tab
+**Overview** - high-level dataset counts and priority/coverage summaries:
 
 ![Overview tab](docs/assets/report-overview.png)
+
+**Capture Targets** - prioritised list of what to capture or isolate next:
+
 ![Capture Targets tab](docs/assets/report-capture-targets.png)
+
+**Mapping Families** - what Stonefist appears to turn each modifier into:
+
 ![Mapping Families tab](docs/assets/report-mapping-families.png)
+
+**Pair Explorer** - every captured before/after pair, individually searchable:
+
 ![Pair Explorer tab](docs/assets/report-pair-explorer.png)
 
 ## Files

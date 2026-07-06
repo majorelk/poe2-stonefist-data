@@ -1,0 +1,9 @@
+Item Class: Gloves
+Rarity: Rare
+Dread Knuckle
+--------
+Item Level: 82
+--------
+{ Prefix Modifier "Hunter's" (Tier: 3) — Attack }
++336(237-346) to Accuracy Rating
+--------

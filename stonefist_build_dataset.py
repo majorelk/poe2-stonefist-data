@@ -267,12 +267,11 @@ def write_capture_targets_csv(rows: list[dict[str, object]]) -> None:
             )
 
 
-def write_glove_coverage_files(
+def compute_coverage_rows(
     pairs: list[dict],
-    observations: list[dict[str, object]],
     family_summaries: list[dict[str, object]],
     reference_entries: list[dict[str, str]],
-) -> None:
+) -> list[dict[str, object]]:
     pool_by_template: dict[str, dict[str, object]] = {}
     for entry in reference_entries:
         tmpl = entry.get("stat_template", "")
@@ -295,8 +294,6 @@ def write_glove_coverage_files(
 
     before_obs: dict[str, set[str]] = {}
     after_obs: dict[str, set[str]] = {}
-    before_examples: dict[str, str] = {}
-    after_examples: dict[str, str] = {}
 
     for p in pairs:
         for block in parse_explicit_modifier_blocks(p["before_text"]):
@@ -304,14 +301,12 @@ def write_glove_coverage_files(
             if not tmpl:
                 continue
             before_obs.setdefault(tmpl, set()).add(p["test_id"])
-            before_examples.setdefault(tmpl, join_stats_for_csv(block["stat_lines"]))
 
         for block in parse_explicit_modifier_blocks(p["after_text"]):
             tmpl = normalise_stat_template(join_stats_for_csv(block["stat_lines"]))
             if not tmpl:
                 continue
             after_obs.setdefault(tmpl, set()).add(p["test_id"])
-            after_examples.setdefault(tmpl, join_stats_for_csv(block["stat_lines"]))
 
     family_by_before: dict[str, dict[str, object]] = {}
     for family in family_summaries:
@@ -389,6 +384,32 @@ def write_glove_coverage_files(
             }
         )
 
+    return coverage_rows
+
+
+def write_glove_coverage_files(
+    pairs: list[dict],
+    observations: list[dict[str, object]],
+    family_summaries: list[dict[str, object]],
+    reference_entries: list[dict[str, str]],
+) -> None:
+    coverage_rows = compute_coverage_rows(pairs, family_summaries, reference_entries)
+
+    pool_templates: set[str] = {
+        entry.get("stat_template", "") for entry in reference_entries if entry.get("stat_template", "")
+    }
+
+    after_obs: dict[str, set[str]] = {}
+    after_examples: dict[str, str] = {}
+
+    for p in pairs:
+        for block in parse_explicit_modifier_blocks(p["after_text"]):
+            tmpl = normalise_stat_template(join_stats_for_csv(block["stat_lines"]))
+            if not tmpl:
+                continue
+            after_obs.setdefault(tmpl, set()).add(p["test_id"])
+            after_examples.setdefault(tmpl, join_stats_for_csv(block["stat_lines"]))
+
     if not reference_entries:
         print("No glove modifier reference pool found; coverage outputs are header-only.")
         with GLOVE_COVERAGE_PATH.open("w", newline="", encoding="utf-8") as f:
@@ -427,7 +448,7 @@ def write_glove_coverage_files(
 
     output_only_rows: list[dict[str, object]] = []
     for tmpl, sample_ids in after_obs.items():
-        if tmpl not in pool_by_template:
+        if tmpl not in pool_templates:
             output_only_rows.append(
                 {
                     "after_stat_template": tmpl,

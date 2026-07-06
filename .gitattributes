@@ -31,3 +31,16 @@
 *.tar binary
 *.gz binary
 *.7z binary
+
+# Generated Stonefist artefacts
+stonefist-captures/report.html linguist-generated
+stonefist-captures/dataset.json linguist-generated
+stonefist-captures/*.csv linguist-generated
+stonefist-reference/glove_mod_pool.csv linguist-generated
+stonefist-reference/glove_mod_pool.json linguist-generated
+
+# Captured evidence data
+stonefist-captures/pairs/** linguist-generated
+stonefist-captures/raw/** linguist-generated
+stonefist-archive/** linguist-generated
+stonefist-reference/raw-poe2db/** linguist-generated

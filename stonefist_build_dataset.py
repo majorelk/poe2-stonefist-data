@@ -21,6 +21,7 @@ GLOVE_COVERAGE_PATH = ROOT / "glove_mod_coverage.csv"
 TRANSFORMED_OUTPUT_ONLY_PATH = ROOT / "transformed_output_only.csv"
 CAPTURE_TARGETS_PATH = ROOT / "capture_targets.csv"
 BASE_CONTROL_SUMMARY_PATH = ROOT / "base_control_summary.csv"
+AUGMENT_SOCKET_SUMMARY_PATH = ROOT / "augment_socket_summary.csv"
 
 
 def read_text(path: Path) -> str:
@@ -234,7 +235,7 @@ def build_capture_targets(coverage_rows: list[dict[str, object]]) -> list[dict[s
 
 def write_capture_targets_csv(rows: list[dict[str, object]]) -> None:
     with CAPTURE_TARGETS_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(
             [
                 "priority",
@@ -414,7 +415,7 @@ def write_glove_coverage_files(
     if not reference_entries:
         print("No glove modifier reference pool found; coverage outputs are header-only.")
         with GLOVE_COVERAGE_PATH.open("w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
+            writer = csv.writer(f, lineterminator="\n")
             writer.writerow(
                 [
                     "stat_template",
@@ -434,7 +435,7 @@ def write_glove_coverage_files(
             )
 
         with TRANSFORMED_OUTPUT_ONLY_PATH.open("w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
+            writer = csv.writer(f, lineterminator="\n")
             writer.writerow(
                 [
                     "after_stat_template",
@@ -460,7 +461,7 @@ def write_glove_coverage_files(
             )
 
     with GLOVE_COVERAGE_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(
             [
                 "stat_template",
@@ -498,7 +499,7 @@ def write_glove_coverage_files(
             )
 
     with TRANSFORMED_OUTPUT_ONLY_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(
             [
                 "after_stat_template",
@@ -1045,7 +1046,7 @@ def write_mapping_csvs(pairs: list[dict]) -> None:
     family_summaries = summarize_mapping_families(observations)
 
     with MAPPING_OBSERVATIONS_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(
             [
                 "test_id",
@@ -1096,7 +1097,7 @@ def write_mapping_csvs(pairs: list[dict]) -> None:
             )
 
     with MAPPING_CANDIDATES_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(
             [
                 "before_modifier_name",
@@ -1131,7 +1132,7 @@ def write_mapping_csvs(pairs: list[dict]) -> None:
             )
 
     with MAPPING_FAMILIES_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(
             [
                 "before_stat_template",
@@ -1279,15 +1280,180 @@ def compute_base_control_rows(pairs: list[dict]) -> list[dict[str, object]]:
 
 def write_base_control_summary_csv(rows: list[dict[str, object]]) -> None:
     with BASE_CONTROL_SUMMARY_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(BASE_CONTROL_FIELDNAMES)
         for row in rows:
             writer.writerow([row.get(field, "") for field in BASE_CONTROL_FIELDNAMES])
 
 
+AUGMENT_SOCKET_FIELDNAMES = [
+    "sample_id",
+    "character_level",
+    "before_rarity",
+    "before_name",
+    "before_base_type",
+    "after_name",
+    "after_base_type",
+    "before_socket_count",
+    "after_socket_count",
+    "before_socket_lines",
+    "after_socket_lines",
+    "before_augment_lines",
+    "after_augment_lines",
+    "augment_family",
+    "socket_behaviour",
+    "augment_behaviour",
+    "notes",
+]
+
+# Not an exhaustive augment database - just enough keyword grouping to give
+# representative control evidence about whether Stonefist preserves sockets
+# and whatever is socketed into them.
+AUGMENT_FAMILY_KEYWORDS = [
+    ("attribute", ("Strength", "Dexterity", "Intelligence")),
+    ("resistance", ("Resistance",)),
+    ("armour_evasion_energy_shield", ("Armour", "Evasion", "Energy Shield")),
+    ("mana_regen", ("Mana Regeneration", "Mana per Second", "Mana Regen")),
+    ("life_regen", ("Life Regeneration", "Life per Second", "Life Regen")),
+    ("idol", ("Idol",)),
+]
+
+
+def extract_socket_lines(text: str) -> list[str]:
+    return [line.strip() for line in text.splitlines() if line.strip().startswith("Sockets:")]
+
+
+def count_sockets(socket_lines: list[str]) -> int:
+    total = 0
+    for line in socket_lines:
+        _, _, value = line.partition(":")
+        total += len(value.split())
+    return total
+
+
+def extract_augment_lines(text: str) -> list[str]:
+    lines = [line.rstrip() for line in text.splitlines()]
+    augment_lines: list[str] = []
+
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+        if not line.startswith("Rune:"):
+            i += 1
+            continue
+
+        augment_lines.append(line)
+        i += 1
+
+        while i < len(lines):
+            nxt = lines[i].strip()
+            if not nxt or nxt == "--------":
+                break
+            augment_lines.append(nxt)
+            i += 1
+
+    return augment_lines
+
+
+def classify_socket_behaviour(before_count: int, after_count: int) -> str:
+    if before_count == 0 and after_count == 0:
+        return "unknown"
+    if after_count == before_count:
+        return "preserved"
+    if after_count == 0:
+        return "removed"
+    return "changed"
+
+
+def classify_augment_behaviour(before_lines: list[str], after_lines: list[str]) -> str:
+    before_joined = " ".join(before_lines).strip()
+    after_joined = " ".join(after_lines).strip()
+
+    if not before_joined and not after_joined:
+        return "preserved"
+    if before_joined and not after_joined:
+        return "removed"
+    if not before_joined and after_joined:
+        return "changed"
+    if before_joined == after_joined:
+        return "preserved"
+    return "changed"
+
+
+def derive_augment_family(augment_lines: list[str], socket_count: int) -> str:
+    if not augment_lines:
+        return "empty_socket" if socket_count > 0 else "unknown"
+
+    combined = " ".join(augment_lines)
+    for family, keywords in AUGMENT_FAMILY_KEYWORDS:
+        if any(keyword in combined for keyword in keywords):
+            return family
+
+    return "other"
+
+
+def is_socket_augment_control_pair(pair: dict) -> bool:
+    before_socket_count = count_sockets(extract_socket_lines(pair.get("before_text", "")))
+    return before_socket_count > 0 and "Fists of Stone" in pair.get("after_text", "")
+
+
+def compute_augment_socket_rows(pairs: list[dict]) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+
+    for p in pairs:
+        if not is_socket_augment_control_pair(p):
+            continue
+
+        before_text = p.get("before_text", "")
+        after_text = p.get("after_text", "")
+
+        before_socket_lines = extract_socket_lines(before_text)
+        after_socket_lines = extract_socket_lines(after_text)
+        before_socket_count = count_sockets(before_socket_lines)
+        after_socket_count = count_sockets(after_socket_lines)
+
+        before_augment_lines = extract_augment_lines(before_text)
+        after_augment_lines = extract_augment_lines(after_text)
+
+        family_lines = before_augment_lines or after_augment_lines
+
+        rows.append(
+            {
+                "sample_id": p.get("test_id", ""),
+                "character_level": p.get("character_level", ""),
+                "before_rarity": p.get("before_rarity", ""),
+                "before_name": p.get("before_name", ""),
+                "before_base_type": p.get("before_base", "") or p.get("before_name", ""),
+                "after_name": p.get("after_name", ""),
+                "after_base_type": p.get("after_base", "") or p.get("after_name", ""),
+                "before_socket_count": before_socket_count,
+                "after_socket_count": after_socket_count,
+                "before_socket_lines": " | ".join(before_socket_lines),
+                "after_socket_lines": " | ".join(after_socket_lines),
+                "before_augment_lines": " | ".join(before_augment_lines),
+                "after_augment_lines": " | ".join(after_augment_lines),
+                "augment_family": derive_augment_family(family_lines, before_socket_count),
+                "socket_behaviour": classify_socket_behaviour(before_socket_count, after_socket_count),
+                "augment_behaviour": classify_augment_behaviour(before_augment_lines, after_augment_lines),
+                "notes": p.get("notes", ""),
+            }
+        )
+
+    rows.sort(key=lambda row: row["sample_id"])
+    return rows
+
+
+def write_augment_socket_summary_csv(rows: list[dict[str, object]]) -> None:
+    with AUGMENT_SOCKET_SUMMARY_PATH.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f, lineterminator="\n")
+        writer.writerow(AUGMENT_SOCKET_FIELDNAMES)
+        for row in rows:
+            writer.writerow([row.get(field, "") for field in AUGMENT_SOCKET_FIELDNAMES])
+
+
 def write_csvs(pairs: list[dict]) -> None:
     with PAIR_SUMMARY_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(
             [
                 "test_id",
@@ -1356,7 +1522,7 @@ def write_csvs(pairs: list[dict]) -> None:
             )
 
     with MOD_LINES_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(["test_id", "category", "side", "line_number", "mod_line"])
 
         for p in pairs:
@@ -1368,6 +1534,7 @@ def write_csvs(pairs: list[dict]) -> None:
 
     write_mapping_csvs(pairs)
     write_base_control_summary_csv(compute_base_control_rows(pairs))
+    write_augment_socket_summary_csv(compute_augment_socket_rows(pairs))
 
 
 def main() -> None:

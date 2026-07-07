@@ -1,0 +1,21 @@
+sample_id,character_level,before_rarity,before_name,before_base_type,after_name,after_base_type,before_socket_count,after_socket_count,before_socket_lines,after_socket_lines,before_augment_lines,after_augment_lines,augment_family,socket_behaviour,augment_behaviour,notes
+STONEFIST-0001,80,Rare,Dread Knuckle,Adorned Wraps,Dread Knuckle,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0005,80,Rare,Dusk Paw,Stalking Bracers,Dusk Paw,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0018,80,Rare,Agony Clutches,Elegant Wraps,Agony Clutches,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0024,80,Rare,Spirit Clutches,Gold Gloves,Spirit Clutches,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0027,80,Rare,Brimstone Talons,Spiral Wraps,Brimstone Talons,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0036,80,Rare,Brood Hand,Gauze Wraps,Brood Hand,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0038,80,Rare,Behemoth Fist,Spined Bracers,Behemoth Fist,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0044,80,Rare,Grim Fingers,Layered Gauntlets,Grim Fingers,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0052,80,Unique,Atziri's Acuity,Moulded Mitts,Atziri's Acuity,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0055,80,Unique,Demon Stitcher,Intricate Gloves,Demon Stitcher,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0059,80,Unique,Kitoko's Current,Jewelled Gloves,Kitoko's Current,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0061,80,Unique,Painter's Servant,Torn Gloves,Painter's Servant,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0064,80,Unique,Valako's Vice,Plate Gauntlets,Valako's Vice,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0070,80,Rare,Torment Knuckle,Bound Cuffs,Torment Knuckle,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0077,80,Rare,Sorrow Vise,Vaal Gloves,Sorrow Vise,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0078,80,Rare,Grim Palm,Baroque Gloves,Grim Palm,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0079,80,Unique,Gravebind,Rope Cuffs,Gravebind,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0084,80,Rare,Gale Nails,Blacksteel Gauntlets,Gale Nails,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,
+STONEFIST-0088,80,Normal,Ornate Mitts,Ornate Mitts,Fists of Stone,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,Normal white base control captures. No explicit modifiers.
+STONEFIST-0094,80,Normal,War Wraps,War Wraps,Fists of Stone,Fists of Stone,1,1,Sockets: S,Sockets: S,,,empty_socket,preserved,preserved,Normal white base control captures. No explicit modifiers.

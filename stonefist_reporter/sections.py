@@ -40,6 +40,37 @@ DEFENCE_FAMILY_BADGE_KIND = {
 
 DEFENCE_FAMILY_ORDER = ["STR", "DEX", "INT", "STR/DEX", "STR/INT", "DEX/INT", "unknown"]
 
+BEHAVIOUR_BADGE_KIND = {
+    "preserved": "success",
+    "removed": "danger",
+    "changed": "warning",
+    "unknown": "muted",
+}
+
+AUGMENT_FAMILY_BADGE_KIND = {
+    "empty_socket": "muted",
+    "attribute": "accent",
+    "resistance": "warning",
+    "armour_evasion_energy_shield": "success",
+    "mana_regen": "accent",
+    "life_regen": "danger",
+    "idol": "special",
+    "other": "special",
+    "unknown": "muted",
+}
+
+AUGMENT_FAMILY_ORDER = [
+    "empty_socket",
+    "attribute",
+    "resistance",
+    "armour_evasion_energy_shield",
+    "mana_regen",
+    "life_regen",
+    "idol",
+    "other",
+    "unknown",
+]
+
 
 def esc(value: object) -> str:
     return html.escape(str(value))
@@ -552,12 +583,107 @@ def render_base_controls_section(rows: list[dict[str, str]]) -> str:
     """
 
 
+def render_augment_socket_behaviour_summary(rows: list[dict[str, str]]) -> str:
+    socket_counts = Counter(row.get("socket_behaviour") or "unknown" for row in rows)
+    augment_counts = Counter(row.get("augment_behaviour") or "unknown" for row in rows)
+
+    def cards_for(counts: Counter, label_prefix: str) -> str:
+        cards = [(f"{label_prefix}: {behaviour}", count) for behaviour, count in counts.items() if count]
+        if not cards:
+            return ""
+        return "".join(
+            f"<div class=\"card\"><div>{esc(label)}</div><div class=\"num\">{esc(count)}</div></div>"
+            for label, count in cards
+        )
+
+    body = cards_for(socket_counts, "Sockets") + cards_for(augment_counts, "Augment")
+    if not body:
+        return "<p><em>No augment/socket control samples captured yet.</em></p>"
+
+    return f'<div class="stats">{body}</div>'
+
+
+def render_augment_family_summary(rows: list[dict[str, str]]) -> str:
+    counts = Counter(row.get("augment_family") or "unknown" for row in rows)
+    cards = [(family, counts.get(family, 0)) for family in AUGMENT_FAMILY_ORDER if counts.get(family, 0)]
+
+    if not cards:
+        return "<p><em>No augment/socket control samples captured yet.</em></p>"
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>{esc(family)}</div><div class=\"num\">{esc(count)}</div></div>"
+        for family, count in cards
+    ) + "</div>"
+
+
+def render_augment_socket_table(rows: list[dict[str, str]]) -> str:
+    if not rows:
+        return "<p><em>No augment/socket control samples captured yet. Capture a glove with sockets before and after Stonefist to add one.</em></p>"
+
+    table_rows = []
+    for row in rows:
+        family = row.get("augment_family") or "unknown"
+        socket_behaviour = row.get("socket_behaviour") or "unknown"
+        augment_behaviour = row.get("augment_behaviour") or "unknown"
+
+        table_rows.append(
+            f"""
+            <tr data-augment-family="{esc(family)}">
+                <td>{esc(row.get('sample_id', ''))}</td>
+                <td>{esc(row.get('before_name', ''))} <small>({esc(row.get('before_base_type', ''))})</small></td>
+                <td>{badge(family, AUGMENT_FAMILY_BADGE_KIND.get(family, 'muted'))}</td>
+                <td>{esc(row.get('before_socket_count', '0'))} &rarr; {esc(row.get('after_socket_count', '0'))}</td>
+                <td>{badge(socket_behaviour, BEHAVIOUR_BADGE_KIND.get(socket_behaviour, 'muted'))}</td>
+                <td>{badge(augment_behaviour, BEHAVIOUR_BADGE_KIND.get(augment_behaviour, 'muted'))}</td>
+                <td><code>{esc(row.get('before_augment_lines', ''))}</code><br><code>{esc(row.get('after_augment_lines', ''))}</code></td>
+                <td>{esc(row.get('notes', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table id="augment-socket-table">
+        <thead>
+            <tr>
+                <th>Sample</th>
+                <th>Before item</th>
+                <th>Augment family</th>
+                <th>Sockets (before &rarr; after)</th>
+                <th>Socket behaviour</th>
+                <th>Augment behaviour</th>
+                <th>Augment lines (before / after)</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(table_rows)}</tbody>
+    </table>
+    """
+
+
+def render_augment_controls_section(rows: list[dict[str, str]]) -> str:
+    return f"""
+    <div class="tab-panel" id="tab-augment-controls">
+        <p class="lede">Sockets and socketed augments (runes), captured before and after Stonefist. This is representative control evidence, not an exhaustive augment database - it tracks whether sockets and whatever is socketed into them survive the transformation. Socketed augment stats are evidence here only, and are never counted as natural explicit glove modifier mappings.</p>
+
+        <h3>Socket and augment behaviour</h3>
+        {render_augment_socket_behaviour_summary(rows)}
+
+        <h3>Samples by augment family</h3>
+        {render_augment_family_summary(rows)}
+
+        <h3>Samples</h3>
+        {render_augment_socket_table(rows)}
+    </div>
+    """
+
+
 def render_overview_section(
     pairs: list[dict],
     coverage: list[dict[str, str]],
     transformed_only: list[dict[str, str]],
     capture_targets: list[dict[str, str]],
     base_controls: list[dict[str, str]],
+    augment_socket_controls: list[dict[str, str]],
 ) -> str:
     status_counts = Counter(p["uid_status"] for p in pairs)
     category_counts = Counter(p["category"] for p in pairs)
@@ -576,6 +702,7 @@ def render_overview_section(
             <div class="card"><div>UID matches</div><div class="num">{status_counts.get("match", 0)}</div></div>
             <div class="card"><div>Exact duplicates</div><div class="num">{duplicate_count}</div></div>
             <div class="card"><div>Normal base controls</div><div class="num">{len(base_controls)}</div></div>
+            <div class="card"><div>Augment/socket controls</div><div class="num">{len(augment_socket_controls)}</div></div>
         </div>
 
         <h3>Capture targets by priority</h3>
@@ -585,7 +712,7 @@ def render_overview_section(
         {render_glove_coverage_summary(coverage, transformed_only)}
 
         <p class="subtle">
-        Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, <code>capture_targets.csv</code>, and <code>base_control_summary.csv</code>.
+        Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, <code>capture_targets.csv</code>, <code>base_control_summary.csv</code>, and <code>augment_socket_summary.csv</code>.
         </p>
     </div>
     """

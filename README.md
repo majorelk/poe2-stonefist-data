@@ -151,6 +151,7 @@ The build step produces derived data under `stonefist-captures/`:
 - `transformed_output_only.csv` - Stonefist output stat templates not present in the loaded glove modifier reference pool.
 - `capture_targets.csv` - prioritised list of modifiers worth hunting or isolating next.
 - `base_control_summary.csv` - normal/white glove base controls (no explicit modifiers) showing how each original defence family (STR/DEX/INT and hybrids) transforms into the Fists of Stone Evasion/Energy Shield implicit, with observed per-level scaling.
+- `augment_socket_summary.csv` - socket and socketed augment (rune) controls, showing whether sockets and whatever is socketed into them survive the Stonefist transformation. Representative control evidence, not an exhaustive augment database.
 - `report.html` - static human-readable report.
 
 ## Reading the report
@@ -202,6 +203,18 @@ Shows normal/white glove pairs with no explicit modifiers, captured before and a
 - `Has +# to maximum Energy Shield per player level`
 
 This tab groups samples by original defence family, shows the observed per-level scaling, and lists each sample with its notes. If no base controls have been captured yet, this tab shows zero counts rather than an error.
+
+### Augment Controls
+
+Shows sockets and socketed augments (runes), captured before and after Stonefist, tracking whether they survive the transformation. This is separate from both Base Controls (which isolates the base implicit) and the explicit modifier mapping tabs: **socketed augment stats are control evidence only and are never counted as natural explicit glove modifier mappings**, since a rune's effect is not an affix on the item.
+
+For each sample this tab shows:
+
+- `socket_behaviour` - whether the socket count was `preserved`, `removed`, `changed`, or `unknown`.
+- `augment_behaviour` - whether whatever was socketed was `preserved`, `removed`, `changed`, or `unknown`.
+- `augment_family` - a rough grouping of what was socketed (`empty_socket`, `attribute`, `resistance`, `armour_evasion_energy_shield`, `mana_regen`, `life_regen`, `idol`, `other`, `unknown`). This is deliberately not an exhaustive augment database - it exists to give representative control evidence, not to map every possible rune.
+
+If no augment/socket controls have been captured yet, this tab shows zero counts rather than an error.
 
 ### Pair Explorer
 

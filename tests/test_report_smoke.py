@@ -14,6 +14,7 @@ TAB_LABELS = [
     "Modifier Coverage",
     "Output Only",
     "Base Controls",
+    "Augment Controls",
     "Pair Explorer",
     "Raw Evidence",
 ]
@@ -37,6 +38,7 @@ def test_report_html_contains_all_tabs(tmp_path, monkeypatch):
     monkeypatch.setattr(loaders, "TRANSFORMED_OUTPUT_ONLY_PATH", tmp_path / "transformed_output_only.csv")
     monkeypatch.setattr(loaders, "CAPTURE_TARGETS_PATH", tmp_path / "capture_targets.csv")
     monkeypatch.setattr(loaders, "BASE_CONTROL_SUMMARY_PATH", tmp_path / "base_control_summary.csv")
+    monkeypatch.setattr(loaders, "AUGMENT_SOCKET_SUMMARY_PATH", tmp_path / "augment_socket_summary.csv")
 
     html = render_html(pairs)
 

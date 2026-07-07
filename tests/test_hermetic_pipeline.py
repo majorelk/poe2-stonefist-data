@@ -18,6 +18,7 @@ WRITTEN_FILENAMES = [
     "transformed_output_only.csv",
     "capture_targets.csv",
     "base_control_summary.csv",
+    "augment_socket_summary.csv",
 ]
 
 
@@ -51,6 +52,7 @@ def test_build_pipeline_writes_only_inside_tmp_path(tmp_path, monkeypatch):
     monkeypatch.setattr(sbd, "TRANSFORMED_OUTPUT_ONLY_PATH", captures_root / "transformed_output_only.csv")
     monkeypatch.setattr(sbd, "CAPTURE_TARGETS_PATH", captures_root / "capture_targets.csv")
     monkeypatch.setattr(sbd, "BASE_CONTROL_SUMMARY_PATH", captures_root / "base_control_summary.csv")
+    monkeypatch.setattr(sbd, "AUGMENT_SOCKET_SUMMARY_PATH", captures_root / "augment_socket_summary.csv")
 
     pairs = sbd.load_pairs()
     assert len(pairs) == 1

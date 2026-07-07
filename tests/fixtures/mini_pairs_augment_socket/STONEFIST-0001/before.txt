@@ -1,0 +1,14 @@
+Item Class: Gloves
+Rarity: Rare
+Test Grips
+Adorned Wraps
+--------
+Evasion Rating: 120
+--------
+Sockets: S
+--------
++12 to Strength (rune)
+--------
+Requires: Level 60
+--------
+Item Level: 75

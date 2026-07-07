@@ -1,0 +1,21 @@
+Item Class: Gloves
+Rarity: Normal
+You cannot use this item. Its stats will be ignored
+--------
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Sockets: S
+--------
+Item Level: 71
+--------
+Gain 3 Life per Enemy Hit with Attacks (rune)
+Gain 1 Mana per Enemy Hit with Attacks (rune)
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable

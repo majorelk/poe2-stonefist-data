@@ -1,46 +1,15 @@
-# Keep repo text files LF-normalised for WSL/Linux-first development.
-* text=auto eol=lf
-
-# Source and text artefacts
+# Normal project text files use LF
 *.py text eol=lf
 *.md text eol=lf
-*.txt text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
 *.json text eol=lf
 *.csv text eol=lf
 *.html text eol=lf
 *.css text eol=lf
 *.js text eol=lf
 
-# Shell scripts
-*.sh text eol=lf
-
-# Windows scripts, if added later
-*.ps1 text eol=crlf
-*.bat text eol=crlf
-*.cmd text eol=crlf
-
-# Binary/archive files
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
-*.webp binary
-*.ico binary
-*.pdf binary
-*.zip binary
-*.tar binary
-*.gz binary
-*.7z binary
-
-# Generated Stonefist artefacts
-# stonefist-captures/report.html
-stonefist-captures/dataset.json linguist-generated
-stonefist-captures/*.csv linguist-generated
-stonefist-reference/glove_mod_pool.csv linguist-generated
-stonefist-reference/glove_mod_pool.json linguist-generated
-
-# Captured evidence data
-stonefist-captures/pairs/** linguist-generated
-stonefist-captures/raw/** linguist-generated
-stonefist-archive/** linguist-generated
-stonefist-reference/raw-poe2db/** linguist-generated
+# Captured clipboard evidence should not be rewritten by Git filters
+stonefist-captures/raw/** -text
+stonefist-captures/pairs/**/before.txt -text
+stonefist-captures/pairs/**/after.txt -text

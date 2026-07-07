@@ -40,6 +40,64 @@ DEFENCE_FAMILY_BADGE_KIND = {
 
 DEFENCE_FAMILY_ORDER = ["STR", "DEX", "INT", "STR/DEX", "STR/INT", "DEX/INT", "unknown"]
 
+BEHAVIOUR_BADGE_KIND = {
+    "preserved": "success",
+    "removed": "danger",
+    "changed": "warning",
+    "absent": "muted",
+    "unknown": "muted",
+}
+
+USABILITY_BADGE_KIND = {
+    "true": "success",
+    "false": "danger",
+    "unknown": "muted",
+}
+
+EFFECT_STATUS_BADGE_KIND = {
+    "active": "success",
+    "ignored": "warning",
+    "unknown": "muted",
+}
+
+AUGMENT_FAMILY_BADGE_KIND = {
+    "empty_socket": "muted",
+    "combo": "special",
+    "life_mana_on_hit": "danger",
+    "accuracy": "accent",
+    "attribute": "accent",
+    "resistance": "warning",
+    "armour_evasion_energy_shield": "success",
+    "mana_regen": "accent",
+    "life_regen": "danger",
+    "idol": "special",
+    "other": "special",
+    "unknown": "muted",
+}
+
+AUGMENT_FAMILY_ORDER = [
+    "empty_socket",
+    "combo",
+    "life_mana_on_hit",
+    "accuracy",
+    "attribute",
+    "resistance",
+    "armour_evasion_energy_shield",
+    "mana_regen",
+    "life_regen",
+    "idol",
+    "other",
+    "unknown",
+]
+
+# What kind of item was socketed (rune vs idol), classified from capture
+# notes only - the visible item text renders both the same way ("(rune)").
+SOURCE_BADGE_KIND = {
+    "rune": "accent",
+    "idol": "special",
+    "unknown": "muted",
+}
+
 
 def esc(value: object) -> str:
     return html.escape(str(value))
@@ -552,17 +610,166 @@ def render_base_controls_section(rows: list[dict[str, str]]) -> str:
     """
 
 
+def render_capture_character_totals_summary(rows: list[dict[str, str]]) -> str:
+    stats_ignored_count = sum(
+        1 for row in rows if row.get("after_stats_ignored_for_capture_character") == "true"
+    )
+    effect_ignored_count = sum(
+        1 for row in rows if row.get("augment_effect_status_for_capture_character") == "ignored"
+    )
+
+    cards = [
+        ("Total augment/socket controls", len(rows)),
+        ("After: stats ignored for capture character", stats_ignored_count),
+        ("Augment effect ignored for capture character", effect_ignored_count),
+    ]
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>{esc(label)}</div><div class=\"num\">{esc(count)}</div></div>"
+        for label, count in cards
+    ) + "</div>"
+
+
+def render_socket_behaviour_summary(rows: list[dict[str, str]]) -> str:
+    counts = Counter(row.get("socket_behaviour") or "unknown" for row in rows)
+    cards = [(behaviour, count) for behaviour, count in counts.items() if count]
+
+    if not cards:
+        return "<p><em>No augment/socket control samples captured yet.</em></p>"
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>Sockets: {esc(behaviour)}</div><div class=\"num\">{esc(count)}</div></div>"
+        for behaviour, count in cards
+    ) + "</div>"
+
+
+def render_augment_line_behaviour_summary(rows: list[dict[str, str]]) -> str:
+    counts = Counter(row.get("augment_line_behaviour") or "unknown" for row in rows)
+    cards = [(behaviour, count) for behaviour, count in counts.items() if count]
+
+    if not cards:
+        return "<p><em>No augment/socket control samples captured yet.</em></p>"
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>Rune text: {esc(behaviour)}</div><div class=\"num\">{esc(count)}</div></div>"
+        for behaviour, count in cards
+    ) + "</div>"
+
+
+def render_augment_family_summary(rows: list[dict[str, str]]) -> str:
+    counts = Counter(row.get("augment_family") or "unknown" for row in rows)
+    cards = [(family, counts.get(family, 0)) for family in AUGMENT_FAMILY_ORDER if counts.get(family, 0)]
+
+    if not cards:
+        return "<p><em>No augment/socket control samples captured yet.</em></p>"
+
+    return "<div class=\"stats\">" + "".join(
+        f"<div class=\"card\"><div>{esc(family)}</div><div class=\"num\">{esc(count)}</div></div>"
+        for family, count in cards
+    ) + "</div>"
+
+
+def render_augment_socket_table(rows: list[dict[str, str]]) -> str:
+    if not rows:
+        return "<p><em>No augment/socket control samples captured yet. Capture a glove with sockets before and after Stonefist to add one.</em></p>"
+
+    table_rows = []
+    for row in rows:
+        family = row.get("augment_family") or "unknown"
+        socket_behaviour = row.get("socket_behaviour") or "unknown"
+        augment_line_behaviour = row.get("augment_line_behaviour") or "unknown"
+        before_usable = row.get("before_usable_for_capture_character") or "unknown"
+        after_usable = row.get("after_usable_for_capture_character") or "unknown"
+        stats_ignored = row.get("after_stats_ignored_for_capture_character") or "false"
+        effect_status = row.get("augment_effect_status_for_capture_character") or "unknown"
+        source = row.get("socketed_augment_source") or "unknown"
+
+        table_rows.append(
+            f"""
+            <tr data-augment-family="{esc(family)}">
+                <td>{esc(row.get('sample_id', ''))}</td>
+                <td>{esc(row.get('before_name', ''))} <small>({esc(row.get('before_base_type', ''))})</small></td>
+                <td>{badge(family, AUGMENT_FAMILY_BADGE_KIND.get(family, 'muted'))}</td>
+                <td>{badge(source, SOURCE_BADGE_KIND.get(source, 'muted'))}</td>
+                <td>
+                    {esc(row.get('before_socket_count', '0'))} &rarr; {esc(row.get('after_socket_count', '0'))}
+                    <br>{badge(socket_behaviour, BEHAVIOUR_BADGE_KIND.get(socket_behaviour, 'muted'))}
+                </td>
+                <td>
+                    {badge(augment_line_behaviour, BEHAVIOUR_BADGE_KIND.get(augment_line_behaviour, 'muted'))}
+                    <br><code>{esc(row.get('before_augment_lines', ''))}</code>
+                    <br><code>{esc(row.get('after_augment_lines', ''))}</code>
+                </td>
+                <td>{badge(before_usable, USABILITY_BADGE_KIND.get(before_usable, 'muted'))} &rarr; {badge(after_usable, USABILITY_BADGE_KIND.get(after_usable, 'muted'))}</td>
+                <td>{badge(stats_ignored, 'warning' if stats_ignored == 'true' else 'muted')}</td>
+                <td>{badge(effect_status, EFFECT_STATUS_BADGE_KIND.get(effect_status, 'muted'))}</td>
+                <td>{esc(row.get('notes', ''))}</td>
+            </tr>
+            """
+        )
+
+    return f"""
+    <table id="augment-socket-table">
+        <thead>
+            <tr>
+                <th>Sample</th>
+                <th>Before item</th>
+                <th>Augment family (visible effect)</th>
+                <th>Augment source (from notes)</th>
+                <th>Sockets (before &rarr; after)</th>
+                <th>Rune text (before / after)</th>
+                <th>Usable for capture character (before &rarr; after)</th>
+                <th>Stats ignored (after)</th>
+                <th>Effect status</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>{"".join(table_rows)}</tbody>
+    </table>
+    """
+
+
+def render_augment_controls_section(rows: list[dict[str, str]]) -> str:
+    return f"""
+    <div class="tab-panel" id="tab-augment-controls">
+        <p class="lede">Sockets and socketed augments (runes and idols), captured before and after Stonefist. This is representative control evidence, not an exhaustive augment database - it tracks whether sockets and whatever is socketed into them survive the transformation. PoE2 renders a socketed Idol's effect the same way as a Rune's - a plain "... (rune)" line - so <strong>augment family</strong> (what the visible effect text looks like) is tracked separately from <strong>augment source</strong> (what item was actually socketed, only known when capture notes say so). Rune text can be preserved word-for-word while its effect is ignored, if the transformed item cannot currently be used by the capture character - that is a per-character fact, not a claim that the item is globally unusable (another character, or a Monk with a different ascendancy, may be able to use it fine). Socketed augment stats are evidence here only, and are never counted as natural explicit glove modifier mappings.</p>
+
+        <h3>Totals</h3>
+        {render_capture_character_totals_summary(rows)}
+
+        <h3>Socket behaviour</h3>
+        {render_socket_behaviour_summary(rows)}
+
+        <h3>Rune text behaviour</h3>
+        {render_augment_line_behaviour_summary(rows)}
+
+        <h3>Samples by augment family</h3>
+        {render_augment_family_summary(rows)}
+
+        <h3>Samples</h3>
+        {render_augment_socket_table(rows)}
+    </div>
+    """
+
+
 def render_overview_section(
     pairs: list[dict],
     coverage: list[dict[str, str]],
     transformed_only: list[dict[str, str]],
     capture_targets: list[dict[str, str]],
     base_controls: list[dict[str, str]],
+    augment_socket_controls: list[dict[str, str]],
 ) -> str:
     status_counts = Counter(p["uid_status"] for p in pairs)
     category_counts = Counter(p["category"] for p in pairs)
     duplicate_count = sum(1 for p in pairs if p.get("is_exact_duplicate"))
     stonefist_count = sum(1 for p in pairs if "Fists of Stone" in p["after_text"])
+    stats_ignored_count = sum(
+        1 for row in augment_socket_controls if row.get("after_stats_ignored_for_capture_character") == "true"
+    )
+    effect_ignored_count = sum(
+        1 for row in augment_socket_controls if row.get("augment_effect_status_for_capture_character") == "ignored"
+    )
 
     return f"""
     <div class="tab-panel" id="tab-overview">
@@ -576,6 +783,9 @@ def render_overview_section(
             <div class="card"><div>UID matches</div><div class="num">{status_counts.get("match", 0)}</div></div>
             <div class="card"><div>Exact duplicates</div><div class="num">{duplicate_count}</div></div>
             <div class="card"><div>Normal base controls</div><div class="num">{len(base_controls)}</div></div>
+            <div class="card"><div>Augment/socket controls</div><div class="num">{len(augment_socket_controls)}</div></div>
+            <div class="card"><div>Stats ignored for capture character</div><div class="num">{stats_ignored_count}</div></div>
+            <div class="card"><div>Augment effect ignored for capture character</div><div class="num">{effect_ignored_count}</div></div>
         </div>
 
         <h3>Capture targets by priority</h3>
@@ -585,7 +795,7 @@ def render_overview_section(
         {render_glove_coverage_summary(coverage, transformed_only)}
 
         <p class="subtle">
-        Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, <code>capture_targets.csv</code>, and <code>base_control_summary.csv</code>.
+        Data source: <code>dataset.json</code>. Generated files: <code>pair_summary.csv</code>, <code>mapping_observations.csv</code>, <code>mapping_candidates.csv</code>, <code>mapping_families.csv</code>, <code>glove_mod_coverage.csv</code>, <code>transformed_output_only.csv</code>, <code>capture_targets.csv</code>, <code>base_control_summary.csv</code>, and <code>augment_socket_summary.csv</code>.
         </p>
     </div>
     """

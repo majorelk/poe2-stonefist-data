@@ -1,0 +1,19 @@
+Item Class: Gloves
+Rarity: Rare
+Test Grips
+Fists of Stone
+--------
+Evasion Rating: 240 (augmented)
+Energy Shield: 80 (augmented)
+--------
+Sockets: S
+--------
++12 to Strength (rune)
+--------
+Item Level: 75
+--------
+{ Implicit Modifier }
+Has +3 to Evasion Rating per player level
+Has +1 to maximum Energy Shield per player level
+--------
+Unmodifiable

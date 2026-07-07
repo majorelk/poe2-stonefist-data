@@ -9,6 +9,7 @@ TABS = [
     ("modifier-coverage", "Modifier Coverage"),
     ("output-only", "Output Only"),
     ("base-controls", "Base Controls"),
+    ("augment-controls", "Augment Controls"),
     ("pair-explorer", "Pair Explorer"),
     ("raw-evidence", "Raw Evidence"),
 ]
@@ -21,6 +22,7 @@ def render_html(pairs: list[dict]) -> str:
     mapping_families = loaders.load_mapping_families()
     mapping_candidates = loaders.load_mapping_candidates()
     base_controls = loaders.load_base_control_summary()
+    augment_socket_controls = loaders.load_augment_socket_summary()
 
     stonefist_count = sum(1 for p in pairs if "Fists of Stone" in p["after_text"])
 
@@ -30,12 +32,15 @@ def render_html(pairs: list[dict]) -> str:
 
     sections_html = "".join(
         [
-            sections.render_overview_section(pairs, coverage, transformed_only, capture_targets, base_controls),
+            sections.render_overview_section(
+                pairs, coverage, transformed_only, capture_targets, base_controls, augment_socket_controls
+            ),
             sections.render_capture_targets_section(capture_targets),
             sections.render_mapping_families_section(mapping_families, mapping_candidates),
             sections.render_modifier_coverage_section(coverage),
             sections.render_output_only_section(transformed_only),
             sections.render_base_controls_section(base_controls),
+            sections.render_augment_controls_section(augment_socket_controls),
             sections.render_pair_explorer_section(pairs),
             sections.render_raw_evidence_section(),
         ]

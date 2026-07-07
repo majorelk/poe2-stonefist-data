@@ -8,7 +8,7 @@ import re
 import urllib.request
 from pathlib import Path
 
-from stonefist_build_dataset import normalise_stat_template
+from stonefist_dataset.item_text import normalise_stat_template
 
 RAW_DIR = Path("stonefist-reference") / "raw-poe2db"
 CSV_PATH = Path("stonefist-reference") / "glove_mod_pool.csv"

@@ -2,7 +2,9 @@ import csv
 import shutil
 from pathlib import Path
 
-import stonefist_build_dataset as sbd
+from stonefist_dataset import paths as dataset_paths
+from stonefist_dataset.pairs import load_pairs
+from stonefist_dataset.writers import write_csvs, write_json_dataset
 
 FIXTURE_PAIRS_DIR = Path(__file__).parent / "fixtures" / "mini_pairs"
 FIXTURE_POOL_CSV = Path(__file__).parent / "fixtures" / "tiny_glove_mod_pool.csv"
@@ -38,27 +40,27 @@ def test_build_pipeline_writes_only_inside_tmp_path(tmp_path, monkeypatch):
     reference_root.mkdir(parents=True, exist_ok=True)
     shutil.copy(FIXTURE_POOL_CSV, reference_root / "glove_mod_pool.csv")
 
-    monkeypatch.setattr(sbd, "ROOT", captures_root)
-    monkeypatch.setattr(sbd, "PAIRS_DIR", pairs_dir)
-    monkeypatch.setattr(sbd, "DATASET_PATH", captures_root / "dataset.json")
-    monkeypatch.setattr(sbd, "PAIR_SUMMARY_PATH", captures_root / "pair_summary.csv")
-    monkeypatch.setattr(sbd, "MOD_LINES_PATH", captures_root / "mod_lines.csv")
-    monkeypatch.setattr(sbd, "MAPPING_OBSERVATIONS_PATH", captures_root / "mapping_observations.csv")
-    monkeypatch.setattr(sbd, "MAPPING_CANDIDATES_PATH", captures_root / "mapping_candidates.csv")
-    monkeypatch.setattr(sbd, "MAPPING_FAMILIES_PATH", captures_root / "mapping_families.csv")
-    monkeypatch.setattr(sbd, "GLOVE_MOD_POOL_JSON_PATH", reference_root / "glove_mod_pool.json")
-    monkeypatch.setattr(sbd, "GLOVE_MOD_POOL_CSV_PATH", reference_root / "glove_mod_pool.csv")
-    monkeypatch.setattr(sbd, "GLOVE_COVERAGE_PATH", captures_root / "glove_mod_coverage.csv")
-    monkeypatch.setattr(sbd, "TRANSFORMED_OUTPUT_ONLY_PATH", captures_root / "transformed_output_only.csv")
-    monkeypatch.setattr(sbd, "CAPTURE_TARGETS_PATH", captures_root / "capture_targets.csv")
-    monkeypatch.setattr(sbd, "BASE_CONTROL_SUMMARY_PATH", captures_root / "base_control_summary.csv")
-    monkeypatch.setattr(sbd, "AUGMENT_SOCKET_SUMMARY_PATH", captures_root / "augment_socket_summary.csv")
+    monkeypatch.setattr(dataset_paths, "ROOT", captures_root)
+    monkeypatch.setattr(dataset_paths, "PAIRS_DIR", pairs_dir)
+    monkeypatch.setattr(dataset_paths, "DATASET_PATH", captures_root / "dataset.json")
+    monkeypatch.setattr(dataset_paths, "PAIR_SUMMARY_PATH", captures_root / "pair_summary.csv")
+    monkeypatch.setattr(dataset_paths, "MOD_LINES_PATH", captures_root / "mod_lines.csv")
+    monkeypatch.setattr(dataset_paths, "MAPPING_OBSERVATIONS_PATH", captures_root / "mapping_observations.csv")
+    monkeypatch.setattr(dataset_paths, "MAPPING_CANDIDATES_PATH", captures_root / "mapping_candidates.csv")
+    monkeypatch.setattr(dataset_paths, "MAPPING_FAMILIES_PATH", captures_root / "mapping_families.csv")
+    monkeypatch.setattr(dataset_paths, "GLOVE_MOD_POOL_JSON_PATH", reference_root / "glove_mod_pool.json")
+    monkeypatch.setattr(dataset_paths, "GLOVE_MOD_POOL_CSV_PATH", reference_root / "glove_mod_pool.csv")
+    monkeypatch.setattr(dataset_paths, "GLOVE_COVERAGE_PATH", captures_root / "glove_mod_coverage.csv")
+    monkeypatch.setattr(dataset_paths, "TRANSFORMED_OUTPUT_ONLY_PATH", captures_root / "transformed_output_only.csv")
+    monkeypatch.setattr(dataset_paths, "CAPTURE_TARGETS_PATH", captures_root / "capture_targets.csv")
+    monkeypatch.setattr(dataset_paths, "BASE_CONTROL_SUMMARY_PATH", captures_root / "base_control_summary.csv")
+    monkeypatch.setattr(dataset_paths, "AUGMENT_SOCKET_SUMMARY_PATH", captures_root / "augment_socket_summary.csv")
 
-    pairs = sbd.load_pairs()
+    pairs = load_pairs()
     assert len(pairs) == 1
 
-    sbd.write_json_dataset(pairs)
-    sbd.write_csvs(pairs)
+    write_json_dataset(pairs)
+    write_csvs(pairs)
 
     for filename in WRITTEN_FILENAMES:
         assert (captures_root / filename).exists(), f"expected {filename} to be written inside tmp_path"

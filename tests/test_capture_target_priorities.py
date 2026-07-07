@@ -1,4 +1,4 @@
-from stonefist_build_dataset import build_capture_targets
+from stonefist_dataset.coverage import build_capture_targets
 
 COVERAGE_ROWS = [
     {

@@ -1,4 +1,4 @@
-from stonefist_build_dataset import compute_coverage_rows
+from stonefist_dataset.coverage import compute_coverage_rows
 
 REFERENCE_ENTRIES = [
     {

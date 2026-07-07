@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from stonefist_build_dataset import parse_explicit_modifier_blocks
+from stonefist_dataset.explicit_mods import parse_explicit_modifier_blocks
 
 FIXTURE_PATH = Path(__file__).parent / "fixtures" / "two_mod_item.txt"
 

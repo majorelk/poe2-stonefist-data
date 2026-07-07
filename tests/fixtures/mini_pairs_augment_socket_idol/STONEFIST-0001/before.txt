@@ -1,0 +1,14 @@
+Item Class: Gloves
+Rarity: Normal
+War Wraps
+--------
+Evasion Rating: 94
+Energy Shield: 29
+--------
+Requires: Level 65, 44 Dex, 44 Int
+--------
+Sockets: S
+--------
+Item Level: 76
+--------
+25% increased Accuracy Rating (rune)

@@ -7,8 +7,7 @@ Evasion Rating: 120
 --------
 Sockets: S
 --------
-Rune: Iron Rune
-+10 to Strength
++12 to Strength (rune)
 --------
 Requires: Level 60
 --------

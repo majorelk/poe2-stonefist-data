@@ -383,8 +383,10 @@ summary {
             <div class="card"><div>UID not present</div><div class="num">99</div></div>
             <div class="card"><div>UID matches</div><div class="num">0</div></div>
             <div class="card"><div>Exact duplicates</div><div class="num">1</div></div>
-            <div class="card"><div>Normal base controls</div><div class="num">17</div></div>
+            <div class="card"><div>Normal base controls</div><div class="num">15</div></div>
             <div class="card"><div>Augment/socket controls</div><div class="num">20</div></div>
+            <div class="card"><div>Stats ignored for capture character</div><div class="num">0</div></div>
+            <div class="card"><div>Augment effect ignored for capture character</div><div class="num">0</div></div>
         </div>
 
         <h3>Capture targets by priority</h3>
@@ -4877,10 +4879,10 @@ summary {
         <p class="lede">Normal/white gloves with no explicit modifiers, captured before and after Stonefist. These isolate the base implicit transformation from explicit modifier mapping, and show how the original defence family scales into the Fists of Stone Evasion/Energy Shield implicit.</p>
 
         <h3>Samples by original defence family</h3>
-        <div class="stats"><div class="card"><div>STR</div><div class="num">4</div></div><div class="card"><div>DEX</div><div class="num">2</div></div><div class="card"><div>INT</div><div class="num">2</div></div><div class="card"><div>STR/DEX</div><div class="num">2</div></div><div class="card"><div>STR/INT</div><div class="num">5</div></div><div class="card"><div>DEX/INT</div><div class="num">2</div></div></div>
+        <div class="stats"><div class="card"><div>STR</div><div class="num">3</div></div><div class="card"><div>DEX</div><div class="num">2</div></div><div class="card"><div>INT</div><div class="num">2</div></div><div class="card"><div>STR/DEX</div><div class="num">2</div></div><div class="card"><div>STR/INT</div><div class="num">5</div></div><div class="card"><div>DEX/INT</div><div class="num">1</div></div></div>
 
         <h3>Observed per-level scaling</h3>
-        <div class="stats"><div class="card"><div>Evasion Rating per level</div><div class="num">+3 (17 samples)</div></div><div class="card"><div>Energy Shield per level</div><div class="num">+1 (17 samples)</div></div></div>
+        <div class="stats"><div class="card"><div>Evasion Rating per level</div><div class="num">+3 (15 samples)</div></div><div class="card"><div>Energy Shield per level</div><div class="num">+1 (15 samples)</div></div></div>
 
         <h3>Samples</h3>
         
@@ -4948,16 +4950,6 @@ summary {
             </tr>
             
             <tr>
-                <td>STONEFIST-0088</td>
-                <td>Ornate Mitts</td>
-                <td><span class="badge badge-danger">STR</span></td>
-                <td>Armour 171</td>
-                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
-                <td>+3 / +1</td>
-                <td>Normal white base control captures. No explicit modifiers.</td>
-            </tr>
-            
-            <tr>
                 <td>STONEFIST-0089</td>
                 <td>Feathered Mitts</td>
                 <td><span class="badge badge-danger">STR</span></td>
@@ -5002,16 +4994,6 @@ summary {
                 <td>Sirenscale Gloves</td>
                 <td><span class="badge badge-accent">INT</span></td>
                 <td>Energy Shield 54</td>
-                <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
-                <td>+3 / +1</td>
-                <td>Normal white base control captures. No explicit modifiers.</td>
-            </tr>
-            
-            <tr>
-                <td>STONEFIST-0094</td>
-                <td>War Wraps</td>
-                <td><span class="badge badge-special">DEX/INT</span></td>
-                <td>Evasion 94, Energy Shield 29</td>
                 <td>Evasion 240 (augmented), Energy Shield 80 (augmented)</td>
                 <td>+3 / +1</td>
                 <td>Normal white base control captures. No explicit modifiers.</td>
@@ -5072,13 +5054,19 @@ summary {
     </div>
     
     <div class="tab-panel" id="tab-augment-controls">
-        <p class="lede">Sockets and socketed augments (runes), captured before and after Stonefist. This is representative control evidence, not an exhaustive augment database - it tracks whether sockets and whatever is socketed into them survive the transformation. Socketed augment stats are evidence here only, and are never counted as natural explicit glove modifier mappings.</p>
+        <p class="lede">Sockets and socketed augments (runes and idols), captured before and after Stonefist. This is representative control evidence, not an exhaustive augment database - it tracks whether sockets and whatever is socketed into them survive the transformation. PoE2 renders a socketed Idol's effect the same way as a Rune's - a plain "... (rune)" line - so <strong>augment family</strong> (what the visible effect text looks like) is tracked separately from <strong>augment source</strong> (what item was actually socketed, only known when capture notes say so). Rune text can be preserved word-for-word while its effect is ignored, if the transformed item cannot currently be used by the capture character - that is a per-character fact, not a claim that the item is globally unusable (another character, or a Monk with a different ascendancy, may be able to use it fine). Socketed augment stats are evidence here only, and are never counted as natural explicit glove modifier mappings.</p>
 
-        <h3>Socket and augment behaviour</h3>
-        <div class="stats"><div class="card"><div>Sockets: preserved</div><div class="num">20</div></div><div class="card"><div>Augment: preserved</div><div class="num">20</div></div></div>
+        <h3>Totals</h3>
+        <div class="stats"><div class="card"><div>Total augment/socket controls</div><div class="num">20</div></div><div class="card"><div>After: stats ignored for capture character</div><div class="num">0</div></div><div class="card"><div>Augment effect ignored for capture character</div><div class="num">0</div></div></div>
+
+        <h3>Socket behaviour</h3>
+        <div class="stats"><div class="card"><div>Sockets: preserved</div><div class="num">20</div></div></div>
+
+        <h3>Rune text behaviour</h3>
+        <div class="stats"><div class="card"><div>Rune text: preserved</div><div class="num">9</div></div><div class="card"><div>Rune text: absent</div><div class="num">11</div></div></div>
 
         <h3>Samples by augment family</h3>
-        <div class="stats"><div class="card"><div>empty_socket</div><div class="num">20</div></div></div>
+        <div class="stats"><div class="card"><div>empty_socket</div><div class="num">11</div></div><div class="card"><div>resistance</div><div class="num">8</div></div><div class="card"><div>armour_evasion_energy_shield</div><div class="num">1</div></div></div>
 
         <h3>Samples</h3>
         
@@ -5087,45 +5075,74 @@ summary {
             <tr>
                 <th>Sample</th>
                 <th>Before item</th>
-                <th>Augment family</th>
+                <th>Augment family (visible effect)</th>
+                <th>Augment source (from notes)</th>
                 <th>Sockets (before &rarr; after)</th>
-                <th>Socket behaviour</th>
-                <th>Augment behaviour</th>
-                <th>Augment lines (before / after)</th>
+                <th>Rune text (before / after)</th>
+                <th>Usable for capture character (before &rarr; after)</th>
+                <th>Stats ignored (after)</th>
+                <th>Effect status</th>
                 <th>Notes</th>
             </tr>
         </thead>
         <tbody>
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="resistance">
                 <td>STONEFIST-0001</td>
                 <td>Dread Knuckle <small>(Adorned Wraps)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-warning">resistance</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>+18% to Lightning Resistance (rune)</code>
+                    <br><code>+18% to Lightning Resistance (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="resistance">
                 <td>STONEFIST-0005</td>
                 <td>Dusk Paw <small>(Stalking Bracers)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-warning">resistance</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>+18% to Cold Resistance (rune)</code>
+                    <br><code>+18% to Cold Resistance (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="resistance">
                 <td>STONEFIST-0018</td>
                 <td>Agony Clutches <small>(Elegant Wraps)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-warning">resistance</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>+18% to Lightning Resistance (rune)</code>
+                    <br><code>+18% to Lightning Resistance (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5133,32 +5150,59 @@ summary {
                 <td>STONEFIST-0024</td>
                 <td>Spirit Clutches <small>(Gold Gloves)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="resistance">
                 <td>STONEFIST-0027</td>
                 <td>Brimstone Talons <small>(Spiral Wraps)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-warning">resistance</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>+18% to Fire Resistance (rune)</code>
+                    <br><code>+18% to Fire Resistance (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="resistance">
                 <td>STONEFIST-0036</td>
                 <td>Brood Hand <small>(Gauze Wraps)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-warning">resistance</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>+14% to Cold Resistance (rune)</code>
+                    <br><code>+14% to Cold Resistance (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5166,21 +5210,39 @@ summary {
                 <td>STONEFIST-0038</td>
                 <td>Behemoth Fist <small>(Spined Bracers)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="resistance">
                 <td>STONEFIST-0044</td>
                 <td>Grim Fingers <small>(Layered Gauntlets)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-warning">resistance</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>+10% to Cold Resistance (rune)</code>
+                    <br><code>+10% to Cold Resistance (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5188,10 +5250,19 @@ summary {
                 <td>STONEFIST-0052</td>
                 <td>Atziri&#x27;s Acuity <small>(Moulded Mitts)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5199,10 +5270,19 @@ summary {
                 <td>STONEFIST-0055</td>
                 <td>Demon Stitcher <small>(Intricate Gloves)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5210,32 +5290,59 @@ summary {
                 <td>STONEFIST-0059</td>
                 <td>Kitoko&#x27;s Current <small>(Jewelled Gloves)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="resistance">
                 <td>STONEFIST-0061</td>
                 <td>Painter&#x27;s Servant <small>(Torn Gloves)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-warning">resistance</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>+18% to Lightning Resistance (rune)</code>
+                    <br><code>+18% to Lightning Resistance (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="resistance">
                 <td>STONEFIST-0064</td>
                 <td>Valako&#x27;s Vice <small>(Plate Gauntlets)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-warning">resistance</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>+18% to Lightning Resistance (rune)</code>
+                    <br><code>+18% to Lightning Resistance (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5243,10 +5350,19 @@ summary {
                 <td>STONEFIST-0070</td>
                 <td>Torment Knuckle <small>(Bound Cuffs)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5254,21 +5370,39 @@ summary {
                 <td>STONEFIST-0077</td>
                 <td>Sorrow Vise <small>(Vaal Gloves)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
-            <tr data-augment-family="empty_socket">
+            <tr data-augment-family="armour_evasion_energy_shield">
                 <td>STONEFIST-0078</td>
                 <td>Grim Palm <small>(Baroque Gloves)</small></td>
-                <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-success">armour_evasion_energy_shield</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-success">preserved</span>
+                    <br><code>18% increased Armour, Evasion and Energy Shield (rune)</code>
+                    <br><code>18% increased Armour, Evasion and Energy Shield (rune)</code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5276,10 +5410,19 @@ summary {
                 <td>STONEFIST-0079</td>
                 <td>Gravebind <small>(Rope Cuffs)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5287,10 +5430,19 @@ summary {
                 <td>STONEFIST-0084</td>
                 <td>Gale Nails <small>(Blacksteel Gauntlets)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td></td>
             </tr>
             
@@ -5298,10 +5450,19 @@ summary {
                 <td>STONEFIST-0088</td>
                 <td>Ornate Mitts <small>(Ornate Mitts)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td>Normal white base control captures. No explicit modifiers.</td>
             </tr>
             
@@ -5309,10 +5470,19 @@ summary {
                 <td>STONEFIST-0094</td>
                 <td>War Wraps <small>(War Wraps)</small></td>
                 <td><span class="badge badge-muted">empty_socket</span></td>
-                <td>1 &rarr; 1</td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><span class="badge badge-success">preserved</span></td>
-                <td><code></code><br><code></code></td>
+                <td><span class="badge badge-muted">unknown</span></td>
+                <td>
+                    1 &rarr; 1
+                    <br><span class="badge badge-success">preserved</span>
+                </td>
+                <td>
+                    <span class="badge badge-muted">absent</span>
+                    <br><code></code>
+                    <br><code></code>
+                </td>
+                <td><span class="badge badge-muted">unknown</span> &rarr; <span class="badge badge-muted">unknown</span></td>
+                <td><span class="badge badge-muted">false</span></td>
+                <td><span class="badge badge-muted">unknown</span></td>
                 <td>Normal white base control captures. No explicit modifiers.</td>
             </tr>
             </tbody>

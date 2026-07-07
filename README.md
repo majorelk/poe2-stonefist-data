@@ -83,6 +83,8 @@ Capture prompts for a character level and then for optional **session notes** at
 - `Desecrated dual-resistance target.`
 - `Essence-forced off-class evasion mod.`
 
+For socket/rune/idol captures specifically, follow the note convention under [Augment Controls](#augment-controls) below - the exact wording affects how those pairs get classified, not just how they read.
+
 Pass `--prompt-notes` to additionally be asked for a note after each individual pair is saved:
 
 ```bash
@@ -151,7 +153,7 @@ The build step produces derived data under `stonefist-captures/`:
 - `transformed_output_only.csv` - Stonefist output stat templates not present in the loaded glove modifier reference pool.
 - `capture_targets.csv` - prioritised list of modifiers worth hunting or isolating next.
 - `base_control_summary.csv` - normal/white glove base controls (no explicit modifiers) showing how each original defence family (STR/DEX/INT and hybrids) transforms into the Fists of Stone Evasion/Energy Shield implicit, with observed per-level scaling.
-- `augment_socket_summary.csv` - socket and socketed augment (rune) controls, showing whether sockets and whatever is socketed into them survive the Stonefist transformation. Representative control evidence, not an exhaustive augment database.
+- `augment_socket_summary.csv` - socket and socketed augment (rune) controls. Tracks socket preservation, rune text preservation, and capture-character usability as three separate facts. Representative control evidence, not an exhaustive augment database.
 - `report.html` - static human-readable report.
 
 ## Reading the report
@@ -206,13 +208,50 @@ This tab groups samples by original defence family, shows the observed per-level
 
 ### Augment Controls
 
-Shows sockets and socketed augments (runes), captured before and after Stonefist, tracking whether they survive the transformation. This is separate from both Base Controls (which isolates the base implicit) and the explicit modifier mapping tabs: **socketed augment stats are control evidence only and are never counted as natural explicit glove modifier mappings**, since a rune's effect is not an affix on the item.
+Shows sockets and socketed augments (runes), captured before and after Stonefist, tracking whether they survive the transformation. This is separate from both Base Controls (which isolates the base implicit) and the explicit modifier mapping tabs: **socketed augment stats are control evidence only and are never counted as natural explicit glove modifier mappings**, since a rune's effect is not an affix on the item. PoE2 does not reliably show a `Rune:` header for socketed runes - the tool looks for standalone lines ending in `(rune)` instead (a legacy `Rune:` header is still recognised if it ever appears).
 
-For each sample this tab shows:
+This tab deliberately keeps three different facts separate, because rune text can be preserved word-for-word while its effect is ignored:
 
-- `socket_behaviour` - whether the socket count was `preserved`, `removed`, `changed`, or `unknown`.
-- `augment_behaviour` - whether whatever was socketed was `preserved`, `removed`, `changed`, or `unknown`.
-- `augment_family` - a rough grouping of what was socketed (`empty_socket`, `attribute`, `resistance`, `armour_evasion_energy_shield`, `mana_regen`, `life_regen`, `idol`, `other`, `unknown`). This is deliberately not an exhaustive augment database - it exists to give representative control evidence, not to map every possible rune.
+- **Socket preservation** (`socket_behaviour`) - whether the socket itself survived: `preserved`, `removed`, `changed`, or `unknown`.
+- **Rune text preservation** (`augment_line_behaviour`) - whether the displayed rune text survived: `preserved`, `removed`, `changed`, `absent` (no rune text on either side - a true empty socket), or `unknown`.
+- **Usability for the capture character** (`before_usable_for_capture_character` / `after_usable_for_capture_character` / `usability_behaviour_for_capture_character`) - whether the item can currently be used by the character that captured it.
+
+The PoE2 clipboard sometimes shows `You cannot use this item. Its stats will be ignored` on the transformed item - typically a class/ascendancy mismatch (e.g. Fists of Stone requiring a Monk). When this appears:
+
+- `after_usable_for_capture_character` = `false` and `after_stats_ignored_for_capture_character` = `true`.
+- The rune text itself can still be `preserved` - the warning does not mean the rune was removed or the socket emptied.
+- `augment_effect_status_for_capture_character` becomes `ignored`: the effect doesn't apply for this character, even though the text is there.
+
+**This is deliberately modelled as a per-character fact, not a global item property.** The same transformed item may be perfectly usable by a different character, or by a Monk with a different ascendancy - the report never claims the item is universally unusable, only that it wasn't usable for the specific character that captured it. `augment_effect_status_for_capture_character` is only ever `active` when capture notes explicitly confirm the item was usable/equipped/wearable; otherwise it stays `unknown` rather than assuming.
+
+`augment_family` is a rough grouping of the **visible effect text** (`empty_socket`, `combo`, `life_mana_on_hit`, `accuracy`, `attribute`, `resistance`, `armour_evasion_energy_shield`, `mana_regen`, `life_regen`, `idol`, `other`, `unknown`). This is deliberately not an exhaustive augment database - it exists to give representative control evidence, not to map every possible rune.
+
+**Augment family is not the same as augment source.** PoE2 renders a socketed Idol's effect exactly the same way as a socketed Rune's - a plain line ending in `(rune)`, e.g. `25% increased Accuracy Rating (rune)` for a Cat Idol. The clipboard text alone cannot tell you whether a Rune or an Idol produced that line, so the report tracks them as two separate columns:
+
+- `augment_family` - classified from the visible stat line only (e.g. `accuracy` for the Cat Idol example above).
+- `socketed_augment_source` - `rune`, `idol`, or `unknown`, classified from capture notes/meta **only**, never from the stat line itself. Only set to `rune`/`idol` when the notes actually say so (e.g. "Cat Idol socketed").
+
+#### Note convention for augment/socket captures
+
+`socketed_augment_source` (rune vs idol) and the Base-Controls-vs-Augment-Controls split are both classified from the session/per-pair **notes**, not just the item text - so how you word notes for these captures directly affects how they get classified. Use this format:
+
+```
+<augment/source> control. <rarity/base>. <usable result>. <important observation>.
+```
+
+Examples:
+
+```
+Empty socket control. Normal glove. Usable after transform.
+
+Rune of Accumulation control. Normal glove. Rune text preserved, but transformed item cannot be used by capture character, stats ignored. GGG bug ref 2,634,911,882.
+
+Rune of Culmination control. Magic cold resistance glove. Rune text preserved. Item usable after transform.
+
+Cat Idol control. Normal glove. Item usable after transform. Clipboard renders Cat Idol effect as "(rune)".
+```
+
+Leading with `<augment/source> control` matters: notes containing `socket`, `rune`, `idol`, or `augment` are exactly what excludes a pair from Base Controls (see Base Controls above) and route it to Augment Controls instead, and words like `idol`/`rune` in that lead-in are what let `socketed_augment_source` tell a Cat Idol apart from an actual Rune despite both rendering as `(rune)` in the clipboard. If the transformed item warned `You cannot use this item. Its stats will be ignored`, say so explicitly (`cannot be used`, `stats ignored`) so `after_stats_ignored_for_capture_character` and `augment_effect_status_for_capture_character` are picked up correctly; otherwise say the item was `usable`/`equipped` so the effect can be marked `active` rather than left `unknown`.
 
 If no augment/socket controls have been captured yet, this tab shows zero counts rather than an error.
 

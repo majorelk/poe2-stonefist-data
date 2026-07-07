@@ -1,6 +1,6 @@
 import pytest
 
-from stonefist_build_dataset import normalise_stat_template
+from stonefist_dataset.item_text import normalise_stat_template
 
 
 @pytest.mark.parametrize(

@@ -1,4 +1,4 @@
-from stonefist_build_dataset import build_mapping_observations
+from stonefist_dataset.mapping import build_mapping_observations
 
 # Before/after blocks are in swapped order on purpose: a position-based
 # matcher would pair "Hunter's" (before) with "of the Maelstrom" (after).

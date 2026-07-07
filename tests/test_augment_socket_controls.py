@@ -3,7 +3,23 @@ from pathlib import Path
 
 import pytest
 
-import stonefist_build_dataset as sbd
+from stonefist_dataset import paths as dataset_paths
+from stonefist_dataset.augment_controls import (
+    classify_augment_effect_status_for_capture_character,
+    classify_augment_line_behaviour,
+    classify_socket_behaviour,
+    classify_socketed_augment_source,
+    classify_usability_behaviour,
+    compute_augment_socket_rows,
+    count_sockets,
+    derive_augment_family,
+    extract_augment_lines,
+    extract_display_name_and_base,
+    extract_socket_lines,
+    usability_for_capture_character,
+)
+from stonefist_dataset.explicit_mods import parse_explicit_modifier_blocks
+from stonefist_dataset.pairs import load_pairs
 
 FIXTURE_PAIRS_DIR = Path(__file__).parent / "fixtures" / "mini_pairs_augment_socket"
 FIXTURE_IGNORED_PAIRS_DIR = Path(__file__).parent / "fixtures" / "mini_pairs_augment_socket_ignored"
@@ -14,14 +30,14 @@ USABILITY_WARNING_TEXT = "You cannot use this item. Its stats will be ignored"
 
 def test_extract_socket_lines_and_count():
     text = "Item Class: Gloves\nSockets: S S\n--------\nItem Level: 80\n"
-    lines = sbd.extract_socket_lines(text)
+    lines = extract_socket_lines(text)
 
     assert lines == ["Sockets: S S"]
-    assert sbd.count_sockets(lines) == 2
+    assert count_sockets(lines) == 2
 
 
 def test_count_sockets_handles_no_sockets_line():
-    assert sbd.count_sockets(sbd.extract_socket_lines("Item Class: Gloves\n")) == 0
+    assert count_sockets(extract_socket_lines("Item Class: Gloves\n")) == 0
 
 
 def test_extract_augment_lines_captures_multiple_standalone_rune_lines():
@@ -36,7 +52,7 @@ def test_extract_augment_lines_captures_multiple_standalone_rune_lines():
         "Gain 1 Mana per Enemy Hit with Attacks (rune)\n"
     )
 
-    assert sbd.extract_augment_lines(text) == [
+    assert extract_augment_lines(text) == [
         "Gain 3 Life per Enemy Hit with Attacks (rune)",
         "Gain 1 Mana per Enemy Hit with Attacks (rune)",
     ]
@@ -45,23 +61,23 @@ def test_extract_augment_lines_captures_multiple_standalone_rune_lines():
 def test_extract_augment_lines_captures_combo_rune():
     text = "Sockets: S\n--------\n50% chance to build an additional Combo on Hit (rune)\n"
 
-    assert sbd.extract_augment_lines(text) == [
+    assert extract_augment_lines(text) == [
         "50% chance to build an additional Combo on Hit (rune)"
     ]
 
 
 def test_extract_augment_lines_does_not_require_rune_header():
     text = "+10% to Fire Resistance (rune)\n"
-    assert sbd.extract_augment_lines(text) == ["+10% to Fire Resistance (rune)"]
+    assert extract_augment_lines(text) == ["+10% to Fire Resistance (rune)"]
 
 
 def test_extract_augment_lines_still_supports_legacy_rune_header():
     text = "Rune: Iron Rune\n+10 to Strength\n--------\nItem Level: 80\n"
-    assert sbd.extract_augment_lines(text) == ["Rune: Iron Rune", "+10 to Strength"]
+    assert extract_augment_lines(text) == ["Rune: Iron Rune", "+10 to Strength"]
 
 
 def test_extract_augment_lines_empty_when_no_rune_evidence():
-    assert sbd.extract_augment_lines("Sockets: S\n--------\nItem Level: 80\n") == []
+    assert extract_augment_lines("Sockets: S\n--------\nItem Level: 80\n") == []
 
 
 def test_visible_rune_line_is_not_treated_as_natural_explicit_modifier():
@@ -77,7 +93,7 @@ def test_visible_rune_line_is_not_treated_as_natural_explicit_modifier():
         '+36(36-40)% to Cold Resistance\n'
     )
 
-    blocks = sbd.parse_explicit_modifier_blocks(text)
+    blocks = parse_explicit_modifier_blocks(text)
 
     assert len(blocks) == 1
     assert blocks[0]["modifier_name"] == "of the Ice"
@@ -102,7 +118,7 @@ def test_visible_rune_line_is_not_treated_as_natural_explicit_modifier():
     ],
 )
 def test_derive_augment_family(augment_lines, socket_count, expected):
-    assert sbd.derive_augment_family(augment_lines, socket_count) == expected
+    assert derive_augment_family(augment_lines, socket_count) == expected
 
 
 @pytest.mark.parametrize(
@@ -116,7 +132,7 @@ def test_derive_augment_family(augment_lines, socket_count, expected):
     ],
 )
 def test_classify_socket_behaviour(before_count, after_count, expected):
-    assert sbd.classify_socket_behaviour(before_count, after_count) == expected
+    assert classify_socket_behaviour(before_count, after_count) == expected
 
 
 @pytest.mark.parametrize(
@@ -130,23 +146,23 @@ def test_classify_socket_behaviour(before_count, after_count, expected):
     ],
 )
 def test_classify_augment_line_behaviour(before_lines, after_lines, expected):
-    assert sbd.classify_augment_line_behaviour(before_lines, after_lines) == expected
+    assert classify_augment_line_behaviour(before_lines, after_lines) == expected
 
 
 def test_usability_detects_warning_text():
-    usable, ignored = sbd.usability_for_capture_character(USABILITY_WARNING_TEXT, notes="")
+    usable, ignored = usability_for_capture_character(USABILITY_WARNING_TEXT, notes="")
     assert usable == "false"
     assert ignored is True
 
 
 def test_usability_defaults_to_unknown_without_warning_or_confirming_notes():
-    usable, ignored = sbd.usability_for_capture_character("Fists of Stone\n", notes="")
+    usable, ignored = usability_for_capture_character("Fists of Stone\n", notes="")
     assert usable == "unknown"
     assert ignored is False
 
 
 def test_usability_true_only_when_notes_confirm_usable():
-    usable, ignored = sbd.usability_for_capture_character("Fists of Stone\n", notes="Confirmed usable and equipped.")
+    usable, ignored = usability_for_capture_character("Fists of Stone\n", notes="Confirmed usable and equipped.")
     assert usable == "true"
     assert ignored is False
 
@@ -161,7 +177,7 @@ def test_usability_true_only_when_notes_confirm_usable():
     ],
 )
 def test_classify_usability_behaviour(before_usable, after_usable, expected):
-    assert sbd.classify_usability_behaviour(before_usable, after_usable) == expected
+    assert classify_usability_behaviour(before_usable, after_usable) == expected
 
 
 @pytest.mark.parametrize(
@@ -177,7 +193,7 @@ def test_classify_augment_effect_status_for_capture_character(
     augment_line_behaviour, after_stats_ignored, after_usable, expected
 ):
     assert (
-        sbd.classify_augment_effect_status_for_capture_character(
+        classify_augment_effect_status_for_capture_character(
             augment_line_behaviour, after_stats_ignored, after_usable
         )
         == expected
@@ -195,7 +211,7 @@ def test_classify_augment_effect_status_for_capture_character(
     ],
 )
 def test_classify_socketed_augment_source(notes, expected):
-    assert sbd.classify_socketed_augment_source(notes) == expected
+    assert classify_socketed_augment_source(notes) == expected
 
 
 def _make_pair(**overrides) -> dict:
@@ -214,7 +230,7 @@ def _make_pair(**overrides) -> dict:
 
 
 def test_compute_augment_socket_rows_detects_true_empty_socket():
-    rows = sbd.compute_augment_socket_rows([_make_pair()])
+    rows = compute_augment_socket_rows([_make_pair()])
 
     assert len(rows) == 1
     row = rows[0]
@@ -229,17 +245,17 @@ def test_compute_augment_socket_rows_detects_true_empty_socket():
 
 def test_compute_augment_socket_rows_ignores_pairs_without_before_sockets():
     pair = _make_pair(before_text="Item Class: Gloves\n--------\nItem Level: 80\n")
-    assert sbd.compute_augment_socket_rows([pair]) == []
+    assert compute_augment_socket_rows([pair]) == []
 
 
 def test_compute_augment_socket_rows_ignores_non_stonefist_after():
     pair = _make_pair(after_text="Some Other Item\nSockets: S\n")
-    assert sbd.compute_augment_socket_rows([pair]) == []
+    assert compute_augment_socket_rows([pair]) == []
 
 
 def test_compute_augment_socket_rows_handles_no_pairs_gracefully():
     """Zero-data case: must return an empty list, never crash."""
-    assert sbd.compute_augment_socket_rows([]) == []
+    assert compute_augment_socket_rows([]) == []
 
 
 def test_compute_augment_socket_rows_from_real_fixture_pair(tmp_path, monkeypatch):
@@ -249,11 +265,11 @@ def test_compute_augment_socket_rows_from_real_fixture_pair(tmp_path, monkeypatc
     pairs_dir = tmp_path / "pairs"
     shutil.copytree(FIXTURE_PAIRS_DIR, pairs_dir)
 
-    monkeypatch.setattr(sbd, "PAIRS_DIR", pairs_dir)
-    pairs = sbd.load_pairs()
+    monkeypatch.setattr(dataset_paths, "PAIRS_DIR", pairs_dir)
+    pairs = load_pairs()
     assert len(pairs) == 1
 
-    rows = sbd.compute_augment_socket_rows(pairs)
+    rows = compute_augment_socket_rows(pairs)
 
     assert len(rows) == 1
     row = rows[0]
@@ -278,11 +294,11 @@ def test_compute_augment_socket_rows_from_real_fixture_pair_with_ignored_stats(t
     pairs_dir = tmp_path / "pairs"
     shutil.copytree(FIXTURE_IGNORED_PAIRS_DIR, pairs_dir)
 
-    monkeypatch.setattr(sbd, "PAIRS_DIR", pairs_dir)
-    pairs = sbd.load_pairs()
+    monkeypatch.setattr(dataset_paths, "PAIRS_DIR", pairs_dir)
+    pairs = load_pairs()
     assert len(pairs) == 1
 
-    rows = sbd.compute_augment_socket_rows(pairs)
+    rows = compute_augment_socket_rows(pairs)
 
     assert len(rows) == 1
     row = rows[0]
@@ -310,11 +326,11 @@ def test_compute_augment_socket_rows_from_real_fixture_pair_cat_idol(tmp_path, m
     pairs_dir = tmp_path / "pairs"
     shutil.copytree(FIXTURE_IDOL_PAIRS_DIR, pairs_dir)
 
-    monkeypatch.setattr(sbd, "PAIRS_DIR", pairs_dir)
-    pairs = sbd.load_pairs()
+    monkeypatch.setattr(dataset_paths, "PAIRS_DIR", pairs_dir)
+    pairs = load_pairs()
     assert len(pairs) == 1
 
-    rows = sbd.compute_augment_socket_rows(pairs)
+    rows = compute_augment_socket_rows(pairs)
 
     assert len(rows) == 1
     row = rows[0]
@@ -340,7 +356,7 @@ def test_extract_display_name_and_base_skips_usability_warning_block():
         "Evasion Rating: 240 (augmented)\n"
     )
 
-    name, base = sbd.extract_display_name_and_base(text)
+    name, base = extract_display_name_and_base(text)
 
     assert name == "Fists of Stone"
     assert base == ""
@@ -349,7 +365,7 @@ def test_extract_display_name_and_base_skips_usability_warning_block():
 def test_extract_display_name_and_base_normal_case_unaffected():
     text = "Item Class: Gloves\nRarity: Rare\nDread Knuckle\nAdorned Wraps\n--------\nItem Level: 80\n"
 
-    name, base = sbd.extract_display_name_and_base(text)
+    name, base = extract_display_name_and_base(text)
 
     assert name == "Dread Knuckle"
     assert base == "Adorned Wraps"

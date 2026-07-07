@@ -3,7 +3,14 @@ from pathlib import Path
 
 import pytest
 
-import stonefist_build_dataset as sbd
+from stonefist_dataset import paths as dataset_paths
+from stonefist_dataset.augment_controls import compute_augment_socket_rows
+from stonefist_dataset.base_controls import (
+    compute_base_control_rows,
+    derive_defence_family,
+    extract_stonefist_implicit_lines,
+)
+from stonefist_dataset.pairs import load_pairs
 
 FIXTURE_PAIRS_DIR = Path(__file__).parent / "fixtures" / "mini_pairs_base_control"
 FIXTURE_AUGMENT_SOCKET_DIR = Path(__file__).parent / "fixtures" / "mini_pairs_augment_socket"
@@ -25,7 +32,7 @@ FIXTURE_AUGMENT_SOCKET_IGNORED_DIR = Path(__file__).parent / "fixtures" / "mini_
 )
 def test_derive_defence_family(armour, evasion, energy_shield, expected):
     before_stats = {"armour": armour, "evasion": evasion, "energy_shield": energy_shield}
-    assert sbd.derive_defence_family(before_stats) == expected
+    assert derive_defence_family(before_stats) == expected
 
 
 def test_extract_stonefist_implicit_lines():
@@ -44,7 +51,7 @@ def test_extract_stonefist_implicit_lines():
         "Unmodifiable\n"
     )
 
-    lines = sbd.extract_stonefist_implicit_lines(after_text)
+    lines = extract_stonefist_implicit_lines(after_text)
 
     assert lines == [
         "Has +3 to Evasion Rating per player level",
@@ -75,7 +82,7 @@ def _make_pair(**overrides) -> dict:
 
 
 def test_compute_base_control_rows_detects_normal_base_control():
-    rows = sbd.compute_base_control_rows([_make_pair()])
+    rows = compute_base_control_rows([_make_pair()])
 
     assert len(rows) == 1
     row = rows[0]
@@ -90,21 +97,21 @@ def test_compute_base_control_rows_detects_normal_base_control():
 
 def test_compute_base_control_rows_ignores_non_normal_rarity():
     pair = _make_pair(before_rarity="Rare")
-    assert sbd.compute_base_control_rows([pair]) == []
+    assert compute_base_control_rows([pair]) == []
 
 
 def test_compute_base_control_rows_ignores_pairs_with_explicit_mods():
     pair = _make_pair(before_explicit_count=2)
-    assert sbd.compute_base_control_rows([pair]) == []
+    assert compute_base_control_rows([pair]) == []
 
 
 def test_compute_base_control_rows_ignores_non_stonefist_after():
     pair = _make_pair(after_text="Rarity: Normal\nSome Other Base\n")
-    assert sbd.compute_base_control_rows([pair]) == []
+    assert compute_base_control_rows([pair]) == []
 
 
 def test_compute_base_control_rows_handles_no_pairs_gracefully():
-    assert sbd.compute_base_control_rows([]) == []
+    assert compute_base_control_rows([]) == []
 
 
 def test_compute_base_control_rows_excludes_pairs_with_sockets():
@@ -116,7 +123,7 @@ def test_compute_base_control_rows_excludes_pairs_with_sockets():
             "Rarity: Normal\nOrnate Mitts\n--------\nArmour: 171\n--------\nSockets: S\n--------\nItem Level: 80\n"
         )
     )
-    assert sbd.compute_base_control_rows([pair]) == []
+    assert compute_base_control_rows([pair]) == []
 
 
 def test_compute_base_control_rows_excludes_pairs_with_visible_rune_lines():
@@ -125,7 +132,7 @@ def test_compute_base_control_rows_excludes_pairs_with_visible_rune_lines():
             "Rarity: Normal\nOrnate Mitts\n--------\nArmour: 171\n--------\n+12 to Strength (rune)\n--------\nItem Level: 80\n"
         )
     )
-    assert sbd.compute_base_control_rows([pair]) == []
+    assert compute_base_control_rows([pair]) == []
 
 
 @pytest.mark.parametrize(
@@ -141,7 +148,7 @@ def test_compute_base_control_rows_excludes_pairs_with_visible_rune_lines():
 )
 def test_compute_base_control_rows_excludes_pairs_by_note_keywords(notes):
     pair = _make_pair(notes=notes)
-    assert sbd.compute_base_control_rows([pair]) == []
+    assert compute_base_control_rows([pair]) == []
 
 
 def test_compute_base_control_rows_excludes_real_augment_socket_fixture(tmp_path, monkeypatch):
@@ -151,12 +158,12 @@ def test_compute_base_control_rows_excludes_real_augment_socket_fixture(tmp_path
     pairs_dir = tmp_path / "pairs"
     shutil.copytree(FIXTURE_AUGMENT_SOCKET_IGNORED_DIR, pairs_dir)
 
-    monkeypatch.setattr(sbd, "PAIRS_DIR", pairs_dir)
-    pairs = sbd.load_pairs()
+    monkeypatch.setattr(dataset_paths, "PAIRS_DIR", pairs_dir)
+    pairs = load_pairs()
     assert len(pairs) == 1
 
-    assert sbd.compute_base_control_rows(pairs) == []
-    assert len(sbd.compute_augment_socket_rows(pairs)) == 1
+    assert compute_base_control_rows(pairs) == []
+    assert len(compute_augment_socket_rows(pairs)) == 1
 
 
 def test_base_and_augment_controls_are_mutually_exclusive_across_fixtures(tmp_path, monkeypatch):
@@ -176,12 +183,12 @@ def test_base_and_augment_controls_are_mutually_exclusive_across_fixtures(tmp_pa
         for pair_dir in source.iterdir():
             shutil.copytree(pair_dir, flat_dir / f"STONEFIST-{i:04d}")
 
-    monkeypatch.setattr(sbd, "PAIRS_DIR", flat_dir)
-    pairs = sbd.load_pairs()
+    monkeypatch.setattr(dataset_paths, "PAIRS_DIR", flat_dir)
+    pairs = load_pairs()
     assert len(pairs) == 3
 
-    base_ids = {row["sample_id"] for row in sbd.compute_base_control_rows(pairs)}
-    augment_ids = {row["sample_id"] for row in sbd.compute_augment_socket_rows(pairs)}
+    base_ids = {row["sample_id"] for row in compute_base_control_rows(pairs)}
+    augment_ids = {row["sample_id"] for row in compute_augment_socket_rows(pairs)}
 
     assert base_ids == {"STONEFIST-0001"}
     assert augment_ids == {"STONEFIST-0002", "STONEFIST-0003"}
@@ -194,11 +201,11 @@ def test_compute_base_control_rows_from_real_fixture_pair(tmp_path, monkeypatch)
     pairs_dir = tmp_path / "pairs"
     shutil.copytree(FIXTURE_PAIRS_DIR, pairs_dir)
 
-    monkeypatch.setattr(sbd, "PAIRS_DIR", pairs_dir)
-    pairs = sbd.load_pairs()
+    monkeypatch.setattr(dataset_paths, "PAIRS_DIR", pairs_dir)
+    pairs = load_pairs()
     assert len(pairs) == 1
 
-    rows = sbd.compute_base_control_rows(pairs)
+    rows = compute_base_control_rows(pairs)
 
     assert len(rows) == 1
     row = rows[0]

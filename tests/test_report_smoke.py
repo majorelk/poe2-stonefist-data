@@ -1,7 +1,8 @@
 import shutil
 from pathlib import Path
 
-import stonefist_build_dataset as sbd
+from stonefist_dataset import paths as dataset_paths
+from stonefist_dataset.pairs import load_pairs
 from stonefist_reporter import loaders
 from stonefist_reporter.render import render_html
 
@@ -26,8 +27,8 @@ def test_report_html_contains_all_tabs(tmp_path, monkeypatch):
     pairs_dir = tmp_path / "pairs"
     shutil.copytree(FIXTURE_PAIRS_DIR, pairs_dir)
 
-    monkeypatch.setattr(sbd, "PAIRS_DIR", pairs_dir)
-    pairs = sbd.load_pairs()
+    monkeypatch.setattr(dataset_paths, "PAIRS_DIR", pairs_dir)
+    pairs = load_pairs()
     assert len(pairs) == 1
 
     # Point the CSV loaders at an empty directory so the report renders
